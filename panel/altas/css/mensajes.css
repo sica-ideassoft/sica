@@ -1,0 +1,170 @@
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot?x2elbl');
+	src:url('../fonts/icomoon.eot?#iefixx2elbl') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?x2elbl') format('woff'),
+		url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
+		url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+.mensajes{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+	margin-right: 17px;
+	border: 1px solid #ff3030;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+	display: none;
+}
+.Logom{
+	width: 230px;
+	height: 50px;
+	background-color:		#ee4000;
+	position: relative;
+	float:right;
+	border-radius:0px 7px 7px 0px;
+	overflow: hidden;
+}
+.Logom label{
+	text-align: center;
+color:white;
+overflow: hidden;
+display: block;
+margin-top: 2px;
+font-family: helvetica;
+font-size:17px;
+
+}
+.divmensaje span{
+text-align: center;
+width: 60px;
+height: 50px;
+margin-top: 7px;
+display: block;
+
+}
+.Mico:before{
+font-family: "iconitos";
+content: "\e605";
+font-size: 30px;
+color: white;
+}
+.divmensaje{
+	width: 60px;
+	height: 50px;
+	background-color:	#cd3700;
+	position: relative;
+	float:left;
+
+	border-radius:7px 0px 0px 7px;
+}
+/*----------------------------------------------------------*/
+/*inicio de mensaje de informacion*/
+.mensajesCurp{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+	margin-right: 17px;
+	border: 1px solid tomato;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+display: none;
+}
+.Logom2{
+	width: 230px;
+	height: 50px;
+	background-color:	#eeb422;
+	position: relative;
+	float:right;
+	border-radius:0px 7px 7px 0px;
+	overflow: hidden;
+}
+.Logom2 label{
+	text-align: center;
+color:white;
+overflow: hidden;
+display: block;
+margin-top: 2px;
+font-family: helvetica;
+font-size:17px;
+
+}
+.divmensaje2 span{
+text-align: center;
+width: 60px;
+height: 50px;
+margin-top: 7px;
+display: block;
+
+}
+.Mico2:before{
+font-family: "iconitos";
+content: "\e628";
+font-size: 30px;
+color: white;
+}
+.divmensaje2{
+	width: 60px;
+	height: 50px;
+	background-color: 	#cd8500;
+	position: relative;
+	float:left;
+
+	border-radius:7px 0px 0px 7px;
+}
+/*fin de mensaje de informacion*/
+/*inicio mensaje curp*/
+
+.mensajesTelefono{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+margin-right: 17px;
+	border: 1px solid tomato;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+display: none;
+}
+
+.mensajesMatricula{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+	margin-right: 17px;
+	border: 1px solid tomato;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+	display: none;
+}
+.mensajesEmail{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+	margin-right: 17px;
+	border: 1px solid tomato;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+display: none;
+}
