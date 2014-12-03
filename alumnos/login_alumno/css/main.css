@@ -208,15 +208,15 @@ input[type='radio'],.recor{
 }
 .recor{
 	margin: 3px 15px 0px 0px;
-	padding-left: 10px;
+	padding-left: 90px;
 
 }
 .reco{
 	float: left;
 	position: relative;
 	margin-top: 45px ;
-	margin-left: -150px !important;
-	color:#b0e0e6;
+	margin-left: 130px !important;
+	color:#329393;
 	list-style: square;
 	font-weight: bold;
 

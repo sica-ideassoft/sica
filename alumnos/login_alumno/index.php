@@ -87,8 +87,6 @@ location.href = "../alumno/index.php";
                         <div class="Mpass">
                           <span class="pico1"></span><p>Contraseña</p>
                       </div>
-                      <input type="radio" />
-                      <label for="radio1" class="recor">Recordarme</label>
 
                       <a href="#" class="reco">No recuerdo mi contraseña</a>
 
