@@ -4,7 +4,8 @@ $("#modificar").on("click",abrir);
 $(".cerrarconf,.borrarconf").on("click",cerrar);
 
 }
-function abrir(){
+function abrir(e){
+	e.preventDefault()
 $(".confirmacion").fadeIn();
 }
 function cerrar(){

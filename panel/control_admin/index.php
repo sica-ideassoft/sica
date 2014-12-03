@@ -73,7 +73,7 @@
               <p><span class="isica"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="Imenu52">
-              <p><span class="Iconfig"></span><b>CONFUIGURACIÓN</b></p>
+              <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">

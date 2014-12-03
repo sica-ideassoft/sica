@@ -427,9 +427,9 @@ text-align: center;
 	font-size: 12px;
 }
 .Ccontent .mod2{
-width: 45%;
+	width: 45%;
 	height: 90px;
-opacity:0.8;
+	opacity:0.8;
 	background-color: 	#ff4500;
 	overflow: hidden;
 	padding-top: 10px;
@@ -440,6 +440,8 @@ opacity:0.8;
 	content: "\e638";
 	font-size: 35px;
 	color: white;
+
+
 
 }
 
@@ -1004,6 +1006,7 @@ width: 120px;
 height: 140px;
 background-color: rgba(0,0,0,0.2);
 margin: 0 auto;
+margin-top: 10px;
 }
 .table4{
 	margin: 0 auto;
@@ -1069,7 +1072,9 @@ color: #104e8b;
 .confcabeza{
 	width: 100%;
 	height: 60px;
-		background: -moz-linear-gradient(center top , #ffa500, 	#cd8500) repeat scroll 0% 0% transparent;
+		background: -webkit-linear-gradient(#ffa500, #cd8500) repeat scroll 0% 0% transparent;
+		background: -o-linear-gradient(#ffa500, #cd8500) repeat scroll 0% 0% transparent;
+		background: linear-gradient(#ffa500, #cd8500) repeat scroll 0% 0% transparent;
 
 
 }
@@ -1144,30 +1149,41 @@ font-size: 25px;
 	font-weight: bold;
 }
 .confalerta{
-	background: -moz-linear-gradient(center top ,	#00cdcd,	#009acd) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
 	border-style: none;
 	color: white;
 	font-weight: bold;
 }
 .confalerta:hover{
 
-	background: -moz-linear-gradient(center top ,	#009acd,	#00cdcd) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
 }
 .borrarconf{
-background: -moz-linear-gradient(center top , 	#009acd,	#1874cd) repeat scroll 0% 0% transparent;
+background: -webkit-linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
+background: -o-linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
+background: linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
 	border-style: none;
 	color: white;
 	font-weight: bold;
 
 }
 .borrarconf:hover{
-	background: -moz-linear-gradient(center top ,	#1874cd, 	#009acd) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
 }
 /*-----------------------------*/
 
 /*--------------------------*/
 .icomodif{
-background: -moz-linear-gradient(center top ,#00a1f1,	#0072c6) repeat scroll 0% 0% transparent;
+background: -webkit-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: -o-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+
 width: 35px;
 height: 40px;
 
@@ -1200,7 +1216,9 @@ color: white;
 /*---------------------------------------------*/
 /*--------------------------*/
 .icolimpiar{
-background: -moz-linear-gradient(center top ,	#ee2c2c,	#cd3700) repeat scroll 0% 0% transparent;
+background: -webkit-linear-gradient(#ee2c2c, #cd3700) repeat       scroll 0% 0% transparent;
+background: -o-linear-gradient(#ee2c2c, #cd3700) repeat       scroll 0% 0% transparent;
+background: linear-gradient(#ee2c2c, #cd3700) repeat       scroll 0% 0% transparent;
 width: 35px;
 height: 40px;
 border-radius: 0px 5px  5px 0;
@@ -1233,7 +1251,9 @@ color: white;
 }
 /*---------------------------------------------*/
 .conentacept{
-background: -moz-linear-gradient(center top ,#00a1f1,	#0072c6) repeat scroll 0% 0% transparent;
+background: -webkit-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: -o-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
 width: 35px;
 height: 40px;
 
@@ -1265,7 +1285,9 @@ color: white;
 }
 /*--------------------------*/
 .conentcancelar{
-background: -moz-linear-gradient(center top ,#00a1f1,	#0072c6) repeat scroll 0% 0% transparent;
+background: -webkit-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: -o-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
 width: 35px;
 height: 40px;
 

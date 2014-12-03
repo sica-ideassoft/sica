@@ -1,0 +1,133 @@
+@font-face {
+    font-family: 'mensajes';
+    src:url('../fonts/icomoon.eot?x2elbl');
+    src:url('../fonts/icomoon.eot?#iefixx2elbl') format('embedded-opentype'),
+        url('../fonts/icomoon.woff?x2elbl') format('woff'),
+        url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
+        url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.info, .exito, .alertaT, .error {
+    font-family:helvetica;
+    font-size:18px;
+    background-repeat: no-repeat;
+   position:fixed;
+    width: 600px;
+    height: 33px;
+    display: none;
+
+
+}
+.textoM{
+    margin-top: 5px;
+
+
+}
+
+.info:after {
+    color: #00529B;
+    background-color: #BDE5F8;
+
+}
+
+.alertaT{
+
+    background-color: #f9d62e;
+    color:white;
+    box-shadow: 3px 3px 3px #888888;
+}
+.alerta:before {
+    font-family: "mensajes";
+    content: "\e628";
+    position: relative;
+    float: left;
+    font-size: 30px;
+
+    width: 40px;
+    height: 33px;
+margin-left:30px;
+}
+.error {
+    color: #D8000C;
+    background-color: #FFBABA;
+    background-image: url('../image/error.png');
+}
+.Muser,.Mpass{
+display: none;
+}
+.Muser p{
+position: fixed;
+margin-left: 490px;
+margin-top: -150px;
+background-color: #4682b4;
+color:white;
+height: 30px;
+padding: 10px 5px 0px 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+.pico1{
+ 	width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-right: 10px solid #4682b4 ;
+    border-bottom: 5px solid transparent;
+    position: fixed;
+    margin-top: -70px;
+    margin-left: 277px;
+}
+.pico2{
+ 	width: 0px;
+    height: 0px;
+    border-top: 5px solid transparent;
+    border-right: 10px solid #4682b4;
+    border-bottom: 5px solid transparent;
+    position: fixed;
+    margin-top: -133px;
+    margin-left: 277px;
+}
+.Mpass p{
+position: fixed;
+margin-left: 490px;
+margin-top: -85px;
+background-color: #4682b4;
+color:white;
+
+height: 30px;
+padding: 10px 5px 0px 5px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+section .validar{
+    background-color: tomato;
+    color:white;
+    width: 300px;
+    height: 70px;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    display: none;
+    border: 1px solid red;
+    box-shadow: 5px 5px 5px #888888;
+
+
+}
+
+section .validar .Malerta{
+    padding: 15px;
+    text-align: center;
+    margin-left: 60px;
+    position: relative;
+
+}
+section .imgvalidar:after{
+    font-family: "mensajes";
+    content:"\e605";
+    background-color: rgba(0,0,0,0.2);
+    position: fixed;
+    padding: 15px;
+    font-size: 40px;
+}
