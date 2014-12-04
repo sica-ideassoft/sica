@@ -14,10 +14,29 @@ section figure p{
 }
 section .mensaje{
 	margin-top: 0px;
+
+
+}
+.mensaje:hover{
+  -moz-animation: 2s bote ease-in-out;
+}
+
+@-moz-keyframes bote {
+  20%, 50%, 80% {
+    -moz-transform: translateY(0);
+  }
+
+  40% {
+    -moz-transform: translateY(-30px);
+  }
+
+  65% {
+    -moz-transform: translateY(-15px);
+  }
 }
 section h1{
 	margin-top: -60px;
-	font-size: 25px;
+	font-size: 17px;
 }
 footer{
 
