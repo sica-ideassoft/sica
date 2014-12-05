@@ -11,7 +11,7 @@
 body{
 
 background:url(../image/fondo2.png),url(../image/fondo.png);
-font-family: verdana;
+font-family: "Open Sans",Arial;
 }
 header{
 	background: -webkit-linear-gradient(#009acd, #0099cc) repeat scroll 0% 0% transparent;
