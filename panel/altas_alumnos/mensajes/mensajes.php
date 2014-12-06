@@ -17,7 +17,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/style_mensaje.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
 
@@ -63,7 +63,7 @@
             <div class="heder22">
               <ul class="heder21sub2">
                 <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-                <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+                <li><span class='circulo'></span><a href="#"><span class="mes"></span>MENSAJES</a></li>
                 <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
             </div>
@@ -115,7 +115,7 @@
             <div class="Mcontent">
               <div id='cssmenu'>
                 <ul class="ul2">
-                 <li class="activo"><a href='#'><span>HOME</span></a></li>
+                 <li class="activo"><a href='../home/home.php'><span>HOME</span></a></li>
                  <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
                   <ul>
                    <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
@@ -205,7 +205,7 @@
       <!-- finde  mensajes curp de validacion -->
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>home</p></div>
+        <div class="tem"><p>mensajes</p></div>
             <div class="control">
 
               <table class="table2">

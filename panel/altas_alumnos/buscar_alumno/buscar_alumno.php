@@ -62,9 +62,9 @@
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href=""><span class="esta"></span>ESTADISTICAS</a></li>
-                <li><a href=""><span class="mes"></span>MENSAJES</a></li>
-                <li><a href=""><span class="cale"></span>CALENDARIOS</a></li>
+                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+                <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
             </div>
           </div>
@@ -115,19 +115,19 @@
             <div class="Mcontent">
               <div id='cssmenu'>
                 <ul class="ul2">
-                 <li><a href='#'><span>HOME</span></a></li>
+                 <li><a href='../home/home.php'><span>HOME</span></a></li>
                  <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
                   <ul>
-                   <li><a class="altas" href='#'><span><b>ALTAS</b></span></a>
+                   <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
 
                    </li>
-                   <li><a href='#'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+                   <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
 
                    </li>
                  </ul>
                </li>
-               <li class='last activo'><a href='#'><span>BUSCAR</span></a></li>
-               <li><a href='#'><span>PUBLICACIONES</span></a></li>
+               <li class='last activo'><a href='../buscar_alumno/buscar_alumno.php'><span>BUSCAR</span></a></li>
+               <li><a href='../publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
              </ul>
            </div>
            <!-- fin de menu3 -->
