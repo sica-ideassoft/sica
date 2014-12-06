@@ -9,20 +9,6 @@
 	font-style: normal;
 }
 
-#cssmenu > ul > .admin > a {
-	color:white;
-background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
-  background: -moz-linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) )!important;
-  background: -o-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
-  background: -ms-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
-  background: linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) );
-}
-
-
-#cssmenu ul ul li .altas{
-background-color:	#00ffff;
-color: black;
-}
 body{
 background-image: url(../image-global/fondo.png);
 font-family: "Open Sans",Arial;

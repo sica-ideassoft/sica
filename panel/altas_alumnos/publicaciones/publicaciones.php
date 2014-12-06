@@ -127,7 +127,7 @@
                  </ul>
                </li>
                <li class='last'><a href='#'><span>BUSCAR</span></a></li>
-               <li><a href='#'><span>PUBLICACIONES</span></a></li>
+               <li class="activo"><a href='#'><span>PUBLICACIONES</span></a></li>
              </ul>
            </div>
            <!-- fin de menu3 -->

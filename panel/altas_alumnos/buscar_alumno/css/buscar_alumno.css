@@ -10,6 +10,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
+/*inicio de activo*/
+#cssmenu > ul > .activo > a {
+	color:white;
+background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
+  background: -moz-linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) )!important;
+  background: -o-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
+  background: -ms-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
+  background: linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) );
+}
+/*fin de activo*/
 .mod p a{
 	text-decoration: none;
 	color:white;

@@ -115,7 +115,7 @@
             <div class="Mcontent">
               <div id='cssmenu'>
                 <ul class="ul2">
-                 <li><a href='#'><span>Home</span></a></li>
+                 <li><a href='#'><span>HOME</span></a></li>
                  <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
                   <ul>
                    <li><a class="altas" href='#'><span><b>ALTAS</b></span></a>
@@ -126,7 +126,7 @@
                    </li>
                  </ul>
                </li>
-               <li class='last'><a href='#'><span>BUSCAR</span></a></li>
+               <li class='last activo'><a href='#'><span>BUSCAR</span></a></li>
                <li><a href='#'><span>PUBLICACIONES</span></a></li>
              </ul>
            </div>

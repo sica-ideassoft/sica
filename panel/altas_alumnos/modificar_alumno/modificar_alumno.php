@@ -116,18 +116,18 @@
               <div id='cssmenu'>
                 <ul class="ul2">
                  <li><a href='#'><span>Home</span></a></li>
-                 <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
+                 <li class='has-sub  activo'><a  href='#'><span>ADMINISTRAR</span></a>
                   <ul>
-                   <li><a class="altas" href='#'><span><b>ALTAS</b></span></a>
+                   <li><a  href='#'><span><b>ALTAS</b></span></a>
 
                    </li>
-                   <li><a href='#'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+                   <li><a class="modificar" href='#'><span><b>MODIFICAR/ELIMINAR</b></span></a>
 
                    </li>
                  </ul>
                </li>
                <li class='last'><a href='#'><span>BUSCAR</span></a></li>
-               <li><a href='#'><span>PUBLICACIONES</span></a></li>
+               <li ><a href='#'><span>PUBLICACIONES</span></a></li>
              </ul>
            </div>
            <!-- fin de menu3 -->

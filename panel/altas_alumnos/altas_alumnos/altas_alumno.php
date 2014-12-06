@@ -116,7 +116,7 @@
               <div id='cssmenu'>
                 <ul class="ul2">
                  <li><a href='#'><span>Home</span></a></li>
-                 <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
+                 <li class='has-sub activo'><a  href='#'><span>ADMINISTRAR</span></a>
                   <ul>
                    <li><a class="altas" href='#'><span><b>ALTAS</b></span></a>
 
