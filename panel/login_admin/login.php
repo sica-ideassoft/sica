@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if (!isset($_SESSION['alumno']) ){
+	if (!isset($_SESSION['admin-sica']) ){
 		if ( @$idcnx = @mysql_connect('localhost','root','tescha4951') ){
 
 			if ( @mysql_select_db('calificaciones',$idcnx) ){
@@ -9,7 +9,7 @@
 				if ( @$res = @mysql_query($sql) ){
 					if ( @mysql_num_rows($res) == 1 ){
 						$user = @mysql_fetch_array($res);
-						$_SESSION['alumno']	= $user['user'];
+						$_SESSION['admin-sica']	= $user['user'];
 						echo 1;
 					}
 					else

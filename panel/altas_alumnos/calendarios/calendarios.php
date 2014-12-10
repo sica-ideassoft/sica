@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['alumno'])) {
+if (!isset($_SESSION['admin-sica'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
@@ -51,7 +51,7 @@ location.href = "../../login_admin/index.php";
                 <div class="userimg">
                   <img src="image/user.png" alt="">
                 </div>
-                <div class="datos"><p>USER:</p></div>
+                <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>
             </nav>
 

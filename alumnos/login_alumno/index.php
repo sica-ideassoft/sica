@@ -67,12 +67,13 @@ location.href = "../alumno/index.php";
 
 <div class="content">
     <div class="content-head">
-    	<p>login</p>
+    	<p class="cont-login">login</p>
+      <p class="sica"><span class="ico-login"></span>sica</p>
     </div>
     <div class="contenido">
         <div class="form" >
 
-          <form action="" method='post'>
+          <form action="" method='post' autocomplete="off">
               <table class="table">
                   <tr>
                       <td><span class="ico ico1"></span><input type="text" placeholder=" User" id="username" name="username"></td>
@@ -83,7 +84,7 @@ location.href = "../alumno/index.php";
                   </tr>
 
                   <tr>
-                      <td><input type="submit" value="enviar"  name="enviar" id="enviar" class="enviar"></td>
+                      <td><input type="submit" value="enviar"  name="enviar" id="enviar" class="enviar"><span class='ico-enviar'></span></td>
                   </tr>
               </table>
 

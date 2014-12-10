@@ -14,10 +14,10 @@ session_start();
 	<div class="login_form">
 	<h3>Private Area</h3>
 <?php
-if (!isset($_SESSION['alumno'])) {
+if (!isset($_SESSION['admin-sica'])) {
 echo 'You are not logged. <a href="index.php">login</a>';
 } else {
-echo 'hello <b>'.$_SESSION['alumno'].'</b> you are logged in. <a href="logout.php">logout</a>';
+echo 'hello <b>'.$_SESSION['admin-sica'].'</b> you are logged in. <a href="logout.php">logout</a>';
 }
 ?>
 

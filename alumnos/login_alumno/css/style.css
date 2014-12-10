@@ -6,16 +6,41 @@ body{
 }
 @font-face {
 	font-family: 'iconitos';
-	src:url('../fonts/icomoon.eot?-hvxxee');
-	src:url('../fonts/icomoon.eot?#iefix-hvxxee') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?-hvxxee') format('woff'),
-		url('../fonts/icomoon.ttf?-hvxxee') format('truetype'),
-		url('../fonts/icomoon.svg?-hvxxee#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?gqe1sj');
+	src:url('../fonts/icomoon.eot?#iefixgqe1sj') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?gqe1sj') format('woff'),
+		url('../fonts/icomoon.ttf?gqe1sj') format('truetype'),
+		url('../fonts/icomoon.svg?gqe1sj#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
+.sica{
+	float: right;
+	margin-right: 20px;
+}
+.ico-login{
+	padding-right: 20px;
+}
+.cont-login{
+	margin-left: 20px;
+}
+.ico-login:after{
+	font-family: "iconitos";
+	content:"\e613";
+}
+.ico-enviar{
+	margin-top: 8px;
+	position: absolute;
+	margin-left: -40px;
 
+}
+.ico-enviar:after{
+	font-family: "iconitos";
+	content: "\e615";
+	font-size: 30px;
+	color: rgba(255,255,255,0.8);
 
+}
 /*inicio de mensajes*/
 .mensajes{
 	width: 290px;
@@ -150,10 +175,11 @@ body{
 /*fin de mensaje usuario*/
 .content-head p{
 	color: white;
-	padding: 20px;
+	padding: 5px;
+	padding-left: 20px;
 	font-size: 20px;
 	text-transform: uppercase;
-	text-align: center;
+	display: inline-block;
 
 
 }
@@ -218,10 +244,10 @@ body{
 	border-style: none;
 	letter-spacing: .2em;
 	word-spacing: .5em;
+    padding-left: 10px;
 	-moz-box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
     -webkit-box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
     box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
-    padding-left: 10px;
 }
 .table tr td input[type="submit"]{
 	background-color:  #ff0033;

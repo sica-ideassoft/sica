@@ -10,6 +10,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.datos{
+	text-transform: uppercase;
+}
 .circulo{
 	background-color: #0099cc;
 	width: 5px;

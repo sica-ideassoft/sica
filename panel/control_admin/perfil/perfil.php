@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if (!isset($_SESSION['admin-sica'])) {
+echo '<SCRIPT LANGUAGE="javascript">
+location.href = "../../login_admin/index.php";
+</script>';
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -43,7 +50,7 @@
                 <div class="userimg">
                   <img src="image/user.png" alt="">
                 </div>
-                <div class="datos"><p>USER:</p></div>
+                <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>
             </nav>
 

@@ -10,7 +10,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+.datos{
+	text-transform: uppercase;
+}
 #cssmenu > ul > .activo > a {
 	color:white;
 background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );

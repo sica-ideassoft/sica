@@ -2,16 +2,16 @@
 	font-family: 'iconitos';
 	src:url('../fonts/icomoon.eot?x2elbl');
 	src:url('../fonts/icomoon.eot?#iefixx2elbl') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?x2elbl') format('woff'),
-		url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
-		url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
+	url('../fonts/icomoon.woff?x2elbl') format('woff'),
+	url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
+	url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 body{
 
-background:url(../image/fondo2.png),url(../image/fondo.png);
-font-family: "Open Sans",Arial;
+	background:url(../image/fondo2.png),url(../image/fondo.png);
+	font-family: "Open Sans",Arial;
 }
 header{
 	background: -webkit-linear-gradient(#009acd, #0099cc) repeat scroll 0% 0% transparent;
@@ -44,29 +44,33 @@ header{
 .menu li a{
 	color: rgba(255,255,255,1);
 	text-decoration: none;
-font-weight: 600;
-font-size: 15px;
+	font-weight: 600;
+	font-size: 15px;
 
 }
 .menu li a:hover{
-		color:		#87cefa;
+	color:		#87cefa;
 
-	   -webkit-transition:all 1s ease;
-   -moz-transition:all 1s ease;
-   -o-transition:all 1s ease;
-   transition:all 1s ease;
+	-webkit-transition:all 1s ease;
+	-moz-transition:all 1s ease;
+	-o-transition:all 1s ease;
+	transition:all 1s ease;
 }
 
 .campo{
 	width: 300px;
 	height: 40px;
 	border-style: none;
-background-color:	#e3e3e3;
- color: black;
- border:1px solid 	#00b2ee;
+	background-color:	#e3e3e3;
+	color: black;
+	border:1px solid 	#00b2ee;
+	letter-spacing: .1em;
+	padding-left: 10px;
 }
 .campos {
 	margin-top: 50px;
+
+
 }
 
 .enviar{
@@ -76,19 +80,19 @@ background-color:	#e3e3e3;
 .menu span{
 	margin-left: 10px;
 }
-  .home:before{
+.home:before{
 	font-family: "iconitos";
 	content:"\e608";
 	padding-right: 10px;
 
 }
-  .contacto:before{
-font-family: "iconitos";
-content:"\e626";
-padding-right: 10px;
+.contacto:before{
+	font-family: "iconitos";
+	content:"\e626";
+	padding-right: 10px;
 }
-  .salir:before{
-font-family: "iconitos";
+.salir:before{
+	font-family: "iconitos";
 	content:"\e60b";
 	padding-right: 10px;
 
@@ -102,8 +106,8 @@ font-family: "iconitos";
 	margin-top: 70px;
 
 	-webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
--moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
 }
 .cuerpo .encabezado{
 	width: 100%;
@@ -127,35 +131,35 @@ box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.3);
 	color:white ;
 	padding:0px 10px 0px 10px;
 
-  -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
-    -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
-    box-shadow: inset 0 3px 8px rgba(0,0,0,.24);
+	-moz-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+	-webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,.4);
+	box-shadow: inset 0 3px 8px rgba(0,0,0,.24);
 
 }
 input[name='enviar']{
-	 background-color:	#00688b;
-	 border: none;
-	 color: white;
-	 width: 140px;
-	 height: 40px;
-	 margin-left: 70px;
-	 position: absolute;
-     border-radius: 7px ;
-     border-bottom: 4px solid 	#1e90ff;
-     font-weight: bold;
+	background-color:	#00688b;
+	border: none;
+	color: white;
+	width: 190px;
+	height: 45px;
+	margin-left: 50px;
+	position: absolute;
+	border-radius: 7px ;
+	border-bottom: 3px solid 	#1e90ff;
+	font-weight: bold;
 
 
 }
 input[name='enviar']:hover{
-	 border-style: none;
-	 -moz-transition:all 2s;
-	 -webkit-transition:all 2s;
+	border-style: none;
+	-moz-transition:all 2s;
+	-webkit-transition:all 2s;
 }
 .ico1:before{
 	font-family: "iconitos";
 	content:"\e603";
 	margin-left: 10px;
-	font-size: 20px;
+	font-size: 22px;
 }
 .ico2:before{
 
@@ -194,44 +198,18 @@ footer a:after{
 footer a:before{
 	content:" - " ;
 }
-input[type='radio']{
-	margin-left: 22%;
-	margin-top: 7px;
-}
-.radio1{
-	margin-top: 10px !important;
-}
-input[type='radio'],.recor{
-	float: left;
-	color:	#00688B;
-	font-weight:bold;
-}
-.recor{
-	margin: 3px 15px 0px 0px;
-	padding-left: 90px;
 
-}
-.reco{
-	float: left;
-	position: relative;
-	margin-top: 45px ;
-	margin-left: 130px !important;
-	color:#329393;
-	list-style: square;
-	font-weight: bold;
-
-}
 
 /*--------------------------*/
 .conent1{
 	background: -webkit-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 	background: -o-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 	background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
-	width: 35px;
-	height: 40px;
+	width: 38px;
+	height: 44px;
 	border-radius: 0px 5px 5px 0px;
 	position: relative;
-	margin-right: 160px;
+	margin-right: 159px;
 	float: right;
 	z-index: 30;
 
@@ -252,7 +230,7 @@ input[type='radio'],.recor{
 	font-family: "iconitos";
 	content: "\e60f";
 	margin-right: 20px;
-color: white;
+	color: white;
 
 
 }
@@ -262,174 +240,170 @@ color: white;
 @media only screen and (max-width: 480px) {
 }
 @media only screen and (max-width: 320px) {
-header{
-height: 60px;
+	header{
+		height: 60px;
 
-}
-.menu{
+	}
+	.menu{
 
-	float:left;
-	margin-left: -50px;
-}
-.campo{
-	width: 200px;
-	height: 30px;
+		float:left;
+		margin-left: -50px;
+	}
+	.campo{
+		width: 200px;
+		height: 30px;
 
-}
-.campos {
-	margin-top: 30px;
-}
-.cuerpo{
+	}
+	.campos {
+		margin-top: 30px;
+	}
+	.cuerpo{
 
-	width: 300px;
-	height: 290px;
-	margin-top: 30px;
-}
-.cuerpo .encabezado{
-	width: 100%;
-	height: 50px;
-}
+		width: 300px;
+		height: 290px;
+		margin-top: 30px;
+	}
+	.cuerpo .encabezado{
+		width: 100%;
+		height: 50px;
+	}
 
-.titulo{
-	margin: 13px;
+	.titulo{
+		margin: 13px;
 
-}
-.sistemas{
-	float: right;
-	margin: 13px;
-
-
-}
-input[name='enviar']{
-	 width: 80px;
-	 height: 30px;
-   padding-bottom: 5px;
-     margin-left: 95px;
-
-}
-footer{
-	height: 50px;
-}
-footer a{
-	font-size: 13px;
-}
-footer label{
-font-size: 15px;
-}
-input[type='radio']{
-	margin-left: 10%;
-	margin-top: -10px;
+	}
+	.sistemas{
+		float: right;
+		margin: 13px;
 
 
+	}
+	input[name='enviar']{
+		width: 80px;
+		height: 30px;
+		padding-bottom: 5px;
+		margin-left: 95px;
 
-}
+	}
+	footer{
+		height: 50px;
+	}
+	footer a{
+		font-size: 13px;
+	}
+	footer label{
+		font-size: 15px;
+	}
+	input[type='radio']{
+		margin-left: 10%;
+		margin-top: -10px;
 
 
-.recor{
-	margin: -15px 15px 0px 0px;
-	padding-left: 3px;
-}
-.reco{
-float: left;
-margin-top: 20px;
-margin-left: 10%;
 
-}
+	}
+
+
+	.recor{
+		margin: -15px 15px 0px 0px;
+		padding-left: 3px;
+	}
+	.reco{
+		float: left;
+		margin-top: 20px;
+		margin-left: 10%;
+
+	}
 
 
 }
 @media only screen and (max-width: 240px) {
 	header{
-height: 60px;
+		height: 60px;
 
-}
-.menu{
-	display: inline-block;
-	float:left;
-	margin-left: -45px;
-}
-.menu li {
+	}
+	.menu{
+		display: inline-block;
+		float:left;
+		margin-left: -45px;
+	}
+	.menu li {
 
-	padding-left: 0px;
-	margin-top: 5px;
+		padding-left: 0px;
+		margin-top: 5px;
 
-}
-.menu li a{
-	font-size: 11px;
-}
-.campo{
-	width: 150px;
-	height: 25px;
+	}
+	.menu li a{
+		font-size: 11px;
+	}
+	.campo{
+		width: 150px;
+		height: 25px;
 
-}
-.campos {
-	margin-top: 10px;
-}
-.recor{
+	}
+	.campos {
+		margin-top: 10px;
+	}
+	.recor{
 
- font-size: 13px;
-}
+		font-size: 13px;
+	}
 
-.reco{
-	margin-top: -30px;
-}
-.cuerpo{
+	.reco{
+		margin-top: -30px;
+	}
+	.cuerpo{
 
-	width: 220px;
-	height: 205px;
-	margin-top: 10px;
-}
-.cuerpo .encabezado{
-	width: 100%;
-	height: 40px;
-}
+		width: 220px;
+		height: 205px;
+		margin-top: 10px;
+	}
+	.cuerpo .encabezado{
+		width: 100%;
+		height: 40px;
+	}
 
-.titulo{
-	margin: 8px;
+	.titulo{
+		margin: 8px;
 
-}
-.sistemas{
-	float: right;
-	margin: 8px;
-
-
-}
-input[type='radio']{
-margin-left: 10px;
+	}
+	.sistemas{
+		float: right;
+		margin: 8px;
 
 
-}
-input[name='enviar']{
-	 width: 60px;
-	 height: 30px;
-	   padding-bottom: 5px;
-     margin-left: 80px;
-     margin-top: -50px !important;
+	}
+
+	input[name='enviar']{
+		width: 60px;
+		height: 30px;
+		padding-bottom: 5px;
+		margin-left: 80px;
+		margin-top: -50px !important;
 
 
-}
-footer{
-	height: 50px;
-}
-footer a{
-	font-size: 13px;
-}
-footer label{
-font-size: 15px;
-}
-input[type='radio']{
-	margin-left: 15px;
-	margin-top: -20px;
-}
-.recor{
-	margin: -23px 15px 0px 0px;
-	padding-left: 30px;
-}
-.reco{
-float: left;
-margin-top: 0px;
-margin-left: 10%;
-font-size: 13px;
+	}
+	footer{
+		height: 50px;
+	}
+	footer a{
+		font-size: 13px;
+	}
+	footer label{
+		font-size: 15px;
+	}
+	input[type='radio']{
+		margin-left: 15px;
+		margin-top: -20px;
+	}
+	.recor{
+		margin: -23px 15px 0px 0px;
+		padding-left: 30px;
+	}
+	.reco{
+		float: left;
+		margin-top: 0px;
+		margin-left: 10%;
+		font-size: 13px;
 
-}}
+		}}
 
