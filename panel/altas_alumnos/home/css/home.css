@@ -11,6 +11,16 @@
 	font-style: normal;
 }
 
+.perfil{
+	text-decoration: none;
+	color: white;
+	display: block;
+	padding: 30px;
+}
+.home figure img {
+	margin-top: 50px;
+	width: 900px;
+}
 /*inicio de activo*/
 #cssmenu > ul > .activo > a {
   color:white;

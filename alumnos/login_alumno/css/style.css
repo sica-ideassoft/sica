@@ -1,0 +1,368 @@
+body{
+	font-family: arial;
+	background-image: url(../image/pater.png),url(../image/patron.png);
+	font-size: 16px;
+	text-transform: uppercase;
+}
+@font-face {
+	font-family: 'iconitos';
+	src:url('../fonts/icomoon.eot?-hvxxee');
+	src:url('../fonts/icomoon.eot?#iefix-hvxxee') format('embedded-opentype'),
+		url('../fonts/icomoon.woff?-hvxxee') format('woff'),
+		url('../fonts/icomoon.ttf?-hvxxee') format('truetype'),
+		url('../fonts/icomoon.svg?-hvxxee#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*inicio de mensajes*/
+.mensajes{
+	width: 290px;
+	height:70px;
+	background-color: #fe2e2e;
+	float: right;
+	right: 10px;
+	top: 10px;
+	position: absolute;
+	color: white;
+	border: 2px solid red;
+	box-shadow: 3px 3px 3px rgba(255,255,255,0.1);
+	display: none;
+}
+.mensajes span{
+	padding-top: 15px;
+	display: block;
+}
+
+.stop:after{
+	 font-family: "iconitos";
+ 	content: "\e60b";
+ 	font-size: 35px;
+ 	padding: 20px;
+ 	margin-top: 10px;
+}
+.icono{
+	width: 72px;
+	height: 65px;
+	margin:2px;
+	background-color: rgba(0,0,0,0.3);
+	display: inline-block !important;
+	border-radius: 5px;
+}
+.ico-mensaje{
+	width: 173px;
+	height: 70px;
+	float: right;
+	text-align: center;
+	display: inline-block;
+}
+.ico-mensaje p{
+	padding-right: 11px;
+}
+/*fin de mensajes*/
+.mensajes2{
+	width: 290px;
+	height:70px;
+	background-color: #ffa500;
+	float: right;
+	right: 10px;
+	top: 10px;
+	position: absolute;
+	color: white;
+	display: none;
+
+}
+.mensajes2 span{
+	padding-top: 15px;
+	display: block;
+	margin-left: 10px;
+}
+
+.usuario:after{
+	font-family: "iconitos";
+ 	content: "\e60a";
+ 	font-size: 35px;
+ 	padding: 10px;
+ 	margin-top: 10px;
+}
+.icono2{
+	width: 72px;
+	height: 65px;
+	margin:2px;
+	background-color:rgba(0,0,0,0.2);
+	display: inline-block !important;
+	border-radius: 5px;
+}
+.ico-mensaje2{
+	width: 210px;
+	height: 70px;
+	float: right;
+	text-align: center;
+	display: inline-block;
+}
+.ico-mensaje2 p{
+	padding-right: 2px;
+}
+/*fin de usuario*/
+.mensajes3{
+	width: 290px;
+	height:70px;
+	background-color: #ffa500;
+	float: right;
+	right: 10px;
+	top: 10px;
+	position: absolute;
+	color: white;
+	display: none;
+}
+.mensajes3 span{
+	padding-top: 15px;
+	display: block;
+	margin-left: 10px;
+}
+
+.contrasena:after{
+	font-family: "iconitos";
+ 	content: "\e60a";
+ 	font-size: 35px;
+ 	padding: 10px;
+ 	margin-top: 10px;
+}
+.icono3{
+	width: 72px;
+	height: 65px;
+	margin:2px;
+	background-color:rgba(0,0,0,0.2);
+	display: inline-block !important;
+	border-radius: 5px;
+}
+.ico-mensaje3{
+	width: 210px;
+	height: 70px;
+	float: right;
+	text-align: center;
+	display: inline-block;
+}
+.ico-mensaje3 p{
+	padding-right: 2px;
+}
+/*fin de mensaje usuario*/
+.content-head p{
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	text-transform: uppercase;
+	text-align: center;
+
+
+}
+.ico{
+	background: #F03;
+	padding: 11px;
+	color:white;
+	border:none;
+	border-radius:  7px 0px 0px 7px ;
+}
+.ico1:after{
+ font-family: "iconitos";
+ content: "\e600";
+
+}
+.ico2:after{
+ font-family: "iconitos";
+ content: "\e603";
+}
+.content{
+	width: 500px;
+	height: 400px;
+	background: -moz-radial-gradient(#ffffff,rgba(111, 115, 120, 0.01));
+
+	margin: 0 auto;
+	margin-top: 150px;
+}
+.content-head{
+	width: 100%;
+	height: 70px;
+	background-color: #ff0033;
+	font-size: 12px;
+
+}
+.content-head div{
+	display: inline-block;
+	width: 33.1%;
+	height: 79px;
+
+}
+.login{
+	background-color: red;
+	position: ;
+}
+.login,.redes{
+	border-right: 1px solid white;
+}
+.form{
+
+	height: 320px;
+}
+.table{
+	margin: 0 auto;
+	margin-top: 40px;
+}
+.table tr td{
+	padding-bottom: 20px;
+}
+.table tr td input[type="text"], input[type="password"]{
+	width: 290px;
+	height:39px;
+	border-style: none;
+	letter-spacing: .2em;
+	word-spacing: .5em;
+	-moz-box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
+    -webkit-box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
+    box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
+    padding-left: 10px;
+}
+.table tr td input[type="submit"]{
+	background-color:  #ff0033;
+	border-radius: 5px;
+	border: none;
+	border-bottom: 4px solid #c30006;
+	color: white;
+	height: 50px;
+	text-transform: uppercase;
+	width: 340px;
+	font-weight: bold;
+}
+.table tr td input[type="submit"]:hover{
+	border-style: none;
+}
+.form p{
+	font-size: 1.5rem;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+.form form{
+	padding-top: 25px;
+}
+@media screen and (max-width: 320px){
+.content{
+	width: 270px;
+	height: 350px;
+	margin-top: 80px;
+}
+.form{
+	margin-top: -20px;
+}
+.table tr td input[type="text"], input[type="password"]{
+	margin-top: -10px;
+	width: 180px;
+	height:39px;
+    padding-left: 10px;
+}
+.table tr td input[type="submit"]{
+	width: 230px;
+	height: 50px;
+
+}
+.mensajes{
+	width: 290px;
+	height:55px;
+right: 15px;
+}
+.mensajes span{
+	padding-top: 10px;
+	padding-left: 3px;
+	display: block;
+
+}
+
+.stop:after{;
+ 	font-size: 25px;
+ 	padding: 10px;
+ 	margin-top: 10px;
+}
+.icono{
+	width: 50px;
+	height: 50px;
+	margin:2px;
+
+}
+.ico-mensaje{
+	width: 230px;
+	height: 55px;
+	float: right;
+
+}
+.ico-mensaje p{
+	padding-right: 11px;
+	margin-top: 7px;
+}
+/*fin de mensajes*/
+.mensajes2{
+	width: 290px;
+	height:60px;
+	right: 15px;
+	top: 10px;
+
+}
+.mensajes2 span{
+	padding-top: 10px;
+	display: block;
+	margin-left: 10px;
+}
+
+.usuario:after{
+ 	font-size: 30px;
+ 	padding: 5px;
+ 	margin-top: 7px;
+}
+.icono2{
+	width: 60px;
+	height: 55px;
+	margin:2px;
+
+}
+.ico-mensaje2{
+	width: 225px;
+	height: 60px;
+	float: right;
+	text-align: center;
+	display: inline-block;
+}
+.ico-mensaje2 p{
+	padding-right: 2px;
+}
+/*fin de usuario*/
+.mensajes3{
+	width: 290px;
+	height:60px;
+	right: 15px;
+	top: 10px;
+
+}
+.mensajes3 span{
+	padding-top: 12px;
+	margin-left: 13px;
+}
+
+.contrasena:after{
+	font-family: "iconitos";
+ 	content: "\e60a";
+ 	font-size: 25px;
+ 	padding: 5px;
+
+}
+.icono3{
+	width: 60px;
+	height: 55px;
+	margin:2px;
+}
+.ico-mensaje3{
+	width: 225px;
+	height: 60px;
+
+	float: right;
+}
+}

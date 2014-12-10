@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if (!isset($_SESSION['alumno'])) {
+echo '<SCRIPT LANGUAGE="javascript">
+location.href = "../../login_admin/index.php";
+</script>';
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -35,8 +42,8 @@
 
               </div>
               <ul class="menu1">
-                <li class="lisalir" ><a href=""><span class='salir'></span>SALIR</a></li>
-                <li><a href=""><span class='home'></span>HOME</a></li>
+                <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
+                <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
 
               </ul>
 
@@ -74,15 +81,17 @@
               <p><span class="isica"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="Imenu52">
-              <p><span class="Iconfig"></span><b>CONFUIGURACIÓN</b></p>
+              <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">
                 <div class="Cco">
-                <div class="mod btn btn-1 btn-1e">
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e" >
                   <span class="modico "></span>
                   <p>PERFIL</p>
                   </div>
+                  </a>
 
                 <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
@@ -206,7 +215,7 @@
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>ALTAS ALUMNOS</p></div>
-        <form action="" method="POST" name="form1" class="form1">
+        <form action="php/funciones.php" method="POST" name="form1" class="form1">
 
           <table class='table1'>
             <tr>

@@ -10,6 +10,11 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.perfil{
+	text-decoration: none;
+	color: white;
+	display: block;
+}
 /*inicio de estado de alumno*/
 #cssmenu > ul > .activo > a {
 	color:white;

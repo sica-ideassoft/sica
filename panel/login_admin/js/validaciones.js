@@ -7,10 +7,10 @@ function inicio(){
 }
 function Muser(){
 
- setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
+ setTimeout($('.Muser').fadeIn(1000).fadeOut(10000), 1000);
 }
 function Mpass(){
 
- setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
+ setTimeout($('.Mpass').fadeIn(1000).fadeOut(10000), 1000);
 }
 

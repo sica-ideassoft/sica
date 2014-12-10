@@ -1,4 +1,11 @@
-<?php session_start(); ?>
+<?php
+session_start();
+if (!isset($_SESSION['alumno'])) {
+echo '<SCRIPT LANGUAGE="javascript">
+location.href = "../../login_admin/index.php";
+</script>';
+}
+?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -35,7 +42,7 @@
 
               </div>
               <ul class="menu1">
-                <li class="lisalir" ><a href=""><span class='salir'></span>SALIR</a></li>
+                <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
                 <li><a href=""><span class='home'></span>HOME</a></li>
 
               </ul>
@@ -74,20 +81,25 @@
               <p><span class="isica"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="Imenu52">
-              <p><span class="Iconfig"></span><b>CONFUIGURACIÓN</b></p>
+              <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">
                 <div class="Cco">
+                <a href="../../control_admin/perfil/perfil.php">
                 <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
-                  <p><a href="../../control_admin/perfil/perfil.php">PERFIL</a></p>
+                  <p>PERFIL</p>
                   </div>
+                  </a>
+
 
                 <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
                 </div>
+
+
 
                  <div class="mod3 btn btn-1 btn-1b">
                   <span class="modico3"></span>
@@ -206,12 +218,18 @@
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>home</p></div>
+			<div class="home">
+        		<figure>
+				<img src="image/home.svg" alt="">
+				</figure>
+			</div>
             <div class="control">
+
 
               <table class="table2">
             </table>
 
-        </form>
+			</div>
 
       </section>
 
