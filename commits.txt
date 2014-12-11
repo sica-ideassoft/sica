@@ -1,0 +1,83 @@
+commit 6bd56aa70405fbdc6929fcc00df16c625bbd7473
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Wed Dec 10 02:01:41 2014 -0600
+
+    termino de login
+
+commit 4f6f6dc1c0b4d6c117183e6a5b4a59330df0890f
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Wed Dec 10 01:04:38 2014 -0600
+
+    creacion de login y rutas de admin
+
+commit 4d832240774d1733ab8d5d9b0a476b3d60a58ea2
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Sat Dec 6 03:32:15 2014 -0600
+
+    cambio de direcciones de alumno
+
+commit 9076ea7a6e81d37566e85aa7872037e2638c4d15
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Sat Dec 6 01:09:22 2014 -0600
+
+    estado activo en menu terminado
+
+commit 04e3df6d18e881cae9182bef17b9a755904a3d77
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Fri Dec 5 23:42:06 2014 -0600
+
+    creacion correcta de carpetas alumno
+
+commit f68cd1ab5a004769d2843881805908603037a02b
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Thu Dec 4 23:54:29 2014 -0600
+
+    cambio de carpetas 2
+
+commit 4d80f393a903c122558e0be530c96741105e6176
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Thu Dec 4 23:50:09 2014 -0600
+
+    cambio de carpetas
+
+commit 98be3a397ca9c627df2f6ccdebcd1c093be09747
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Thu Dec 4 00:29:27 2014 -0600
+
+    cambio de error 404
+
+commit 6d1bf024c5bc245ebc4a9b7932ba319c015ae01e
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Wed Dec 3 01:20:42 2014 -0600
+
+    error 404
+
+commit 06139965f3f0c3d506a1f08ef1b8c1925a21cc7c
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Tue Dec 2 18:25:26 2014 -0600
+
+    archivos de alumno
+
+commit a55a81eb3f32b9f50b2452dc5f514ac2b9883683
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Mon Dec 1 00:40:25 2014 -0600
+
+    cambio del menu admin
+
+commit 529880e2b25f7fbe14c0da9c9bec4f74ef93ecca
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Sun Nov 30 23:30:23 2014 -0600
+
+    solucionado problema del menu
+
+commit 6f9730c13503989b3ea40e733cf19063615a20c2
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Sun Nov 30 23:22:05 2014 -0600
+
+    subiendo todos los archivos
+
+commit 37ada0a3030f35398a959f196905b76d7d584c10
+Author: jovanny <jovannylz_19@hotmail.com>
+Date:   Sun Nov 30 23:18:26 2014 -0600
+
+    primer commit subiendo los archivos

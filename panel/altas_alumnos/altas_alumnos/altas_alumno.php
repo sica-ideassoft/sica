@@ -323,7 +323,7 @@ location.href = "../../login_admin/index.php";
                         <div class="conent1 color"> <span class="icoaltas"></span></div>
                   </input>
                 </td><td>
-                <input type="submit" value="LIMPIAR" class="borrarbtn">
+                <input type="reset" value="LIMPIAR" class="borrarbtn">
 
                    <div class="conent1"> <span class="icolimpiar"></span></div>
                 </input>
