@@ -1,3 +1,6 @@
+body{
+	background-image:url(../image/patter2.png), url(../image/fondo.png);
+}
 @font-face {
 	font-family: 'iconitos';
 	src:url('../fonts/icomoon.eot?-nrqudh');
@@ -5,6 +8,16 @@
 		url('../fonts/icomoon.woff?-nrqudh') format('woff'),
 		url('../fonts/icomoon.ttf?-nrqudh') format('truetype'),
 		url('../fonts/icomoon.svg?-nrqudh#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'responsive';
+	src:url('../fonts2/icomoon.eot?emwmzc');
+	src:url('../fonts2/icomoon.eot?#iefixemwmzc') format('embedded-opentype'),
+		url('../fonts2/icomoon.woff?emwmzc') format('woff'),
+		url('../fonts2/icomoon.ttf?emwmzc') format('truetype'),
+		url('../fonts2/icomoon.svg?emwmzc#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -74,12 +87,7 @@ font-family: 'iconitos';
 	content:"\e607";
 	padding-right: 10px;
 }
-.btnboton:after{
-	font-family: 'iconitos';
-	content:"\e60a";
-	font-size: 25px;
 
-}
 .contuser{
 	background-color: #00c0c0;
 	width: 60px;
@@ -108,9 +116,6 @@ float: right;
 	margin-top: 25px;
 	font-weight: bold;
 font-size: 20px;
-}
-body{
-	background-image: url(../image/fondo.png);
 }
 header{
 
@@ -149,33 +154,6 @@ border-radius: 50%;
 position: relative;
 
 cursor: pointer;
-}
-.boton{
-	position: fixed;
-	background-color: white;
-	margin-left: 200px;
-	width: 80px;
-	height:60px;
-	list-style: none;
-cursor: pointer;
-
-}
-.boton:hover{
-	background-color: #09C;
-	color: white;
-	-moz-transition:all 1s;
-	-webkit-transition:all 1s;
-}
-.boton li{
-
-	height: 60px;
-}
-
-.boton li a{
-	padding-top: 15px;
-	text-align: center;
-	text-decoration: none;
-	display: block;
 }
 .tem{
 	position: fixed;
@@ -288,7 +266,7 @@ background-color: black;
 .menu2{
 width: 200px;
 height: 100%;
-background-color: #0099cc;
+background-color:  #257499;
 margin-top: 60px;
 position: fixed;
 }
@@ -357,15 +335,237 @@ display: block;
 	width: 185px;
 	height: 30px;
 	list-style: none;
-padding-left: 15px;
-padding-top: 10px;
-margin-top: 10px;
+	padding:10px 10px 10px 5px;
+
 }
 .menu3 li:hover{
 background-color: rgba(0, 91, 150,0.8);
 }
 .menu3 li a{
-font-size: 13px;
+	font-size: 13px;
 	color: white;
 	text-decoration: none;
+	display: block;
+	padding: 10px;
+	overflow: hidden;
+
+}
+@media screen and (max-width: 320px){
+.menu2{
+	width: 170px;
+	margin-left: -170px;
+}
+
+.color{
+	width: 170px;
+}
+.menu3 li{
+	width:152px;
+
+}
+.Cdatos{
+	width: 90px;
+	height: 90px;
+
+}
+.titulo1{
+	height: 40px;
+}
+.titulo1 p{
+	margin-top: 10px;
+}
+.titulo2 {
+height: 40px;
+margin-bottom: -10px;
+	}
+.Nuser p {
+	margin-top: 4px;
+}
+.Cdatos .figura{
+	width: 60px;
+	height: 60px;
+}
+.Cdatos img{
+width: 60px;
+	height: 60px;
+}
+.menuresp{
+
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	position: fixed;
+
+}
+
+.menuresp2{
+
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	position: fixed;
+	display: none;
+}
+.responsive{
+	width: 20px;
+	height: 20px;
+	padding: 20px;
+
+	position: absolute;
+}
+.cantera{
+	margin-left: 40px;
+}
+.responsive:after{
+	font-family: "responsive";
+	content:"\e600";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+
+}
+.responsive2:after{
+	font-family: "responsive";
+	content:"\e601";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+position: absolute;
+margin-left: 20px;
+}
+.tem{
+
+	width: 260px !important;
+
+}
+.contuser{
+	background-color: transparent;
+}
+.flecha{
+	width: 30px;
+	height:20px;
+	background-color: red;
+
+
+
+}
+
+.salir{
+
+display: none;
+
+
+}
+
+}
+@media screen and (max-width: 360px){
+.menu2{
+	width: 170px;
+	margin-left: -170px;
+}
+
+.color{
+	width: 170px;
+}
+.menu3 li{
+	width:152px;
+
+}
+.Cdatos{
+	width: 90px;
+	height: 90px;
+
+}
+.titulo1{
+	height: 40px;
+}
+.titulo1 p{
+	margin-top: 10px;
+}
+.titulo2 {
+height: 40px;
+margin-bottom: -10px;
+	}
+.Nuser p {
+	margin-top: 4px;
+}
+.Cdatos .figura{
+	width: 60px;
+	height: 60px;
+}
+.Cdatos img{
+width: 60px;
+	height: 60px;
+}
+.menuresp{
+
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	position: fixed;
+
+}
+
+.menuresp2{
+
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	position: fixed;
+	display: none;
+}
+.responsive{
+	width: 20px;
+	height: 20px;
+	padding: 20px;
+
+	position: absolute;
+}
+.cantera{
+	margin-left: 40px;
+}
+.responsive:after{
+	font-family: "responsive";
+	content:"\e600";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+
+}
+.responsive2:after{
+	font-family: "responsive";
+	content:"\e601";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+position: absolute;
+margin-left: 20px;
+}
+.tem{
+
+	width: 298px;
+
+}
+.contuser{
+	background-color: transparent;
+}
+.flecha{
+	width: 30px;
+	height:20px;
+	background-color: red;
+
+
+
+}
+
+.salir{
+
+display: none;
+
+
+}
 }

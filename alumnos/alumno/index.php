@@ -31,10 +31,13 @@ location.href = "../login_alumno/index.php";
         <![endif]-->
         <header>
             <div class="tem">
-                <p><span class="cantera"></span><b>SICA</b> CANTERA</p>
+            <div class="menuresp">
+            <span class="responsive"></span>
             </div>
-            <div class="boton">
-            <li id="respon"><a class="btnboton"></a></li>
+              <div class="menuresp2">
+            <span class="responsive2"></span>
+            </div>
+                <p><span class="cantera"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="contuser">
 
@@ -45,8 +48,14 @@ location.href = "../login_alumno/index.php";
                 <img src="image/user.png" alt="" width="" class="user11">
                 </div>
 
-
               </div>
+               <div class="flecha">
+                    <ul>
+                        <li>
+                            <a href=""></a>
+                        </li>
+                    </ul>
+               </div>
 
             </div>
         </header>
@@ -94,8 +103,11 @@ location.href = "../login_alumno/index.php";
             </div>
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
-<script src="js/colores.js"></script>
+<script src="js/hammer.js"></script>
+<script src="js/gestos.js"></script>
 <script src="js/menu.js"></script>
+
+
     </body>
 </html>
+

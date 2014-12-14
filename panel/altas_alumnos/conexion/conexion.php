@@ -7,9 +7,9 @@ class DB{
 	var $Clave;
 	function DB(){
 		$this->BaseDatos = "calificaciones";
-		$this->Servidor  = "localhost";
-		$this->Usuario   = "root";
-		$this->Clave     = "tescha4951";
+		$this->Servidor = "localhost";
+		$this->Usuario = "root";
+		$this->Clave = "";
 	}
 
 	 function conectar() {

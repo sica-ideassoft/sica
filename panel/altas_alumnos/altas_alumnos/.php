@@ -319,7 +319,7 @@ location.href = "../../login_admin/index.php";
 
         <table class="table2">
           <tr><td>
-            <input type="submit" value="ALTAS" class="altasbtn" id="enviar">
+            <input type="submit" value="ALTAS" class="altasbtn" id="altas">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
           </td><td>
