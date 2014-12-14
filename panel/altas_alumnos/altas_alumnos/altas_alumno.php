@@ -215,7 +215,7 @@ location.href = "../../login_admin/index.php";
 <!-- inicio de section -->
 <section class="seccion1">
   <div class="tem"><p>ALTAS ALUMNOS</p></div>
-  <form method="get" name="form1" class="form1">
+  <form method="get" action="php/enviar.php" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -225,9 +225,9 @@ location.href = "../../login_admin/index.php";
 
       </tr>
       <tr>
-        <td><input type="text" nombre="nombre"  id="nombre" alt="nombre" ></input></td>
-        <td><input type="text" nombre="paterno"  id="paterno" ></input></td>
-        <td><input type="text" nombre="materno" id="materno" ></input></td>
+        <td><input type="text" name="nombre"  id="nombre" alt="nombre" ></input></td>
+        <td><input type="text" name="paterno"  id="paterno" ></input></td>
+        <td><input type="text" name="materno" id="materno" ></input></td>
 
       </tr>
       <tr>
@@ -237,9 +237,9 @@ location.href = "../../login_admin/index.php";
       </tr>
 
       <tr>
-        <td><input type="text" nombre="matricula" id="matricula"></td>
-        <td><input type="text" nombre="curp" id="curp" ></td>
-        <td><input type="text" nombre="telefono"  id="telefono"></td>
+        <td><input type="text" name="matricula" id="matricula"></td>
+        <td><input type="text" name="curp" id="curp" ></td>
+        <td><input type="text" name="telefono"  id="telefono"></td>
 
       </tr>
       <tr>
@@ -248,13 +248,13 @@ location.href = "../../login_admin/index.php";
         <td><label for="">Fecha de nacimiento:</label></td>
       </tr>
       <tr>
-        <td><input type="text" nombre="correo" id="correo"></td>
+        <td><input type="text" name="correo" id="correo"></td>
         <td><select name="genero" id="genero">
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
         </select></td>
 
-        <td><input type="text" nombre="nacimeinto" id="nacimeinto" class="fecha"></td>
+        <td><input type="text" name="nacimeinto" id="nacimeinto" class="fecha"></td>
 
         </tr>
         <tr>
@@ -272,8 +272,8 @@ location.href = "../../login_admin/index.php";
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td><input type="text" nombre="grado"  id="grado" ></td>
-          <td><input type="text" nombre="grupo" id="grupo"></td>
+          <td><input type="text" name="grado"  id="grado" ></td>
+          <td><input type="text" name="grupo" id="grupo"></td>
 
         </tr>
         <tr>
@@ -282,9 +282,9 @@ location.href = "../../login_admin/index.php";
           <td><label for="">Calle:</label></td>
         </tr>
         <tr>
-          <td><input type="text" nombre="estado" id="estado" ></td>
-          <td><input type="text" nombre="municipio" id="municipio" ></td>
-          <td><input type="text" nombre="calle"  id="calle"></td>
+          <td><input type="text" name="estado" id="estado" ></td>
+          <td><input type="text" name="municipio" id="municipio" ></td>
+          <td><input type="text" name="calle"  id="calle"></td>
         </tr>
         <tr>
           <td><label for="">Nacionalidad</label></td>
@@ -292,7 +292,7 @@ location.href = "../../login_admin/index.php";
           <td><label for="">Fotografia:</label></td>
         </tr>
         <tr>
-        <td><input type="text" nombre="nacionalidad" id="nacionalidad"></td>
+        <td><input type="text" name="nacionalidad" id="nacionalidad"></td>
         <td><select name="civil"  id="civil">
           <option value="soltero">Soltero</option>
           <option value="casado">Casado</option>
@@ -300,7 +300,7 @@ location.href = "../../login_admin/index.php";
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-        <td colspan="2"><input type="file" nombre="foto" id="foto"></td>
+        <td colspan="2"><input type="file" name="foto" id="foto"></td>
       </tr>
       <tr>
           <td><label for="">Status:</label></td>
@@ -341,7 +341,7 @@ location.href = "../../login_admin/index.php";
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
 <script src="js/calendario.js"></script>
-<script src="js/functions.js"></script>
+<!-- <script src="js/functions.js"></script> -->
 <script src="js/script.js"></script>
 <script src="js/menu.js"></script>
 <!-- <script src="js/val_campos.js"></script> -->

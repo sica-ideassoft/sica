@@ -1,9 +1,11 @@
 <?php
+$nombre  = $_POST['nombre'];
+$paterno = $_POST['paterno'];
 
-$con = mysql_connect('localhost', 'root', 'tescha4951');
+$con = mysql_connect('localhost','root','tescha4951');
 mysql_select_db("calificaciones", $con);
 
-$insert = "INSERT INTO alumno (id_alumno,nombre,A_paterno) VALUES (null,'".$_POST['nombre']."', '".$_POST['paterno']."')";
+$insert = "INSERT INTO alumno (id_alumno,nombre,A_paterno) VALUES (null,'$nombre','$paterno')";
 mysql_query($insert);
 
 ?>
