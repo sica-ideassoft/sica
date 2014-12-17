@@ -185,7 +185,7 @@ body{
 
 }
 .ico{
-	background: #F03;
+	background: #035498;
 	padding: 11px;
 	color:white;
 	border:none;
@@ -212,7 +212,7 @@ body{
 .content-head{
 	width: 100%;
 	height: 70px;
-	background-color: #ff0033;
+	background-color: #035498;
 	font-size: 12px;
 
 }
@@ -252,10 +252,10 @@ body{
     box-shadow: inset 0 4px 4px rgba(0,0,0,.3);
 }
 .table tr td input[type="submit"]{
-	background-color:  #ff0033;
+	background-color: #035498;
 	border-radius: 5px;
 	border: none;
-	border-bottom: 4px solid #c30006;
+	border-bottom: 4px solid blue;
 	color: white;
 	height: 50px;
 	text-transform: uppercase;

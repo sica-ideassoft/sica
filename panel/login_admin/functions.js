@@ -1,12 +1,12 @@
 $(function() {
   $("#enviar").click(function() {
 	var username = $("input#username").val();
-	if (username == "") {
+	if (username === "") {
 	   setTimeout($('.alertaT').fadeIn(1000).fadeOut(10000), 1000);
        return false;
     }
 	var password = $("input#password").val();
-	if (password == "") {
+	if (password === "") {
 	   setTimeout($('.alertaT').fadeIn(1000).fadeOut(10000), 1000);
        return false;
     }

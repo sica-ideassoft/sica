@@ -6,6 +6,7 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
+<?php include_once("php/Nalumno.php"); ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -146,16 +147,14 @@ location.href = "../../login_admin/index.php";
    </div>
 
    <div class='footcontent'>
-    <table class="tabla1">
-      <thead>
-        <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-      </thead>
-      <tbody>
-        <td><p>1200</p></td><td><p>hola</p></td>
-      </tbody>
-      <tfoot>
 
-      </tfoot>
+    <div class="headtabla1"><p>Recien Ingresados</p></div>
+
+    <table class="tabla1">
+      <div class="mosAlumno">
+        <div id="show"></div>
+      </div>
+
     </table>
   </div>
 </div>
@@ -212,10 +211,31 @@ location.href = "../../login_admin/index.php";
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
+ <!-- mensajes de curp validacion -->
+<div class="mensajesCorrecto">
+  <div class="Logom3">
+      <label>Los datos se enviaron <b>Correctamente</b></label>
+  </div>
+  <div class="divmensaje3">
+      <span class="Mico3"></span>
+  </div>
+</div>
+
+<!-- <div class="mensajesAlumno">
+  <div class="Logom4">
+      <div id="show"></div>
+  </div>
+  <div class="divmensaje4">
+      <span class="Mico4"></span>
+  </div>
+</div>
+ -->
+<!-- finde  mensajes curp de validacion -->
+
 <!-- inicio de section -->
 <section class="seccion1">
   <div class="tem"><p>ALTAS ALUMNOS</p></div>
-  <form method="get" action="php/enviar.php" name="form1" class="form1">
+  <form method="POST" action="" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -254,7 +274,7 @@ location.href = "../../login_admin/index.php";
           <option value="femenino">Femenino</option>
         </select></td>
 
-        <td><input type="text" name="nacimeinto" id="nacimeinto" class="fecha"></td>
+        <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"></td>
 
         </tr>
         <tr>
@@ -318,7 +338,14 @@ location.href = "../../login_admin/index.php";
       <div class="control">
 
         <table class="table2">
-          <tr><td>
+
+          <tr>
+          <td>
+
+<div id="flash" align="left"  >
+  <img src="image/loader.gif" alt="">
+</div>
+          </td><td>
             <input type="submit" value="ALTAS" class="altasbtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
@@ -331,8 +358,15 @@ location.href = "../../login_admin/index.php";
         </td></tr>
       </table>
     </div>
-    <div class='validar'><p>lakjsbdkjnsad</p></div>
+
   </form>
+
+
+
+
+<div class="space"></div>
+
+
 
 </section>
 
@@ -340,13 +374,14 @@ location.href = "../../login_admin/index.php";
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
-<script src="js/calendario.js"></script>
-<!-- <script src="js/functions.js"></script> -->
-<script src="js/script.js"></script>
 <script src="js/menu.js"></script>
-<!-- <script src="js/val_campos.js"></script> -->
+<script src="js/calendario.js"></script>
+<script src="js/functions.js"></script>
+<script src="js.script.js"></script>
 
 
 </body>
 </html>
+
+
 
