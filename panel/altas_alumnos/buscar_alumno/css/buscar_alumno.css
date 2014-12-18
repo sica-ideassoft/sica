@@ -63,7 +63,7 @@ overflow: hidden;
 	position: fixed;
 	width: 80%;
 	border:2px solid rgba(0,0,0,0.2) ;
-	bo
+
 }
 .control{
 	background: -webkit-linear-gradient(#F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
@@ -90,35 +90,34 @@ overflow: hidden;
 #resultTable{
 	margin: 0 auto;
 	margin-top: 10px;
+
+	font-size: 14px;
 }
 #resultTable thead{
 	background-color:#09C;
 }
 #resultTable thead th{
-	font-size: 10px;
-
-	width: 110px;
+	width: 150px;
 	height: 30px;
 	color: white;
 	text-transform: uppercase;
 }
 #resultTable tbody{
-	font-size: 10px;
+	font-size: 14px;
 	text-align: center;
 
 }
 #resultTable tbody td{
 	height: 35px;
-
 	border-bottom: 1px solid rgba(0,0,0,0.1)
 }
 #resultTable tbody tr:nth-child(odd){
-background-color:  rgba(255,255,255,0.7);
+	background-color:  rgba(255,255,255,0.7);
 
 }
 #resultTable tbody tr:nth-child(even){
-background-color:  #eeeeee;
-color: black;
+	background-color:  #eeeeee;
+	color: black;
 }
 .btnSearch{
 	width: 50px;
@@ -148,4 +147,25 @@ margin-top:10px;
 .Noexiste{
 	width: 100%;
 	background-color: red;
+}
+.lia a{
+	text-decoration: none;
+}
+.mas:after{
+	font-family: "buscar";
+	content:"\e607";
+}
+.ContentBuscar{
+
+width: 800px;
+height: 400px;
+z-index: -10;
+margin: 0 auto !important;
+ overflow: hidden;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.ContentBuscar tbody{
+float: top;
+top: 0px;
 }

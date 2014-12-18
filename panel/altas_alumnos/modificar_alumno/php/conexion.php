@@ -1,28 +1,11 @@
 <?php
-class DB{
-	var $conect;
-	var $BaseDatos;
-	var $Servidor;
-	var $Usuario;
-	var $Clave;
-	function DB(){
-		$this->BaseDatos = "calificaciones";
-		$this->Servidor = "localhost";
-		$this->Usuario = "root";
-		$this->Clave = "tescha4951";
-	}
+include_once("PDO_Pagination.php");
+$root = 'root';
+$password = 'tescha4951';
+$host = 'localhost';
+$dbname = 'calificaciones';
 
-	 function conectar() {
-		if(!($con=@mysql_connect($this->Servidor,$this->Usuario,$this->Clave))){
-			echo"<h1> [:(] A ocurrido un error de conexión</h1>";
-			exit();
-		}
-		if (!@mysql_select_db($this->BaseDatos,$con)){
-			echo"<h1> [:(] A ocurrido un error de conexión</h1>";
-			exit();
-		}
-		$this->conect=$con;
-		return true;
-	}
-}
-?>
+$connection = new PDO("mysql:host=$host;dbname=$dbname;", $root, $password);
+$pagination = new PDO_Pagination($connection);
+
+ ?>

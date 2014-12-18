@@ -163,58 +163,6 @@ location.href = "../../login_admin/index.php";
         </div>
       </div>
 
-      <!-- mensajes de validacion -->
-      <div class="mensajes">
-        <div class="Logom">
-            <label><b>Campos vacios</b> no se puede Enviar la petición</label>
-        </div>
-        <div class="divmensaje">
-            <span class="Mico"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes de validacion -->
- <!-- mensajes de matricula validacion -->
-      <div class="mensajesMatricula">
-        <div class="Logom2">
-            <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes matricula de validacion -->
-        <!-- mensajes de curp validacion -->
-      <div class="mensajesCurp">
-        <div class="Logom2">
-            <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
-
-
-        <!-- mensajes de curp validacion -->
-      <div class="mensajesTelefono">
-        <div class="Logom2">
-            <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
-       <!-- mensajes de curp validacion -->
-      <div class="mensajesEmail">
-        <div class="Logom2">
-            <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>home</p></div>

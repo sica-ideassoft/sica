@@ -5,7 +5,12 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+include_once("php/conexion.php");
+include_once('php/PDO_Pagination.php');
+include_once("php/paginacion.php");
+
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -87,22 +92,22 @@ location.href = "../../login_admin/index.php";
             <div class="Ccontent">
                 <div class="Cco">
                   <a href="../../control_admin/perfil/perfil.php">
-                <div class="mod btn btn-1 btn-1e">
+                <div class="mod btn1 btn-1 btn-1e">
                   <span class="modico "></span>
                   <p>PERFIL</p>
                   </div>
                 </a>
 
-                <div class="mod2 btn btn-1 btn-1a">
+                <div class="mod2 btn1 btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
                 </div>
 
-                 <div class="mod3 btn btn-1 btn-1b">
+                 <div class="mod3 btn1 btn-1 btn-1b">
                   <span class="modico3"></span>
                   <p>PUBLICAR</p>
                 </div>
-                <div class="mod4 btn btn-1 btn-1c">
+                <div class="mod4 btn1 btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>
                 </div>
@@ -140,7 +145,24 @@ location.href = "../../login_admin/index.php";
              </ul>
            </div>
            <!-- fin de menu3 -->
-
+<div class="Mconfirma">
+  <div class="contentM">
+  <div class="Mhead">
+      <div class="icoAlert"><span></span></div>
+      <div class="confirmacion"><p>Confirmación</p></div>
+      <div class="icoCerrar"><span></span></div>
+  </div>
+  <div class="Mbody">
+    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
+  </div>
+  <div class="Mfooter">
+      <input type="submit" name='cancelar' value="cancelar" class='cancelar'>
+        <span class="icoacancelar"></span>
+      </input>
+      <input type="submit" name='enviar' value="enviar" class="enviar"></input>
+  </div>
+  </div>
+</div>
            <!-- inicio de menu4 -->
 
          </div>
@@ -151,7 +173,7 @@ location.href = "../../login_admin/index.php";
               <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
             </thead>
             <tbody>
-              <td><p>1200</p></td><td><p>hola</p></td>
+              <td><p></p></td><td><p>hola</p></td>
             </tbody>
             <tfoot>
 
@@ -160,67 +182,57 @@ location.href = "../../login_admin/index.php";
         </div>
       </div>
 
-      <!-- mensajes de validacion -->
-      <div class="mensajes">
-        <div class="Logom">
-            <label><b>Campos vacios</b> no se puede Enviar la petición</label>
-        </div>
-        <div class="divmensaje">
-            <span class="Mico"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes de validacion -->
- <!-- mensajes de matricula validacion -->
-      <div class="mensajesMatricula">
-        <div class="Logom2">
-            <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes matricula de validacion -->
-        <!-- mensajes de curp validacion -->
-      <div class="mensajesCurp">
-        <div class="Logom2">
-            <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
 
-
-        <!-- mensajes de curp validacion -->
-      <div class="mensajesTelefono">
-        <div class="Logom2">
-            <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
-       <!-- mensajes de curp validacion -->
-      <div class="mensajesEmail">
-        <div class="Logom2">
-            <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
-        </div>
-        <div class="divmensaje2">
-            <span class="Mico2"></span>
-        </div>
-      </div>
-      <!-- finde  mensajes curp de validacion -->
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>modificar / eliminar alumnos</p></div>
-            <div class="control">
+        <form method="POST" class="formBuscar" ction="<?php echo $_SERVER["PHP_SELF"] ?>">
+          <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
+           <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
-              <table class="table2">
-            </table>
-
+          <input type="submit"  class='btnSearch' value="-"></input>
         </form>
+        <br><br>
+        <center>
+          <table>
+            <thead class="datosmodificar">
+              <tr >
+                <th>nombre</th>
+                <th>A paterno</th>
+                <th>A materno</th>
+                <th>matricula</th>
+                <th>grupo</th>
+                <th>modificar</th>
+                <th>eliminar</th>
+              </tr>
+            </thead>
+            <tbody  class="tableHead">
+              <?php
+              foreach($model as $row)
+              {
+                echo "<tr>";
+
+                echo "<td>".$row['nombre']."</td>";
+                echo "<td>".$row['A_paterno']."</td>";
+                echo "<td>".$row['A_materno']."</td>";
+                echo "<td>".$row['matricula']."</td>";
+                echo "<td>".$row['grupo']."</td>";
+                echo "<td>--</td>";
+                echo "<td>++</td>";
+                echo "</tr>";
+              }
+              ?>
+            </tbody>
+          </table>
+          <div class="control">
+            <table class="table2">
+
+              <div class="botones">
+                <?php
+                $pagination->pages("btn");
+                ?>
+              </div>
+            </table>
 
       </section>
 

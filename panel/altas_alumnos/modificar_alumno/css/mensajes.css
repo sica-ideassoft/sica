@@ -8,163 +8,122 @@
 	font-weight: normal;
 	font-style: normal;
 }
-.mensajes{
-	width: 290px;
-	height: 50px;
-	background-color: none;
+.Mconfirma{
+	background-color: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
 	position: fixed;
-	z-index: 10;
-	right: 0;
-	margin-top:15px;
-	border-radius: 7px;
-	margin-right: 17px;
-	border: 1px solid #ff3030;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+	z-index: 100;
+	top: 0px;
+	left: 0px;
 	display: none;
 }
-.Logom{
-	width: 230px;
-	height: 50px;
-	background-color:		#ee4000;
-	position: relative;
-	float:right;
-	border-radius:0px 7px 7px 0px;
-	overflow: hidden;
+.contentM{
+	margin: 0 auto;
+	margin-top: 15%;
+	width: 600px;
+	height: 330px;
+	background-color: rgba(255,255,255,0.9) ;
 }
-.Logom label{
-	text-align: center;
-color:white;
-overflow: hidden;
-display: block;
-margin-top: 2px;
-font-family: helvetica;
-font-size:17px;
+.Mhead{
+	width: 100%;
+	height: 60px;
+	background: linear-gradient(#FFA500, #CD8500) repeat scroll 0% 0% transparent;
 
 }
-.divmensaje span{
-text-align: center;
-width: 60px;
-height: 50px;
-margin-top: 7px;
-display: block;
-
-}
-.Mico:before{
-font-family: "iconitos";
-content: "\e605";
-font-size: 30px;
-color: white;
-}
-.divmensaje{
+.icoAlert{
 	width: 60px;
-	height: 50px;
-	background-color:	#cd3700;
-	position: relative;
-	float:left;
-
-	border-radius:7px 0px 0px 7px;
-}
-/*----------------------------------------------------------*/
-/*inicio de mensaje de informacion*/
-.mensajesCurp{
-	width: 290px;
-	height: 50px;
-	background-color: none;
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	margin-top:15px;
-	border-radius: 7px;
-	margin-right: 17px;
-	border: 1px solid tomato;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
-}
-.Logom2{
-	width: 230px;
-	height: 50px;
-	background-color:	#eeb422;
-	position: relative;
-	float:right;
-	border-radius:0px 7px 7px 0px;
-	overflow: hidden;
-}
-.Logom2 label{
+	height: 60px;
 	text-align: center;
-color:white;
-overflow: hidden;
-display: block;
-margin-top: 2px;
-font-family: helvetica;
-font-size:17px;
+	padding-top:15px;
+}
+.icoAlert span{
 
 }
-.divmensaje2 span{
-text-align: center;
-width: 60px;
-height: 50px;
-margin-top: 7px;
-display: block;
+.icoAlert span:after{
+	font-family: "iconitos";
+	content: "\e62a";
+	font-size: 25px;
+	color: white;
+}
+.Mbody{
+	width: 100%;
+	height: 170px;
+
 
 }
-.Mico2:before{
-font-family: "iconitos";
-content: "\e628";
-font-size: 30px;
-color: white;
+.Mbody p {
+margin-left: 20px;
+margin-top: 30px;
 }
-.divmensaje2{
+.Mfooter{
+	width: 100%;
+	height: 70px;
+	bottom: 0px;
+}
+.icoCerrar{
 	width: 60px;
-	height: 50px;
-	background-color: 	#cd8500;
-	position: relative;
-	float:left;
-
-	border-radius:7px 0px 0px 7px;
+	height: 45px;
+	top: 0px;
+	float: right;
+	margin-top: -60px;
 }
-/*fin de mensaje de informacion*/
-/*inicio mensaje curp*/
+.icoCerrar span:after{
 
-.mensajesTelefono{
-	width: 290px;
-	height: 50px;
-	background-color: none;
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	margin-top:15px;
-	border-radius: 7px;
-margin-right: 17px;
-	border: 1px solid tomato;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
+	text-align: center;
+	font-family: "iconitos";
+	content: "\e62d";
+	color:white;
+	font-size: 25px;
+	margin-left: 20px;
+	margin-right: 15px;
+
+}
+.confirmacion{
+	width: 150px;
+	height: 60px;
+	position: absolute;
+	margin-top: -75px;
+	margin-left: 60px;
+
+}
+.confirmacion p {
+	color: white;
+	margin-top: 20px;
+}
+.cancelar{
+	width: 150px;
+	height: 40px;
+	background: -webkit-linear-gradient(#009ACD, #1874CD) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#009ACD, #1874CD) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#009ACD, #1874CD) repeat scroll 0% 0% transparent;
+	border-style: none;
+	color: white;
+	text-transform: uppercase;
+	float: right;
+	margin-right: 10px;
 }
 
-.mensajesMatricula{
-	width: 290px;
-	height: 50px;
-	background-color: none;
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	margin-top:15px;
-	border-radius: 7px;
-	margin-right: 17px;
-	border: 1px solid tomato;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-	display: none;
+.icoacancelar{
+	width: 30px;
+	height: 30px;
+	background-color: red;
 }
-.mensajesEmail{
-	width: 290px;
-	height: 50px;
-	background-color: none;
-	position: fixed;
-	z-index: 10;
-	right: 0;
-	margin-top:15px;
-	border-radius: 7px;
-	margin-right: 17px;
-	border: 1px solid tomato;
-	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
+.enviar{
+	border-style: none;
+	color: white;
+	width: 150px;
+	height: 40px;
+	background: -webkit-linear-gradient(#00CDCD, #009ACD) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#00CDCD, #009ACD) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#00CDCD, #009ACD) repeat scroll 0% 0% transparent;
+	text-transform: uppercase;
+	float: right;
+	margin-right: 10px;
+}
+.icoacancelar{
+	width: 30px;
+	height: 30px;
+	background-color:blue;
+	margin-left: 30px;
 }

@@ -12,9 +12,12 @@ $conn = dbConnect();
 		$error = $stmt->errorInfo();
 	}
 	if(empty($rows)) {
-		echo "<tr>";
-			echo "<td colspan='4'>El alumno no existe</td>";
-		echo "</tr>";
+?>
+		<tr>
+			<td colspan='5'>El alumno no existe</td>
+		</tr>
+
+<?php
 	}
 	else {
 		foreach ($rows as $row) {
@@ -23,9 +26,9 @@ $conn = dbConnect();
 				echo "<td>".$row['A_paterno']."</td>";
 				echo "<td>".$row['A_materno']."</td>";
 				echo "<td>".$row['matricula']."</td>";
-				echo "<td><img src='image/buscar.png'></img></td>";
-
-			echo "</tr>";
+?>
+		<td class="lia"><a href=""><span class="mas"></span></a></td></tr>
+<?php
 		}
 
 	}
