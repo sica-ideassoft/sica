@@ -10,13 +10,24 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'buscar';
+	src:url('../fonts2/icomoon.eot?-5dly7z');
+	src:url('../fonts2/icomoon.eot?#iefix-5dly7z') format('embedded-opentype'),
+		url('../fonts2/icomoon.woff?-5dly7z') format('woff'),
+		url('../fonts2/icomoon.ttf?-5dly7z') format('truetype'),
+		url('../fonts2/icomoon.svg?-5dly7z#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
 .datos{
 	text-transform: uppercase;
 }
 /*inicio de activo*/
 #cssmenu > ul > .activo > a {
-	color:white;
-background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
+  color:white;
+  background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
   background: -moz-linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) )!important;
   background: -o-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
   background: -ms-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
@@ -52,6 +63,7 @@ overflow: hidden;
 	position: fixed;
 	width: 80%;
 	border:2px solid rgba(0,0,0,0.2) ;
+	bo
 }
 .control{
 	background: -webkit-linear-gradient(#F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
@@ -64,4 +76,76 @@ overflow: hidden;
 	position: fixed;
 	border-radius: 0px 0px 10px 10px;
 }
+.buscar{
+	width: 250px;
+	height: 30px;
+	border-style: none;
+	box-shadow: inset 0px 0px 5px rgba(0,0,0,0.5);
+	padding-left: 10px;
+}
+.search{
+	text-align: center;
 
+}
+#resultTable{
+	margin: 0 auto;
+	margin-top: 10px;
+}
+#resultTable thead{
+	background-color:#09C;
+}
+#resultTable thead th{
+	font-size: 10px;
+
+	width: 110px;
+	height: 30px;
+	color: white;
+	text-transform: uppercase;
+}
+#resultTable tbody{
+	font-size: 10px;
+	text-align: center;
+
+}
+#resultTable tbody td{
+	height: 35px;
+
+	border-bottom: 1px solid rgba(0,0,0,0.1)
+}
+#resultTable tbody tr:nth-child(odd){
+background-color:  rgba(255,255,255,0.7);
+
+}
+#resultTable tbody tr:nth-child(even){
+background-color:  #eeeeee;
+color: black;
+}
+.btnSearch{
+	width: 50px;
+	height: 32px;
+	color: white;
+	margin-top: 10px;
+	position: absolute;
+	border-style:none;
+	border-bottom:2px solid blue;
+	background-color: #0099cc;
+}
+.btnSearch:hover{
+	border-style: none;
+}
+.icoSearch.{
+
+}
+.icoSearch:after
+{
+	font-family: "buscar";
+	content:"\e606";
+}
+.buscar{
+margin-top:10px;
+
+}
+.Noexiste{
+	width: 100%;
+	background-color: red;
+}

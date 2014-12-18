@@ -6,6 +6,10 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
+<?php
+require_once 'php/Connection.simple.php';
+$conn = dbConnect();
+ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -215,12 +219,29 @@ location.href = "../../login_admin/index.php";
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>buscar alumno</p></div>
-            <div class="control">
 
-              <table class="table2">
-            </table>
+    <form method="get" class="search">
 
-        </form>
+        <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
+
+        <button type="button" class="btnSearch"><span class="icoSearch"></span></button>
+
+    </form>
+<table id="resultTable" >
+    <thead>
+        <th>Nombre</th>
+        <th>A paterno</th>
+        <th>A materno</th>
+        <th>Matricula</th>
+        <th>mostrar</th>
+
+
+    </thead>
+    <tbody></tbody>
+</table>
+
+        <div class="control">
+        </div>
 
       </section>
 
@@ -232,6 +253,7 @@ location.href = "../../login_admin/index.php";
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
+      <script src="js/buscar.js"></script>
 
 
     </body>

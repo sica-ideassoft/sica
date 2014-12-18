@@ -46,7 +46,7 @@ location.href = "../alumno/index.php";
 			<span class="usuario"></span>
 		</div>
 		<div class="ico-mensaje2">
-			<p>El campo de <b>user</b> esta vació</p>
+			<p>El campo de <b>user</b> <br>esta vació</p>
 		</div>
 	</div>
 

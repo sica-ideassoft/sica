@@ -377,7 +377,7 @@ location.href = "../../login_admin/index.php";
 <script src="js/menu.js"></script>
 <script src="js/calendario.js"></script>
 <script src="js/functions.js"></script>
-<script src="js.script.js"></script>
+<script src="js/script.js"></script>
 
 
 </body>

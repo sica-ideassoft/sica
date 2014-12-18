@@ -104,7 +104,7 @@ location.href = "../login_alumno/index.php";
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>
-<script src="js/gestos.js"></script>
+<!-- <script src="js/gestos.js"></script> -->
 <script src="js/menu.js"></script>
 
 
