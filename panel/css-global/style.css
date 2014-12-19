@@ -8,7 +8,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+@font-face {
+	font-family: 'menu';
+	src:url('fonts/icomoon.eot?s4hs2h');
+	src:url('fonts/icomoon.eot?#iefixs4hs2h') format('embedded-opentype'),
+		url('fonts/icomoon.woff?s4hs2h') format('woff'),
+		url('fonts/icomoon.ttf?s4hs2h') format('truetype'),
+		url('fonts/icomoon.svg?s4hs2h#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 body{
 background-image: url(../image-global/fondo.png);
 font-family: "Open Sans",Arial;
@@ -20,6 +29,10 @@ header{
 	background-color:#0099cc;
 	border-bottom: 1px solid #fff;
 
+}
+.activo{
+background-color: #0FF !important;
+color: #000  !important;
 }
 
 .heder21sub1,.heder21sub3{
@@ -442,18 +455,20 @@ left: 0;
 
 	margin: 0 auto;
 	width: 90%;
-	height: 120px;
+	height: 105px;
 	bottom:0px;
-	margin-top: 50px;
+	margin-top: 100px;
 	position:relative;
 	background-color:white;
 }
 .tabla1{
 width: 100%;
+
 }
 .tabla1 thead{
 	overflow: hidden;
-height: 30px;
+height: 10px;
+
 background-color:#09C;
 }
 .tabla1 td p{
@@ -462,6 +477,7 @@ background-color:#09C;
 }
 .Nalumno {
 	border-right: 2px solid #d2d4dc;
+
 }.tabla1 tbody{
 	text-align: center;
 
@@ -863,5 +879,63 @@ font-size: 40px;
 	margin: 0 auto;
 	margin-bottom: 20px;
 
+}
+/*inicio de iconos de el menu lateral*/
+.icoHome:before{
+	font-family: "menu";
+	content: "\e601";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+.icoAlumno:before{
+	font-family: "menu";
+	content: "\e624";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+.icoMaestro:before{
+	font-family: "menu";
+	content: "\e60b";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+.icoMateria:before{
+	font-family: "menu";
+	content: "\e609";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+.icoPublicar:before{
+	font-family: "menu";
+	content: "\e605";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+
+.icoBuscar:before{
+	font-family: "menu";
+	content: "\e606";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+
+.icoAltas:before{
+	font-family: "menu";
+	content: "\e61f";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+.icoEditar:before{
+	font-family: "menu";
+	content: "\e602";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
+
+.icoAltasM:before{
+	font-family: "menu";
+	content: "\e616";
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
 }
 

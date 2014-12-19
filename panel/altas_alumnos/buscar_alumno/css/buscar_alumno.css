@@ -90,7 +90,6 @@ overflow: hidden;
 #resultTable{
 	margin: 0 auto;
 	margin-top: 10px;
-
 	font-size: 14px;
 }
 #resultTable thead{
@@ -98,11 +97,12 @@ overflow: hidden;
 }
 #resultTable thead th{
 	width: 150px;
-	height: 30px;
+	height: 0px;
 	color: white;
 	text-transform: uppercase;
 }
 #resultTable tbody{
+
 	font-size: 14px;
 	text-align: center;
 
@@ -158,7 +158,7 @@ margin-top:10px;
 .ContentBuscar{
 
 width: 800px;
-height: 400px;
+height: 350px;
 z-index: -10;
 margin: 0 auto !important;
  overflow: hidden;
@@ -168,4 +168,28 @@ overflow-y:scroll;
 .ContentBuscar tbody{
 float: top;
 top: 0px;
+}
+.datosAlumno{
+	background-color: red;
+	text-align: center;
+	background-color: #09C;
+	width: 750px;
+	margin: 0 auto;
+	margin-left: 130px;
+	height: 30px;
+	margin-top: 10px !important;
+}
+.datosAlumno table{
+	margin: 0 auto;
+
+}
+.datosAlumno table th{
+	width: 150px;
+	color: white;
+	text-transform: uppercase;
+	padding: 5px;
+}
+.datosBucar1{
+	text-align: center;
+
 }

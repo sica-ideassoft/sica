@@ -127,21 +127,45 @@ $conn = dbConnect();
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-                <ul class="ul2">
-                 <li><a href='../home/home.php'><span>HOME</span></a></li>
-                 <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
-                  <ul>
-                   <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+              <ul class="ul2">
+        <li><a href='#'><span>HOME</span></a></li>
+        <li class='has-sub admin activo'><a  href='#'><span>ALUMNOS</span></a>
+          <ul>
+          </li>
+            <li><a class="activo " href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+            </li>
+            <li><a href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
 
-                   </li>
-                   <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+          </ul>
+        </li>
+        <li class='has-sub admin'><a  href='#'><span>MAESTROS</span></a>
+          <ul>
+          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
 
-                   </li>
-                 </ul>
-               </li>
-               <li class='last activo'><a href='../buscar_alumno/buscar_alumno.php'><span>BUSCAR</span></a></li>
-               <li><a href='../publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
-             </ul>
+          </ul>
+        </li>
+          <li class='has-sub admin'><a  href='#'><span>MATERIAS</span></a>
+          <ul>
+          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+            </li>
+            <li><a href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li><a href='../publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
+
+      </ul>
            </div>
            <!-- fin de menu3 -->
 
@@ -175,17 +199,29 @@ $conn = dbConnect();
         <button type="button" class="btnSearch"><span class="icoSearch"></span></button>
 
     </form>
-<div class="ContentBuscar">
-<table id="resultTable" >
-    <thead class="datosBucar">
+
+<div class="datosAlumno">
+<table>
+    <thead class="datosBucar1">
         <th>Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
         <th>Matricula</th>
         <th>mostrar</th>
-
-
     </thead>
+</table>
+</div>
+<div class="ContentBuscar">
+<table id="resultTable" >
+
+    <thead class="datosBucar">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+    </thead>
+
     <tbody>
 
     </tbody>
