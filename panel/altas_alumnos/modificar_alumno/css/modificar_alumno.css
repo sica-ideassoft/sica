@@ -164,6 +164,8 @@ border-radius: 2px;
 .active
 {
   background: #F65050;
+}
 
-
+.icoEditar:before{
+	color: #000;
 }

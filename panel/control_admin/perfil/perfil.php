@@ -41,8 +41,8 @@ location.href = "../../login_admin/index.php";
 
               </div>
               <ul class="menu1">
-                <li class="lisalir" ><a href=""><span class='salir'></span>SALIR</a></li>
-                <li><a href=""><span class='home'></span>HOME</a></li>
+                <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
+                <li><a href="../../altas_alumnos/home/home.php"><span class='home'></span>HOME</a></li>
 
               </ul>
 
@@ -122,21 +122,45 @@ location.href = "../../login_admin/index.php";
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-                <ul class="ul2">
-                 <li><a href='../../altas_alumnos/home/home.php'><span>HOME</span></a></li>
-                 <li class='has-sub admin'><a  href='#'><span>ADMINISTRAR</span></a>
-                  <ul>
-                   <li><a class="altas" href='../../altas_alumnos/altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+              <ul class="ul2">
+        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a class="activo " href='#'><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
-                   </li>
-                   <li><a href='../../altas_alumnos/modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+          </ul>
+        </li>
+        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
+          <ul>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href=''><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
 
-                   </li>
-                 </ul>
-               <li class='last'><a href='../../altas_alumnos/buscar_alumno/buscar_alumno.php'><span>BUSCAR</span></a></li>
-               <li><a href='../../altas_alumnos/publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
-               </li>
-             </ul>
+          </ul>
+        </li>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <ul>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
+
+          </ul>
+        </li>
+
+        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+
+      </ul>
            </div>
            <!-- fin de menu3 -->
 
@@ -202,8 +226,8 @@ location.href = "../../login_admin/index.php";
 
                   </input>
                 </td><td>
-                <input type="submit" value="LIMPIAR" class="borrarbtn">
-<div class="icolimpiar"> <span class="icolimpiar1"></span></div>
+                  <input type="submit" value="LIMPIAR" class="borrarbtn">
+                  <div class="icolimpiar"> <span class="icolimpiar1"></span></div>
                   </input>
                 </input>
 
@@ -225,23 +249,23 @@ location.href = "../../login_admin/index.php";
 
           </div>
           <div class='mesconf'>
-          <p>Realmente quiere Modificar el Usuario?</p>
+          <p class="mensajeAlerta">Realmente quiere <b>Modificar</b> el Usuario?</p>
           </div>
             <div class="footercabeza">
                  <table class="tablealerta">
                 <tr>
-
-                <td>
-                <input type="submit" value="CANCELAR" class="borrarconf">
-
-                </input>
-              </td>
 
               <td>
                   <input type="submit" value="ACEPTAR" name="aceptar" class="confalerta" id="conf">
                    <div class="conentacept"> <span class="icoacep"></span></div>
                   </input>
                 </td>
+                <td>
+                <input type="submit" value="CANCELAR" class="borrarconf">
+                    <div class="conentcancelar"> <span class="icoacancelar"></span></div>
+                </input>
+              </td>
+
               </tr>
             </table>
             </div>

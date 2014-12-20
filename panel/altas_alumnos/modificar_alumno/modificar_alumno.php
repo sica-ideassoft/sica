@@ -128,43 +128,43 @@ include_once("php/paginacion.php");
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-                 <ul class="ul2">
-        <li class="activo"><a href='#'><span>HOME</span></a></li>
-        <li class='has-sub admin'><a  href='#'><span>ALUMNOS</span></a>
+                  <ul class="ul2">
+        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a class="activo" href='#'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-        <li class='has-sub admin'><a  href='#'><span>MAESTROS</span></a>
+        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a  href=''><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a  href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href=' '><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
+        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
 
       </ul>
            </div>
@@ -180,15 +180,26 @@ include_once("php/paginacion.php");
     <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
   </div>
   <div class="Mfooter">
-      <input type="submit" name='cancelar' value="cancelar" class='cancelar'>
-        <span class="icoacancelar"></span>
-      </input>
-      <input type="submit" name='enviar' value="enviar" class="enviar"></input>
-  </div>
+<!-- inicio de botones de confirmacion -->
+      <table class="table2">
+          </td><td>
+            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
+                  <div class="conent1 color"> <span class="icoaltas"></span></div>
+            </input>
+          </td><td>
+          <input type="reset" value="CANCELAR" class="cancelarBtn">
+
+             <div class="conent1"> <span class="icoCancelar"></span></div>
+          </input>
+
+        </td></tr>
+      </table>
+<!-- fin de botones de confirmacion -->
+
+    </div>
   </div>
 </div>
-           <!-- inicio de menu4 -->
-
+           <!-- inicio de menu4 <-->
          </div>
 
          <div class='footcontent'>

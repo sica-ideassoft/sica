@@ -218,28 +218,27 @@ margin-top: 10px !important;
 	content: "\e630";
 	margin-right: 20px;
 color: white;
-
-
-
 }
 .icoaltas{
-margin-left: 10px !important;
-margin-top: 10px !important;
+	margin-left: 10px !important;
+	margin-top: 10px !important;
 	margin: 0 auto;
 	overflow: hidden;
 
+}
+.icoaltas:before{
+
+	font-family: "iconitos";
+	content: "\e631";
+	margin-right: 20px;
+color: white;
 }
 .color{
 background: -webkit-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 background: -o-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 }
-.icoaltas:after{
-	font-family: "iconitos";
-	content: "\e631";
-	margin-right: 20px;
-color: white;
-
-
-
+.black{
+	color: black;
 }
+

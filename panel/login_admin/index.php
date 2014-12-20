@@ -39,7 +39,7 @@ if (isset($_SESSION['admin-sica'])) {
                     <ul class="menu">
                         <li><a href="http://www.lacantera.org.mx/" ><span class="icono home"></span>HOME</a></li>
                         <li><a href="http://lacantera.org.mx/soporte/" ><span class="icono contacto"></span>CONTACTO</a></li>
-                        <li><a href="logout.php" ><span class='icono salir'></span>SALIR</a></li>
+
                     </ul>
                 </nav>
             </header>

@@ -24,11 +24,7 @@ margin-top: 15px;
 .table1 select option{
 	background-color: white;
 }
-.form1 .table1 td{
-	padding-bottom: 5px;
-padding-left: 30px;
-	padding-right: 10px;
-}
+
 .form1 .table1 td label{
 color: #104e8b;
 font-family: verdana;
@@ -103,11 +99,9 @@ border-bottom:4px solid #cd3700;
 	width: 100%;
 	height: 50px;
 	background: -moz-linear-gradient(center top , #F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
-
-
-background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));
 	border-radius: 10px 10px 0px 0px;
-overflow: hidden;
+	overflow: hidden;
 }
 .tem p{
 	text-align: center;
@@ -117,16 +111,18 @@ overflow: hidden;
 .seccion1{
 	border-radius: 10px 10px 10px 10px;
 	height: 550px;
-margin-left: 240px;
-margin-top: 10px;
-background-color: rgba(255, 255, 255, 0.3);
-position: fixed;
-width: 80%;
-border:2px solid rgba(0,0,0,0.2) ;
+	margin-left: 240px;
+	margin-top: 10px;
+	background-color: rgba(255, 255, 255, 0.3);
+	position: fixed;
+	width: 80%;
+	border:2px solid rgba(0,0,0,0.2) ;
 }
 .control{
-background: -moz-linear-gradient(center top , #F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
-background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));
+	background: -webkit-linear-gradient(#F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#F7F7F7, #DFE3EE) repeat scroll 0% 0% transparent;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));
 	width: 80%;
 
 	height: 50px;
@@ -199,7 +195,7 @@ color: #104e8b;
 
 }
 .confirmacion{
-	background-color: rgba(0,0,0,0.5);
+	background-color: rgba(0,0,0,0.8);
 	width: 100%;
 	height:100%;
 	top: 0;
@@ -211,7 +207,7 @@ color: #104e8b;
 }
 .confcuerpo{
 	width: 550px;
-	height: 300px;
+	height: 280px;
 	background-color: rgba(255,255,255,0.9);
 	margin: 16% auto;
 
@@ -229,7 +225,7 @@ color: #104e8b;
 
 	width: 100%;
 	height: 78px;
-	margin-top: 160px;
+	margin-top: 140px;
 overflow: hidden;
 	bottom: 0;
 	position: relative;
@@ -247,7 +243,6 @@ overflow: hidden;
 
 .confcabeza p{
 	color: white;
-
 	display: inline-block;
 	font-size: 20px;
 	margin-top: 20px;
@@ -279,7 +274,7 @@ cursor: pointer;
 font-family: "iconitos";
 content: "\e62d";
 color: white;
-font-size: 25px;
+font-size: 30px;
 
 }
 .mesconf{
@@ -291,37 +286,28 @@ font-size: 25px;
 .mesconf p{
 	margin-left: 30px;
 	margin-top: 40px;
-	font-family: 30px !important;
-
-	font-weight: bold;
 }
 .confalerta{
-	background: -webkit-linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
-	background: -o-linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
-	background: linear-gradient(#00cdcd, #009acd) repeat scroll 0% 0% transparent;
+	background: none repeat scroll 0% 0% #008CDD;
 	border-style: none;
 	color: white;
 	font-weight: bold;
+	border-bottom: 4px solid #00688B;
+	border-radius:  5px 0px 0px 5px;
 }
 .confalerta:hover{
-
-	background: -webkit-linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
-	background: -o-linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
-	background: linear-gradient(#009acd, #00cdcd) repeat scroll 0% 0% transparent;
+	border-style: none;
 }
 .borrarconf{
-background: -webkit-linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
-background: -o-linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
-background: linear-gradient(#009acd, #1874cd) repeat scroll 0% 0% transparent;
+background-color: #FF4500;
 	border-style: none;
 	color: white;
 	font-weight: bold;
-
+border-radius:  5px 0px 0px 5px;
+border-bottom: 4px solid #CD3700;
 }
 .borrarconf:hover{
-	background: -webkit-linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
-	background: -o-linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
-	background: linear-gradient(#1874cd, #009acd) repeat scroll 0% 0% transparent;
+	border-style: none;
 }
 /*-----------------------------*/
 
@@ -376,13 +362,13 @@ margin-top: -40px;
 
 }
 .icolimpiar span{
-	vertical-align: middle;
+vertical-align: middle;
 position: absolute;
 height: 40px;
 }
 .icolimpiar1{
-margin-left: 10px !important;
-margin-top: 10px !important;
+	margin-left: 10px !important;
+	margin-top: 10px !important;
 	margin: 0 auto;
 	overflow: hidden;
 
@@ -398,25 +384,25 @@ color: white;
 }
 /*---------------------------------------------*/
 .conentacept{
-background: -webkit-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
-background: -o-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
-background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+
+background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 width: 35px;
 height: 40px;
-
+border-radius:  0px 5px 5px 0px;
 position: absolute;
 margin-left: 180px;
 margin-top: -40px;
 
+
 }
 .conentacept span{
 	vertical-align: middle;
-position: absolute;
-height: 40px;
+	position: absolute;
+	height: 40px;
 }
 .icoacep{
-margin-left: 10px !important;
-margin-top: 10px !important;
+	margin-left: 10px !important;
+	margin-top: 10px !important;
 	margin: 0 auto;
 	overflow: hidden;
 
@@ -432,12 +418,10 @@ color: white;
 }
 /*--------------------------*/
 .conentcancelar{
-background: -webkit-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
-background: -o-linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
-background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#EE2C2C, #CD3700) repeat scroll 0% 0% transparent;
 width: 35px;
 height: 40px;
-
+border-radius:  0px 5px 5px 0px;
 position: absolute;
 margin-left: 180px;
 margin-top: -40px;
@@ -459,8 +443,8 @@ margin-top: 10px !important;
 	font-family: "iconitos";
 	content: "\e630";
 	margin-right: 20px;
-color: white;
-
-
-
+	color: white;
+}
+.mensajeAlerta{
+	font-size: 19px;
 }

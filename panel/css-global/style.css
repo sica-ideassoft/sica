@@ -34,7 +34,6 @@ header{
 background-color: #0FF !important;
 color: #000  !important;
 }
-
 .heder21sub1,.heder21sub3{
 
 	cursor: pointer;
@@ -455,25 +454,28 @@ left: 0;
 
 	margin: 0 auto;
 	width: 90%;
-	height: 105px;
+	height: 95px;
 	bottom:0px;
 	margin-top: 100px;
 	position:relative;
 	background-color:white;
 }
+
 .tabla1{
 width: 100%;
 
 }
 .tabla1 thead{
 	overflow: hidden;
-height: 10px;
+
 
 background-color:#09C;
 }
 .tabla1 td p{
+	margin-top: 8px;
 	color: white;
 	text-align: center;
+	height: 7px;
 }
 .Nalumno {
 	border-right: 2px solid #d2d4dc;
@@ -938,4 +940,7 @@ font-size: 40px;
 	padding-right: 10px;
 	color: rgba(255,255,255,0.7);
 }
-
+.ul2 li a{
+  		/*quitar el lineado punteado molesto*/
+  outline: none;
+}

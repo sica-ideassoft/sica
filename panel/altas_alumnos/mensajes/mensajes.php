@@ -123,43 +123,43 @@ location.href = "../../login_admin/index.php";
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-                 <ul class="ul2">
-        <li class="activo"><a href='#'><span>HOME</span></a></li>
-        <li class='has-sub admin'><a  href='#'><span>ALUMNOS</span></a>
+                   <ul class="ul2">
+        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-        <li class='has-sub admin'><a  href='#'><span>MAESTROS</span></a>
+        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a  href=''><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span><b>ALTAS</b></span></a>
+            <li><a href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='.'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php'><span>PUBLICACIONES</span></a></li>
+        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
 
       </ul>
            </div>

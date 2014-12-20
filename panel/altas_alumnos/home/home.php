@@ -131,7 +131,7 @@ location.href = "../../login_admin/index.php";
         <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../modificar_alumno/modificar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -141,22 +141,22 @@ location.href = "../../login_admin/index.php";
         </li>
         <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a class="altas" href=''><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
           <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href='../modificar_alumno/modificar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="altas" href='../altas_alumnos/altas_alumno.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>

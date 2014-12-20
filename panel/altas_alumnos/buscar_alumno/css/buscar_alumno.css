@@ -193,3 +193,7 @@ top: 0px;
 	text-align: center;
 
 }
+
+.icoBuscar:before{
+	color: #000;
+}
