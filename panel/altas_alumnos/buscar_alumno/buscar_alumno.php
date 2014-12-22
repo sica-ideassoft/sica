@@ -129,10 +129,10 @@ $conn = dbConnect();
               <div id='cssmenu'>
                           <ul class="ul2">
         <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+        <li class='has-sub admin  activo '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a class="activo" href='#'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a  class='activo' href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -142,28 +142,30 @@ $conn = dbConnect();
         </li>
         <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a   href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a href=''><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
         <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+
+
 
       </ul>
            </div>
@@ -192,7 +194,7 @@ $conn = dbConnect();
       <section class="seccion1">
         <div class="tem"><p>buscar alumno</p></div>
 
-    <form method="get" class="search">
+    <form method="POST" class="search">
 
         <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
 
@@ -225,12 +227,14 @@ $conn = dbConnect();
     <tbody>
 
     </tbody>
-</table>
+    </table>
     </div>
 
-        <div class="control">
-        </div>
-
+    <div class="control">
+    </div>
+    <?php
+      include_once("mostrar.php")
+    ?>
       </section>
 
       <!-- fin de section -->

@@ -150,7 +150,9 @@ background: linear-gradient(#00a1f1, #0072c6) repeat scroll 0% 0% transparent;
 	background-color:blue;
 	margin-left: 30px;
 }
-
+.icoCerrar{
+	cursor: pointer;
+}
 
 /*ventana de confirmacion*/
 .confirmarBtn{

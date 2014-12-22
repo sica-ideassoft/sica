@@ -71,7 +71,6 @@ if (isset($_SESSION['admin-sica'])) {
                                 <input type="submit" name="enviar" id="enviar" class="enviar" value='ENTRAR'>
                                 <div class="conent1"> <span class="icoenviar"></span></div></input><br>
 
-
                                 <div class="loaderAjax" id="loaderAjax">
                                     <img src="image/loader.gif" style="display:none;">
 

@@ -20,6 +20,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'menu';
+	src:url('fonts_menu/icomoon.eot?s4hs2h');
+	src:url('fonts_menu/icomoon.eot?#iefixs4hs2h') format('embedded-opentype'),
+		url('fonts_menu/icomoon.woff?s4hs2h') format('woff'),
+		url('fonts_menu/icomoon.ttf?s4hs2h') format('truetype'),
+		url('fonts_menu/icomoon.svg?s4hs2h#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .datos{
 	text-transform: uppercase;
 }
@@ -112,9 +122,6 @@ text-align: center;
 	background-color: #09C;
 
 }
-.datosmodificar tr{
-
-}
 .datosmodificar tr th{
 width: 130px;
 height: 30px;
@@ -126,9 +133,15 @@ text-transform: uppercase;
 .tableHead{
 	text-align: center;
 }
+.tableHead tr td{
+	color:#0066cc;
+	font-family: !important;
+
+}
 .tableHead tr{
 	height: 40px;
 	border-bottom: 1px solid rgba(255,255,255,0.8);
+
 }
 .tableHead tr:nth-child(odd){
 	background-color:  rgba(255,255,255,0.7);
@@ -165,7 +178,24 @@ border-radius: 2px;
 {
   background: #F65050;
 }
+.eliminar:before{
+	font-family: "menu";
+	content: "\e610";
+	color:#ff4040;
+}
+.modificar:before{
+	font-family: "menu";
+	content: "\e60c";
+	color:#1e90ff;
+}
+.liEliminar{
+text-decoration: none;
 
-.icoEditar:before{
-	color: #000;
+}
+
+.liModifi{
+text-decoration: none;
+}
+.modi{
+	width: 100px !important;
 }

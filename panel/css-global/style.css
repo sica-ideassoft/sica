@@ -30,6 +30,9 @@ header{
 	border-bottom: 1px solid #fff;
 
 }
+.icoblack{
+	color:black !important;
+}
 .activo{
 background-color: #0FF !important;
 color: #000  !important;
@@ -943,4 +946,32 @@ font-size: 40px;
 .ul2 li a{
   		/*quitar el lineado punteado molesto*/
   outline: none;
+}
+
+
+
+/*iconos activos */
+.icoBuscarActivo:before{
+	font-family: "menu";
+	content: "\e606";
+	padding-right: 10px;
+	color: rgba(0,0,0,1);
+}
+.icoAltasActivo:before{
+	font-family: "menu";
+	content: "\e61f";
+	padding-right: 10px;
+	color: rgba(0,0,0,1);
+}
+.icoAltasMActivo:before{
+	font-family: "menu";
+	content: "\e616";
+	padding-right: 10px;
+	color: rgba(0,0,0,1);
+}
+.icoEditarActivo:before{
+	font-family: "menu";
+	content: "\e602";
+	padding-right: 10px;
+	color: rgba(0,0,0,1);
 }

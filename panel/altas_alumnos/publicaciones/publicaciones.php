@@ -136,30 +136,31 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
+   <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a   href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href=""><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
-        </li>
+        </li >
 
-        <li class="activo"><a href='#' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+        <li class='activo'><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+
 
       </ul>
            </div>

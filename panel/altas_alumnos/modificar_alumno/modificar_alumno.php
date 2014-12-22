@@ -137,28 +137,28 @@ include_once("php/paginacion.php");
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a class="activo" href='#'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a class="activo" href='#'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
         <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a   href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href=''><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=''><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href=''><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href=''><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href=' '><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
@@ -166,39 +166,11 @@ include_once("php/paginacion.php");
 
         <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
 
+
       </ul>
            </div>
            <!-- fin de menu3 -->
-<div class="Mconfirma">
-  <div class="contentM">
-  <div class="Mhead">
-      <div class="icoAlert"><span></span></div>
-      <div class="confirmacion"><p>Confirmación</p></div>
-      <div class="icoCerrar"><span></span></div>
-  </div>
-  <div class="Mbody">
-    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
-  </div>
-  <div class="Mfooter">
-<!-- inicio de botones de confirmacion -->
-      <table class="table2">
-          </td><td>
-            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
-            </input>
-          </td><td>
-          <input type="reset" value="CANCELAR" class="cancelarBtn">
 
-             <div class="conent1"> <span class="icoCancelar"></span></div>
-          </input>
-
-        </td></tr>
-      </table>
-<!-- fin de botones de confirmacion -->
-
-    </div>
-  </div>
-</div>
            <!-- inicio de menu4 <-->
          </div>
 
@@ -237,8 +209,8 @@ include_once("php/paginacion.php");
                 <th>A materno</th>
                 <th>matricula</th>
                 <th>grupo</th>
-                <th>modificar</th>
-                <th>eliminar</th>
+                <th class="modi">eliminar</th>
+                <th class="modi">modificar</th>
               </tr>
             </thead>
             <tbody  class="tableHead">
@@ -252,13 +224,17 @@ include_once("php/paginacion.php");
                 echo "<td>".$row['A_materno']."</td>";
                 echo "<td>".$row['matricula']."</td>";
                 echo "<td>".$row['grupo']."</td>";
-                echo "<td>--</td>";
-                echo "<td>++</td>";
-                echo "</tr>";
+              ?>
+
+                <td><a class="liEliminar" href=""><span class="eliminar"></span></a></td>
+                <td><a class="liModifi" href=""><span class="modificar"></span></a></td>
+              <?php
               }
               ?>
+
             </tbody>
           </table>
+
           <div class="control">
             <table class="table2">
 
@@ -270,7 +246,36 @@ include_once("php/paginacion.php");
             </table>
 
       </section>
+<!-- inicio de mensaje de confirmacion -->
+              <div class="Mconfirma">
+  <div class="contentM">
+  <div class="Mhead">
+      <div class="icoAlert"><span></span></div>
+      <div class="confirmacion"><p>Confirmación</p></div>
+      <div class="icoCerrar"><span></span></div>
+  </div>
+  <div class="Mbody">
+    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
+  </div>
+  <div class="Mfooter">
+<!-- inicio de botones de confirmacion -->
+      <table class="table2">
+          </td><td>
+            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
+                  <div class="conent1 color"> <span class="icoaltas"></span></div>
+            </input>
+          </td><td>
+          <input type="reset" value="CANCELAR" class="cancelarBtn">
 
+             <div class="conent1"> <span class="icoCancelar"></span></div>
+          </input>
+
+        </td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- fin de mensaje de confrimacion -->
       <!-- fin de section -->
 
       <script src="js/jquery.js"></script>
@@ -278,6 +283,8 @@ include_once("php/paginacion.php");
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
+      <script src="js/confirmacion.js"></script>
+
       <script src="js/val_campos.js"></script>
 
 
