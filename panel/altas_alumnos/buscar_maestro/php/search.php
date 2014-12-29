@@ -5,7 +5,7 @@ $conn = dbConnect();
 	$OK = true;
 	if (isset($_POST['name'])) {
 		$data = "%".$_POST['name']."%";
-		$sql = 'SELECT * FROM alumno WHERE nombre like ?';
+		$sql = 'SELECT * FROM maestro WHERE nombre like ?';
 		$stmt = $conn->prepare($sql);
 		$results = $stmt->execute(array($data));
 		$rows = $stmt->fetchAll();
@@ -25,7 +25,7 @@ $conn = dbConnect();
 				echo "<td>".$row['nombre']."</td>";
 				echo "<td>".$row['A_paterno']."</td>";
 				echo "<td>".$row['A_materno']."</td>";
-				echo "<td>".$row['matricula']."</td>";
+				echo "<td>".$row['telefono']."</td>";
 ?>
 		<td class="lia"><a href=""><span class="mas"></span></a></td></tr>
 <?php

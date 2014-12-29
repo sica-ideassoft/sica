@@ -192,7 +192,7 @@ location.href = "../../login_admin/index.php";
         <div class="tem"><p>home</p></div>
 			<div class="home">
         		<figure>
-				<img src="image/home.svg" alt="">
+				<img class="imghome"src="image/home.svg" alt="">
 				</figure>
 			</div>
             <div class="control">

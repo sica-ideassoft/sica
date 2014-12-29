@@ -109,6 +109,7 @@ overflow: hidden;
 }
 #resultTable tbody td{
 	height: 35px;
+	color:#06C;
 	border-bottom: 1px solid rgba(0,0,0,0.1)
 }
 #resultTable tbody tr:nth-child(odd){
@@ -150,8 +151,10 @@ margin-top:10px;
 }
 .lia a{
 	text-decoration: none;
+	color:#009ee0;
 }
 .mas:after{
+
 	font-family: "buscar";
 	content:"\e607";
 }
@@ -193,4 +196,6 @@ top: 0px;
 	text-align: center;
 
 }
-
+.mostrar{
+	width: 10px !important;
+}

@@ -188,6 +188,15 @@ border-radius: 2px;
 	content: "\e60c";
 	color:#1e90ff;
 }
+.mostrar:before{
+	font-family: "menu";
+	content: "\e606";
+	color:#1e90ff;
+}
+.liMostrar{
+text-decoration: none;
+
+}
 .liEliminar{
 text-decoration: none;
 
@@ -197,5 +206,5 @@ text-decoration: none;
 text-decoration: none;
 }
 .modi{
-	width: 100px !important;
+	width: 90px !important;
 }

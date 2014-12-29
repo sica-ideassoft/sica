@@ -209,8 +209,9 @@ include_once("php/paginacion.php");
                 <th>A materno</th>
                 <th>matricula</th>
                 <th>grupo</th>
-                <th class="modi">eliminar</th>
-                <th class="modi">modificar</th>
+                <th class="modi">eliminar-</th>
+                <th class="modi">modificar-</th>
+                <th class="modi">mostrar</th>
               </tr>
             </thead>
             <tbody  class="tableHead">
@@ -228,6 +229,7 @@ include_once("php/paginacion.php");
 
                 <td><a class="liEliminar" href=""><span class="eliminar"></span></a></td>
                 <td><a class="liModifi" href=""><span class="modificar"></span></a></td>
+                <td><a class="liMostrar" href=""><span class="mostrar"></span></a></td>
               <?php
               }
               ?>

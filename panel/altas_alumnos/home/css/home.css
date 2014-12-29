@@ -10,6 +10,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.home .imghome{
+	text-align: center;
+	width: 1000px;
+	margin-top: 10px;
+
+
+}
 .datos{
 	text-transform: uppercase;
 }

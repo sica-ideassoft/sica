@@ -132,7 +132,7 @@ $conn = dbConnect();
         <li class='has-sub admin '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a  href='#'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a  href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -206,7 +206,7 @@ $conn = dbConnect();
         <th>Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th>Matricula</th>
+        <th>Telefono</th>
         <th>mostrar</th>
     </thead>
 </table>
@@ -219,7 +219,7 @@ $conn = dbConnect();
         <th></th>
         <th></th>
         <th></th>
-        <th></th>
+        <th class="masBuscar"></th>
     </thead>
 
     <tbody>

@@ -101,6 +101,11 @@ overflow: hidden;
 	color: white;
 	text-transform: uppercase;
 }
+
+#resultTable  td{
+	color: #06C;
+}
+
 #resultTable tbody{
 
 	font-size: 14px;
@@ -150,6 +155,7 @@ margin-top:10px;
 }
 .lia a{
 	text-decoration: none;
+	color: #009EE0;
 }
 .mas:after{
 	font-family: "buscar";
