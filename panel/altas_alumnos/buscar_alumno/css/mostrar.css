@@ -1,0 +1,32 @@
+.ventana{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 100;
+	top:0px;
+	left: 0px;
+	display: none;
+}
+.datos2{
+	width: 800px;
+	height: 500px;
+	background-color: white;
+	left:0px;
+	margin:120px auto;
+
+}
+.imgAlumno{
+	width: 200px;
+	height: 100%;
+	background-color: red;
+}
+.imgAlumno .foto{
+	width: 130px;
+	height: 140px;
+	background-color: white;
+	position: absolute;
+	margin-top: 50px !important;
+	margin-left: 40px;
+
+}

@@ -27,7 +27,7 @@ $conn = dbConnect();
 				echo "<td>".$row['A_materno']."</td>";
 				echo "<td>".$row['telefono']."</td>";
 ?>
-		<td class="lia"><a href=""><span class="mas"></span></a></td></tr>
+		<td class="lia"><a href="mostrar_maestros.php?id=<?php echo $row['id_maestro'] ?>"><span class="mas"></span></a></td></tr>
 <?php
 		}
 

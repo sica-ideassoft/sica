@@ -1,3 +1,4 @@
+
 <?php
 require_once('Connection.simple.php');
 
@@ -21,15 +22,15 @@ if(empty($rows)) {
 }
 else {
 	foreach ($rows as $row) {
-		echo "<tr>";
+?>
 
-		echo "<td>".$row['nombre']."</td>";
-		echo "<td>".$row['A_paterno']."</td>";
-		echo "<td>".$row['A_materno']."</td>";
-		echo "<td>".$row['matricula']."</td>";
-		?>
-
-		<td class="lia"><a href="mostrar.php?id=<?php echo $row['id_alumno'];?>"><span class="mas"></span></a></td></tr>
+		<tr>
+<td><?php echo $row['nombre']; ?></td>
+<td><?php echo $row['A_paterno']; ?></td>
+<td><?php echo $row['A_materno']; ?></td>
+<td><?php echo $row['matricula']; ?></td>
+<td class="lia"><a  id="eliminar" href="mostrar_alumnos.php?id=<?php echo $row['id_alumno']?>"><span class="mas"></span></a></td>
+		</tr>
 
 		<?php
 	}

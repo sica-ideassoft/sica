@@ -5,8 +5,9 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+
 ?>
-<?php include_once("php/Nalumno.php"); ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -25,7 +26,7 @@ location.href = "../../login_admin/index.php";
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/style_materia.css">
+  <link rel="stylesheet" href="css/style_altas.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
 
@@ -126,12 +127,12 @@ location.href = "../../login_admin/index.php";
         <div id='cssmenu'>
                   <ul class="ul2">
         <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
                <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='#'><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a class="activo " href='#'><span class="icoAltasActivo"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
@@ -148,11 +149,11 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-          <li class='has-sub admin activo'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="activo" href='#'><span class="icoAltasMActivo"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
@@ -258,53 +259,108 @@ location.href = "../../login_admin/index.php";
 
 <!-- inicio de section -->
 <section class="seccion1">
-  <div class="tem"><p>ALTAS MATERIAS</p></div>
-  <form method="POST" action="" name="form1" class="form1">
+  <div class="tem"><p>MODIFICAR DATOS</p></div>
+<?php
+include_once("php/modificar-alumno.php");
+?>
+  <form method="POST" action="modificar.php?id=" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
         <td><label for="">Nombre:</label></td>
-        <td><label for="">Profesor:</label></td>
-
-
-      </tr>
-      <tr>
-        <td><input type="text" name="nombre"  id="nombre" alt="nombre" ></input></td>
-        <td><input type="text" name="profesor"  id="profesor" ></input></td>
-      </tr>
-      <tr>
-        <td><label for="">Fecha Inicio:</label></td>
-        <td><label for="">Fecha fin:</label></td>
-
-      </tr>
-
-      <tr>
-        <td><input type="text" name="fecha1" id="fecha1" class="fecha"></td>
-        <td><input type="text" name="fecha2" id="fecha2" class="fecha"></td>
-      </tr>
-      <tr>
-        <td><label for="">Creditos:</label></td>
-        <td><label for="">Calificacion:</label></td>
+        <td><label for="">Apellido Paterno:</label></td>
+        <td><label for="">Apellido Materno:</label></td>
 
       </tr>
       <tr>
 
-<td class="edad"><select name="creditos" id="creditos" >
-            <?php
-              for ($i=1; $i <= 20 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
-             ?>
-          </select><label for="">Creditos</label> </td>
+        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $alumno['nombre']; ?>></input></td>
+        <td><input type="text" name="paterno"  id="paterno" value=<?php echo $alumno['A_paterno']; ?>></input></td>
+        <td><input type="text" name="materno" id="materno" value=<?php echo $alumno['A_materno']; ?>></input></td>
 
-        <td><input type="text" name="calificacion" id="calificacion"></td>
+      </tr>
+      <tr>
+        <td><label for="">Matricula:</label></td>
+        <td><label for="">Curp:</label></td>
+        <td><label for="">Telefono:</label></td>
+      </tr>
+
+      <tr>
+        <td><input type="text" name="matricula" id="matricula" value=<?php echo $alumno['matricula']; ?>></td>
+        <td><input type="text" name="curp" id="curp" value=<?php echo $alumno['curp']; ?>></td>
+        <td><input type="text" name="telefono"  id="telefono" value=<?php echo $alumno['telefono']; ?>></td>
+
+      </tr>
+      <tr>
+        <td><label for="">Correo:</label></td>
+        <td><label for="">Genero:</label></td>
+        <td><label for="">Fecha de nacimiento:</label></td>
+      </tr>
+      <tr>
+        <td><input type="text" name="correo" id="correo" value=<?php echo $alumno['correo']; ?>></td>
+        <td><select name="genero" id="genero" value=<?php echo $alumno['genero']; ?>>
+          <option value="masculino">Masculino</option>
+          <option value="femenino">Femenino</option>
+        </select></td>
+
+        <td><input type="text" name="nacimiento" id="nacimiento" class="fecha" value=<?php echo $alumno['fecha_nacimiento']; ?>></td>
+
+        </tr>
+        <tr>
+          <td><label for="">Edad:</label></td>
+          <td><label for="">Grado:</label></td>
+          <td><label for="">Grupo:</label></td>
 
         </tr>
 
+        <tr>
+          <td class="edad"><select name="edad" id="edad" value=<?php echo $alumno['edad']; ?>>
+            <?php
+              for ($i=10; $i <= 90 ; $i++) {
+            echo "<option>".$i."</option>";
+              }
+             ?>
+          </select><label for="">Años</label> </td>
+          <td><input type="text" name="grado"  id="grado" value=<?php echo $alumno['grado']; ?>></td>
+          <td><input type="text" name="grupo" id="grupo" value=<?php echo $alumno['grupo']; ?>></td>
+
+        </tr>
+        <tr>
+          <td><label for="">Estado</label></td>
+          <td><label for="">Municipio:</label></td>
+          <td><label for="">Calle:</label></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="estado" id="estado" value=<?php echo $alumno['estado']; ?>></td>
+          <td><input type="text" name="municipio" id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
+          <td><input type="text" name="calle"  id="calle" value=<?php echo $alumno['calle']; ?>></td>
+        </tr>
+        <tr>
+          <td><label for="">Nacionalidad</label></td>
+          <td><label for="">Estado Civil:</label></td>
+          <td><label for="">Fotografia:</label></td>
+        </tr>
+        <tr>
+        <td><input type="text" name="nacionalidad" id="nacionalidad" value=<?php echo $alumno['nacionalidad']; ?>></td>
+        <td><select name="civil"  id="civil" value=<?php echo $alumno['estado_civil']; ?>>
+          <option value="soltero">Soltero</option>
+          <option value="casado">Casado</option>
+          <option value="libre">Union libre</option>
+          <option value="divorciado">Divorceado</option>
+          <option value="viudo">Viudo</option>
+        </select></td>
+        <td colspan="2"><input type="file" name="foto" id="foto" value=<?php echo $alumno['fotografia']; ?>></td>
+      </tr>
+      <tr>
+          <td><label for="">Status:</label></td>
+        </tr>
+        <tr>
+          <td><select name="status" id="status" value=<?php echo $alumno['status']; ?>>
+            <option value="activo">Activo</option>
+            <option value="inactivo">Inactivo</option>
+          </select></td>
+        </tr>
       </table>
-
-
-
       <div class="control">
 
         <table class="table2">
@@ -316,7 +372,7 @@ location.href = "../../login_admin/index.php";
   <img src="image/loader.gif" alt="">
 </div>
           </td><td>
-            <input type="submit" value="ALTAS" class="altasbtn" id="enviar">
+            <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
           </td><td>

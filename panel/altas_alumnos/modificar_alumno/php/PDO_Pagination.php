@@ -42,7 +42,7 @@ $this->total = $query->rowCount();
 
 public function config($max_pages, $max_rows)
 {
-    
+
 $this->start_row = 0;
 $this->item = 0;
 $this->max_pages = $max_pages;
@@ -133,7 +133,7 @@ $this->item = 0;
 
 public function pages($class='')
 {
-    
+
 if($this->item >= 1)
 {
 echo "<a class='$class'  href='?previous=1".$this->param."'>$this->btn_first_page</a>";

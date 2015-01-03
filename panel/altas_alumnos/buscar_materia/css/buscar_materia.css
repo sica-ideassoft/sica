@@ -157,9 +157,10 @@ margin-top:10px;
 }
 .ContentBuscar{
 
-width: 800px;
+width: 900px;
 height: 350px;
 z-index: -10;
+
 margin: 0 auto !important;
  overflow: hidden;
 overflow-x:hidden;
@@ -173,9 +174,9 @@ top: 0px;
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width: 750px;
+	width: 910px;
 	margin: 0 auto;
-	margin-left: 130px;
+	margin-left: 50px;
 	height: 30px;
 	margin-top: 10px !important;
 }

@@ -21,9 +21,6 @@
 	font-style: normal;
 }
 
-.datos{
-	text-transform: uppercase;
-}
 /*inicio de activo*/
 #cssmenu > ul > .activo > a {
   color:white;
@@ -107,19 +104,21 @@ overflow: hidden;
 	text-align: center;
 
 }
+
 #resultTable tbody td{
 	height: 35px;
-	color:#06C;
-	border-bottom: 1px solid rgba(0,0,0,0.1)
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	color:#09C;
 }
 #resultTable tbody tr:nth-child(odd){
-	background-color:  rgba(255,255,255,0.7);
+	background-color:  rgba(255,255,255,0.7) !important;
 
 }
 #resultTable tbody tr:nth-child(even){
-	background-color:  #eeeeee;
+	background-color:  #eeeeee !important;
 	color: black;
 }
+
 .btnSearch{
 	width: 50px;
 	height: 32px;
@@ -198,4 +197,9 @@ top: 0px;
 }
 .mostrar{
 	width: 10px !important;
+	padding: 10px 20px;
+
+}
+.control{
+	text-align: center;
 }

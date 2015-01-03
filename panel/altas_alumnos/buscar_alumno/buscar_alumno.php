@@ -31,9 +31,6 @@ $conn = dbConnect();
   <link rel="stylesheet" href="css/buscar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
-
-
-
 </head>
 <body>
       <!--[if lt IE 7]>
@@ -208,7 +205,7 @@ $conn = dbConnect();
         <th>Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th>Matricula</th>
+        <th>Telefono</th>
         <th>mostrar</th>
     </thead>
 </table>
@@ -221,21 +218,21 @@ $conn = dbConnect();
         <th></th>
         <th></th>
         <th></th>
-        <th></th>
+        <th class="masBuscar"></th>
     </thead>
 
     <tbody>
 
     </tbody>
-    </table>
+</table>
     </div>
 
-    <div class="control">
-    </div>
-    <?php
-      include_once("mostrar.php")
-    ?>
+        <div class="control">
+        </div>
+
+
       </section>
+
 
       <!-- fin de section -->
 
@@ -243,6 +240,7 @@ $conn = dbConnect();
       <script src="js/jquery-ui.js"></script>
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
+      <script src="js/mostrar_alumnos.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
       <script src="js/buscar.js"></script>

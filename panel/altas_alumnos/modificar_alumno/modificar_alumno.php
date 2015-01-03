@@ -11,6 +11,7 @@ include_once("php/paginacion.php");
 
 ?>
 
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -218,22 +219,29 @@ include_once("php/paginacion.php");
               <?php
               foreach($model as $row)
               {
-                echo "<tr>";
+                ?>
+                <tr>
+                <td><?php echo$row['nombre'];?></td>
+                <td><?php echo$row['A_paterno'];?></td>
+                <td><?php echo$row['A_materno'];?></td>
+                <td><?php echo$row['matricula'];?></td>
+                <td><?php echo$row['grupo'];?></td>
 
-                echo "<td>".$row['nombre']."</td>";
-                echo "<td>".$row['A_paterno']."</td>";
-                echo "<td>".$row['A_materno']."</td>";
-                echo "<td>".$row['matricula']."</td>";
-                echo "<td>".$row['grupo']."</td>";
-              ?>
 
-                <td><a class="liEliminar" href=""><span class="eliminar"></span></a></td>
-                <td><a class="liModifi" href=""><span class="modificar"></span></a></td>
-                <td><a class="liMostrar" href=""><span class="mostrar"></span></a></td>
+                <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
+                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_alumno'];?>"><span class="modificar"></span></a></td>
+                <td><a class="liMostrar" href="mostrar_alumno.php?id=<?php echo $row['id_alumno'];?>"><span class="mostrar"></span></a></td>
+                </tr>
               <?php
               }
               ?>
-
+<script type="text/javascript">
+function delEmpresa(id) {
+  if (window.confirm("Aviso:\nDesea eliminar el registro seleccionado?")) {
+    window.location = "php/delete.php?action=del&id="+id;
+  }
+}
+</script>
             </tbody>
           </table>
 
@@ -249,7 +257,7 @@ include_once("php/paginacion.php");
 
       </section>
 <!-- inicio de mensaje de confirmacion -->
-              <div class="Mconfirma">
+              <!-- <div class="Mconfirma">
   <div class="contentM">
   <div class="Mhead">
       <div class="icoAlert"><span></span></div>
@@ -259,9 +267,9 @@ include_once("php/paginacion.php");
   <div class="Mbody">
     <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
   </div>
-  <div class="Mfooter">
+  <div class="Mfooter"> -->
 <!-- inicio de botones de confirmacion -->
-      <table class="table2">
+ <!--      <table class="table2">
           </td><td>
             <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
@@ -276,7 +284,7 @@ include_once("php/paginacion.php");
       </table>
     </div>
   </div>
-</div>
+</div> -->
 <!-- fin de mensaje de confrimacion -->
       <!-- fin de section -->
 
@@ -285,8 +293,8 @@ include_once("php/paginacion.php");
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
-      <script src="js/confirmacion.js"></script>
-
+      <!-- <script src="js/confirmacion.js"></script> -->
+      <script src="js/eliminar.js"></script>
       <script src="js/val_campos.js"></script>
 
 

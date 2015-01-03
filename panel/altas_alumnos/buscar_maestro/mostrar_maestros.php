@@ -6,6 +6,10 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
+<?php
+require_once 'php/Connection.simple.php';
+$conn = dbConnect();
+ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -23,9 +27,11 @@ location.href = "../../login_admin/index.php";
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/perfil.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/buscar_maestro.css">
   <link rel="stylesheet" href="css/mensajes.css">
+  <link rel="stylesheet" href="css/mostrar_maestros.css">
+
 
 
 
@@ -42,7 +48,7 @@ location.href = "../../login_admin/index.php";
               </div>
               <ul class="menu1">
                 <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
-                <li><a href="../../altas_alumnos/home/home.php"><span class='home'></span>HOME</a></li>
+                <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
 
               </ul>
 
@@ -68,9 +74,9 @@ location.href = "../../login_admin/index.php";
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-                <li><a href="../../altas_alumnos/mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
-                <li><a href="../../altas_alumnos/calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
+                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+                <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
             </div>
           </div>
@@ -85,12 +91,12 @@ location.href = "../../login_admin/index.php";
 <!-- incio de menu config -->
             <div class="Ccontent">
                 <div class="Cco">
+                  <a href="../../control_admin/perfil/perfil.php">
                 <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
-
                   <p>PERFIL</p>
-<div class='flecha'></div>
                   </div>
+                  </a>
 
                 <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
@@ -122,44 +128,43 @@ location.href = "../../login_admin/index.php";
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-              <ul class="ul2">
-        <li ><a href='../../altas_alumnos/home/home.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+                          <ul class="ul2">
+        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../../altas_alumnos/buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a  href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../../altas_alumnos/altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../../altas_alumnos/modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
+        <li class='has-sub admin activo'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a   href='../../altas_alumnos/buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a class="activo" href='#'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../../altas_alumnos/altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../../altas_alumnos/modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
           <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a href="../../altas_alumnos/buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../../altas_alumnos/altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../../altas_alumnos/modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
-        <li><a href='../../altas_alumnos/publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
-
+        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
 
       </ul>
            </div>
@@ -184,110 +189,50 @@ location.href = "../../login_admin/index.php";
         </div>
       </div>
 
-
-      <!-- finde  mensajes curp de validacion -->
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>PERFIL</p></div>
-     <figure class='perfil'>
-              <img src="" alt=""/>
-            </figure>
-            <form enctype="multipart/form-data" action="php/upload.php" method="post" name="form1">
-           <table class='table4'>
-            <tr>
-              <td>
-                <p>Imagen:</p>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <input type="file" name="miArchivo" class="imagen1" id="imagen">
-              </td>
+        <div class="tem"><p>buscar maestros</p></div>
+                <div class="content-alumno">
+                  <div class="img-alumno">
+                      <figure class="foto-alumno">
+                        <img src="" alt="">
+                      </figure>
+                      <label for=""></label>
 
-            </tr>
-             <tr>
-               <td><p class="texto">Usuario:</p></td>
-              </tr>
-              <tr>
-               <td><input type="text" name="usuario" class='usuario'/><span class="usuario1"></span></td>
-             </tr>
-             <tr>
-               <td><p class="texto">Password:</p></td>
-              </tr>
-              <tr>
-               <td><input type="password" name="password" class='password'><span class="password1"/></span></input>
-             </tr>
-           </table>
+                  </div>
+                  <div class="info-alumno">
 
-          <div class="control">
+<?php
+include_once("php/mostrar.php");
 
-            <table class="table2">
-                <tr><td>
-                  <input type="submit" value="MODIFICAR" class="modificarbtn" id="modificar">
-                  <div class="icomodif"> <span class="icomodif1"></span></div>
-
-                  </input>
-                </td><td>
-                  <input type="submit" value="LIMPIAR" class="borrarbtn">
-                  <div class="icolimpiar"> <span class="icolimpiar1"></span></div>
-                  </input>
-                </input>
-
-              </td></tr>
-            </table>
-
-          </div>
-
-
-  <!-- mensajes de validacion -->
-
-      <div class='confirmacion'>
-        <div class='confcuerpo'>
-          <div class="confcabeza">
-             <p><span class='temaconf'></span>Confirmación</p>
-             <div class="cerrarconf">
-             <span class='iconocerrar'></span>
-             </div>
-
-          </div>
-          <div class='mesconf'>
-          <p class="mensajeAlerta">Realmente quiere <b>Modificar</b> el Usuario?</p>
-          </div>
-            <div class="footercabeza">
-                 <table class="tablealerta">
-                <tr>
-
-              <td>
-                  <input type="submit" value="ACEPTAR" name="aceptar" class="confalerta" id="conf">
-                   <div class="conentacept"> <span class="icoacep"></span></div>
-                  </input>
-                </td>
-                <td>
-                <input type="submit" value="CANCELAR" class="borrarconf">
-                    <div class="conentcancelar"> <span class="icoacancelar"></span></div>
-                </input>
-              </td>
-
-              </tr>
-            </table>
+?>
+</table>
+                  </div>
             </div>
 
-         </div>
-      </div>
 
-        </form>
-
+        <div class="control">
+        <table>
+        <tr>
+        <td>
+            <a class="regresar" href="buscar_maestro.php">REGRESAR</a><span class="reg"></span>
+        </td>
+        </tr>
+        </table>
+        </div>
       </section>
 
       <!-- fin de section -->
 
       <script src="js/jquery.js"></script>
+      <script src="js/jquery-ui.js"></script>
+      <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
-      <script src="js/confirmacion.js"></script>
       <script src="js/menu.js"></script>
-
-
+      <script src="js/val_campos.js"></script>
+      <script src="js/buscar.js"></script>
 
 
     </body>
     </html>
+

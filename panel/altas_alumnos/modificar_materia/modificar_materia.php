@@ -137,7 +137,7 @@ include_once("php/paginacion.php");
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a  href='#'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a  href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>

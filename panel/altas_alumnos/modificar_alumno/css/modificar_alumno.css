@@ -133,24 +133,26 @@ text-transform: uppercase;
 .tableHead{
 	text-align: center;
 }
+
 .tableHead tr td{
 	color:#0066cc;
 	font-family: !important;
 
+}
+.tableHead  tr:nth-child(odd){
+	background-color:  rgba(255,255,255,0.7) !important;
+
+}
+.tableHead tr:nth-child(even){
+	background-color:  #eeeeee !important;
+	color: black;
 }
 .tableHead tr{
 	height: 40px;
 	border-bottom: 1px solid rgba(255,255,255,0.8);
 
 }
-.tableHead tr:nth-child(odd){
-	background-color:  rgba(255,255,255,0.7);
 
-}
-.tableHead tr:nth-child(even){
-	background-color:  #eeeeee;
-	color: black;
-}
 .botones{
 	margin-top: 10px;
 }
@@ -177,6 +179,9 @@ border-radius: 2px;
 .active
 {
   background: #F65050;
+}
+.eliminar{
+	cursor:pointer;
 }
 .eliminar:before{
 	font-family: "menu";

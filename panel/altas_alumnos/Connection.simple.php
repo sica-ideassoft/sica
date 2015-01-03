@@ -11,7 +11,7 @@ function dbConnect (){
 		//echo 'Connected succesfully.<br>';
 	}
 	catch (PDOException $e) {
-		echo '<p>No se pudo conectar con la base de datos!!</p>';
+		echo '<p>Cannot connect to database !!</p>';
 		echo '<p>'.$e.'</p>';
 	    exit;
 	}
