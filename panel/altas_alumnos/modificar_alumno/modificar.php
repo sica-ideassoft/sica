@@ -132,9 +132,9 @@ location.href = "../../login_admin/index.php";
           </li>
                <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="activo " href='#'><span class="icoAltasActivo"><b>ALTAS</b></span></a>
+            <li><a href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a  class="activo" href='../modificar_alumno/modificar_alumno.php'><span  class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
@@ -161,7 +161,7 @@ location.href = "../../login_admin/index.php";
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
       </ul>
      </div>
@@ -259,11 +259,17 @@ location.href = "../../login_admin/index.php";
 
 <!-- inicio de section -->
 <section class="seccion1">
-  <div class="tem"><p>MODIFICAR DATOS</p></div>
+  <div class="tem">
+    <div class="estacion">
+            <span class="estudent"></span>
+    </div>
+  <p>MODIFICAR / ELIMINAR ALUMNOS</p>
+  </div>
 <?php
 include_once("php/modificar-alumno.php");
+$id = $_GET["id"];
 ?>
-  <form method="POST" action="modificar.php?id=" name="form1" class="form1">
+  <form method="POST" action="php/modificado.php?id=<?php echo $id ?>" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -367,19 +373,12 @@ include_once("php/modificar-alumno.php");
 
           <tr>
           <td>
-
-<div id="flash" align="left"  >
-  <img src="image/loader.gif" alt="">
-</div>
-          </td><td>
             <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
+            <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
-          </td><td>
-          <input type="reset" value="LIMPIAR" class="borrarbtn">
-
-             <div class="conent1"> <span class="icolimpiar"></span></div>
-          </input>
+          </td>
+          <td>
+            <a class="regresar" href="modificar_alumno.php">REGRESAR</a><span class="reg"></span>
 
         </td></tr>
       </table>

@@ -4,9 +4,9 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
 $search = htmlspecialchars($_REQUEST["search"]);
 $pagination->param = "&search=$search";
-$pagination->rowCount("SELECT * FROM alumno WHERE nombre LIKE '%$search%' OR A_paterno LIKE '%$search%' OR A_materno LIKE '%$search%'");
+$pagination->rowCount("SELECT * FROM materias WHERE nombre LIKE '%$search%' OR profesor LIKE '%$search%' OR credito LIKE '%$search%'");
 $pagination->config(3, 5);
-$sql = "SELECT * FROM alumno WHERE nombre LIKE '%$search%' OR A_paterno LIKE '%$search%' OR A_materno LIKE '%$search%' ORDER BY id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+$sql = "SELECT * FROM materias WHERE nombre LIKE '%$search%' OR profesor LIKE '%$search%' OR credito LIKE '%$search%' ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
 $query = $connection->prepare($sql);
 $query->execute();
 
@@ -19,9 +19,9 @@ while($rows = $query->fetch())
 }
 else
 {
-$pagination->rowCount("SELECT * FROM alumno");
+$pagination->rowCount("SELECT * FROM materias");
 $pagination->config(3, 7);
-$sql = "SELECT * FROM alumno ORDER BY id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+$sql = "SELECT * FROM materias ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
 $query = $connection->prepare($sql);
 $query->execute();
 $model = array();

@@ -213,3 +213,24 @@ text-decoration: none;
 .modi{
 	width: 90px !important;
 }
+/*cino de estacion*/
+.estacion{
+	margin-left:330px;
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent:after{
+font-family: "menu";
+content: "\e624";
+font-size: 30px;
+color: #000;
+}

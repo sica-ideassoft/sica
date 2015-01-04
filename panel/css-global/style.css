@@ -910,9 +910,9 @@ font-size: 40px;
 	padding-right: 10px;
 	color: rgba(255,255,255,0.7);
 }
-.icoPublicar:before{
+.icoCalificaciones:before{
 	font-family: "menu";
-	content: "\e605";
+	content: "\e613";
 	padding-right: 10px;
 	color: rgba(255,255,255,0.7);
 }

@@ -10,6 +10,33 @@
 	font-weight: normal;
 	font-style: normal;
 }
+/*---------------*/
+td .regresar{
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	padding: 10px 45px;
+	background: -webkit-linear-gradient(#00c060, #0072C6) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
+	background: linear-gradient(#6a5acd, 	#836fff) repeat scroll 0% 0% transparent;
+	text-align: center;
+	border-radius: 5px;
+}
+td .regresar{
+	border-bottom: 3px solid #473c8b;
+}
+td .regresar:hover{
+	border-style: none;
+}
+.reg:after{
+	font-family: "iconitos";
+	content: "\e611";
+	color:white;
+}
+.reg{
+margin-left: -30px;
+}
+/*-------------*/
 .datos{
 	text-transform: uppercase;
 }
@@ -242,3 +269,24 @@ background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 	color: black;
 }
 
+/*cino de estacion*/
+.estacion{
+	margin-left:330px;
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent:after{
+font-family: "menu";
+content: "\e624";
+font-size: 30px;
+color: #000;
+}

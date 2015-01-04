@@ -164,7 +164,7 @@ $conn = dbConnect();
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
       </ul>
            </div>
@@ -191,7 +191,12 @@ $conn = dbConnect();
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>buscar maestros</p></div>
+        <div class="tem">
+          <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>buscar maestros</p>
+        </div>
                 <div class="content-alumno">
                   <div class="img-alumno">
                       <figure class="foto-alumno">

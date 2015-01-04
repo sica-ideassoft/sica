@@ -109,7 +109,8 @@ overflow: hidden;
 }
 #resultTable tbody td{
 	height: 35px;
-	border-bottom: 1px solid rgba(0,0,0,0.1)
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+	color:#09C;
 }
 #resultTable tbody tr:nth-child(odd){
 	background-color:  rgba(255,255,255,0.7);
@@ -193,4 +194,25 @@ top: 0px;
 .datosBucar1{
 	text-align: center;
 
+}
+/*cino de estacion*/
+.estacion{
+	margin-left:390px;
+	margin-top: 15px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent:after{
+font-family: "menu";
+	content: "\e609";
+font-size: 20px;
+color: #000;
 }

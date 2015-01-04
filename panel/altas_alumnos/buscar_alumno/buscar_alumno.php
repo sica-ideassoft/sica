@@ -160,7 +160,7 @@ $conn = dbConnect();
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
 
 
@@ -189,7 +189,12 @@ $conn = dbConnect();
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>buscar alumno</p></div>
+        <div class="tem">
+        <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>buscar alumno</p>
+        </div>
 
     <form method="POST" class="search">
 

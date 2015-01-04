@@ -242,3 +242,24 @@ background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 	color: black;
 }
 
+/*cino de estacion*/
+.estacion{
+	margin-left:390px;
+	margin-top: 10px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent{
+	width: 50px;
+	height: 50px;
+	position: absolute;
+
+}
+.estudent:after{
+font-family: "menu";
+content: "\e60b";
+font-size: 25px;
+color: #000;
+}

@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-include_once("../conexion.php");
+include_once("conexion.php");
 $conn = new DB;
 $conn->conectar();
 

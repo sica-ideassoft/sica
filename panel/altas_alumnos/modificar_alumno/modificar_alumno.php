@@ -165,7 +165,7 @@ include_once("php/paginacion.php");
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
 
       </ul>
@@ -193,7 +193,12 @@ include_once("php/paginacion.php");
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>modificar / eliminar alumnos</p></div>
+        <div class="tem">
+        <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>modificar / eliminar alumnos</p>
+        </div>
         <form method="POST" class="formBuscar" ction="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->

@@ -32,7 +32,7 @@ include_once("php/paginacion.php");
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/modificar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
-  <link rel="stylesheet" href="css/mostrar_alumnos.css">
+  <link rel="stylesheet" href="css/mostrar_maestro.css">
 
 
 
@@ -139,7 +139,7 @@ include_once("php/paginacion.php");
           </li>
           <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
           </li>
-          <li><a class="activo" href='#'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
+          <li><a class="activo" href='../modificar_alumno/modificar_alumno.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
@@ -166,7 +166,7 @@ include_once("php/paginacion.php");
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+          <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
 
       </ul>
@@ -194,7 +194,12 @@ include_once("php/paginacion.php");
 
 <!-- inicio de section -->
 <section class="seccion1">
-  <div class="tem"><p>modificar / eliminar alumnos</p></div>
+  <div class="tem">
+  <div class="estacion">
+            <span class="estudent"></span>
+  </div>
+  <p>MODIFICAR / ELIMINAR ALUMNOS</p>
+  </div>
 
             <div class="content-alumno">
                   <div class="img-alumno">

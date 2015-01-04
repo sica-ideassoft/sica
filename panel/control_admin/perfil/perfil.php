@@ -158,8 +158,7 @@ location.href = "../../login_admin/index.php";
           </ul>
         </li>
 
-        <li><a href='../../altas_alumnos/publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
-
+        <li><a href='../../altas_alumnos/calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
       </ul>
            </div>

@@ -24,7 +24,7 @@ location.href = "../../login_admin/index.php";
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/publicaciones.css">
+  <link rel="stylesheet" href="css/calificaciones.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
 
@@ -159,7 +159,7 @@ location.href = "../../login_admin/index.php";
           </ul>
         </li >
 
-        <li class='activo'><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li class='activo'><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
 
       </ul>
@@ -188,7 +188,12 @@ location.href = "../../login_admin/index.php";
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>publicaciones</p></div>
+        <div class="tem">
+          <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>CALIFICACIONES</p>
+        </div>
             <div class="control">
 
               <table class="table2">

@@ -6,7 +6,7 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
-<?php include_once("php/Nalumno.php"); ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -159,8 +159,7 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+   <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
       </ul>
      </div>
      <!-- fin de menu3 -->
@@ -257,7 +256,12 @@ location.href = "../../login_admin/index.php";
 
 <!-- inicio de section -->
 <section class="seccion1">
-  <div class="tem"><p>ALTAS MAESTROS</p></div>
+  <div class="tem">
+    <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+  <p>ALTAS MAESTROS</p>
+  </div>
   <form method="POST" action="" name="form1" class="form1">
 
     <table class='table1'>

@@ -162,7 +162,7 @@ location.href = "../../login_admin/index.php";
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+        <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
       </ul>
            </div>
@@ -189,7 +189,12 @@ location.href = "../../login_admin/index.php";
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>home</p></div>
+        <div class="tem">
+ <div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>home</p>
+        </div>
 			<div class="home">
         		<figure>
 				<img class="imghome"src="image/home.svg" alt="">

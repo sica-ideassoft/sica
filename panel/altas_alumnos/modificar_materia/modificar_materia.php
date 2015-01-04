@@ -164,13 +164,13 @@ include_once("php/paginacion.php");
           </ul>
         </li>
 
-        <li><a href='../publicaciones/publicaciones.php' ><span class="icoPublicar">PUBLICACIONES</span></a></li>
+           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
 
 
       </ul>
            </div>
            <!-- fin de menu3 -->
-<div class="Mconfirma">
+<!-- <div class="Mconfirma">
   <div class="contentM">
   <div class="Mhead">
       <div class="icoAlert"><span></span></div>
@@ -180,8 +180,8 @@ include_once("php/paginacion.php");
   <div class="Mbody">
     <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
   </div>
-  <div class="Mfooter">
-<!-- inicio de botones de confirmacion -->
+  <div class="Mfooter"> -->
+<!-- inicio de botones de confirmacion --><!--
       <table class="table2">
           </td><td>
             <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
@@ -194,12 +194,12 @@ include_once("php/paginacion.php");
           </input>
 
         </td></tr>
-      </table>
+      </table> -->
 <!-- fin de botones de confirmacion -->
 
-    </div>
+<!--     </div>
   </div>
-</div>
+</div> -->
            <!-- inicio de menu4 <-->
          </div>
 
@@ -221,7 +221,12 @@ include_once("php/paginacion.php");
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem"><p>modificar / eliminar materia</p></div>
+        <div class="tem">
+<div class="estacion">
+            <span class="estudent"></span>
+        </div>
+        <p>modificar / eliminar materia</p>
+        </div>
         <form method="POST" class="formBuscar" ction="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
@@ -234,12 +239,14 @@ include_once("php/paginacion.php");
             <thead class="datosmodificar">
               <tr >
                 <th>nombre</th>
-                <th>A paterno</th>
-                <th>A materno</th>
-                <th>matricula</th>
-                <th>grupo</th>
-                <th>modificar</th>
-                <th>eliminar</th>
+                <th>profesor</th>
+                <th>F inicio</th>
+                <th>F final</th>
+                <th>Credito</th>
+                <th>Cal. Minima</th>
+                <th class="modi">elim</th>
+                <th class="modi">modi</th>
+
               </tr>
             </thead>
             <tbody  class="tableHead">
@@ -247,19 +254,30 @@ include_once("php/paginacion.php");
               foreach($model as $row)
               {
                 echo "<tr>";
-
                 echo "<td>".$row['nombre']."</td>";
-                echo "<td>".$row['A_paterno']."</td>";
-                echo "<td>".$row['A_materno']."</td>";
-                echo "<td>".$row['matricula']."</td>";
-                echo "<td>".$row['grupo']."</td>";
-                echo "<td>--</td>";
-                echo "<td>++</td>";
-                echo "</tr>";
+                echo "<td>".$row['profesor']."</td>";
+                echo "<td>".$row['fecha_inicio']."</td>";
+                echo "<td>".$row['fecha_fin']."</td>";
+                echo "<td>".$row['credito']."</td>";
+                echo "<td>".$row['cal_min']."</td>";
+                ?>
+                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
+
+                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_materia'];?>"><span class="modificar"></span></a></td>
+
+                </tr>
+                <?php
               }
               ?>
             </tbody>
           </table>
+<script type="text/javascript">
+function delEmpresa(id) {
+  if (window.confirm("Aviso:\nDesea eliminar el registro seleccionado?")) {
+    window.location = "php/delete.php?action=del&id="+id;
+  }
+}
+</script>
           <div class="control">
             <table class="table2">
 
