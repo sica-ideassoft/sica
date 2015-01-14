@@ -21,6 +21,8 @@ body{
 	font-weight: normal;
 	font-style: normal;
 }
+
+
 .salir{
 
 	width: 100px !important;
@@ -270,6 +272,8 @@ background-color:  #257499;
 margin-top: 60px;
 position: fixed;
 }
+
+
 /*inicio de colores */
 .verde{
 background-color:#20C319;
@@ -351,10 +355,23 @@ background-color: rgba(0, 91, 150,0.8);
 
 }
 @media screen and (max-width: 320px){
+.section-content{
+	background-color: rgba(255,255,255,0.3);
+	width: 95%;
+	height: 400px;
+	position:fixed;
+	margin: 10px 10px 10px 5px ;
+	margin-top: 70px;
+
+}
 .menu2{
 	width: 170px;
 	margin-left: -170px;
+	transition:all .3s ease;
+	-webkit-transition:all .5s ease;
+	z-index: 100;
 }
+
 
 .color{
 	width: 170px;
@@ -398,6 +415,7 @@ width: 60px;
 
 }
 
+
 .menuresp2{
 
 	width: 60px;
@@ -406,7 +424,7 @@ width: 60px;
 	position: fixed;
 	display: none;
 }
-.responsive{
+.show{
 	width: 20px;
 	height: 20px;
 	padding: 20px;
@@ -416,7 +434,7 @@ width: 60px;
 .cantera{
 	margin-left: 40px;
 }
-.responsive:after{
+.show:after{
 	font-family: "responsive";
 	content:"\e600";
 	color: white;
@@ -425,16 +443,21 @@ width: 60px;
 font-size: 20px;
 
 }
-.responsive2:after{
+.hide:after{
 	font-family: "responsive";
-	content:"\e601";
+	content:"\e600";
 	color: white;
 	padding-top: 20px;
 	font-weight: bold;
 font-size: 20px;
 position: absolute;
 margin-left: 20px;
+
 }
+.remove{
+	display: none;
+}
+
 .tem{
 
 	width: 260px !important;
@@ -464,6 +487,12 @@ display: none;
 .menu2{
 	width: 170px;
 	margin-left: -170px;
+	transition:all .3s ease;
+	-webkit-transition:all .5s ease;
+}
+
+.is-active{
+	margin-left: 0px !important;
 }
 
 .color{
@@ -507,14 +536,11 @@ width: 60px;
 	position: fixed;
 
 }
-
-.menuresp2{
-
-	width: 60px;
-	height: 60px;
-	cursor: pointer;
-	position: fixed;
+.hide{
 	display: none;
+}
+ .is-active{
+	display: block
 }
 .responsive{
 	width: 20px;

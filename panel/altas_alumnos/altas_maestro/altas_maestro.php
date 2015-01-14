@@ -159,15 +159,26 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-   <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
-      </ul>
+ <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+
+          </ul>
+        </li>
+
+      <li><a><span>***</span></a></li>
      </div>
      <!-- fin de menu3 -->
 
      <!-- inicio de menu4 -->
 
    </div>
-
+<!--
    <div class='footcontent'>
 
     <div class="headtabla1"><p>Recien Ingresados</p></div>
@@ -178,7 +189,7 @@ location.href = "../../login_admin/index.php";
       </div>
 
     </table>
-  </div>
+  </div> -->
 </div>
 
 <!-- mensajes de validacion -->

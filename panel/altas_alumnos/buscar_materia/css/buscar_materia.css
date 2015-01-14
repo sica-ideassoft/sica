@@ -140,6 +140,7 @@ overflow: hidden;
 {
 	font-family: "buscar";
 	content:"\e606";
+
 }
 .buscar{
 margin-top:10px;
@@ -155,6 +156,7 @@ margin-top:10px;
 .mas:after{
 	font-family: "buscar";
 	content:"\e607";
+		color:#009EE0 ;
 }
 .ContentBuscar{
 
@@ -175,9 +177,9 @@ top: 0px;
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width: 910px;
+	width: 750px;
 	margin: 0 auto;
-	margin-left: 50px;
+	margin-left: 130px;
 	height: 30px;
 	margin-top: 10px !important;
 }

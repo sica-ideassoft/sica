@@ -20,7 +20,7 @@ location.href = "../login_alumno/index.php";
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/../../css-global/style.css">
+
         <link rel="stylesheet" href="css/style.css">
 
 
@@ -32,11 +32,10 @@ location.href = "../login_alumno/index.php";
         <header>
             <div class="tem">
             <div class="menuresp">
-            <span class="responsive"></span>
+            <span class="show" id="show"></span>
+            <span class="hide" id="hide"></span>
             </div>
-              <div class="menuresp2">
-            <span class="responsive2"></span>
-            </div>
+
                 <p><span class="cantera"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="contuser">
@@ -61,7 +60,8 @@ location.href = "../login_alumno/index.php";
         </header>
 
         <!-- menu2  -->
-            <div class="menu2">
+
+            <div class="menu2" id="menu2" >
 
                 <div class="Cdatos">
                     <div class="figura">
@@ -101,10 +101,12 @@ location.href = "../login_alumno/index.php";
                 </div>
 
             </div>
+
+
+            <section class ="section-content"></section>
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>
-<!-- <script src="js/gestos.js"></script> -->
 <script src="js/menu.js"></script>
 
 

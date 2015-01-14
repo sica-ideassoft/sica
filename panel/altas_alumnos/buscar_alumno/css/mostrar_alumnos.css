@@ -50,14 +50,14 @@ background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.3),rgba(226, 2
 	text-decoration: none;
 	color: white;
 	padding: 10px 45px;
-	background: -webkit-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
-	background: -o-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
-	background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
+background: linear-gradient(#6A5ACD, #836FFF) repeat scroll 0% 0% transparent;
+background:-webkit- linear-gradient(#6A5ACD, #836FFF) repeat scroll 0% 0% transparent;
+background: -moz-linear-gradient(#6A5ACD, #836FFF) repeat scroll 0% 0% transparent;
 	text-align: center;
 	border-radius: 5px;
 }
 .control .regresar{
-	border-bottom: 3px solid #00688B;
+	border-bottom: 3px solid #473C8B;
 }
 .control .regresar:hover{
 	border-style: none;

@@ -170,7 +170,7 @@ location.href = "../../login_admin/index.php";
 
          </div>
 
-         <div class='footcontent'>
+<!--          <div class='footcontent'>
           <table class="tabla1">
             <thead>
               <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
@@ -182,7 +182,7 @@ location.href = "../../login_admin/index.php";
 
             </tfoot>
           </table>
-        </div>
+        </div> -->
       </div>
 
 

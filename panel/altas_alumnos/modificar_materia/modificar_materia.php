@@ -164,10 +164,19 @@ include_once("php/paginacion.php");
           </ul>
         </li>
 
-           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
+ <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
 
-      </ul>
+      <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->
 <!-- <div class="Mconfirma">
@@ -203,7 +212,7 @@ include_once("php/paginacion.php");
            <!-- inicio de menu4 <-->
          </div>
 
-         <div class='footcontent'>
+<!--          <div class='footcontent'>
           <table class="tabla1">
             <thead>
               <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
@@ -215,7 +224,7 @@ include_once("php/paginacion.php");
 
             </tfoot>
           </table>
-        </div>
+        </div> -->
       </div>
 
 
@@ -237,15 +246,15 @@ include_once("php/paginacion.php");
         <center>
           <table>
             <thead class="datosmodificar">
+
               <tr >
                 <th>nombre</th>
                 <th>profesor</th>
-                <th>F inicio</th>
-                <th>F final</th>
                 <th>Credito</th>
                 <th>Cal. Minima</th>
-                <th class="modi">elim</th>
-                <th class="modi">modi</th>
+                <th class="modi">eliminar-</th>
+                <th class="modi">modificar-</th>
+                <th class="modi">mostrar</th>
 
               </tr>
             </thead>
@@ -256,16 +265,17 @@ include_once("php/paginacion.php");
                 echo "<tr>";
                 echo "<td>".$row['nombre']."</td>";
                 echo "<td>".$row['profesor']."</td>";
-                echo "<td>".$row['fecha_inicio']."</td>";
-                echo "<td>".$row['fecha_fin']."</td>";
+
                 echo "<td>".$row['credito']."</td>";
                 echo "<td>".$row['cal_min']."</td>";
                 ?>
                  <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
 
                 <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_materia'];?>"><span class="modificar"></span></a></td>
+                <td><a class="liMostrar" href="mostrar_materias.php?id=<?php echo $row['id_materia'];?>"><span class="mostrar"></span></a></td>
 
                 </tr>
+
                 <?php
               }
               ?>

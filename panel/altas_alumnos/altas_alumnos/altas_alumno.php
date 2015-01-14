@@ -148,21 +148,20 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+
+        <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
-          <li><a href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          </li>
+               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
-            </li>
+            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
 
-           <li><a href='../calificaciones/calificaciones.php' ><span class="icoCalificaciones">CALIFICACIONES</span></a></li>
-
-      </ul>
+      <li><a><span>***</span></a></li>
      </div>
      <!-- fin de menu3 -->
 
@@ -170,7 +169,7 @@ location.href = "../../login_admin/index.php";
 
    </div>
 
-   <div class='footcontent'>
+<!--    <div class='footcontent'>
 
     <div class="headtabla1"><p>Recien Ingresados</p></div>
 
@@ -180,7 +179,7 @@ location.href = "../../login_admin/index.php";
       </div>
 
     </table>
-  </div>
+  </div> -->
 </div>
 
 <!-- mensajes de validacion -->
