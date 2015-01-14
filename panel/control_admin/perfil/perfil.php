@@ -5,7 +5,13 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+
 ?>
+<?php
+include_once("../conectar.php");
+$conn = new DB();
+$conn->conectar();
+ ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -48,7 +54,7 @@ location.href = "../../login_admin/index.php";
 
               <div class="user">
                 <div class="userimg">
-                  <img src="image/user.png" alt="">
+                  <?php  include_once("php/miniatura.php"); ?>
                 </div>
                 <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>
@@ -198,10 +204,11 @@ location.href = "../../login_admin/index.php";
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem"><p>PERFIL</p></div>
-     <figure class='perfil'>
-              <img src="" alt=""/>
-            </figure>
-            <form enctype="multipart/form-data" action="php/upload.php" method="post" name="form1">
+        <?php
+          include("mostrar.php");
+        ?>
+
+            <form enctype="multipart/form-data" action="recibir.php" enctype="multipart/form-data" method="post" name="form1">
            <table class='table4'>
             <tr>
               <td>
@@ -210,7 +217,7 @@ location.href = "../../login_admin/index.php";
             </tr>
             <tr>
               <td>
-                <input type="file" name="miArchivo" class="imagen1" id="imagen">
+                <input type="file" name="imagen" class="imagen1" id="imagen">
               </td>
 
             </tr>
@@ -218,13 +225,13 @@ location.href = "../../login_admin/index.php";
                <td><p class="texto">Usuario:</p></td>
               </tr>
               <tr>
-               <td><input type="text" name="usuario" class='usuario'/><span class="usuario1"></span></td>
+<td><input type="text" name="usuario" class='usuario' value=<?php echo $usuario; ?>><span class="usuario1"></span></td>
              </tr>
              <tr>
                <td><p class="texto">Password:</p></td>
               </tr>
               <tr>
-               <td><input type="password" name="password" class='password'><span class="password1"/></span></input>
+               <td><input type="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
              </tr>
            </table>
 
@@ -249,7 +256,7 @@ location.href = "../../login_admin/index.php";
 
 
   <!-- mensajes de validacion -->
-
+<!--
       <div class='confirmacion'>
         <div class='confcuerpo'>
           <div class="confcabeza">
@@ -282,7 +289,7 @@ location.href = "../../login_admin/index.php";
             </div>
 
          </div>
-      </div>
+      </div> -->
 
         </form>
 
@@ -292,7 +299,7 @@ location.href = "../../login_admin/index.php";
 
       <script src="js/jquery.js"></script>
       <script src="js/script.js"></script>
-      <script src="js/confirmacion.js"></script>
+      <!-- <script src="js/confirmacion.js"></script> -->
       <script src="js/menu.js"></script>
 
 
