@@ -5,8 +5,9 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-
 ?>
+
+
 <?php
 include_once("../conectar.php");
 $conn = new DB();
@@ -56,7 +57,8 @@ $conn->conectar();
                 <div class="userimg">
                   <?php  include_once("php/miniatura.php"); ?>
                 </div>
-                <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
+                <div class="datos"><p><?php echo $_SESSION['admin-sica'];?></p></div>
+
               </div>
             </nav>
 
@@ -184,7 +186,7 @@ $conn->conectar();
 
          </div>
 
-         <div class='footcontent'>
+  <!--        <div class='footcontent'>
           <table class="tabla1">
             <thead>
               <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
@@ -196,13 +198,23 @@ $conn->conectar();
 
             </tfoot>
           </table>
-        </div>
+        </div> -->
       </div>
 
 
       <!-- finde  mensajes curp de validacion -->
       <!-- inicio de section -->
       <section class="seccion1">
+
+
+      <div class="mensajes">
+  <div class="Logom">
+      <label><b>Campos vacios</b> no se puede Enviar la petición</label>
+  </div>
+  <div class="divmensaje">
+      <span class="Mico"></span>
+  </div>
+</div>
         <div class="tem"><p>PERFIL</p></div>
         <?php
           include("mostrar.php");
@@ -225,13 +237,13 @@ $conn->conectar();
                <td><p class="texto">Usuario:</p></td>
               </tr>
               <tr>
-<td><input type="text" name="usuario" class='usuario' value=<?php echo $usuario; ?>><span class="usuario1"></span></td>
+<td><input type="text" name="usuario" id="usuario" class='usuario' value=<?php echo $usuario; ?>><span class="usuario1"></span></td>
              </tr>
              <tr>
                <td><p class="texto">Password:</p></td>
               </tr>
               <tr>
-               <td><input type="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
+         <td><input type="password" id="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
              </tr>
            </table>
 
@@ -301,6 +313,7 @@ $conn->conectar();
       <script src="js/script.js"></script>
       <!-- <script src="js/confirmacion.js"></script> -->
       <script src="js/menu.js"></script>
+      <script src="js/validar.js"></script>
 
 
 

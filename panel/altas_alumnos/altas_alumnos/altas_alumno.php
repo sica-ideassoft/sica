@@ -5,8 +5,9 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+
 ?>
-<?php include_once("php/Nalumno.php"); ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -50,7 +51,7 @@ location.href = "../../login_admin/index.php";
 
         <div class="user">
           <div class="userimg">
-            <img src="image/user.png" alt="">
+            <?php  include_once("php/miniatura.php"); ?>
           </div>
           <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
         </div>
@@ -148,7 +149,18 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
+     </li>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <ul>
+          <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='#'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
 
+          </ul>
+        </li>
         <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>

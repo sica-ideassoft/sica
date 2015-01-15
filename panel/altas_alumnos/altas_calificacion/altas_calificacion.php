@@ -6,7 +6,7 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
-<?php include_once("php/Nalumno.php"); ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -50,7 +50,7 @@ location.href = "../../login_admin/index.php";
 
         <div class="user">
           <div class="userimg">
-            <img src="image/user.png" alt="">
+            <?php include_once("php/miniatura.php"); ?>
           </div>
           <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
         </div>

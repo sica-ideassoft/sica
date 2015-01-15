@@ -1,8 +1,5 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-include_once("conexion.php");
-$conn = new DB;
-$conn->conectar();
 
 $id = $_GET["id"];
 $sql=mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");

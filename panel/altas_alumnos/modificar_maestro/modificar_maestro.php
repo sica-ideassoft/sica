@@ -54,7 +54,7 @@ include_once("php/paginacion.php");
 
               <div class="user">
                 <div class="userimg">
-                  <img src="image/user.png" alt="">
+                  <?php include_once("php/miniatura.php"); ?>
                 </div>
                 <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>

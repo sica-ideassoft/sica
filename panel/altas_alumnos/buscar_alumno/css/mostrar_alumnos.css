@@ -75,3 +75,14 @@ background: -moz-linear-gradient(#6A5ACD, #836FFF) repeat scroll 0% 0% transpare
 .reg{
 margin-left: -30px;
 }
+.userimg .miniatura img{
+	width: 45px;
+	height:45px;
+	border-radius: 50%;
+	margin-top: -7px;
+	margin-left: -23px;
+}
+.usuario,.password{
+	padding-left: 10px;
+	color: #024960;
+}

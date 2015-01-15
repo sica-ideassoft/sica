@@ -234,3 +234,14 @@ content: "\e624";
 font-size: 30px;
 color: #000;
 }
+.userimg .miniatura img{
+	width: 45px;
+	height:45px;
+	border-radius: 50%;
+	margin-top: -7px;
+	margin-left: -23px;
+}
+.usuario,.password{
+	padding-left: 10px;
+	color: #024960;
+}
