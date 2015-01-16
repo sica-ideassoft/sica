@@ -34,6 +34,9 @@ $conn->conectar();
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
 
 
 </head>
@@ -220,7 +223,8 @@ $conn->conectar();
           include("mostrar.php");
         ?>
 
-            <form enctype="multipart/form-data" action="recibir.php" enctype="multipart/form-data" method="post" name="form1">
+            <form enctype="multipart/form-data" action="recibir.php" method="post" name="form1">
+
            <table class='table4'>
             <tr>
               <td>
@@ -267,41 +271,6 @@ $conn->conectar();
           </div>
 
 
-  <!-- mensajes de validacion -->
-<!--
-      <div class='confirmacion'>
-        <div class='confcuerpo'>
-          <div class="confcabeza">
-             <p><span class='temaconf'></span>Confirmación</p>
-             <div class="cerrarconf">
-             <span class='iconocerrar'></span>
-             </div>
-
-          </div>
-          <div class='mesconf'>
-          <p class="mensajeAlerta">Realmente quiere <b>Modificar</b> el Usuario?</p>
-          </div>
-            <div class="footercabeza">
-                 <table class="tablealerta">
-                <tr>
-
-              <td>
-                  <input type="submit" value="ACEPTAR" name="aceptar" class="confalerta" id="conf">
-                   <div class="conentacept"> <span class="icoacep"></span></div>
-                  </input>
-                </td>
-                <td>
-                <input type="submit" value="CANCELAR" class="borrarconf">
-                    <div class="conentcancelar"> <span class="icoacancelar"></span></div>
-                </input>
-              </td>
-
-              </tr>
-            </table>
-            </div>
-
-         </div>
-      </div> -->
 
         </form>
 
@@ -314,7 +283,8 @@ $conn->conectar();
       <!-- <script src="js/confirmacion.js"></script> -->
       <script src="js/menu.js"></script>
       <script src="js/validar.js"></script>
-
+      <script src="php/functions.js"></script>
+      <script src="alertifyjs/alertify.js"></script>
 
 
 

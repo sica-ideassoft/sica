@@ -33,7 +33,8 @@ include_once("php/paginacion.php");
   <link rel="stylesheet" href="css/modificar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
-
+<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
 
 
 </head>
@@ -210,7 +211,7 @@ include_once("php/paginacion.php");
         </div>
         <p>modificar / eliminar alumnos</p>
         </div>
-        <form method="POST" class="formBuscar" ction="<?php echo $_SERVER["PHP_SELF"] ?>">
+        <form method="POST" class="formBuscar" action="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
@@ -244,7 +245,8 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['grupo'];?></td>
 
 
-                <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
+<td><a class="liEliminar" href="#"
+ onclick="delEmpresa(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
                 <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_alumno'];?>"><span class="modificar"></span></a></td>
                 <td><a class="liMostrar" href="mostrar_alumno.php?id=<?php echo $row['id_alumno'];?>"><span class="mostrar"></span></a></td>
                 </tr>
@@ -253,9 +255,15 @@ include_once("php/paginacion.php");
               ?>
 <script type="text/javascript">
 function delEmpresa(id) {
-  if (window.confirm("Aviso:\nDesea eliminar el registro seleccionado?")) {
+alertify.confirm("Realmente quiere eliminar el Alumno.",
+  function(){
+    alertify.success('Ok');
     window.location = "php/delete.php?action=del&id="+id;
-  }
+  },
+  function(){
+    // alertify.error('Cancel');
+  });
+
 }
 </script>
             </tbody>
@@ -272,37 +280,6 @@ function delEmpresa(id) {
             </table>
 
       </section>
-<!-- inicio de mensaje de confirmacion -->
-              <!-- <div class="Mconfirma">
-  <div class="contentM">
-  <div class="Mhead">
-      <div class="icoAlert"><span></span></div>
-      <div class="confirmacion"><p>Confirmación</p></div>
-      <div class="icoCerrar"><span></span></div>
-  </div>
-  <div class="Mbody">
-    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
-  </div>
-  <div class="Mfooter"> -->
-<!-- inicio de botones de confirmacion -->
- <!--      <table class="table2">
-          </td><td>
-            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
-            </input>
-          </td><td>
-          <input type="reset" value="CANCELAR" class="cancelarBtn">
-
-             <div class="conent1"> <span class="icoCancelar"></span></div>
-          </input>
-
-        </td></tr>
-      </table>
-    </div>
-  </div>
-</div> -->
-<!-- fin de mensaje de confrimacion -->
-      <!-- fin de section -->
 
       <script src="js/jquery.js"></script>
       <script src="js/jquery-ui.js"></script>
@@ -312,7 +289,7 @@ function delEmpresa(id) {
       <!-- <script src="js/confirmacion.js"></script> -->
       <script src="js/eliminar.js"></script>
       <script src="js/val_campos.js"></script>
-
+      <script src="alertifyjs/alertify.js"></script>
 
     </body>
     </html>

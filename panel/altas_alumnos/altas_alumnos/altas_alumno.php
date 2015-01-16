@@ -275,7 +275,7 @@ location.href = "../../login_admin/index.php";
         </div>
   <p>ALTAS ALUMNOS</p>
   </div>
-  <form method="POST" action="" name="form1" class="form1">
+  <form method="POST" action="" enctype="multipart/form-data" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -360,7 +360,7 @@ location.href = "../../login_admin/index.php";
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-        <td colspan="2"><input type="file" name="foto" id="foto"></td>
+        <td colspan="2"><input type="file" name="imagen" id="imagen"></td>
       </tr>
       <tr>
           <td><label for="">Status:</label></td>

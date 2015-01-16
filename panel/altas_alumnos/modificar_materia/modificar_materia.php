@@ -32,6 +32,10 @@ include_once("php/paginacion.php");
   <link rel="stylesheet" href="css/modificar_materia.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
+
 
 
 
@@ -178,38 +182,7 @@ include_once("php/paginacion.php");
 
       <li><a><span>***</span></a></li>
            </div>
-           <!-- fin de menu3 -->
-<!-- <div class="Mconfirma">
-  <div class="contentM">
-  <div class="Mhead">
-      <div class="icoAlert"><span></span></div>
-      <div class="confirmacion"><p>Confirmación</p></div>
-      <div class="icoCerrar"><span></span></div>
-  </div>
-  <div class="Mbody">
-    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
-  </div>
-  <div class="Mfooter"> -->
-<!-- inicio de botones de confirmacion --><!--
-      <table class="table2">
-          </td><td>
-            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
-            </input>
-          </td><td>
-          <input type="reset" value="CANCELAR" class="cancelarBtn">
 
-             <div class="conent1"> <span class="icoCancelar"></span></div>
-          </input>
-
-        </td></tr>
-      </table> -->
-<!-- fin de botones de confirmacion -->
-
-<!--     </div>
-  </div>
-</div> -->
-           <!-- inicio de menu4 <-->
          </div>
 
 <!--          <div class='footcontent'>
@@ -283,9 +256,14 @@ include_once("php/paginacion.php");
           </table>
 <script type="text/javascript">
 function delEmpresa(id) {
-  if (window.confirm("Aviso:\nDesea eliminar el registro seleccionado?")) {
+  alertify.confirm("Realmente quiere eliminar la Materia?.",
+  function(){
+    alertify.success('Ok');
     window.location = "php/delete.php?action=del&id="+id;
-  }
+  },
+  function(){
+    // alertify.error('Cancel');
+  });
 }
 </script>
           <div class="control">
@@ -308,7 +286,7 @@ function delEmpresa(id) {
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
-
+<script src="alertifyjs/alertify.js"></script>
 
     </body>
     </html>

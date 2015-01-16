@@ -5,7 +5,6 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -25,10 +24,13 @@ location.href = "../../login_admin/index.php";
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/style_altas.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
+
+<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
 
 
 
@@ -196,6 +198,7 @@ location.href = "../../login_admin/index.php";
 </div>
 
 <!-- mensajes de validacion -->
+<!-- mensajes de validacion -->
 <div class="mensajes">
   <div class="Logom">
       <label><b>Campos vacios</b> no se puede Enviar la petición</label>
@@ -256,8 +259,7 @@ location.href = "../../login_admin/index.php";
       <span class="Mico3"></span>
   </div>
 </div>
-
-<!-- <div class="mensajesAlumno">
+<div class="mensajesAlumno">
   <div class="Logom4">
       <div id="show"></div>
   </div>
@@ -280,7 +282,12 @@ location.href = "../../login_admin/index.php";
 include_once("php/modificar-alumno.php");
 $id = $_GET["id"];
 ?>
-  <form method="POST" action="php/modificado.php?id=<?php echo $id ?>" name="form1" class="form1">
+
+<script>
+   var id = "<?php echo $id;?>" ;
+</script>
+
+  <form method="POST" action="" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -414,6 +421,7 @@ $id = $_GET["id"];
 <script src="js/calendario.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/script.js"></script>
+<script src="alertifyjs/alertify.js"></script>
 
 
 </body>
