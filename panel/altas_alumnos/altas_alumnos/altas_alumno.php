@@ -19,7 +19,7 @@ location.href = "../../login_admin/index.php";
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -382,9 +382,7 @@ location.href = "../../login_admin/index.php";
           <tr>
           <td>
 
-<div id="flash" align="left"  >
-  <img src="image/loader.gif" alt="">
-</div>
+
           </td><td>
             <input type="submit" value="ALTAS" class="altasbtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>

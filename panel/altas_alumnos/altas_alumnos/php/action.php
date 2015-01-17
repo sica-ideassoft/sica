@@ -28,17 +28,23 @@ $calle        = mysql_real_escape_string($_POST['calle']);
 $nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
 $civil        = mysql_real_escape_string($_POST['civil']);
 $status       = mysql_real_escape_string($_POST['status']);
+
 $ip           = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
 
-$rutaEnServidor='../imagenes';
-$rutaTemporal=$_FILES['imagen']['tmp_name'];
-$nombreImagen=$_FILES['imagen']['name'];
-$rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
-move_uploaded_file($rutaTemporal,$rutaDestino);
+// $rutaEnServidor='imagenes';
+// $rutaTemporal=$_FILES['imagen']['tmp_name'];
+// $nombreImagen=$_FILES['imagen']['name'];
+// $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
+// move_uploaded_file($rutaTemporal,$rutaDestino);
 
+$checkuser = mysql_query("SELECT matricula FROM alumno WHERE matricula='".$matricula ."'");
+$username_exist = mysql_num_rows($checkuser);
+if ($username_exist>0) {
+	echo "<script>alert(hola);</script>";
+}else{
 
-
-mysql_query("INSERT INTO alumno(id_alumno,nombre,A_paterno,A_materno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,grado,grupo,estado,municipio,calle,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$grado','$grupo','$estado','$municipio','$calle','$nacionalidad','$civil','".$rutaDestino."','$status','$ip')");
+$query = mysql_query("INSERT INTO alumno(id_alumno,nombre,A_paterno,A_materno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,grado,grupo,estado,municipio,calle,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$grado','$grupo','$estado','$municipio','$calle','$nacionalidad','$civil','".$rutaDestino."','$status','$ip')");
+}
 }
 
 ?>

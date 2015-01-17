@@ -1,8 +1,8 @@
 <?php
 session_start();
-if (isset($_SESSION['alumno'])) {
+if (isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
-location.href = "../alumno/index.php";
+location.href = "../home/index.php";
 </script>';
 }
 ?>
@@ -64,16 +64,18 @@ location.href = "../alumno/index.php";
 
 </header>
 <section>
-
     <div class="content-head">
     	<p class="cont-login">login</p>
       <p class="sica"><span class="ico-login"></span>sica</p>
     </div>
+
 <div class="content">
+    <div class="content-head">
+      <p class="cont-login">login</p>
+      <p class="sica"><span class="ico-login"></span>sica</p>
+    </div>
+
     <div class="contenido">
-        <figure class="logotipo">
-          <img src="image/cantera.svg" alt="">
-        </figure>
         <div class="form" >
 
           <form action="" method='post' autocomplete="off">
