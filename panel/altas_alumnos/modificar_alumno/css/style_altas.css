@@ -75,6 +75,11 @@ margin-top: 15px;
 
 
 }
+.table1 input[type="text"]{
+	color: #191919!important;
+
+
+}
 .table1 select {
 	cursor: pointer;
 }

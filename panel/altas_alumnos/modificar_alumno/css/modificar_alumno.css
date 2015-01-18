@@ -33,6 +33,7 @@
 .datos{
 	text-transform: uppercase;
 }
+
 #cssmenu > ul > .activo > a {
 	color:white;
 background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
@@ -137,7 +138,6 @@ text-transform: uppercase;
 .tableHead tr td{
 	color:#0066cc;
 	font-family: !important;
-
 }
 .tableHead  tr:nth-child(odd){
 	background-color:  rgba(255,255,255,0.7) !important;

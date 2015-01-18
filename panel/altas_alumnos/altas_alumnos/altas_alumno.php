@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
-echo '<SCRIPT LANGUAGE="javascript">
+echo '<script>
 location.href = "../../login_admin/index.php";
 </script>';
 }
@@ -28,6 +28,10 @@ location.href = "../../login_admin/index.php";
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/style_altas.css">
   <link rel="stylesheet" href="css/mensajes.css">
+
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
 
 
 
@@ -416,6 +420,7 @@ location.href = "../../login_admin/index.php";
 <script src="js/calendario.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/script.js"></script>
+<script src="alertifyjs/alertify.js"></script>
 
 
 </body>

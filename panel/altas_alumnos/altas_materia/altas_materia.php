@@ -28,8 +28,8 @@ location.href = "../../login_admin/index.php";
   <link rel="stylesheet" href="css/style_materia.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
-
-
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+  <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
 
 </head>
 <body>
@@ -281,7 +281,7 @@ location.href = "../../login_admin/index.php";
       <td><label for="">Modulo:</label></td>
     </tr>
     <tr>
-        <td><input type="text" name="sep"  id="sep" ></input></td>
+        <td><input type="text" name="sep"  id="sep"></input></td>
         <td><input type="text" name="modulo"  id="modulo" alt="modulo" ></input></td>
     </tr>
       <tr>
@@ -334,9 +334,7 @@ location.href = "../../login_admin/index.php";
           <tr>
           <td>
 
-<div id="flash" align="left"  >
-  <img src="image/loader.gif" alt="">
-</div>
+
           </td><td>
             <input type="submit" value="ALTAS" class="altasbtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
@@ -368,8 +366,10 @@ location.href = "../../login_admin/index.php";
 <script src="js/jquery-ui.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/calendario.js"></script>
-<script src="js/functions.js"></script>
 <script src="js/script.js"></script>
+<script src="js/functions.js"></script>
+
+<script src="alertifyjs/alertify.js"></script>
 
 
 </body>

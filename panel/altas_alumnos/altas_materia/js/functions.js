@@ -17,39 +17,36 @@ $(function() {
     var calificacion  = $("#calificacion").val();
 
 
-var dataString ='modulo='+ modulo +'&sep='+ sep + '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion ;
+var dataString ='sep=' + sep + '&modulo='+ modulo+ '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion ;
 
-if(modulo === '' ||sep === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
+if(sep === ''|| modulo === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
 }
 else
 {
-      $("#flash").show();
-      $("#flash").fadeIn(400);
+
       $.ajax({
         type: "POST",
         url: "php/action.php",
         data: dataString,
         cache: true,
         success: function(html){
-          $("#show").after(html);
+
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
-
-          document.getElementById('modulo').value='';
-          document.getElementById('sep').value='';
-          document.getElementById('nombre').value='';
-          document.getElementById('profesor').value='';
-          document.getElementById('fecha1').value='';
-          document.getElementById('fecha2').value='';
-          document.getElementById('creditos').value='';
-          document.getElementById('calificacion').value='';
-
-          $("#flash").hide();
-          $("#modulo,#sep,#nombre,#profesor,#fecha1,#fecha2,#creditos,#calificacion").focus();
+          $("#sep").val("");
+          $("#modulo").val("");
+          $("#nombre").val("");
+          $("#profesor").val("");
+          $("#fecha1").val("");
+          $("#fecha2").val("");
+          $("#creditos").val("");
+          $("#calificacion").val("");
 
 
+        }, error: function () {
+         alertify.alert().set('message', 'La clave del libro ya existe').show();
         }
       });
 }

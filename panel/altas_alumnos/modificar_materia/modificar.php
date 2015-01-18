@@ -29,6 +29,8 @@ location.href = "../../login_admin/index.php";
   <link rel="stylesheet" href="css/mensajes.css">
 
 
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+  <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
 
 
 </head>
@@ -279,7 +281,11 @@ location.href = "../../login_admin/index.php";
 include_once("php/modificar-materia.php");
 $id = $_GET["id"];
 ?>
-  <form method="POST"  action="php/modificado.php?id=<?php echo $id;?>" name="form1" class="form1">
+<script>
+   var id = "<?php echo $id;?>" ;
+</script>
+
+  <form method="POST"  action="" name="form1" class="form1">
 
     <table class='table1'>
         <tr>
@@ -340,9 +346,6 @@ $id = $_GET["id"];
           <tr>
           <td>
 
-<div id="flash" align="left"  >
-  <img src="image/loader.gif" alt="">
-</div>
           </td><td>
             <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
@@ -370,9 +373,10 @@ $id = $_GET["id"];
 <script src="js/jquery-ui.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/calendario.js"></script>
-<script src="js/functions.js"></script>
 <script src="js/script.js"></script>
+<script src="js/functions.js"></script>
 
+<script src="alertifyjs/alertify.js"></script>
 
 </body>
 </html>

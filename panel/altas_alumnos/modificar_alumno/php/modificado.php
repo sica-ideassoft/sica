@@ -3,7 +3,7 @@ include_once("../../conectar.php");
 $conn = new DB;
 $conn->conectar();
 
-$id       = mysql_real_escape_string($_POST["id"]);
+$id           = mysql_real_escape_string($_POST["id"]);
 $nombre       = mysql_real_escape_string($_POST["nombre"]);
 $paterno      = mysql_real_escape_string($_POST["paterno"]);
 $materno      = mysql_real_escape_string($_POST["materno"]);
@@ -30,7 +30,7 @@ $ssql = "UPDATE alumno set nombre = '".$nombre."',A_paterno = '".$paterno."',A_m
 if(mysql_query($ssql)){
 	return true;
 }else{
-	echo "no se pudo modificar el cliente";
+	echo "no se pudo modificar el Alumno";
 }
 
  ?>

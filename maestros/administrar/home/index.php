@@ -41,7 +41,7 @@ location.href = "../login_maestro/index.php";
 
               </div>
               <ul class="menu1">
-                <li class="lisalir" ><a href="../logout.php"><span class='salir'></span>SALIR</a></li>
+                <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
                 <li><a href=""><span class='home'></span>HOME</a></li>
 
               </ul>

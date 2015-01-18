@@ -28,6 +28,9 @@ location.href = "../../login_admin/index.php";
   <link rel="stylesheet" href="css/style_maestro.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+  <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
 
 
 
@@ -278,7 +281,10 @@ location.href = "../../login_admin/index.php";
 include_once("php/modificar-maestro.php");
 $id = $_GET["id"];
 ?>
-  <form method="POST" action="php/modificado.php?id=<?php echo $id;?>" name="form1" class="form1">
+<script>
+   var id = "<?php echo $id;?>" ;
+</script>
+  <form method="POST" action="" name="form1" class="form1">
 
     <table class='table1'>
       <tr>
@@ -293,25 +299,28 @@ $id = $_GET["id"];
         <td><input type="text" name="materno" id="materno" value=<?php echo $alumno['A_materno']; ?>></input></td>
       </tr>
       <tr>
+        <td><label for="">Clave:</label></td>
         <td><label for="">Curp:</label></td>
         <td><label for="">Telefono:</label></td>
-        <td><label for="">Correo:</label></td>
 
       </tr>
 
       <tr>
+        <td><input type="text" name="clavep" id="clavep" value=<?php echo $alumno['clave']; ?>></td>
         <td><input type="text" name="curp" id="curp" value=<?php echo $alumno['curp']; ?>></td>
         <td><input type="text" name="telefono" id="telefono" value=<?php echo $alumno['telefono']; ?>></td>
-        <td><input type="text" name="correo" id="correo" value=<?php echo $alumno['correo']; ?>></td>
+
 
       </tr>
       <tr>
+        <td><label for="">Correo:</label></td>
+
         <td><label for="">Genero:</label></td>
         <td><label for="">Edad:</label></td>
-        <td><label for="">Estado Civil:</label></td>
 
       </tr>
       <tr>
+        <td><input type="text" name="correo" id="correo" value=<?php echo $alumno['correo']; ?>></td>
        <td><select name="genero" id="genero" value=<?php echo $alumno['genero']; ?>>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
@@ -323,48 +332,54 @@ $id = $_GET["id"];
               }
              ?>
           </select><label for="">Años</label> </td>
-        <td><select name="civil" id="civil" value=<?php echo $alumno['estado_civil']; ?>>
+
+
+
+        </tr>
+        <tr>
+        <td><label for="">Estado Civil:</label></td>
+
+        <td><label for="">Fecha Nacimiento:</label></td>
+          <td><label for="">Estado:</label></td>
+
+
+        </tr>
+
+        <tr>
+          <td><select name="civil" id="civil" value=<?php echo $alumno['estado_civil']; ?>>
           <option value="soltero">Soltero</option>
           <option value="casado">Casado</option>
           <option value="libre">Union libre</option>
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-
-
-        </tr>
-        <tr>
-        <td><label for="">Fecha Nacimiento:</label></td>
-          <td><label for="">Estado:</label></td>
-          <td><label for="">Municipio:</label></td>
-
-
-        </tr>
-
-        <tr>
          <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"value=<?php echo $alumno['fecha_nacimiento']; ?>></td>
           <td><input type="text" name="estado"  id="estado" value=<?php echo $alumno['Estado']; ?>></td>
-          <td><input type="text" name="municipio"  id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
+
 
 
         </tr>
         <tr>
+          <td><label for="">Municipio:</label></td>
+
           <td><label for="">Calle:</label></td>
           <td><label for="">Nacionalidad</label></td>
-          <td><label for="">Usuario</label></td>
 
         </tr>
         <tr>
-
+<td><input type="text" name="municipio"  id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
         <td><input type="text" name="calle" id="calle" value=<?php echo $alumno['calle']; ?>></td>
           <td><input type="text" name="nacionalidad" id="nacionalidad" value=<?php echo $alumno['nacionalidad']; ?>></td>
-          <td><input type="text" name="user" id="user" ></td>
         </tr>
         <tr>
+          <td><label for="">Usuario</label></td>
+
         <td><label for="">Contraseña</label></td>
           <td><label for="">Fotografia</label></td>
         </tr>
         <tr>
+          <td><input type="text" name="user" id="user" ></td>
+
           <td><input type="password" name="password" id="password" ></td>
           <td><input name="foto" id="foto" type="file"></input></td>
         </tr>
@@ -411,7 +426,7 @@ $id = $_GET["id"];
 <script src="js/calendario.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/script.js"></script>
-
+<script src="alertifyjs/alertify.js"></script>
 
 </body>
 </html>

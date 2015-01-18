@@ -9,23 +9,27 @@ $(function() {
     var nombre    = $("#nombre").val();
     var paterno   = $("#paterno").val();
     var materno   = $("#materno").val();
+    var clavep    = $("#clavep").val();
     var curp      = $("#curp").val();
     var telefono  = $("#telefono").val();
     var correo    = $("#correo").val();
     var genero    = $("#genero").val();
     var edad      = $("#edad").val();
     var civil     = $("#civil").val();
-    var nacimineto = $("#nacimineto").val();
+    var nacimiento = $("#nacimiento").val();
     var estado     = $("#estado").val();
     var municipio  = $("#municipio").val();
     var calle  = $("#calle").val();
     var nacionalidad  = $("#nacionalidad").val();
+    var user  = $("#user").val();
+    var password  = $("#password").val();
+    var foto  = $("#foto").val();
 
 
 
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&nacionalidad=' + nacionalidad;
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+'&clavep=' + clavep+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&nacionalidad=' + nacionalidad + '&user=' + user+ '&password=' + password + '&foto=' + foto;
 
-if(nombre === '' || paterno === "" || materno === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimineto === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "")
+if(nombre === '' || paterno === "" || materno === ""|| clavep === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimiento === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === ""|| user === ""|| password === ""|| foto === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
@@ -55,33 +59,34 @@ else
         data: dataString,
         cache: true,
         success: function(html){
-          $("#show").after(html);
+
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
 
-          document.getElementById('nombre').value='';
-          document.getElementById('paterno').value='';
-          document.getElementById('materno').value='';
-          document.getElementById('curp').value='';
-          document.getElementById('telefono').value='';
-          document.getElementById('correo').value='';
-          document.getElementById('genero').value='';
-          document.getElementById('edad').value='';
-          document.getElementById('civil').value='';
-          document.getElementById('nacimiento').value='';
-          document.getElementById('estado').value='';
-          document.getElementById('municipio').value='';
-          document.getElementById('calle').value='';
-          document.getElementById('nacionalidad').value='';
+    $("#nombre").val("");
+    $("#paterno").val("");
+    $("#materno").val("");
+    $("#clavep").val("");
+    $("#curp").val("");
+    $("#telefono").val("");
+    $("#correo").val("");
+    $("#genero").val("");
+    $("#edad").val("");
+    $("#civil").val("");
+    $("#nacimiento").val("");
+    $("#estado").val("");
+    $("#municipio").val("");
+    $("#calle").val("");
+    $("#nacionalidad").val("");
+    $("#user").val("");
+    $("#password").val("");
+    $("#foto").val("");
 
-
-
-          $("#flash").hide();
-          $("#nombre,#paterno,#materno,#curp,#telefono,#correo,#genero,#edad,#civil,#nacimiento,#estado,#municipio,#calle,#nacionalidad").focus();
-
-
+        }, error: function () {
+         alertify.alert().set('message', 'La clave del maestro ya existe').show();
         }
       });
 }
 
   });
 });
+

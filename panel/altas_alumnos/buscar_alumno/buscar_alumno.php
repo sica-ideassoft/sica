@@ -207,7 +207,7 @@ $conn = dbConnect();
         <th>Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th>Telefono</th>
+        <th>Matricula</th>
         <th>mostrar</th>
     </thead>
 </table>

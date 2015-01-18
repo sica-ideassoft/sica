@@ -48,7 +48,6 @@ $conn->conectar();
             <nav>
               <div class="cantera">
                 <img src="image/canter.png" alt="">
-
               </div>
               <ul class="menu1">
                 <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
@@ -58,6 +57,7 @@ $conn->conectar();
 
               <div class="user">
                 <div class="userimg">
+
                   <?php  include_once("php/miniatura.php"); ?>
                 </div>
                 <div class="datos"><p><?php echo $_SESSION['admin-sica'];?></p></div>

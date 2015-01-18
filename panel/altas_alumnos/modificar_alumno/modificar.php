@@ -26,11 +26,11 @@ location.href = "../../login_admin/index.php";
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style_altas.css">
   <link rel="stylesheet" href="css/mensajes.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
 
 
 <link rel="stylesheet" href="alertifyjs/css/alertify.css">
 <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
 
 
 

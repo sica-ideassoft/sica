@@ -6,32 +6,26 @@ $(function() {
 
   $("#enviar").click(function(e) {
     e.preventDefault();
-
-
  id
  var nombre       = $("#nombre").val();
  var paterno      = $("#paterno").val();
  var materno      = $("#materno").val();
- var matricula    = $("#matricula").val();
+ var clavep       = $("#clavep").val();
  var curp         = $("#curp").val();
  var telefono     = $("#telefono").val();
  var correo       = $("#correo").val();
  var genero       = $("#genero").val();
- var nacimiento   = $("#nacimiento").val();
  var edad         = $("#edad").val();
- var grado        = $("#grado").val();
- var grupo        = $("#grupo").val();
+ var civil        = $("#civil").val();
+ var nacimiento   = $("#nacimiento").val();
  var estado       = $("#estado").val();
  var municipio    = $("#municipio").val();
  var calle        = $("#calle").val();
  var nacionalidad = $("#nacionalidad").val();
- var civil        = $("#civil").val();
- var foto         = $("#foto").val();
- var status       = $("#status").val();
 
-var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grado='+ grado + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio + '&calle='+ calle  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&foto='+ foto + '&status='+ status  ;
+var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&clavep='+ clavep  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&edad='+ edad+ '&estado='+ estado + '&municipio='+ municipio + '&calle='+ calle + '&nacionalidad='+ nacionalidad;
 
-if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grado === ""|| grupo === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "" || civil === ""|| foto === ""|| status === "")
+if(nombre === '' ||paterno === '' ||materno === '' || clavep === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| edad === ""|| civil === ""|| nacionalidad === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
@@ -53,7 +47,7 @@ else if(!expr.test(correo))
 }
 else
 {
-alertify.confirm("Realmente quiere modificar el Alumno?.",
+alertify.confirm("Realmente quiere modificar el Maestro?.",
 function()
 {
     // alertify.success('Ok');

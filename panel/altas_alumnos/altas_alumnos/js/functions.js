@@ -4,6 +4,7 @@ $(function() {
   var Ecurp     = /[a-zA-Z]{4,4}[0-9]{6}[a-zA-Z]{6,6}[0-9]{2}/;
   var Etelefono = /^[0-9-()+]{3,20}/;
 
+
   $("#enviar").click(function(e) {
     e.preventDefault();
     var nombre    = $("#nombre").val();
@@ -25,6 +26,7 @@ $(function() {
     var civil     = $("#civil").val();
     var imagen      = $("#imagen").val();
     var status    = $("#status").val();
+
 
 
 var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grado=' + grado + '&grupo=' + grupo + '&estado=' + estado + '&municipio=' + municipio + '&calle=' + calle+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&imagen=' + imagen+ '&status=' + status;
@@ -56,6 +58,7 @@ else
         url: "php/action.php",
         data: dataString,
         cache: true,
+
         success: function(html){
 
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
@@ -79,6 +82,8 @@ else
     $("#civil").val("");
     $("#imagen").val("");
     $("#status").val("");
+        }, error: function () {
+         alertify.alert().set('message', 'La matricula ya existe').show();
         }
       });
 }

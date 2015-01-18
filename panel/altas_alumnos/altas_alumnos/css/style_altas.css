@@ -10,6 +10,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 .datos{
 	text-transform: uppercase;
 }
@@ -48,6 +49,11 @@ margin-top: 15px;
 
 
 }
+.table1 input[type="text"],select{
+	color: #191919!important;
+
+
+}
 .table1 select {
 	cursor: pointer;
 }
@@ -58,6 +64,7 @@ margin-top: 15px;
 	padding-bottom: 5px;
 padding-left: 30px;
 	padding-right: 10px;
+
 }
 .form1 .table1 td label{
 color: #104e8b;
