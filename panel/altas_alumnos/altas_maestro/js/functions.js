@@ -23,13 +23,13 @@ $(function() {
     var nacionalidad  = $("#nacionalidad").val();
     var user  = $("#user").val();
     var password  = $("#password").val();
-    var foto  = $("#foto").val();
 
 
 
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+'&clavep=' + clavep+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&nacionalidad=' + nacionalidad + '&user=' + user+ '&password=' + password + '&foto=' + foto;
 
-if(nombre === '' || paterno === "" || materno === ""|| clavep === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimiento === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === ""|| user === ""|| password === ""|| foto === "")
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+'&clavep=' + clavep+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&nacionalidad=' + nacionalidad + '&user=' + user+ '&password=' + password;
+
+if(nombre === '' || paterno === "" || materno === ""|| clavep === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimiento === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === ""|| user === ""|| password === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
@@ -51,8 +51,6 @@ else if(!expr.test(correo))
 }
 else
 {
-      $("#flash").show();
-      $("#flash").fadeIn(400);
       $.ajax({
         type: "POST",
         url: "php/action.php",
@@ -79,10 +77,10 @@ else
     $("#nacionalidad").val("");
     $("#user").val("");
     $("#password").val("");
-    $("#foto").val("");
+
 
         }, error: function () {
-         alertify.alert().set('message', 'La clave del maestro ya existe').show();
+         alertify.alert().set('message', 'La <b>clave</b> o el <b>usuario</b> del maestro ya están en uso').show();
         }
       });
 }

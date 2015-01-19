@@ -18,7 +18,7 @@ location.href = "../../login_admin/index.php";
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -373,15 +373,12 @@ $id = $_GET["id"];
         </tr>
         <tr>
           <td><label for="">Usuario</label></td>
-
-        <td><label for="">Contraseña</label></td>
-          <td><label for="">Fotografia</label></td>
+          <td><label for="">Contraseña</label></td>
         </tr>
         <tr>
-          <td><input type="text" name="user" id="user" ></td>
+          <td><input type="text" name="user" id="user" value=<?php echo $maestro_user['user']; ?>></td>
+          <td><input type="password" name="password" id="password" value=<?php echo $maestro_user['password']; ?>></td>
 
-          <td><input type="password" name="password" id="password" ></td>
-          <td><input name="foto" id="foto" type="file"></input></td>
         </tr>
       </table>
 

@@ -21,7 +21,7 @@ $conn = dbConnect();
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -206,15 +206,16 @@ $conn = dbConnect();
         </div>
         <p>buscar maestros</p>
         </div>
-                <div class="content-alumno">
-                  <div class="img-alumno">
-                      <figure class="foto-alumno">
-                        <img src="" alt="">
+                <div class="content-mestro">
+                  <div class="img-maestro">
+                       <?php
+                          include_once("php/mostrar_foto.php");
+                        ?>
                       </figure>
                       <label for=""></label>
 
                   </div>
-                  <div class="info-alumno">
+                  <div class="info-maestro">
 
 <?php
 include_once("php/mostrar.php");

@@ -10,6 +10,16 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'buscar';
+	src:url('../fonts2/icomoon.eot?-5dly7z');
+	src:url('../fonts2/icomoon.eot?#iefix-5dly7z') format('embedded-opentype'),
+		url('../fonts2/icomoon.woff?-5dly7z') format('woff'),
+		url('../fonts2/icomoon.ttf?-5dly7z') format('truetype'),
+		url('../fonts2/icomoon.svg?-5dly7z#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 .datos{
 	text-transform: uppercase;
 }
@@ -140,4 +150,173 @@ color: #000;
 .usuario,.password{
 	padding-left: 10px;
 	color: #024960;
+}
+.btnModulo{
+	position: absolute;
+	background-color:#1e90ff;
+	padding: 10px 30px;
+	text-decoration: none;
+	color: white;
+	margin-left: 20px;
+	margin-top: 5px;
+	border-radius: 5px;
+	border-bottom: 3px solid rgb(0, 206, 251);
+}
+.btnModulo:hover{
+	border-style: none;
+}
+.icoModulo{
+	padding-left: 20px;
+}
+.icoModulo:after{
+	font-family: "iconitos";
+	content:"\e610";
+}
+.modulo{
+	width: 100%;
+	height: 55px;
+	overflow: hidden;
+	background-color: rgb(212, 212, 212);
+}
+.altas-modulo{
+	position: absolute;
+	margin-top: 55px;
+	width: 100%;
+	height: 40px;
+	background-color: rgb(212, 212, 212);
+	display: none;
+
+}
+.altas-modulo form table tr td{
+	padding-left: 20px;
+}
+.altas-modulo form table tr td input[type="text"]{
+	color: rgba(0,0,0,0.7);
+	width: 200px;
+	height: 30px;
+	border-style: none;
+	padding-left: 10px;
+}
+.agregar{
+	width: 170px;
+	height: 35px;
+	border-style: none;
+	background-color: rgb(21, 179, 185);
+	border-bottom: 3px solid rgb(0, 111, 255);
+	color: white;
+	border-radius: 5px;
+	font-weight: bold;
+
+}
+.agregar:hover{
+	border-style: none;
+}
+.icoAgregar{
+	margin-left: -23px;
+	position: absolute;
+	margin-top: 5px;
+}
+.icoAgregar:after{
+	font-family: "iconitos";
+	content:"\e631";
+	color: white;
+}
+.modulos-view{
+background-color:rgba(0,0,0,0.7);
+/*font-family: helvetica;*/
+height: 100%;
+width: 100%;
+z-index: 100;
+
+position: fixed;
+top: 0px;
+left: 0px;
+display: none;
+}
+.title{
+	background-color: rgba(0,0,0,0.1);
+
+	border-radius: 0px 20px 0px  0px;
+}
+.model-con{
+	margin: 0 auto;
+	margin-top: 70px;
+	/*border:10px solid rgba(255,255,255,0.1);*/
+	width: 1030px;
+	height: 550px;
+	padding: 10px;
+	/*background-color: rgba(238, 238, 238, 0.2);*/
+	 overflow: hidden;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+
+.model{
+	width: 200px;
+	height: 120px;
+	background-color:rgb(19, 126, 161);
+	display: inline-block;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+	border-radius: 0px 20px 0px  20px;
+}
+.model table {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: white;
+
+
+}
+.cerrar{
+	position: absolute;
+	cursor:pointer;
+	padding-top: 10px;
+	right: 0px;
+	width: 60px;
+	height: 50px;
+	/*border:5px solid white;*/
+	background-color:rgb(19, 126, 161);
+
+}
+.cerrar:after{
+	font-family: "iconitos";
+	content:"\e62d";
+    color: white;
+	font-size: 40px;
+
+	padding: 10px;
+}
+.modulos-view p {
+	position: absolute;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: rgba(238, 238, 238, 1);
+	margin-left: 115px;
+	font-family: helvetica;
+}
+
+.modal{
+	background-color:rgb(14, 77, 80);
+	color: white;
+	/*position: absolute;*/
+	margin-top: 5px;
+	display: inline-block;
+	padding: 10px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 3px solid rgb(15, 83, 246);
+	border-radius: 5px;
+}
+.modal:hover{
+	border-style: none;
+}
+.control{
+	overflow: hidden;
+	text-align: center;
+}
+.modal-mas:after{
+font-family: "buscar";
+	content:"\e606";
+	color: white;
+	padding-left: 20px;
 }

@@ -5,12 +5,14 @@ $conn = new DB;
 $conn->conectar();
 
 $id = $_GET["id"];
-$sql=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");
+$sql = mysql_query("SELECT * FROM maestro m
+INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'");
+// $sql=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");
 ?>
 
 <?php
 while($row = mysql_fetch_array($sql)){
-$nombre = $row['nombre'];
+
 ?>
 <table class="tabla-mostrar">
 <tr>
@@ -53,10 +55,14 @@ $nombre = $row['nombre'];
 <tr>
 	<td class="dato"><label for="">calle:</label></td>
 	<td class="dato"><label for="">nacionalidad:</label></td>
+	<td class="dato"><label for="">User:</label></td>
+
 </tr>
 <tr>
 	<td><?php echo $row['calle']; ?></td>
 	<td><?php echo $row['nacionalidad']; ?></td>
+	<td><?php echo $row['user']; ?></td>
+
 </tr>
 
 </table>

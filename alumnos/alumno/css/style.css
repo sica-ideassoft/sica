@@ -196,14 +196,15 @@ margin-left: -40px;
 position: absolute;
 overflow: hidden;
 margin-left: 70px;
-width: 100px;
+width: 150px;
 height: 100px;
 top:0;
-margin-top: 30px;s
+margin-top: 30px;
 
 	}
 .Nuser p{
 	font-weight: bold;
+
 }
 
 .Nuser p{
@@ -354,6 +355,128 @@ background-color: rgba(0, 91, 150,0.8);
 	overflow: hidden;
 
 }
+@media screen and (max-width: 360px){
+.menu2{
+	width: 170px;
+	margin-left: -170px;
+	transition:all .3s ease;
+	-webkit-transition:all .5s ease;
+}
+
+.is-active{
+	margin-left: 0px !important;
+}
+
+.color{
+	width: 170px;
+}
+.menu3 li{
+	width:152px;
+
+}
+.Cdatos{
+	width: 90px;
+	height: 90px;
+
+}
+.titulo1{
+	height: 40px;
+}
+.titulo1 p{
+	margin-top: 10px;
+}
+.titulo2 {
+height: 40px;
+margin-bottom: -10px;
+	}
+.Nuser{
+position: absolute;
+overflow: hidden;
+margin-left: 70px;
+width: 100px;
+height: 100px;
+top:0;
+margin-top: 30px;
+
+	}
+.Nuser p {
+	margin-top: 4px;
+}
+.Cdatos .figura{
+	width: 60px;
+	height: 60px;
+}
+.Cdatos img{
+width: 60px;
+	height: 60px;
+}
+.menuresp{
+
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	position: fixed;
+
+}
+.hide{
+	display: none;
+}
+ .is-active{
+	display: block
+}
+.responsive{
+	width: 20px;
+	height: 20px;
+	padding: 20px;
+
+	position: absolute;
+}
+.cantera{
+	margin-left: 40px;
+}
+.responsive:after{
+	font-family: "responsive";
+	content:"\e600";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+
+}
+.responsive2:after{
+	font-family: "responsive";
+	content:"\e601";
+	color: white;
+	padding-top: 20px;
+	font-weight: bold;
+font-size: 20px;
+position: absolute;
+margin-left: 20px;
+}
+.tem{
+
+	width: 298px;
+
+}
+.contuser{
+	background-color: transparent;
+}
+.flecha{
+	width: 30px;
+	height:20px;
+	background-color: red;
+
+
+
+}
+
+.salir{
+
+display: none;
+
+
+}
+}
 @media screen and (max-width: 320px){
 .section-content{
 	background-color: rgba(255,255,255,0.3);
@@ -397,6 +520,7 @@ margin-bottom: -10px;
 	}
 .Nuser p {
 	margin-top: 4px;
+	margin-left: -10px;
 }
 .Cdatos .figura{
 	width: 60px;
@@ -482,116 +606,4 @@ display: none;
 
 }
 
-}
-@media screen and (max-width: 360px){
-.menu2{
-	width: 170px;
-	margin-left: -170px;
-	transition:all .3s ease;
-	-webkit-transition:all .5s ease;
-}
-
-.is-active{
-	margin-left: 0px !important;
-}
-
-.color{
-	width: 170px;
-}
-.menu3 li{
-	width:152px;
-
-}
-.Cdatos{
-	width: 90px;
-	height: 90px;
-
-}
-.titulo1{
-	height: 40px;
-}
-.titulo1 p{
-	margin-top: 10px;
-}
-.titulo2 {
-height: 40px;
-margin-bottom: -10px;
-	}
-.Nuser p {
-	margin-top: 4px;
-}
-.Cdatos .figura{
-	width: 60px;
-	height: 60px;
-}
-.Cdatos img{
-width: 60px;
-	height: 60px;
-}
-.menuresp{
-
-	width: 60px;
-	height: 60px;
-	cursor: pointer;
-	position: fixed;
-
-}
-.hide{
-	display: none;
-}
- .is-active{
-	display: block
-}
-.responsive{
-	width: 20px;
-	height: 20px;
-	padding: 20px;
-
-	position: absolute;
-}
-.cantera{
-	margin-left: 40px;
-}
-.responsive:after{
-	font-family: "responsive";
-	content:"\e600";
-	color: white;
-	padding-top: 20px;
-	font-weight: bold;
-font-size: 20px;
-
-}
-.responsive2:after{
-	font-family: "responsive";
-	content:"\e601";
-	color: white;
-	padding-top: 20px;
-	font-weight: bold;
-font-size: 20px;
-position: absolute;
-margin-left: 20px;
-}
-.tem{
-
-	width: 298px;
-
-}
-.contuser{
-	background-color: transparent;
-}
-.flecha{
-	width: 30px;
-	height:20px;
-	background-color: red;
-
-
-
-}
-
-.salir{
-
-display: none;
-
-
-}
 }

@@ -23,7 +23,7 @@ include_once("php/paginacion.php");
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -207,18 +207,16 @@ include_once("php/paginacion.php");
      <div class="estacion">
             <span class="estudent"></span>
         </div>
-  <p>modificar / eliminar alumnos</p>
+  <p>modificar / eliminar maestro</p>
   </div>
 
-            <div class="content-alumno">
-                  <div class="img-alumno">
-                      <figure class="foto-alumno">
-                        <img src="" alt="">
-                      </figure>
-                      <label for=""></label>
-
+            <div class="content-maestro">
+                  <div class="img-maestro">
+                      <?php
+                      include_once("php/mostrar_foto.php");
+                       ?>
                   </div>
-                  <div class="info-alumno">
+                  <div class="info-maestro">
 
 <?php
 include_once("php/mostrar.php");

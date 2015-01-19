@@ -19,8 +19,13 @@ $estado       = mysql_real_escape_string($_POST['estado']);
 $municipio    = mysql_real_escape_string($_POST['municipio']);
 $calle        = mysql_real_escape_string($_POST['calle']);
 $nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
+$user         = mysql_real_escape_string($_POST['user']);
+$password     = mysql_real_escape_string($_POST['password']);
 
 $ssql = "UPDATE maestro set nombre = '".$nombre."',A_paterno = '".$paterno."',A_materno = '".$materno."',clave = '".$clavep."',curp = '".$curp."',telefono = '".$telefono."',correo = '".$correo."',genero = '".$genero."',edad = '".$edad."',estado_civil = '".$civil."',Estado = '".$estado."',municipio = '".$municipio."',calle = '".$calle."',nacionalidad = '".$nacionalidad."' WHERE id_maestro= '".$id."'";
+
+
+$ssql = "UPDATE user_maestro set user = '".$user."',password = '".$password."' WHERE id_maestro= '".$id."'";
 if(mysql_query($ssql)){
 	header("location:../modificar_maestro.php");
 }else{

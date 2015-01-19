@@ -22,10 +22,12 @@ $(function() {
  var municipio    = $("#municipio").val();
  var calle        = $("#calle").val();
  var nacionalidad = $("#nacionalidad").val();
+ var user         = $("#user").val();
+ var password     = $("#password").val();
 
-var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&clavep='+ clavep  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&edad='+ edad+ '&estado='+ estado + '&municipio='+ municipio + '&calle='+ calle + '&nacionalidad='+ nacionalidad;
+var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&clavep='+ clavep  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&edad='+ edad+ '&estado='+ estado + '&municipio='+ municipio + '&calle='+ calle + '&nacionalidad='+ nacionalidad+ '&user='+ user+ '&password='+ password;
 
-if(nombre === '' ||paterno === '' ||materno === '' || clavep === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| edad === ""|| civil === ""|| nacionalidad === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "")
+if(nombre === '' ||paterno === '' ||materno === '' || clavep === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| edad === ""|| civil === ""|| nacionalidad === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === ""|| user === ""|| password === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

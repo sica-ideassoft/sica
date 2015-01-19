@@ -17,6 +17,7 @@ $(function() {
     var calificacion  = $("#calificacion").val();
 
 
+
 var dataString ='sep=' + sep + '&modulo='+ modulo+ '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion ;
 
 if(sep === ''|| modulo === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
