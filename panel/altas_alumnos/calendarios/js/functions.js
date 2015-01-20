@@ -36,7 +36,7 @@ else
     $("#nombre").val("");
     $("#modulo").val("");
     $("#fecha").val("");
-
+    location.reload();
         }, error: function () {
          alertify.alert().set('message', 'El modulo ya <b>Existe</b>').show();
         }

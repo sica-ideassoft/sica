@@ -282,7 +282,13 @@ location.href = "../../login_admin/index.php";
     </tr>
     <tr>
         <td><input type="text" name="sep"  id="sep"></input></td>
-        <td><input type="text" name="modulo"  id="modulo" alt="modulo" ></input></td>
+        <!-- <td><input type="text" name="modulo"  id="modulo" alt="modulo" ></input></td> -->
+        <td><select name="modulo"  id="modulo" >
+          <?php
+              include_once("php/select.php");
+              modulo();
+          ?>
+        </select></td>
     </tr>
       <tr>
         <td><label for="">Nombre:</label></td>
@@ -292,7 +298,13 @@ location.href = "../../login_admin/index.php";
       </tr>
       <tr>
         <td><input type="text" name="nombre"  id="nombre" alt="nombre" ></input></td>
-        <td><input type="text" name="profesor"  id="profesor" ></input></td>
+        <!-- <td><input type="text" name="profesor"  id="profesor" ></input></td> -->
+        <td><select name="profesor"  id="profesor" >
+        <?php
+              include_once("php/select.php");
+              maestro();
+         ?>
+        </select></td>
       </tr>
       <tr>
         <td><label for="">Fecha Inicio:</label></td>

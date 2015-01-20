@@ -4,6 +4,9 @@ $sql=mysql_query("SELECT * FROM modulos ORDER BY fecha ASC");
   while($row = mysql_fetch_array($sql)){
     ?>
     <div class='model'>
+
+    <div class="elim"><a href="#" onclick="delModulo(<?php echo $row['id_modulo'];?>);">x</a></div>
+
     <table >
         <tr>
           <td class='title'><label ><?php echo $row['nombre']; ?></label></td>
@@ -16,8 +19,7 @@ $sql=mysql_query("SELECT * FROM modulos ORDER BY fecha ASC");
         </tr>
       </table>
     </div>
-
-
+<script src="js/eliminar.js"></script>
   <?php
   }
 

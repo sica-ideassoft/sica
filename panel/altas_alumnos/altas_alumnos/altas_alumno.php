@@ -158,7 +158,7 @@ location.href = "../../login_admin/index.php";
           <ul>
           <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='#'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
@@ -336,8 +336,18 @@ location.href = "../../login_admin/index.php";
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td><input type="text" name="grado"  id="grado" ></td>
-          <td><input type="text" name="grupo" id="grupo"></td>
+          <td><select name="grado"  id="grado">
+              <?php include_once("php/grupo.php");
+               grado();
+              ?>
+          </select></td>
+          <!-- <td><input type="text" name="grado"  id="grado" ></td> -->
+          <!-- <td><input type="text" name="grupo" id="grupo"></td> -->
+           <td><select name="grupo" id="grupo" id="">
+              <?php
+               grupo();
+              ?>
+          </select></td>
 
         </tr>
         <tr>

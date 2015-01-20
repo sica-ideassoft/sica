@@ -258,7 +258,7 @@ function delEmpresa(id) {
 alertify.confirm("Realmente quiere eliminar el Alumno.",
   function(){
     alertify.success('Ok');
-    window.location = "php/delete.php?action=del&id="+id;
+    window.location = "php/delete.php?id="+id;
   },
   function(){
     // alertify.error('Cancel');

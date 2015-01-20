@@ -2,7 +2,7 @@
 session_start();
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
-location.href = "../login_maestro/index.php";
+location.href = "../../login_maestro/index.php";
 </script>';
 }
 ?>
@@ -207,7 +207,7 @@ location.href = "../login_maestro/index.php";
         <p>home</p>
         </div>
 			<div class="home">
-
+      <?php include_once("php/materias.php"); ?>
 			</div>
             <div class="control">
 

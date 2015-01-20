@@ -11,7 +11,7 @@ $conn = dbConnect();
 		$rows = $stmt->fetchAll();
 		$error = $stmt->errorInfo();
 	}
-	if(empty($rows)) {
+	if(!isset($f)) {
 ?>
 		<tr>
 			<td colspan='5'>El alumno no existe</td>

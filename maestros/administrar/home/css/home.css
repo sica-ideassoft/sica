@@ -115,3 +115,55 @@ color: #000;
 	padding-left: 10px;
 	color: #024960;
 }
+.content-materias{
+	background-color: rgba(0,0,0,0.1);
+	position: absolute;
+	width: 300px;
+	height:500px;
+}
+.title-materias{
+	width: 320px;
+	height: 60px;
+	background-color: rgb(20, 151, 161);
+	/*margin-left: 20px;*/
+	margin-top: 5px;
+	display: inline-block;
+
+}
+.title-materias p{
+	width: 100%;
+	height: 100%;
+	/*padding-top: 20px;*/
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.materias{
+	width: 300px;
+	height: 60px;
+	background-color: rgb(41, 105, 100);
+	margin-left: 20px;
+	margin-top: 15px;
+	display: inline-block;
+
+}
+.materias p{
+	width: 100%;
+	height: 100%;
+	/*padding-top: 20px;*/
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.pico{
+	margin-top: -32px;
+ 	width: 0;
+    height: 0;
+    border-top: 20px solid rgba(0,0,0,0.9);
+    border-right: 20px solid transparent;
+    margin-left: 20px;
+    float: right;
+}

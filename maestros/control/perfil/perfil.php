@@ -132,7 +132,7 @@ $conn->conectar();
             <div class="Mcontent">
               <div id='cssmenu'>
               <ul class="ul2">
-        <li ><a href='../../altas_alumnos/home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li ><a href='../../administrar/home/index.php'><span class="icoHome">HOME</span></a></li>
         <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>

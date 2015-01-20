@@ -2,6 +2,17 @@
 <?php
 
 $id = $_GET["id"];
+
+
+$queris = mysql_query("SELECT m.profesor,u.id_maestro,u.user,o.id_maestro,o.nombre
+FROM materias m
+INNER JOIN user_maestro u  ON m.id_materia = '$id' and m.profesor = u.user
+INNER JOIN maestro o  ON o.id_maestro =  u.id_maestro");
+
+$listar2 = mysql_fetch_array($queris);
+
+// echo $listar2['nombre'];
+
 $sql=mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
 ?>
 
@@ -19,7 +30,7 @@ $nombre = $row['nombre'];
 	<td><?php echo $row['claveSEP']; ?></td>
 	<td><?php echo $row['modulo']; ?></td>
 	<td><?php echo $row['nombre']; ?></td>
-	<td><?php echo $row['profesor']; ?></td>
+	<td><?php echo $listar2['nombre']; ?></td>
 </tr>
 <tr>
 	<td class="dato"><label for="">Fecha inicio:</label></td>

@@ -19,8 +19,11 @@
 	text-align: center;
 }
 .tabla-mostrar{
-	width: 830px;
+	width: 1000px;
 	height: 300px;
+	/*position: absolute;*/
+	margin-left: -80px;
+
 }
 .tabla-mostrar .dato{
 text-transform: uppercase;
