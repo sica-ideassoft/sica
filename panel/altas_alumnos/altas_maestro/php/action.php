@@ -43,9 +43,6 @@ if ($row = mysql_fetch_row($rs)) {
 $id = trim($row[0]);
 }
 $maestro = mysql_query("INSERT INTO user_maestro(id_login_maestro,id_maestro,user,password) values (null,'".$id."','".$user."','".$password."')");
-
-
-
 	}
 
 

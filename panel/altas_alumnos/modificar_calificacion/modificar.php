@@ -148,31 +148,41 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-          <li class='has-sub admin activo'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
           <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a class="activo" href='../modificar_materia/modificar_materia.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a  href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
 
- <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+ <li class='has-sub admin activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
                <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a  class='activo' href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
      </div>
      <!-- fin de menu3 -->
@@ -348,7 +358,7 @@ $id = $_GET["id"];
                   <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
           </td> <td>
-          <a class="regresar" href="modificar_materia.php">REGRESAR</a><span class="reg"></span>
+          <a class="regresar" href="modificar_calificacion.php">REGRESAR</a><span class="reg"></span>
         </td></tr>
       </table>
     </div>

@@ -6,10 +6,7 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
-<?php
-require_once 'php/Connection.simple.php';
-$conn = dbConnect();
- ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -174,7 +171,17 @@ $conn = dbConnect();
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->

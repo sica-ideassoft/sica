@@ -19,18 +19,16 @@ $nombreImagen=$_FILES['imagen']['name'];
 $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
-$usuario=$_POST['usuario'];
-$pass=$_POST['password'];
 
-
-$sql = "UPDATE user_maestro set imagen = '".$rutaDestino."',user = '".$usuario."',password = '".$pass."' WHERE  user ='".$user."'";
+$sql = "UPDATE user_maestro set imagen = '".$rutaDestino."' WHERE  user ='".$user."'";
 
 $res=mysql_query($sql);
 
 if ($res){
-	header("location:../../logout.php");
+	header("location:perfil.php");
 }else{
     echo 'no se pudo modificar';
 }
+
 
 ?>

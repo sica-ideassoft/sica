@@ -176,7 +176,17 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
      </div>
      <!-- fin de menu3 -->
@@ -336,11 +346,12 @@ location.href = "../../login_admin/index.php";
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td><select name="grado"  id="grado">
+          <td class='grado'><select name="grado"  id="grado">
               <?php include_once("php/grupo.php");
                grado();
               ?>
-          </select></td>
+          </select>
+          <label for="">ro</label></td>
           <!-- <td><input type="text" name="grado"  id="grado" ></td> -->
           <!-- <td><input type="text" name="grupo" id="grupo"></td> -->
            <td><select name="grupo" id="grupo" id="">

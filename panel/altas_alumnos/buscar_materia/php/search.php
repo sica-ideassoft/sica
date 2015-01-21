@@ -6,15 +6,17 @@ $conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM materias WHERE nombre LIKE '%".$busca."%' OR profesor LIKE '%".$busca."%'");
+$busqueda=mysql_query("SELECT m.id_materia,m.profesor,m.nombre_materia,m.nombre_materia,m.credito,m.cal_min,u.id_maestro,u.user,o.id_maestro,o.nombre
+FROM materias m
+INNER JOIN user_maestro u ON  m.profesor = u.user
+INNER JOIN maestro o  ON o.id_maestro =  u.id_maestro
+WHERE m.nombre_materia LIKE '%".$busca."%'OR o.nombre LIKE '%".$busca."%' ");
 
-// $row=mysql_fetch_array($busqueda);
-	//
 
 	if(mysql_num_rows($busqueda)==0) {
 	?>
-		<tr>
-			<td colspan='5'>El alumno no existe</td>
+		<tr class= "existe">
+			<td  colspan='5'>El alumno no existe</td>
 		</tr>
 
 	<?php
@@ -23,8 +25,8 @@ $busqueda=mysql_query("SELECT * FROM materias WHERE nombre LIKE '%".$busca."%' O
 
 	?>
 		<tr>
+		<td class= "nombre"><?php echo $f['nombre_materia']?></td>
 		<td><?php echo $f['nombre']?></td>
-		<td><?php echo $f['profesor']?></td>
 		<td><?php echo $f['credito']?></td>
 		<td><?php echo $f['cal_min']?></td>
 		?>

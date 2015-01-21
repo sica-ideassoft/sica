@@ -4,7 +4,8 @@ $conn = new DB();
 $conn->conectar();
 
 $user = $_SESSION['maestro-session'];
-$query =  mysql_query("SELECT nombre FROM materias where profesor = '".$user."'");
+
+$query =  mysql_query("SELECT nombre_materia FROM materias where profesor = '".$user."'");
 
 ?>
 <div class="content-materias">
@@ -17,7 +18,7 @@ $query =  mysql_query("SELECT nombre FROM materias where profesor = '".$user."'"
 		?>
 		<div class="materias">
 			<p>
-				<?php echo $row["nombre"];  ?>
+				<?php echo $row["nombre_materia"];  ?>
 			</p>
 			<div class='pico'></div>
 		</div>

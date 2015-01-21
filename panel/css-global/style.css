@@ -10,11 +10,11 @@
 }
 @font-face {
 	font-family: 'menu';
-	src:url('fonts/icomoon.eot?s4hs2h');
-	src:url('fonts/icomoon.eot?#iefixs4hs2h') format('embedded-opentype'),
-		url('fonts/icomoon.woff?s4hs2h') format('woff'),
-		url('fonts/icomoon.ttf?s4hs2h') format('truetype'),
-		url('fonts/icomoon.svg?s4hs2h#icomoon') format('svg');
+	src:url('fonts/icomoon.eot?-tgvyfx');
+	src:url('fonts/icomoon.eot?#iefix-tgvyfx') format('embedded-opentype'),
+		url('fonts/icomoon.woff?-tgvyfx') format('woff'),
+		url('fonts/icomoon.ttf?-tgvyfx') format('truetype'),
+		url('fonts/icomoon.svg?-tgvyfx#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -917,6 +917,14 @@ font-size: 40px;
 	color: rgba(255,255,255,0.7);
 }
 
+.icoGrupo:before{
+	font-family: "menu";
+	content: "\e625";
+	/*content: "\e614";*/
+	/*content: "\e618";*/
+	padding-right: 10px;
+	color: rgba(255,255,255,0.7);
+}
 .icoBuscar:before{
 	font-family: "menu";
 	content: "\e606";

@@ -29,7 +29,7 @@ if ($username_exist>0) {
 	exit();
 }else{
 
-$query = mysql_query("INSERT INTO materias(id_materia,claveSEP,modulo,nombre,profesor,fecha_inicio,fecha_fin,credito,cal_min) values (null,'$sep','$modulo','$nombre','$profesor','$fecha1','$fecha2','$creditos','$calificacion')");
+$query = mysql_query("INSERT INTO materias(id_materia,claveSEP,modulo,nombre_materia,profesor,fecha_inicio,fecha_fin,credito,cal_min) values (null,'$sep','$modulo','$nombre','$profesor','$fecha1','$fecha2','$creditos','$calificacion')");
 	}
 }
 

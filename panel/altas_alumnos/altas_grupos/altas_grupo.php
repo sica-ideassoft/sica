@@ -1,0 +1,407 @@
+<?php
+session_start();
+if (!isset($_SESSION['admin-sica'])) {
+echo '<script>
+location.href = "../../login_admin/index.php";
+</script>';
+}
+
+?>
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang='es'> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <link rel="shortcut icon" href="image/favicon.ico">
+
+  <title>ADMINISTRADOR</title>
+
+  <meta name="description" content="Sistemas de calificaciones">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style_altas.css">
+  <link rel="stylesheet" href="css/mensajes.css">
+  <link rel="stylesheet" href="css/buscar_grupo.css">
+
+
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
+
+
+
+
+</head>
+<body>
+      <!--[if lt IE 7]>
+          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+          <![endif]-->
+    <header>
+      <nav>
+        <div class="cantera">
+          <img src="image/canter.png" alt="">
+
+        </div>
+        <ul class="menu1">
+          <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
+          <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
+
+        </ul>
+
+        <div class="user">
+          <div class="userimg">
+            <?php  include_once("php/miniatura.php"); ?>
+          </div>
+          <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
+        </div>
+      </nav>
+
+    </header>
+    <div class='heder2'>
+
+      <div class="heder21">
+        <div class="heder21sub1">
+          <li><a href="#alum"><span class="resp"></span></a></li>
+        </div>
+        <div class="heder21sub3">
+          <li><a  href="#confi"><span class="conf"></span></a></li>
+        </div>
+      </div>
+
+      <div class="heder22">
+        <ul class="heder21sub2">
+          <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+          <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+          <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- inicio menu 4 -->
+    <div id="confi" class="contenido menu5">
+      <div class="Imenu5">
+        <p><span class="isica"></span><b>SICA</b> CANTERA</p>
+      </div>
+      <div class="Imenu52">
+        <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
+      </div>
+<!-- incio de menu config -->
+      <div class="Ccontent">
+          <div class="Cco">
+          <a href="../../control_admin/perfil/perfil.php">
+          <div class="mod btn btn-1 btn-1e" >
+            <span class="modico "></span>
+            <p>PERFIL</p>
+            </div>
+            </a>
+
+          <div class="mod2 btn btn-1 btn-1a">
+            <span class="modico2 "></span>
+            <p>MATERIALES</p>
+          </div>
+
+           <div class="mod3 btn btn-1 btn-1b">
+            <span class="modico3"></span>
+            <p>PUBLICAR</p>
+          </div>
+          <div class="mod4 btn btn-1 btn-1c">
+            <span class="modico4"></span>
+            <p>AVISOS</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+    <!-- finde munu 4 -->
+
+    <!-- inicio de menu2 -->
+    <div id="alum"class="contenido menu3">
+      <div class="Tmenu3">
+        <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
+      </div>
+      <div class="Tmenu52">
+        <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+      </div>
+      <div class="Mcontent">
+        <div id='cssmenu'>
+                  <ul class="ul2">
+        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='#'><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+
+          </ul>
+        </li>
+        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
+          <ul>
+          <li><a href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
+
+          </ul>
+        </li>
+     </li>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <ul>
+          <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            </li>
+
+          </ul>
+        </li>
+        <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+
+          </ul>
+        </li>
+         <li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a class='activo' href='../altas_grupos/altas_grupo.php'><span class="icoAltasActivo"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+
+          </ul>
+        </li>
+
+      <li><a><span>***</span></a></li>
+     </div>
+     <!-- fin de menu3 -->
+
+     <!-- inicio de menu4 -->
+
+   </div>
+
+<!--    <div class='footcontent'>
+
+    <div class="headtabla1"><p>Recien Ingresados</p></div>
+
+    <table class="tabla1">
+      <div class="mosAlumno">
+        <div id="show"></div>
+      </div>
+
+    </table>
+  </div> -->
+</div>
+
+<!-- mensajes de validacion -->
+<div class="mensajes">
+  <div class="Logom">
+      <label><b>Campos vacios</b> no se puede Enviar la petición</label>
+  </div>
+  <div class="divmensaje">
+      <span class="Mico"></span>
+  </div>
+</div>
+<!-- finde  mensajes de validacion -->
+<!-- mensajes de matricula validacion -->
+<div class="mensajesMatricula">
+  <div class="Logom2">
+      <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+      <span class="Mico2"></span>
+  </div>
+</div>
+<!-- finde  mensajes matricula de validacion -->
+  <!-- mensajes de curp validacion -->
+<div class="mensajesCurp">
+  <div class="Logom2">
+      <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+      <span class="Mico2"></span>
+  </div>
+</div>
+<!-- finde  mensajes curp de validacion -->
+
+
+  <!-- mensajes de curp validacion -->
+<div class="mensajesTelefono">
+  <div class="Logom2">
+      <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+      <span class="Mico2"></span>
+  </div>
+</div>
+<!-- finde  mensajes curp de validacion -->
+ <!-- mensajes de curp validacion -->
+<div class="mensajesEmail">
+  <div class="Logom2">
+      <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+      <span class="Mico2"></span>
+  </div>
+</div>
+<!-- finde  mensajes curp de validacion -->
+ <!-- mensajes de curp validacion -->
+<div class="mensajesCorrecto">
+  <div class="Logom3">
+      <label>Los datos se enviaron <b>Correctamente</b></label>
+  </div>
+  <div class="divmensaje3">
+      <span class="Mico3"></span>
+  </div>
+</div>
+
+<!-- <div class="mensajesAlumno">
+  <div class="Logom4">
+      <div id="show"></div>
+  </div>
+  <div class="divmensaje4">
+      <span class="Mico4"></span>
+  </div>
+</div>
+ -->
+<!-- finde  mensajes curp de validacion -->
+
+<!-- inicio de section -->
+<section class="seccion1">
+  <div class="tem">
+  <div class="estacion">
+            <span class="grupo"></span>
+        </div>
+  <p>ALTAS GRUPOS</p>
+  </div>
+<div class="modulo">
+<table>
+<td>
+  <a href="" class="btnModulo" id="btnModulo">NUEVO GRUPO<span class="icoModulo"></span></a>
+  </td>
+</table>
+  <div class="altas-modulo" id="altas-modulo">
+      <!-- <form action=""> -->
+            <table>
+              <tr>
+                <td><label for="">Maestro:</label></td>
+                <td><label for="">Materia:</label></td>
+                <td><label for="">Grado:</label></td>
+                <td><label for="">Grupo:</label></td>
+
+              </tr>
+              <tr>
+                <td><select name="maestro" id="maestro">
+
+                  <option value="">asd</option>
+                </select></td>
+                <td><select name="materia" id="materia">
+                  <option value="">asd</option>
+                </select></td>
+                <td><select name="grado" id="grado">
+                  <option value="">asd</option>
+                </select></td>
+                <td><select name="grupo" id="grupo">
+                  <option value="">asd</option>
+                </select></td>
+              </tr>
+              <tr>
+              <td></td><td></td><td></td>
+                <td><input type="submit" class="agregar" id="agregar" value="AGREGAR">
+                  <span class="icoAgregar"></span>
+                </td>
+              </tr>
+            </table>
+      </form>
+  </div>
+</div>
+<!-- ----------------------------- -->
+   <form method="POST" class="search">
+
+        <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
+
+        <button type="button" class="btnSearch"><span class="icoSearch"></span></button>
+
+    </form>
+
+<div class="datosAlumno">
+<table>
+    <thead class="datosBucar1">
+        <th>Nombre</th>
+        <th>A paterno</th>
+        <th>A materno</th>
+        <th>Matricula</th>
+        <th>mostrar</th>
+    </thead>
+</table>
+</div>
+<div class="ContentBuscar">
+<table id="resultTable" >
+
+    <thead class="datosBucar">
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th class="masBuscar"></th>
+    </thead>
+
+    <tbody>
+
+    </tbody>
+</table>
+    </div>
+
+      <div class="control">
+
+
+    </div>
+
+  </form>
+
+
+
+
+<div class="space"></div>
+
+
+
+</section>
+
+<!-- fin de section -->
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/menu.js"></script>
+<!-- <script src="js/calendario.js"></script> -->
+<script src="js/script.js"></script>
+<script src="js/functions.js"></script>
+<script src="js/nuevo-modulo.js"></script>
+<script src="js/nuevo-buscar.js"></script>
+
+<script src="alertifyjs/alertify.js"></script>
+
+
+</body>
+</html>
+
+
+

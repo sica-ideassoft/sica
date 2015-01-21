@@ -31,7 +31,7 @@ $(function() {
 
 var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grado='+ grado + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio + '&calle='+ calle  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&foto='+ foto + '&status='+ status  ;
 
-if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grado === ""|| grupo === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "" || civil === ""|| foto === ""|| status === "")
+if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grado === ""|| grupo === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === "" || civil === ""|| status === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

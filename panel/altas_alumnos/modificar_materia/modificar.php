@@ -174,7 +174,17 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
      </div>
      <!-- fin de menu3 -->
@@ -302,7 +312,7 @@ $id = $_GET["id"];
       </tr>
 
       <tr>
-        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre'];?> ></input></td>
+        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre_materia'];?> ></input></td>
 
         <td><input type="text" name="profesor"  id="profesor" value=<?php echo $materia['profesor'];?>></input></td>
       </tr>

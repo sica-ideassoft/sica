@@ -179,7 +179,17 @@ include_once("php/paginacion.php");
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
            </div>
 
@@ -236,7 +246,7 @@ include_once("php/paginacion.php");
               foreach($model as $row)
               {
                 echo "<tr>";
-                echo "<td>".$row['nombre']."</td>";
+                echo "<td>".$row['nombre_materia']."</td>";
                 echo "<td>".$row['profesor']."</td>";
 
                 echo "<td>".$row['credito']."</td>";

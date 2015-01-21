@@ -29,9 +29,10 @@ location.href = "../../login_admin/index.php";
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/buscar_calificacion.css">
+  <link rel="stylesheet" href="css/mostrar_calificacion.css">
   <link rel="stylesheet" href="css/mensajes.css">
-    <link rel="stylesheet" href="css/modificar_calificacion.css">
+  <link rel="stylesheet" href="css/modificar_calificacion.css">
+
 
 
 
@@ -133,7 +134,7 @@ location.href = "../../login_admin/index.php";
         <li class='has-sub admin   '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a   href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
+               <li><a   href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -152,9 +153,9 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-          <li class='has-sub admin  activo'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a class='activo' href="../buscar_materia/buscar_materia.php"><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
+          <li><a  href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
@@ -164,18 +165,28 @@ location.href = "../../login_admin/index.php";
           </ul>
         </li>
 
-  <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+  <li class='has-sub admin activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
                <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a class='activo' href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->
@@ -206,7 +217,7 @@ location.href = "../../login_admin/index.php";
          <div class="estacion">
             <span class="cali"></span>
         </div>
-        <p>buscar matería</p>
+        <p>modificar / eliminar materia</p>
         </div>
           <!-- inicio de bloque  -->
             <div class="content-materia">
@@ -225,7 +236,7 @@ include_once("php/mostrar.php");
         <table>
         <tr>
         <td>
-            <a class="regresar" href="modificar_materia.php">REGRESAR</a><span class="reg"></span>
+            <a class="regresar" href="modificar_calificacion.php">REGRESAR</a><span class="reg"></span>
         </td>
         </tr>
         </table>

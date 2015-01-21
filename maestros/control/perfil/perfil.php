@@ -132,55 +132,38 @@ $conn->conectar();
             <div class="Mcontent">
               <div id='cssmenu'>
               <ul class="ul2">
-        <li ><a href='../../administrar/home/index.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin activo'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+             <li ><a href='../../administrar/home/index.php'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin activo'><a   href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../../altas_alumnos/buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../../altas_alumnos/altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../../altas_alumnos/modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
-
-          </ul>
-        </li>
-        <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
-          <ul>
-          <li><a   href='../../altas_alumnos/buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../../altas_alumnos/altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../../altas_alumnos/modificar_maestro/modificar_maestro.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
-            </li>
-
-          </ul>
-        </li>
-          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
-          <ul>
-          <li><a href="../../altas_alumnos/buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../../altas_alumnos/altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../../altas_alumnos/modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
-            </li>
-
-          </ul>
-        </li>
-
-        <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
-          <ul>
+          <li ><a href='../../administrar/buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
           </li>
-               <li><a href='../../altas_alumnos/../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../../altas_alumnos/../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../../altas_alumnos/../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
-          </ul>
+
+        </ul>
+      </li>
+
+      <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+        <ul>
+          <li><a href="../../administrar/buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          </li>
+        </ul>
+      </li>
+
+      <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+        <ul>
+        </li>
+        <li><a href='../../administrar/buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+        </li>
+        <li><a  href='../../administrar/altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
         </li>
 
-      <li><a><span>***</span></a></li>
-           </div>
+
+      </ul>
+    </li>
+
+    <li><a><span>***</span></a></li>
+  </div>
            <!-- fin de menu3 -->
 
            <!-- inicio de menu4 -->
@@ -235,18 +218,7 @@ $conn->conectar();
               </td>
 
             </tr>
-             <tr>
-               <td><p class="texto">Usuario:</p></td>
-              </tr>
-              <tr>
-<td><input type="text" name="usuario" id="usuario" class='usuario' value=<?php echo $usuario; ?>><span class="usuario1"></span></td>
-             </tr>
-             <tr>
-               <td><p class="texto">Password:</p></td>
-              </tr>
-              <tr>
-         <td><input type="password" id="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
-             </tr>
+
            </table>
 
           <div class="control">
@@ -257,13 +229,7 @@ $conn->conectar();
                   <div class="icomodif"> <span class="icomodif1"></span></div>
 
                   </input>
-                </td><td>
-                  <input type="submit" value="LIMPIAR" class="borrarbtn">
-                  <div class="icolimpiar"> <span class="icolimpiar1"></span></div>
-                  </input>
-                </input>
-
-              </td></tr>
+                </td></tr>
             </table>
 
           </div>
@@ -281,7 +247,7 @@ $conn->conectar();
       <!-- <script src="js/confirmacion.js"></script> -->
       <script src="js/menu.js"></script>
       <script src="js/validar.js"></script>
-      <script src="php/functions.js"></script>
+      <!-- <script src="php/functions.js"></script> -->
       <script src="alertifyjs/alertify.js"></script>
 
 

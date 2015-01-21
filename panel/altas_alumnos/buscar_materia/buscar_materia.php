@@ -171,7 +171,17 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
+   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
+            <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->
@@ -215,7 +225,7 @@ location.href = "../../login_admin/index.php";
 <div class="datosAlumno">
 <table>
     <thead class="datosBucar1">
-        <th>Nombre</th>
+        <th class="nombre">Nombre</th>
         <th>Profesor</th>
         <th>Creditos</th>
         <th>Cal. minima</th>

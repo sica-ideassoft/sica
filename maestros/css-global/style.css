@@ -250,7 +250,7 @@ list-style: none;
 .Imenu52{
 	width: 100%;
 	height: 40px;
-	background-color: rgba(0,0,0,.6);
+ background: linear-gradient(rgb(57, 173, 230), rgb(47, 139, 159)) repeat scroll 0% 0% transparent;
 overflow: hidden;
 }
 .Iconfig:after{

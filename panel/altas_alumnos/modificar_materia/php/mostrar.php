@@ -11,7 +11,7 @@ $sql= mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
 
 <?php
 while($row = mysql_fetch_array($sql)){
-$nombre = $row['nombre'];
+$nombre = $row['nombre_materia'];
 ?>
 <table class="tabla-mostrar">
 <tr>
@@ -22,7 +22,7 @@ $nombre = $row['nombre'];
 </tr>
 	<td><?php echo $row['claveSEP']; ?></td>
 	<td><?php echo $row['modulo']; ?></td>
-	<td><?php echo $row['nombre']; ?></td>
+	<td><?php echo $row['nombre_materia']; ?></td>
 	<td><?php echo $row['profesor']; ?></td>
 </tr>
 <tr>
