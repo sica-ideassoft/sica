@@ -306,3 +306,21 @@ color: #000;
 	padding-left: 10px;
 	color: #024960;
 }
+.calle{
+	width: 140px !important ;
+}
+.interior{
+	width: 50px !important ;
+
+}
+.exterior{
+	width: 50px !important ;
+
+}
+.Linterior{
+margin-left: 110px;
+}
+.Lexterior{
+margin-left: 10px;
+
+}

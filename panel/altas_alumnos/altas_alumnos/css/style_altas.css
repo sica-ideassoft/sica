@@ -10,7 +10,24 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.calle{
+	width: 140px !important ;
+}
+.interior{
+	width: 50px !important ;
 
+}
+.exterior{
+	width: 50px !important ;
+
+}
+.Linterior{
+margin-left: 110px;
+}
+.Lexterior{
+margin-left: 10px;
+
+}
 .datos{
 	text-transform: uppercase;
 }

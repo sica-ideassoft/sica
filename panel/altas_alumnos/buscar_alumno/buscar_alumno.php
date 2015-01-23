@@ -215,6 +215,8 @@ location.href = "../../login_admin/index.php";
         <th>A paterno</th>
         <th>A materno</th>
         <th>Matricula</th>
+        <th>Grado</th>
+        <th>Grupo</th>
         <th>mostrar</th>
     </thead>
 </table>
@@ -223,6 +225,8 @@ location.href = "../../login_admin/index.php";
 <table id="resultTable" >
 
     <thead class="datosBucar">
+        <th></th>
+        <th></th>
         <th></th>
         <th></th>
         <th></th>

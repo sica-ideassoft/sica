@@ -117,7 +117,7 @@ text-align: center;
 	width:60px;
 }
 .datosmodificar tr th{
-width: 135px;
+width: 100px;
 height: 30px;
 text-align: center;
 color: white;
@@ -238,4 +238,7 @@ color: #000;
 .usuario,.password{
 	padding-left: 10px;
 	color: #024960;
+}
+.nomM{
+width: 400px !important;
 }

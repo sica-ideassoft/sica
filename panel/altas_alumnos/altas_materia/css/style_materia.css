@@ -90,7 +90,7 @@ font-weight: bold;
     box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
 }
 .table2{
-margin: 0 auto !important;
+margin-left: 20%;
 margin-top: 5px !important;
 }
 .table2 td{
@@ -273,4 +273,119 @@ color: #000;
 .usuario,.password{
 	padding-left: 10px;
 	color: #024960;
+}
+/*-inicio de la ventana modal*/
+
+.modulos-view{
+background-color:rgba(0,0,0,0.8);
+/*font-family: helvetica;*/
+height: 100%;
+width: 100%;
+z-index: 10;
+
+position: fixed;
+top: 0px;
+left: 0px;
+display: none;
+}
+.title{
+	background-color: rgba(0,0,0,0.1);
+
+	border-radius: 0px 20px 0px  0px;
+}
+.model-con{
+	margin: 0 auto;
+	margin-top: 70px;
+	/*border:10px solid rgba(255,255,255,0.1);*/
+	width: 1030px;
+	height: 550px;
+	padding: 10px;
+	/*background-color: rgba(238, 238, 238, 0.2);*/
+	overflow: hidden;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+
+.model{
+	width: 200px;
+	height: 120px;
+	background-color:rgb(19, 126, 161);
+	display: inline-block;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.6);
+	border-radius: 0px 20px 0px  20px;
+}
+.model table {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	color: white;
+
+
+}
+.cerrar{
+	position: absolute;
+	cursor:pointer;
+	padding-top: 10px;
+	right: 0px;
+	width: 55px;
+	height: 40px;
+	/*border:5px solid white;*/
+	background-color:rgb(19, 126, 161);
+
+}
+.cerrar:after{
+	font-family: "iconitos";
+	content:"\e62d";
+    color: white;
+	font-size: 27px;
+	/*padding: 7px;*/
+	padding-left: 15px;
+}
+.modulos-view p {
+	position: absolute;
+	text-transform: uppercase;
+	font-size: 30px;
+	color: rgba(238, 238, 238, 1);
+	margin-left: 115px;
+	font-family: helvetica;
+}
+
+.modal{
+	background-color:rgb(14, 77, 80);
+	color: white;
+	/*position: absolute;*/
+	/*margin-top: 5px;*/
+	/*display: inline-block;*/
+	float:right;
+	margin-right: 5px;
+	margin-top: -43px;
+	padding: 9px 20px;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-bottom: 3px solid rgb(15, 83, 246);
+	border-radius: 5px;
+
+}
+
+.modal:hover{
+	border-style: none;
+
+}
+
+.modal-mas:after{
+font-family: "menu";
+	content:"\e606";
+	color: white;
+	padding-left: 20px;
+}
+.elim{
+position: absolute;
+padding-left: 10px;
+}
+.elim a{
+	text-decoration: none;
+	font-size: 20px;
+	font-family: helvetica;
+	color: rgba(0,0,0,0.5);
+	font-weight: bold;
 }

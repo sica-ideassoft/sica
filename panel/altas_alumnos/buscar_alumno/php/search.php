@@ -6,7 +6,8 @@ $conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM alumno WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'");
+$busqueda=mysql_query("SELECT * FROM alumno WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
+	OR matricula LIKE '%".$busca."%' OR grado LIKE '%".$busca."%' OR grupo LIKE '%".$busca."%'");
 
 // $row=mysql_fetch_array($busqueda);
 	//
@@ -14,7 +15,7 @@ $busqueda=mysql_query("SELECT * FROM alumno WHERE nombre LIKE '%".$busca."%' OR 
 	if(mysql_num_rows($busqueda)==0) {
 	?>
 		<tr>
-			<td colspan='5'>El alumno no existe</td>
+			<td colspan='7'>El alumno no existe</td>
 		</tr>
 
 	<?php
@@ -28,6 +29,8 @@ while($f=mysql_fetch_array($busqueda)){
 		<td><?php echo $f['A_paterno']; ?></td>
 		<td><?php echo $f['A_materno']; ?></td>
 		<td><?php echo $f['matricula']; ?></td>
+		<td><?php echo $f['grado']; ?></td>
+		<td><?php echo $f['grupo']; ?></td>
 		<td class="lia"><a  id="eliminar" href="#" onclick="mostrarAlumno(<?php echo $f['id_alumno']?>)"><span class="mas"></span></a></td>
 	</tr>
 

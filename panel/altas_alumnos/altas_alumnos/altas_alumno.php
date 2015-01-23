@@ -14,7 +14,7 @@ location.href = "../../login_admin/index.php";
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js" lang='es'> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
   <link rel="shortcut icon" href="image/favicon.ico">
@@ -364,20 +364,39 @@ location.href = "../../login_admin/index.php";
         <tr>
           <td><label for="">Estado</label></td>
           <td><label for="">Municipio:</label></td>
-          <td><label for="">Calle:</label></td>
+          <td><label for="">Colonia:</label></td>
+
         </tr>
         <tr>
-          <td><input type="text" name="estado" id="estado" ></td>
+          <td><select name="estado" id="estado">
+            <?php
+            include_once("php/select.php");
+              estado();
+             ?>
+          </select></td>
+          <!-- <td><input type="text" name="estado" id="estado" ></td> -->
           <td><input type="text" name="municipio" id="municipio" ></td>
-          <td><input type="text" name="calle"  id="calle"></td>
+          <td><input type="colonia" id="colonia" class='colonia'></td>
         </tr>
         <tr>
+           <td>
+          <label for="">Calle:</label>
+          <label for="" class="Linterior">#Int.:</label>
+          <label for="" class="Lexterior">#Ext.:</label>
+          </td>
           <td><label for="">Nacionalidad</label></td>
           <td><label for="">Estado Civil:</label></td>
-          <td><label for="">Fotografia:</label></td>
         </tr>
         <tr>
-        <td><input type="text" name="nacionalidad" id="nacionalidad"></td>
+        <td>
+          <input type="text" name="calle"  class ="calle" id="calle">
+           <input type="text" name="interior" class="interior" id="interior" placeholder="#">
+           <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#">
+          </td>
+        <td><select name="nacionalidad" id="nacionalidad">
+          <option value="Mexicana">Mexicana</option>
+          <option value="Extrangera">Extrangera</option>
+        </select></td>
         <td><select name="civil"  id="civil">
           <option value="soltero">Soltero</option>
           <option value="casado">Casado</option>
@@ -385,9 +404,17 @@ location.href = "../../login_admin/index.php";
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-        <td colspan="2"><input type="file" name="imagen" id="imagen"></td>
+
       </tr>
       <tr>
+          <td><label for="">Fotografia:</label></td>
+
+      </tr>
+      <tr>
+
+         <td colspan="2"><input type="file" name="imagen" id="imagen"></td>
+      </tr>
+<!--       <tr>
           <td><label for="">Status:</label></td>
         </tr>
         <tr>
@@ -395,7 +422,7 @@ location.href = "../../login_admin/index.php";
             <option value="activo">Activo</option>
             <option value="inactivo">Inactivo</option>
           </select></td>
-        </tr>
+        </tr> -->
       </table>
 
 

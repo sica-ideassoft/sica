@@ -6,7 +6,8 @@ $conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'");
+$busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
+	OR telefono LIKE '%".$busca."%'");
 
 // $row=mysql_fetch_array($busqueda);
 	//
@@ -14,7 +15,7 @@ $busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR
 	if(mysql_num_rows($busqueda)==0) {
 	?>
 		<tr>
-			<td colspan='5'>El alumno no existe</td>
+			<td colspan='5'>El maestro no existe</td>
 		</tr>
 
 	<?php

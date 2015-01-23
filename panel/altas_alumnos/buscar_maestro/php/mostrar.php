@@ -45,7 +45,7 @@ $nombre = $row['nombre'];
 </tr>
 
 <tr>
-	<td><?php echo $row['edad']; ?></td>
+	<td><?php echo $row['edad']; ?> Años</td>
 	<td><?php echo $row['estado_civil']; ?></td>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
 	<td><?php echo $row['Estado']; ?></td>
@@ -54,17 +54,24 @@ $nombre = $row['nombre'];
 <tr>
 	<td class="dato"><label for="">Municipio:</label></td>
 	<td class="dato"><label for="">Calle:</label></td>
-	<td class="dato"><label for="">Nacionalidad:</label></td>
-	<td class="dato"><label for="">User:</label></td>
+	<td class="dato"><label for="">Núm Interior:</label></td>
+	<td class="dato"><label for="">Núm Exterior:</label></td>
 </tr>
 <tr>
 	<td><?php echo $row['municipio']; ?></td>
 	<td><?php echo $row['calle']; ?></td>
-	<td><?php echo $row['nacionalidad']; ?></td>
-	<td><?php echo $row['user']; ?></td>
+	<td>#<?php echo $row['Ninterior']; ?></td>
+	<td>#<?php echo $row['Nexterior']; ?></td>
+</tr>
+<tr>
+	<td class="dato"><label for="">Nacionalidad:</label></td>
+	<td class="dato"><label for="">User:</label></td>
+
 </tr>
 <tr>
 
+	<td><?php echo $row['nacionalidad']; ?></td>
+	<td><?php echo $row['user']; ?></td>
 </tr>
 </table>
 

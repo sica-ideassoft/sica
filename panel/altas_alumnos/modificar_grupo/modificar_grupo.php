@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
+include_once("../conexion.php");
+include_once('../PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -162,7 +162,7 @@ include_once("php/paginacion.php");
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a  href='#'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a  href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
@@ -232,7 +232,7 @@ include_once("php/paginacion.php");
             <thead class="datosmodificar">
 
               <tr >
-                <th>nombre</th>
+                <th class="grupo">nombre</th>
                 <th>profesor</th>
                 <th>Credito</th>
                 <th>Cal. Minima</th>
@@ -253,10 +253,10 @@ include_once("php/paginacion.php");
                 echo "<td>".$row['credito']."</td>";
                 echo "<td>".$row['cal_min']."</td>";
                 ?>
-                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
+                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_grupo'];?>);"><span class="eliminar"></span></a></td>
 
-                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_materia'];?>"><span class="modificar"></span></a></td>
-                <td><a class="liMostrar" href="mostrar_grupo.php?id=<?php echo $row['id_materia'];?>"><span class="mostrar"></span></a></td>
+                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_grupo'];?>"><span class="modificar"></span></a></td>
+                <td><a class="liMostrar" href="mostrar_grupo.php?id=<?php echo $row['id_grupo'];?>"><span class="mostrar"></span></a></td>
 
                 </tr>
 

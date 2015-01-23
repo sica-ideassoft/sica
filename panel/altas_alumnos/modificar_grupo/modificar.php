@@ -288,7 +288,7 @@ location.href = "../../login_admin/index.php";
   <p>MODIFICAR / ELIMINAR GRUPOS</p></div>
 
 <?php
-include_once("php/modificar-materia.php");
+include_once("php/modificar-grupo.php");
 $id = $_GET["id"];
 ?>
 <script>

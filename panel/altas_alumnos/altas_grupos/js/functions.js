@@ -29,9 +29,9 @@ else
     $("#materia").val("");
     $("#grado").val("");
     $("#grupo").val("");
-    location.reload();
+
         }, error: function () {
-         alertify.alert().set('message', 'El modulo ya <b>Existe</b>').show();
+         alertify.alert().set('message', 'El grupo ya <b>Existe</b>').show();
         }
       });
 }

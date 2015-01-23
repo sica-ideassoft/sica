@@ -37,7 +37,7 @@ while($row = mysql_fetch_array($sql)){
 	<td><?php echo $row['telefono']; ?></td>
 	<td><?php echo $row['correo']; ?></td>
 	<td><?php echo $row['genero']; ?></td>
-	<td><?php echo $row['edad']; ?></td>
+	<td><?php echo $row['edad']; ?> Años</td>
 </tr>
 <tr>
 	<td class="dato"><label for="">E. Civil:</label></td>
@@ -54,17 +54,25 @@ while($row = mysql_fetch_array($sql)){
 </tr>
 <tr>
 	<td class="dato"><label for="">calle:</label></td>
+	<td class="dato"><label for="">Núm. Interior:</label></td>
+	<td class="dato"><label for="">Núm Exterior:</label></td>
 	<td class="dato"><label for="">nacionalidad:</label></td>
-	<td class="dato"><label for="">User:</label></td>
+
 
 </tr>
 <tr>
 	<td><?php echo $row['calle']; ?></td>
+	<td>#<?php echo $row['Ninterior']; ?></td>
+	<td>#<?php echo $row['Nexterior']; ?></td>
 	<td><?php echo $row['nacionalidad']; ?></td>
-	<td><?php echo $row['user']; ?></td>
 
 </tr>
-
+<tr>
+	<td class="dato"><label for="">User:</label></td>
+</tr>
+<tr>
+	<td><?php echo $row['user']; ?></td>
+</tr>
 </table>
 
 <?php

@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
+include_once("../conexion.php");
+include_once('../PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -265,7 +265,7 @@ include_once("php/paginacion.php");
 function delEmpresa(id) {
   alertify.confirm("Realmente quiere eliminar al Maestro?.",
   function(){
-    alertify.success('Ok');
+    // alertify.success('Ok');
     window.location = "php/delete.php?action=del&id="+id;
   },
   function(){

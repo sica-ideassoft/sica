@@ -14,7 +14,7 @@ $busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR
 	if(mysql_num_rows($busqueda)==0) {
 	?>
 		<tr>
-			<td colspan='5'>El alumno no existe</td>
+			<td colspan='5'>El grupo no existe</td>
 		</tr>
 
 	<?php

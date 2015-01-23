@@ -12,6 +12,11 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 
 	$model = array();
 
+
+
+
+
+
 	while($rows = $query->fetch())
 	{
 		$model[] = $rows;

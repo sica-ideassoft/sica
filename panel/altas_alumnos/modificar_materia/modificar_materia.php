@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
+include_once("../conexion.php");
+include_once('../PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -231,7 +231,7 @@ include_once("php/paginacion.php");
             <thead class="datosmodificar">
 
               <tr >
-                <th>nombre</th>
+                <th class="nomM">nombre</th>
                 <th>profesor</th>
                 <th>Credito</th>
                 <th>Cal. Minima</th>
@@ -247,7 +247,7 @@ include_once("php/paginacion.php");
               {
                 echo "<tr>";
                 echo "<td>".$row['nombre_materia']."</td>";
-                echo "<td>".$row['profesor']."</td>";
+                echo "<td>".$row['nombre']."</td>";
 
                 echo "<td>".$row['credito']."</td>";
                 echo "<td>".$row['cal_min']."</td>";
@@ -268,7 +268,7 @@ include_once("php/paginacion.php");
 function delEmpresa(id) {
   alertify.confirm("Realmente quiere eliminar la Materia?.",
   function(){
-    alertify.success('Ok');
+    // alertify.success('Ok');
     window.location = "php/delete.php?action=del&id="+id;
   },
   function(){

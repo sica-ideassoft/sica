@@ -6,7 +6,7 @@ $sql=mysql_query("SELECT * FROM alumno WHERE id_alumno = '".$id."'");
 
 <?php
 while($row = mysql_fetch_array($sql)){
-$nombre = $row['nombre'];
+
 ?>
 <table class="tabla-mostrar">
 <tr>
@@ -41,30 +41,42 @@ $nombre = $row['nombre'];
 
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['edad']; ?></td>
-	<td><?php echo $row['grado']; ?></td>
+	<td><?php echo $row['edad']; ?> años</td>
+	<td><?php echo $row['grado']; ?> ro</td>
 	<td><?php echo $row['grupo']; ?></td>
 </tr>
 
 <tr>
 	<td class="dato"><label for="">Estado:</label></td>
 	<td class="dato"><label for="">Municipio:</label></td>
+	<td class="dato"><label for="">Colonia:</label></td>
 	<td class="dato"><label for="">Calle:</label></td>
-	<td class="dato"><label for="">Nacionalidad:</label></td>
 </tr>
 <tr>
 	<td><?php echo $row['estado']; ?></td>
 	<td><?php echo $row['municipio']; ?></td>
+	<td><?php echo $row['colonia']; ?></td>
 	<td><?php echo $row['calle']; ?></td>
-	<td><?php echo $row['nacionalidad']; ?></td>
 </tr>
 <tr>
-	<td class="dato"><label for="">Status:</label></td>
+	<td class="dato"><label for="">Núm. Interior:</label></td>
+	<td class="dato"><label for="">Núm. Exterior:</label></td>
+	<td class="dato"><label for="">Nacionalidad:</label></td>
 	<td class="dato"><label for="">Estado Civil:</label></td>
 </tr>
 <tr>
-	<td><?php echo $row['status']; ?></td>
+	<td>#<?php echo $row['Ninterior']; ?></td>
+	<td>#<?php echo $row['Nexterior']; ?></td>
+	<td><?php echo $row['nacionalidad']; ?></td>
 	<td><?php echo $row['estado_civil']; ?></td>
+</tr>
+<tr>
+
+	<td class="dato"><label for="">Status:</label></td>
+</tr>
+<tr>
+
+	<td ><label id="status"><?php echo $row['status']; ?></label></td>
 </tr>
 </table>
 

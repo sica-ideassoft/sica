@@ -5,10 +5,6 @@ if (!isset($_SESSION['admin-sica'])) {
   location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
-include_once("php/paginacion.php");
-
 ?>
 
 

@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
+include_once("../conexion.php");
+include_once('../PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -236,7 +236,8 @@ include_once("php/paginacion.php");
                 <th>A paterno</th>
                 <th>A materno</th>
                 <th>matricula</th>
-                <th>grupo</th>
+                <th class="grado">grado</th>
+                <th class="grado">grupo</th>
                 <th class="modi">eliminar-</th>
                 <th class="modi">modificar-</th>
                 <th class="modi">mostrar</th>
@@ -244,6 +245,7 @@ include_once("php/paginacion.php");
             </thead>
             <tbody  class="tableHead">
               <?php
+
               foreach($model as $row)
               {
                 ?>
@@ -252,6 +254,7 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['A_paterno'];?></td>
                 <td><?php echo$row['A_materno'];?></td>
                 <td><?php echo$row['matricula'];?></td>
+                <td><?php echo$row['grado'];?></td>
                 <td><?php echo$row['grupo'];?></td>
 
 

@@ -355,7 +355,14 @@ location.href = "../../login_admin/index.php";
           <option value="viudo">Viudo</option>
         </select></td>
          <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"></td>
-          <td><input type="text" name="estado"  id="estado" ></td>
+          <td>
+          <select name="estado"  id="estado" >
+             <?php
+            include_once("php/select.php");
+              estado();
+             ?>
+          </select>
+          </td>
 
 
         </tr>
@@ -367,9 +374,17 @@ location.href = "../../login_admin/index.php";
         </tr>
         <tr>
           <td><input type="text" name="municipio"  id="municipio" ></td>
+            <td>
+          <input type="text" name="calle"  class ="calle" id="calle">
+           <input type="text" name="interior" class="interior" id="interior" placeholder="#">
+           <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#">
+          </td>
 
-        <td><input type="text" name="calle" id="calle"></td>
-          <td><input type="text" name="nacionalidad" id="nacionalidad" ></td>
+          <td><select name="nacionalidad" id="nacionalidad">
+          <option value="Mexicana">Mexicana</option>
+          <option value="Extrangera">Extrangera</option>
+        </select></td>
+          </td>
         </tr>
         <tr>
           <td><label for="">Usuario</label></td>

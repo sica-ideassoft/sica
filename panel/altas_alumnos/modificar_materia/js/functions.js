@@ -8,18 +8,17 @@ $(function() {
     e.preventDefault();
  id
  var sep       = $("#sep").val();
- var modulo    = $("#modulo").val();
  var nombre    = $("#nombre").val();
  var profesor  = $("#profesor").val();
+ var calificacion = $("#calificacion").val();
  var fecha1    = $("#fecha1").val();
  var fecha2    = $("#fecha2").val();
  var creditos  = $("#creditos").val();
- var calificacion = $("#calificacion").val();
 
 
-var dataString ='id='+ id +'&sep='+ sep +'&modulo='+ modulo + '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion;
+var dataString ='id='+ id +'&sep='+ sep  + '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion;
 
-if(sep === '' ||modulo === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
+if(sep === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
@@ -37,7 +36,7 @@ function()
         data: dataString,
         cache: true,
         success: function(html){
-           $("#show").after(html);
+
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
           }
       });

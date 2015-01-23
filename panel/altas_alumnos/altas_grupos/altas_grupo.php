@@ -303,38 +303,54 @@ location.href = "../../login_admin/index.php";
             <table>
               <tr>
                 <td><label for="">Maestro:</label></td>
-                <td><label for="">Materia:</label></td>
+                <td><label for="">Matería:</label></td>
                 <td><label for="">Grado:</label></td>
                 <td><label for="">Grupo:</label></td>
 
               </tr>
               <tr>
                 <td><select name="maestro" id="maestro">
+                      <?php
+                        include_once("php/select.php");
+                        maestro();
+                       ?>
+                </select></td>
 
-                  <option value="">asd</option>
-                </select></td>
                 <td><select name="materia" id="materia">
-                  <option value="">asd</option>
+              <?php
+                include_once("php/select.php");
+                modulo();
+              ?>
                 </select></td>
+
                 <td><select name="grado" id="grado">
-                  <option value="">asd</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
                 </select></td>
+
                 <td><select name="grupo" id="grupo">
-                  <option value="">asd</option>
+                    <option value="A">A</option>
+                    <option value="B">B</option>
+                    <option value="C">C</option>
                 </select></td>
               </tr>
               <tr>
-              <td></td><td></td><td></td>
-                <td><input type="submit" class="agregar" id="agregar" value="AGREGAR">
-                  <span class="icoAgregar"></span>
-                </td>
-              </tr>
+          <table class="tableBtn">
+          <tr>
+          <td>
+          <input type="submit" class="agregar" id="agregar" value="AGREGAR">
+          <span class="icoAgregar"></span>
+          </td>
+          </tr>
+          </table>
+
             </table>
       </form>
   </div>
 </div>
 <!-- ----------------------------- -->
-   <form method="POST" class="search">
+    <form method="get" class="search">
 
         <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
 
@@ -348,7 +364,7 @@ location.href = "../../login_admin/index.php";
         <th>Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th>Matricula</th>
+        <th>Telefono</th>
         <th>mostrar</th>
     </thead>
 </table>
@@ -396,7 +412,7 @@ location.href = "../../login_admin/index.php";
 <script src="js/functions.js"></script>
 <script src="js/nuevo-modulo.js"></script>
 <script src="js/nuevo-buscar.js"></script>
-
+<script src="js/buscar.js"></script>
 <script src="alertifyjs/alertify.js"></script>
 
 

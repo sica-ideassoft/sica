@@ -1,9 +1,9 @@
 <?php
-require("conexion.php");
+require("../../conexion.php");
 
 $id=$_GET["id"];
-	$sql = "DELETE FROM materias WHERE id_materia = ".$id;
+	$sql = "DELETE FROM grupo WHERE id_grupo = ".$id;
 	$query = $connection->prepare($sql);
 	$query->execute();
-	header("location:../modificar_materia.php");
+	header("location:../modificar_grupo.php");
 ?>

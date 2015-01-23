@@ -37,7 +37,7 @@ $nombre = $row['nombre'];
 	<td><?php echo $row['genero']; ?></td>
 </tr>
 <tr>
-	<td class="dato"><label for="">F. Nacimineto:</label></td>
+	<td class="dato"><label for="">F. Nacimiento:</label></td>
 	<td class="dato"><label for="">Edad:</label></td>
 	<td class="dato"><label for="">Grado:</label></td>
 	<td class="dato"><label for="">Grupo:</label></td>
@@ -45,30 +45,42 @@ $nombre = $row['nombre'];
 
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['edad']; ?></td>
-	<td><?php echo $row['grado']; ?></td>
+	<td><?php echo $row['edad']; ?> Años</td>
+	<td><?php echo $row['grado']; ?> ro</td>
 	<td><?php echo $row['grupo']; ?></td>
 </tr>
 
 <tr>
 	<td class="dato"><label for="">Estado:</label></td>
 	<td class="dato"><label for="">Municipio:</label></td>
+	<td class="dato"><label for="">Colonia:</label></td>
 	<td class="dato"><label for="">Calle:</label></td>
-	<td class="dato"><label for="">Nacionalidad:</label></td>
 </tr>
 <tr>
 	<td><?php echo $row['estado']; ?></td>
 	<td><?php echo $row['municipio']; ?></td>
+	<td><?php echo $row['colonia']; ?></td>
 	<td><?php echo $row['calle']; ?></td>
-	<td><?php echo $row['nacionalidad']; ?></td>
 </tr>
 <tr>
-	<td class="dato"><label for="">Status:</label></td>
+	<td class="dato"><label for="">Núm. Interior:</label></td>
+	<td class="dato"><label for="">Núm. Exterior:</label></td>
+	<td class="dato"><label for="">Nacionalidad:</label></td>
 	<td class="dato"><label for="">Estado Civil:</label></td>
 </tr>
 <tr>
-	<td><?php echo $row['status']; ?></td>
+	<td>#<?php echo $row['Ninterior']; ?></td>
+	<td>#<?php echo $row['Nexterior']; ?></td>
+	<td><?php echo $row['nacionalidad']; ?></td>
 	<td><?php echo $row['estado_civil']; ?></td>
+</tr>
+<tr>
+
+	<td class="dato"><label for="">Status:</label></td>
+</tr>
+<tr>
+
+	<td><?php echo $row['status']; ?></td>
 </tr>
 </table>
 

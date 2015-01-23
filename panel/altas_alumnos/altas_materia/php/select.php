@@ -17,6 +17,7 @@ function maestro(){
 	}
 
 }
+
 $modulo = mysql_query("SELECT nombre FROM modulos");
 function modulo(){
 	global $modulo;

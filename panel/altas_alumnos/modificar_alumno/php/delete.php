@@ -1,5 +1,5 @@
 <?php
-require("conexion.php");
+require("../../conexion.php");
 
 $id=$_GET["id"];
 	$sql = "DELETE FROM alumno WHERE id_alumno = ".$id;

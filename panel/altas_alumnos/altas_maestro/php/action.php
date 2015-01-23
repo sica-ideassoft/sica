@@ -4,7 +4,7 @@ $conn = new DB();
 $conn->conectar();
 
 
-if(isset($_POST['nombre']) && isset($_POST['paterno']) && isset($_POST['materno'])&& isset($_POST['clavep'])&& isset($_POST['curp'])&& isset($_POST['telefono'])&& isset($_POST['correo'])&& isset($_POST['genero'])&& isset($_POST['edad'])&& isset($_POST['civil'])&& isset($_POST['nacimiento'])&& isset($_POST['estado'])&& isset($_POST['municipio'])&& isset($_POST['calle'])&& isset($_POST['nacionalidad'])&& isset($_POST['user'])&& isset($_POST['password']))
+if(isset($_POST['nombre']) && isset($_POST['paterno']) && isset($_POST['materno'])&& isset($_POST['clavep'])&& isset($_POST['curp'])&& isset($_POST['telefono'])&& isset($_POST['correo'])&& isset($_POST['genero'])&& isset($_POST['edad'])&& isset($_POST['civil'])&& isset($_POST['nacimiento'])&& isset($_POST['estado'])&& isset($_POST['municipio'])&& isset($_POST['calle'])&& isset($_POST['interior'])&& isset($_POST['exterior'])&& isset($_POST['nacionalidad'])&& isset($_POST['user'])&& isset($_POST['password']))
 {
 $nombre       = mysql_real_escape_string($_POST['nombre']);
 $paterno      = mysql_real_escape_string($_POST['paterno']);
@@ -20,6 +20,8 @@ $nacimiento   = mysql_real_escape_string($_POST['nacimiento']);
 $estado       = mysql_real_escape_string($_POST['estado']);
 $municipio    = mysql_real_escape_string($_POST['municipio']);
 $calle        = mysql_real_escape_string($_POST['calle']);
+$interior     = mysql_real_escape_string($_POST['interior']);
+$exterior     = mysql_real_escape_string($_POST['exterior']);
 $nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
 $user         = mysql_real_escape_string($_POST['user']);
 $password     = mysql_real_escape_string($_POST['password']);
@@ -36,7 +38,7 @@ if ($userclave_exist>0||$username_exist>0) {
 	exit();
 }else{
 
-$maestro = mysql_query("INSERT INTO maestro(id_maestro,nombre,A_paterno,A_materno,clave,curp,telefono,correo,genero,edad,estado_civil,fecha_nacimiento,Estado,municipio,calle,nacionalidad,ip) values (null,'$nombre','$paterno','$materno','$clavep','$curp','$telefono','$correo','$genero','$edad','$civil','$nacimiento','$estado','$municipio','$calle','$nacionalidad','$ip')");
+$maestro = mysql_query("INSERT INTO maestro(id_maestro,nombre,A_paterno,A_materno,clave,curp,telefono,correo,genero,edad,estado_civil,fecha_nacimiento,Estado,municipio,calle,Ninterior,Nexterior,nacionalidad,ip) values (null,'$nombre','$paterno','$materno','$clavep','$curp','$telefono','$correo','$genero','$edad','$civil','$nacimiento','$estado','$municipio','$calle',$interior,$exterior,'$nacionalidad','$ip')");
 
 $rs = mysql_query("SELECT MAX(id_maestro) AS id FROM maestro");
 if ($row = mysql_fetch_row($rs)) {

@@ -300,21 +300,27 @@ $id = $_GET["id"];
     <table class='table1'>
         <tr>
       <td><label for="">Clave SEP:</label></td>
-      <td><label for="">Modulo:</label></td>
+      <td><label for="">Nombre:</label></td>
     </tr>
     <tr>
- <td><input type="text" name="sep"  id="sep" value=<?php echo $materia['claveSEP'];?>></input></td>
-<td><input type="text" name="modulo"  id="modulo" value=<?php echo $materia['modulo'];?>></input></td>
+    <td><input type="text" name="sep"  id="sep" value=<?php echo $materia['claveSEP'];?>></input></td>
+    <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre_materia'];?> ></input></td>
     </tr>
       <tr>
-        <td><label for="">Nombre:</label></td>
         <td><label for="">Profesor:</label></td>
+        <td><label for="">Calificacion:</label></td>
+
       </tr>
 
       <tr>
-        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre_materia'];?> ></input></td>
+         <td><select name="profesor"  id="profesor" >
+          <?php
+          include_once("php/select.php");
+          maestro();
+          ?>
+        </select></td>
 
-        <td><input type="text" name="profesor"  id="profesor" value=<?php echo $materia['profesor'];?>></input></td>
+        <td><input type="text" name="calificacion" id="calificacion" value=<?php echo $materia['cal_min'];?>></td>
       </tr>
       <tr>
         <td><label for="">Fecha Inicio:</label></td>
@@ -328,7 +334,6 @@ $id = $_GET["id"];
       </tr>
       <tr>
         <td><label for="">Creditos:</label></td>
-        <td><label for="">Calificacion:</label></td>
 
       </tr>
       <tr>
@@ -341,7 +346,7 @@ $id = $_GET["id"];
              ?>
           </select><label for="">Creditos</label> </td>
 
-        <td><input type="text" name="calificacion" id="calificacion" value=<?php echo $materia['cal_min'];?>></td>
+
 
         </tr>
 

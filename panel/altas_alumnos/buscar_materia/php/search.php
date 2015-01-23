@@ -16,7 +16,7 @@ WHERE m.nombre_materia LIKE '%".$busca."%'OR o.nombre LIKE '%".$busca."%' ");
 	if(mysql_num_rows($busqueda)==0) {
 	?>
 		<tr class= "existe">
-			<td  colspan='5'>El alumno no existe</td>
+			<td  colspan='5'>La matería no existe</td>
 		</tr>
 
 	<?php

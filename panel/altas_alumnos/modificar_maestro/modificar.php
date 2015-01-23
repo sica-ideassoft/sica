@@ -371,14 +371,22 @@ $id = $_GET["id"];
         </tr>
         <tr>
           <td><label for="">Municipio:</label></td>
-
-          <td><label for="">Calle:</label></td>
+          <td>
+            <label for="">Calle:</label>
+          <label for="" class="Linterior">#Int.:</label>
+          <label for="" class="Lexterior">#Ext.:</label>
+          </td>
           <td><label for="">Nacionalidad</label></td>
 
         </tr>
         <tr>
 <td><input type="text" name="municipio"  id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
-        <td><input type="text" name="calle" id="calle" value=<?php echo $alumno['calle']; ?>></td>
+
+        <td>
+          <input type="text" name="calle"  class ="calle" id="calle" value=<?php echo $alumno['calle']; ?>>
+           <input type="text" name="interior" class="interior" id="interior" placeholder="#" value=<?php echo $alumno['Ninterior']; ?>>
+           <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#" value=<?php echo $alumno["Nexterior"]; ?>>
+          </td>
           <td><input type="text" name="nacionalidad" id="nacionalidad" value=<?php echo $alumno['nacionalidad']; ?>></td>
         </tr>
         <tr>

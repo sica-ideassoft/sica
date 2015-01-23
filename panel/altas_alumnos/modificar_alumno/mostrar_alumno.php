@@ -5,9 +5,6 @@ if (!isset($_SESSION['admin-sica'])) {
   location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
-include_once("php/paginacion.php");
 
 ?>
 
@@ -33,6 +30,7 @@ include_once("php/paginacion.php");
   <link rel="stylesheet" href="css/modificar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
   <link rel="stylesheet" href="css/mostrar_maestro.css">
+  <link rel="stylesheet" href="css/status.css">
 
 
 
@@ -222,9 +220,9 @@ include_once("php/paginacion.php");
 
             <div class="content-alumno">
                   <div class="img-alumno">
-                      <figure class="foto-alumno">
-                        <img src="" alt="">
-                      </figure>
+                      <?php
+                      include_once("php/mostrar_foto.php");
+                       ?>
                       <label for=""></label>
 
                   </div>
@@ -286,6 +284,7 @@ include_once("php/mostrar.php");
 <!-- <script src="js/confirmacion.js"></script> -->
 <script src="js/eliminar.js"></script>
 <script src="js/val_campos.js"></script>
+<script src="js/status.js"></script>
 
 
 </body>

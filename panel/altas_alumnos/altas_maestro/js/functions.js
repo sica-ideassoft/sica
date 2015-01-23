@@ -19,17 +19,16 @@ $(function() {
     var nacimiento = $("#nacimiento").val();
     var estado     = $("#estado").val();
     var municipio  = $("#municipio").val();
-    var calle  = $("#calle").val();
+    var calle      = $("#calle").val();
+    var interior   = $("#interior").val();
+    var exterior   = $("#exterior").val();
     var nacionalidad  = $("#nacionalidad").val();
     var user  = $("#user").val();
     var password  = $("#password").val();
 
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+'&clavep=' + clavep+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&user=' + user+ '&password=' + password;
 
-
-
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno+'&clavep=' + clavep+ '&curp=' + curp+ '&telefono=' + telefono+ '&correo=' + correo+ '&genero=' + genero+ '&edad=' + edad+ '&civil=' + civil+ '&nacimiento=' + nacimiento+ '&estado=' + estado+ '&municipio=' + municipio+ '&calle=' + calle+ '&nacionalidad=' + nacionalidad + '&user=' + user+ '&password=' + password;
-
-if(nombre === '' || paterno === "" || materno === ""|| clavep === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimiento === ""|| estado === ""|| municipio === ""|| calle === ""|| nacionalidad === ""|| user === ""|| password === "")
+if(nombre === '' || paterno === "" || materno === ""|| clavep === ""|| curp === ""|| telefono === ""|| correo === ""|| genero === ""|| edad === ""|| civil === ""|| nacimiento === ""|| estado === ""|| municipio === ""|| calle === ""|| interior === ""|| exterior === ""|| nacionalidad === ""|| user === ""|| password === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;
@@ -74,6 +73,8 @@ else
     $("#estado").val("");
     $("#municipio").val("");
     $("#calle").val("");
+    $("#interior").val("");
+    $("#exterior").val("");
     $("#nacionalidad").val("");
     $("#user").val("");
     $("#password").val("");
