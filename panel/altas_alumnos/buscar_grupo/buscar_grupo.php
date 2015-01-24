@@ -226,11 +226,11 @@ location.href = "../../login_admin/index.php";
 <div class="datosAlumno">
 <table>
     <thead class="datosBucar1">
-        <th>Nombre</th>
-        <th>A paterno</th>
-        <th>A materno</th>
-        <th>Telefono</th>
-        <th>mostrar</th>
+        <th class="materia">Materia</th>
+        <th>Profesor</th>
+        <th class="medio">Grado</th>
+        <th class="medio">grupo</th>
+        <th class="medio">mostrar</th>
     </thead>
 </table>
 </div>
@@ -238,10 +238,10 @@ location.href = "../../login_admin/index.php";
 <table id="resultTable" >
 
     <thead class="datosBucar">
+        <th class="materia"></th>
         <th></th>
         <th></th>
-        <th></th>
-        <th></th>
+        <th ></th>
         <th class="masBuscar"></th>
     </thead>
 

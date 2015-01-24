@@ -91,15 +91,18 @@ overflow: hidden;
 	margin: 0 auto;
 	margin-top: 10px;
 	font-size: 14px;
+
 }
 #resultTable thead{
 	background-color:#09C;
+
 }
 #resultTable thead th{
-	width: 150px;
+	width: 148px;
 	height: 0px;
 	color: white;
 	text-transform: uppercase;
+
 }
 
 #resultTable  td{
@@ -137,9 +140,7 @@ overflow: hidden;
 .btnSearch:hover{
 	border-style: none;
 }
-.icoSearch.{
 
-}
 .icoSearch:after
 {
 	font-family: "buscar";
@@ -161,9 +162,12 @@ margin-top:10px;
 	font-family: "buscar";
 	content:"\e607";
 }
+.materia{
+	width: 300px !important;
+}
 .ContentBuscar{
 
-width: 800px;
+width: 950px;
 height: 350px;
 z-index: -10;
 margin: 0 auto !important;
@@ -179,9 +183,9 @@ top: 0px;
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width: 750px;
+	width: 890px;
 	margin: 0 auto;
-	margin-left: 130px;
+	margin-left: 60px;
 	height: 30px;
 	margin-top: 10px !important;
 }
@@ -190,10 +194,11 @@ top: 0px;
 
 }
 .datosAlumno table th{
-	width: 150px;
+	width: 140px;
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;
+
 }
 .datosBucar1{
 	text-align: center;

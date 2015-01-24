@@ -4,9 +4,9 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
 	$search = htmlspecialchars($_REQUEST["search"]);
 	$pagination->param = "&search=$search";
-	$pagination->rowCount("SELECT * FROM alumno WHERE nombre LIKE '%$search%' OR A_paterno LIKE '%$search%' OR A_materno LIKE '%$search%'");
+	$pagination->rowCount("SELECT * FROM alumno WHERE nombre_alumno LIKE '%$search%' OR A_paterno_alumno LIKE '%$search%' OR A_materno_alumno LIKE '%$search%'");
 	$pagination->config(3, 5);
-	$sql = "SELECT * FROM alumno WHERE nombre LIKE '%$search%' OR A_paterno LIKE '%$search%' OR A_materno LIKE '%$search%' ORDER BY id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+	$sql = "SELECT * FROM alumno WHERE nombre_alumno LIKE '%$search%' OR A_paterno_alumno LIKE '%$search%' OR A_materno_alumno LIKE '%$search%' ORDER BY id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
 	$query = $connection->prepare($sql);
 	$query->execute();
 

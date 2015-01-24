@@ -313,18 +313,21 @@ if (!isset($_SESSION['admin-sica'])) {
         <td><input type="text" name="nombre"  id="nombre" alt="nombre" ></input></td>
       </tr>
       <tr>
-        <td><label for="">Profesor:</label></td>
+
         <td><label for="">Calificacion:</label></td>
+        <td><label for="">Creditos:</label></td>
+
       </tr>
       <tr>
         <!-- <td><input type="text" name="profesor"  id="profesor" ></input></td> -->
-        <td><select name="profesor"  id="profesor" >
-          <?php
-          include_once("php/select.php");
-          maestro();
-          ?>
-        </select></td>
         <td><input type="text" name="calificacion" id="calificacion"></td>
+          <td class="edad"><select name="creditos" id="creditos" >
+          <?php
+          for ($i=1; $i <= 20 ; $i++) {
+            echo "<option>".$i."</option>";
+          }
+          ?>
+        </select><label for="">Creditos</label> </td>
       </tr>
       <tr>
         <td><label for="">Fecha Inicio:</label></td>
@@ -335,18 +338,6 @@ if (!isset($_SESSION['admin-sica'])) {
       <tr>
         <td><input type="text" name="fecha1" id="fecha1" class="fecha"></td>
         <td><input type="text" name="fecha2" id="fecha2" class="fecha"></td>
-      </tr>
-      <tr>
-        <td><label for="">Creditos:</label></td>
-      </tr>
-      <tr>
-        <td class="edad"><select name="creditos" id="creditos" >
-          <?php
-          for ($i=1; $i <= 20 ; $i++) {
-            echo "<option>".$i."</option>";
-          }
-          ?>
-        </select><label for="">Creditos</label> </td>
       </tr>
     </table>
 

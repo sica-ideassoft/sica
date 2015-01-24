@@ -304,23 +304,27 @@ $id = $_GET["id"];
     </tr>
     <tr>
     <td><input type="text" name="sep"  id="sep" value=<?php echo $materia['claveSEP'];?>></input></td>
-    <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre_materia'];?> ></input></td>
+    <td><input type="text" name="nombre"  id="nombre" value="<?php print $materia['nombre_materia'];?>" ></input></td>
     </tr>
       <tr>
-        <td><label for="">Profesor:</label></td>
+
         <td><label for="">Calificacion:</label></td>
+        <td><label for="">Creditos:</label></td>
 
       </tr>
 
       <tr>
-         <td><select name="profesor"  id="profesor" >
-          <?php
-          include_once("php/select.php");
-          maestro();
-          ?>
-        </select></td>
+
 
         <td><input type="text" name="calificacion" id="calificacion" value=<?php echo $materia['cal_min'];?>></td>
+        <td class="edad"><select name="creditos" id="creditos"  value=<?php echo $materia['creditos'];?>>
+            <?php
+              for ($i=1; $i <= 20 ; $i++) {
+            echo "<option>".$i."</option>";
+              }
+             ?>
+          </select><label for="">Creditos</label> </td>
+
       </tr>
       <tr>
         <td><label for="">Fecha Inicio:</label></td>
@@ -332,24 +336,6 @@ $id = $_GET["id"];
         <td><input type="text" name="fecha1" id="fecha1" class="fecha" value=<?php echo $materia['fecha_inicio'];?>></td>
         <td><input type="text" name="fecha2" id="fecha2" class="fecha" value=<?php echo $materia['fecha_fin'];?>></td>
       </tr>
-      <tr>
-        <td><label for="">Creditos:</label></td>
-
-      </tr>
-      <tr>
-
-<td class="edad"><select name="creditos" id="creditos"  value=<?php echo $materia['creditos'];?>>
-            <?php
-              for ($i=1; $i <= 20 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
-             ?>
-          </select><label for="">Creditos</label> </td>
-
-
-
-        </tr>
-
       </table>
 
 

@@ -232,7 +232,7 @@ include_once("php/paginacion.php");
 
               <tr >
                 <th class="nomM">nombre</th>
-                <th>profesor</th>
+                <th>Clave SEP</th>
                 <th>Credito</th>
                 <th>Cal. Minima</th>
                 <th class="modi">eliminar-</th>
@@ -247,8 +247,7 @@ include_once("php/paginacion.php");
               {
                 echo "<tr>";
                 echo "<td>".$row['nombre_materia']."</td>";
-                echo "<td>".$row['nombre']."</td>";
-
+                echo "<td>".$row['claveSEP']."</td>";
                 echo "<td>".$row['credito']."</td>";
                 echo "<td>".$row['cal_min']."</td>";
                 ?>

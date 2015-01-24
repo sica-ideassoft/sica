@@ -6,8 +6,8 @@ $conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM alumno WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
-	OR matricula LIKE '%".$busca."%' OR grado LIKE '%".$busca."%' OR grupo LIKE '%".$busca."%'");
+$busqueda=mysql_query("SELECT * FROM alumno WHERE nombre_alumno LIKE '%".$busca."%' OR A_paterno_alumno LIKE '%".$busca."%' OR A_materno_alumno LIKE '%".$busca."%'
+	OR matricula LIKE '%".$busca."%' OR grado_alumno LIKE '%".$busca."%' OR grupo_alumno LIKE '%".$busca."%'");
 
 // $row=mysql_fetch_array($busqueda);
 	//
@@ -25,16 +25,17 @@ while($f=mysql_fetch_array($busqueda)){
 
 	?>
 	<tr>
-		<td><?php echo $f['nombre']; ?></td>
-		<td><?php echo $f['A_paterno']; ?></td>
-		<td><?php echo $f['A_materno']; ?></td>
+		<td><?php echo $f['nombre_alumno']; ?></td>
+		<td><?php echo $f['A_paterno_alumno']; ?></td>
+		<td><?php echo $f['A_materno_alumno']; ?></td>
 		<td><?php echo $f['matricula']; ?></td>
-		<td><?php echo $f['grado']; ?></td>
-		<td><?php echo $f['grupo']; ?></td>
+		<td><?php echo $f['grado_alumno']; ?></td>
+		<td><?php echo $f['grupo_alumno']; ?></td>
 		<td class="lia"><a  id="eliminar" href="#" onclick="mostrarAlumno(<?php echo $f['id_alumno']?>)"><span class="mas"></span></a></td>
 	</tr>
 
 	<script>
+
 		function mostrarAlumno(id)
 		{
 			window.location = "mostrar_alumnos.php?id="+id;

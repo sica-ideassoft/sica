@@ -232,10 +232,10 @@ include_once("php/paginacion.php");
             <thead class="datosmodificar">
 
               <tr >
-                <th class="grupo">nombre</th>
-                <th>profesor</th>
-                <th>Credito</th>
-                <th>Cal. Minima</th>
+                <th class="grupo">materia</th>
+                <th >profesor</th>
+                <th>grado</th>
+                <th>grupo</th>
                 <th class="modi">eliminar-</th>
                 <th class="modi">modificar-</th>
                 <th class="modi">mostrar</th>
@@ -248,10 +248,9 @@ include_once("php/paginacion.php");
               {
                 echo "<tr>";
                 echo "<td>".$row['nombre_materia']."</td>";
-                echo "<td>".$row['profesor']."</td>";
-
-                echo "<td>".$row['credito']."</td>";
-                echo "<td>".$row['cal_min']."</td>";
+                echo "<td>".$row['nombre']."</td>";
+                echo "<td>".$row['grado']."</td>";
+                echo "<td>".$row['grupo']."</td>";
                 ?>
                  <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_grupo'];?>);"><span class="eliminar"></span></a></td>
 

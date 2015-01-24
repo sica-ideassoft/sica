@@ -308,9 +308,9 @@ $id = $_GET["id"];
       </tr>
       <tr>
 
-        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $alumno['nombre']; ?>></input></td>
-        <td><input type="text" name="paterno"  id="paterno" value=<?php echo $alumno['A_paterno']; ?>></input></td>
-        <td><input type="text" name="materno" id="materno" value=<?php echo $alumno['A_materno']; ?>></input></td>
+        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $alumno['nombre_alumno']; ?>></input></td>
+        <td><input type="text" name="paterno"  id="paterno" value=<?php echo $alumno['A_paterno_alumno']; ?>></input></td>
+        <td><input type="text" name="materno" id="materno" value=<?php echo $alumno['A_materno_alumno']; ?>></input></td>
 
       </tr>
       <tr>
@@ -355,8 +355,8 @@ $id = $_GET["id"];
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td><input type="text" name="grado"  id="grado" value=<?php echo $alumno['grado']; ?>></td>
-          <td><input type="text" name="grupo" id="grupo" value=<?php echo $alumno['grupo']; ?>></td>
+          <td><input type="text" name="grado"  id="grado" value=<?php echo $alumno['grado_alumno']; ?>></td>
+          <td><input type="text" name="grupo" id="grupo" value=<?php echo $alumno['grupo_alumno']; ?>></td>
 
         </tr>
         <tr>

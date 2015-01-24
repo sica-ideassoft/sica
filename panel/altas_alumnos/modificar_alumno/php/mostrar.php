@@ -10,7 +10,7 @@ $sql=mysql_query("SELECT * FROM alumno WHERE id_alumno = '".$id."'");
 
 <?php
 while($row = mysql_fetch_array($sql)){
-$nombre = $row['nombre'];
+$nombre = $row['nombre_alumno'];
 ?>
 <table class="tabla-mostrar">
 <tr>
@@ -19,9 +19,9 @@ $nombre = $row['nombre'];
 	<td class="dato"><label for="">A materno:</label></td>
 	<td class="dato"><label for="">Matricula:</label></td>
 </tr>
-	<td><?php echo $row['nombre']; ?></td>
-	<td><?php echo $row['A_paterno']; ?></td>
-	<td><?php echo $row['A_materno']; ?></td>
+	<td><?php echo $row['nombre_alumno']; ?></td>
+	<td><?php echo $row['A_paterno_alumno']; ?></td>
+	<td><?php echo $row['A_materno_alumno']; ?></td>
 	<td><?php echo $row['matricula']; ?></td>
 </tr>
 <tr>
@@ -46,8 +46,8 @@ $nombre = $row['nombre'];
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
 	<td><?php echo $row['edad']; ?> Años</td>
-	<td><?php echo $row['grado']; ?> ro</td>
-	<td><?php echo $row['grupo']; ?></td>
+	<td><?php echo $row['grado_alumno']; ?> ro</td>
+	<td><?php echo $row['grupo_alumno']; ?></td>
 </tr>
 
 <tr>

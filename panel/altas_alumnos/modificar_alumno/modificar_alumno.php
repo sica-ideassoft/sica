@@ -250,12 +250,12 @@ include_once("php/paginacion.php");
               {
                 ?>
                 <tr>
-                <td><?php echo$row['nombre'];?></td>
-                <td><?php echo$row['A_paterno'];?></td>
-                <td><?php echo$row['A_materno'];?></td>
+                <td><?php echo$row['nombre_alumno'];?></td>
+                <td><?php echo$row['A_paterno_alumno'];?></td>
+                <td><?php echo$row['A_materno_alumno'];?></td>
                 <td><?php echo$row['matricula'];?></td>
-                <td><?php echo$row['grado'];?></td>
-                <td><?php echo$row['grupo'];?></td>
+                <td><?php echo$row['grado_alumno'];?></td>
+                <td><?php echo$row['grupo_alumno'];?></td>
 
 
 <td><a class="liEliminar" href="#"

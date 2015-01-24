@@ -17,12 +17,10 @@ $nombre = $row['nombre_materia'];
 <tr>
 	<td class="dato"><label for="">Clave SEp:</label></td>
 	<td class="dato"><label for="">Nombre:</label></td>
-	<td class="dato"><label for="">Profesor:</label></td>
 	<td class="dato"><label for="">Creditos:</label></td>
 </tr>
 	<td><?php echo $row['claveSEP']; ?></td>
 	<td><?php echo $row['nombre_materia']; ?></td>
-	<td><?php echo $row['profesor']; ?></td>
 	<td><?php echo $row['credito']; ?></td>
 </tr>
 <tr>

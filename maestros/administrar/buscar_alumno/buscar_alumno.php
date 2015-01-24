@@ -18,7 +18,7 @@ if (!isset($_SESSION['maestro-session'])) {
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>ADMINISTRADOR</title>
+  <title>MAESTROS</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -182,9 +182,10 @@ if (!isset($_SESSION['maestro-session'])) {
     <table>
       <thead class="datosBucar1">
         <th class="materia">Materías</th>
-        <th >Nombre</th>
+        <th>Nombre</th>
         <th>A paterno</th>
-        <th >matricula</th>
+        <th>A materno</th>
+        <th>profesor</th>
         <th>Grado</th>
         <th>Grupo</th>
         <th>mostrar</th>
@@ -196,7 +197,6 @@ if (!isset($_SESSION['maestro-session'])) {
 
       <thead class="datosBucar">
         <th class="materia"></th>
-        <th></th>
         <th ></th>
         <th ></th>
         <th ></th>

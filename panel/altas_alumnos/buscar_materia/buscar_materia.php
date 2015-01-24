@@ -226,10 +226,11 @@ location.href = "../../login_admin/index.php";
 <table>
     <thead class="datosBucar1">
         <th class="nombre">Nombre</th>
-        <th>Profesor</th>
-        <th>Creditos</th>
-        <th>Cal. minima</th>
-        <th>mostrar</th>
+        <th>Clave SEP</th>
+        <th>Fecha Ini.</th>
+        <th>Fecha Fin.</th>
+        <th>Credito</th>
+        <th>CAl. Min</th>
     </thead>
 </table>
 </div>
@@ -241,7 +242,8 @@ location.href = "../../login_admin/index.php";
         <th></th>
         <th></th>
         <th></th>
-        <th class="masBuscar"></th>
+        <th></th>
+        <th></th>
     </thead>
 
     <tbody>

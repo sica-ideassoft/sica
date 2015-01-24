@@ -29,7 +29,7 @@ $status       = mysql_real_escape_string($_POST['status']);
 
 
 
-$ssql = "UPDATE alumno set nombre = '".$nombre."',A_paterno = '".$paterno."',A_materno = '".$materno."',matricula = '".$matricula."',curp = '".$curp."',telefono = '".$telefono."',correo = '".$correo."',genero = '".$genero."',fecha_nacimiento = '".$nacimiento."',edad = '".$edad."',grado = '".$grado."',grupo = '".$grupo."',estado = '".$estado."',municipio = '".$municipio."',colonia = '".$colonia."',calle = '".$calle."',Ninterior = '".$interior."',Nexterior = '".$exterior."',nacionalidad = '".$nacionalidad."',fotografia = '".$foto."',estado_civil = '".$civil."',status = '".$status."' WHERE id_alumno='".$id."'";
+$ssql = "UPDATE alumno set nombre_alumno = '".$nombre."',A_paterno_alumno = '".$paterno."',A_materno_alumno = '".$materno."',matricula = '".$matricula."',curp = '".$curp."',telefono = '".$telefono."',correo = '".$correo."',genero = '".$genero."',fecha_nacimiento = '".$nacimiento."',edad = '".$edad."',grado_alumno = '".$grado."',grupo_alumno = '".$grupo."',estado = '".$estado."',municipio = '".$municipio."',colonia = '".$colonia."',calle = '".$calle."',Ninterior = '".$interior."',Nexterior = '".$exterior."',nacionalidad = '".$nacionalidad."',fotografia = '".$foto."',estado_civil = '".$civil."',status = '".$status."' WHERE id_alumno='".$id."'";
 if(mysql_query($ssql)){
 	return true;
 }else{

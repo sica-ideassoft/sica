@@ -1,4 +1,4 @@
-<?php
+	<?php
 include_once("../conectar.php");
 $conn = new DB();
 $conn->conectar();
@@ -22,7 +22,7 @@ while($filas=mysql_fetch_array($consulta)){
        <img src="<?php echo $ruta ;?>" width="119" height="139"/>
  </figure>
  <div class="content-name">
-       <label for="" class="name"><?php echo $filas["nombre"]; ;?></label>
+       <label for="" class="name"><?php echo $filas["nombre_alumno"]; ;?></label>
  </div>
  <div class="content-name">
        <label for="" class="" id='status'><?php echo $filas["status"];?></label>

@@ -41,7 +41,8 @@ if ($username_exist>0) {
 	exit();
 }else{
 
-$query = mysql_query("INSERT INTO alumno(id_alumno,nombre,A_paterno,A_materno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,grado,grupo,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$grado','$grupo','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','".$rutaDestino."','activo','$ip')");
+
+$query = mysql_query("INSERT INTO alumno(id_alumno,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,grado_alumno,grupo_alumno,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$grado','$grupo','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','".$rutaDestino."','activo','$ip')");
 }
 }
 
