@@ -21,7 +21,7 @@ $(function() {
 
 	  setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
 		} else {
-		document.location.href = '../alumno/index.php';
+		document.location.href = '../home/index.php';
 		}
       }
      });

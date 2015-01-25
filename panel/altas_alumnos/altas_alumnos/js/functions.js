@@ -27,12 +27,12 @@ $(function() {
     var exterior     = $("#exterior").val();
     var nacionalidad = $("#nacionalidad").val();
     var civil        = $("#civil").val();
-    var imagen       = $("#imagen").val();
+    var file       = $("#file").val();
     // var status    = $("#status").val();
 
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grado=' + grado + '&grupo=' + grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&imagen=' + imagen;
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grado=' + grado + '&grupo=' + grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&file=' + file;
 
-if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grado === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === "" )
+if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grado === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === ""|| file === "" )
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(4000), 1000);
   return false;
@@ -58,7 +58,6 @@ else
         type: "POST",
         url: "php/action.php",
         data: dataString,
-        cache: true,
 
         success: function(html){
 
@@ -84,7 +83,7 @@ else
     $("#exterior").val("");
     $("#nacionalidad").val("");
     $("#civil").val("");
-    $("#imagen").val("");
+    $("#file").val("");
     // $("#status").val("");
         }, error: function () {
          alertify.alert().set('message', 'La matricula ya existe').show();

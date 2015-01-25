@@ -31,14 +31,14 @@ while($f=mysql_fetch_array($busqueda)){
 		<td><?php echo $f['matricula']; ?></td>
 		<td><?php echo $f['grado_alumno']; ?></td>
 		<td><?php echo $f['grupo_alumno']; ?></td>
-		<td class="lia"><a  id="eliminar" href="#" onclick="mostrarAlumno(<?php echo $f['id_alumno']?>)"><span class="mas"></span></a></td>
+		<td class="lia"><a  id="eliminar" href="mostrar_alumnos.php?id=<?php echo $f['id_alumno']?>" ><span class="mas"></span></a></td>
 	</tr>
 
 	<script>
 
-		function mostrarAlumno(id)
+		function enviar(id)
 		{
-			window.location = "mostrar_alumnos.php?id="+id;
+   			document.location("mostrar_alumnos.php?id="+id)
 		}
 	</script>
 
@@ -46,4 +46,6 @@ while($f=mysql_fetch_array($busqueda)){
 }
 
 }
+?>
+
 ?>

@@ -412,7 +412,7 @@ location.href = "../../login_admin/index.php";
       </tr>
       <tr>
 
-         <td colspan="2"><input type="file" name="imagen" id="imagen"></td>
+         <td colspan="2"><input type="file" name="file" id="file"></td>
       </tr>
 <!--       <tr>
           <td><label for="">Status:</label></td>

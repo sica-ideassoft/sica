@@ -2,7 +2,7 @@
 session_start();
 if (isset($_SESSION['alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
-location.href = "../alumno/index.php";
+location.href = "../home/index.php";
 </script>';
 }
 ?>
@@ -17,7 +17,7 @@ location.href = "../alumno/index.php";
 
     <link rel="shortcut icon" href="image/favicon.ico">
 
-    <title>Calificaciones</title>
+    <title>CALIFICACIONES</title>
 
     <meta name="description" content="Sistemas de calificaciones">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
