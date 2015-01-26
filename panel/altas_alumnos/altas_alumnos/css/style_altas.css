@@ -92,9 +92,7 @@ font-weight: bold;
 .edad select{
 	width: 60px;
 }
-.grado select{
-	width: 60px;
-}
+
 .edad label{
 	margin-left: 20px;
 }

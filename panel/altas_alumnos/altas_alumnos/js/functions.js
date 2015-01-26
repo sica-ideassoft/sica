@@ -17,7 +17,6 @@ $(function() {
     var genero    = $("#genero").val();
     var nacimiento = $("#nacimiento").val();
     var edad      = $("#edad").val();
-    var grado     = $("#grado").val();
     var grupo     = $("#grupo").val();
     var estado    = $("#estado").val();
     var municipio = $("#municipio").val();
@@ -30,9 +29,9 @@ $(function() {
     var file       = $("#file").val();
     // var status    = $("#status").val();
 
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grado=' + grado + '&grupo=' + grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&file=' + file;
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grupo='+ grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&file=' + file;
 
-if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grado === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === ""|| file === "" )
+if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === ""|| file === "" )
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(4000), 1000);
   return false;
@@ -58,7 +57,9 @@ else
         type: "POST",
         url: "php/action.php",
         data: dataString,
-
+        // processData:false,
+        // contentType:false, //Debe estar en false para que JQuery no procese los datos a enviar
+        cache:false,
         success: function(html){
 
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
@@ -73,7 +74,6 @@ else
     $("#genero").val("");
     $("#nacimiento").val("");
     $("#edad").val("");
-    $("#grado").val("");
     $("#grupo").val("");
     $("#estado").val("");
     $("#municipio").val("");

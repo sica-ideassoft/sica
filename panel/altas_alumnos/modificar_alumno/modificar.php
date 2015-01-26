@@ -342,8 +342,8 @@ $id = $_GET["id"];
         </tr>
         <tr>
           <td><label for="">Edad:</label></td>
-          <td><label for="">Grado:</label></td>
           <td><label for="">Grupo:</label></td>
+          <td><label for="">Estado</label></td>
 
         </tr>
 
@@ -355,17 +355,12 @@ $id = $_GET["id"];
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td><input type="text" name="grado"  id="grado" value=<?php echo $alumno['grado_alumno']; ?>></td>
-          <td><input type="text" name="grupo" id="grupo" value=<?php echo $alumno['grupo_alumno']; ?>></td>
+           <td class='grupo'><select name="grupo"  id="grupo">
+              <?php include_once("php/grupo.php");
+               grupo();
+              ?>
+          </select><td>
 
-        </tr>
-        <tr>
-          <td><label for="">Estado</label></td>
-          <td><label for="">Municipio:</label></td>
-          <td><label for="">Colonia:</label></td>
-        </tr>
-        <tr>
-        <td>
           <select name="estado" id="estado">
           <?php
             include_once("php/select.php");
@@ -373,23 +368,32 @@ $id = $_GET["id"];
            ?>
           </select>
           </td>
-          <td><input type="text" name="municipio" id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
-          <td><input type="text" name="colonia" id="colonia" value=<?php echo $alumno['colonia']; ?>></td>
+
         </tr>
         <tr>
+          <td><label for="">Municipio:</label></td>
+          <td><label for="">Colonia:</label></td>
           <td><label for="">Calle:</label>
           <label for="" class="Linterior">#Int.:</label>
           <label for="" class="Lexterior">#Ext.:</label>
           </td>
-          <td><label for="">Nacionalidad</label></td>
-          <td><label for="">Estado Civil:</label></td>
         </tr>
         <tr>
+
+          <td><input type="text" name="municipio" id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
+          <td><input type="text" name="colonia" id="colonia" value=<?php echo $alumno['colonia']; ?>></td>
           <td>
           <input type="text" name="calle" class="calle" id="calle" value=<?php echo $alumno['calle']; ?>>
            <input type="text" name="interior" class="interior" id="interior" value=<?php echo $alumno['Ninterior']; ?> placeholder="#">
            <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#" value=<?php echo $alumno['Nexterior']; ?>>
           </td>
+        </tr>
+        <tr>
+          <td><label for="">Nacionalidad</label></td>
+          <td><label for="">Estado Civil:</label></td>
+          <td><label for="">Status:</label></td>
+        </tr>
+        <tr>
 
          <td><select name="nacionalidad" id="nacionalidad">
           <option value="Mexicana">Mexicana</option>
@@ -402,13 +406,6 @@ $id = $_GET["id"];
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-
-      </tr>
-      <tr>
-          <td><label for="">Status:</label></td>
-          <td><label for="">Fotografia:</label></td>
-        </tr>
-        <tr>
         <td>
           <select name="status" id="status" value=<?php echo $alumno['status']; ?>>
             <option value="activo">Activo</option>
@@ -416,6 +413,12 @@ $id = $_GET["id"];
             <option value="baja temporal">Baja Temporal</option>
           </select>
          </td>
+
+      </tr>
+      <tr>
+          <td><label for="">Fotografia:</label></td>
+        </tr>
+        <tr>
          <td colspan="2"><input type="file" name="foto" id="foto" value=<?php echo $alumno['fotografia']; ?>></td>
          <td>
 

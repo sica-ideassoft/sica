@@ -19,7 +19,6 @@ $(function() {
  var genero       = $("#genero").val();
  var nacimiento   = $("#nacimiento").val();
  var edad         = $("#edad").val();
- var grado        = $("#grado").val();
  var grupo        = $("#grupo").val();
  var estado       = $("#estado").val();
  var municipio    = $("#municipio").val();
@@ -32,9 +31,9 @@ $(function() {
  var foto         = $("#foto").val();
  var status       = $("#status").val();
 
-var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grado='+ grado + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio+ '&colonia='+ colonia + '&calle='+ calle+ '&interior='+ interior+ '&exterior='+ exterior  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&foto='+ foto + '&status='+ status  ;
+var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio+ '&colonia='+ colonia + '&calle='+ calle+ '&interior='+ interior+ '&exterior='+ exterior  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&foto='+ foto + '&status='+ status  ;
 
-if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grado === ""|| grupo === ""|| estado === ""|| municipio === ""|| colonia === ""|| calle === ""||interior === ""||exterior === ""|| nacionalidad === "" || civil === ""|| status === "")
+if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grupo === ""|| estado === ""|| municipio === ""|| colonia === ""|| calle === ""||interior === ""||exterior === ""|| nacionalidad === "" || civil === ""|| status === "")
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

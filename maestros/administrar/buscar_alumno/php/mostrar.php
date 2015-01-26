@@ -1,7 +1,18 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
 $id = $_GET["id"];
-$sql=mysql_query("SELECT * FROM alumno WHERE id_alumno = '".$id."'");
+$sql=mysql_query("SELECT
+ 	a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
+	g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+	s.id_materia,s.nombre_materia,
+	m.nombre,m.id_maestro,
+	u.id_login_maestro,u.id_maestro,u.user
+	FROM alumno a
+	INNER JOIN grupos  g ON g.id_grupo = a.id_grupo
+	INNER JOIN materias s  ON s.id_materia = g.id_materia
+	INNER JOIN maestro m ON m.id_maestro = g.id_maestro
+	INNER JOIN user_maestro u ON u.id_maestro = m.id_maestro
+	WHERE id_alumno = '".$id."'");
 ?>
 
 <?php
@@ -16,8 +27,8 @@ $nombre = $row['nombre'];
 	<td class="dato"><label for="">Matricula:</label></td>
 </tr>
 	<td><?php echo $row['nombre']; ?></td>
-	<td><?php echo $row['A_paterno']; ?></td>
-	<td><?php echo $row['A_materno']; ?></td>
+	<td><?php echo $row['A_paterno_alumno']; ?></td>
+	<td><?php echo $row['A_materno_alumno']; ?></td>
 	<td><?php echo $row['matricula']; ?></td>
 </tr>
 <tr>
@@ -41,7 +52,7 @@ $nombre = $row['nombre'];
 
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['edad']; ?></td>
+	<td><?php echo $row['edad']; ?> Años</td>
 	<td><?php echo $row['grado']; ?></td>
 	<td><?php echo $row['grupo']; ?></td>
 </tr>
@@ -59,12 +70,18 @@ $nombre = $row['nombre'];
 	<td><?php echo $row['nacionalidad']; ?></td>
 </tr>
 <tr>
-	<td class="dato"><label for="">Status:</label></td>
 	<td class="dato"><label for="">Estado Civil:</label></td>
+	<td class="dato"><label for="">Status:</label></td>
+	<td class="dato"><label for="">Profesor:</label></td>
+	<td class="dato"><label for="">Matería:</label></td>
+
 </tr>
 <tr>
-	<td><?php echo $row['status']; ?></td>
 	<td><?php echo $row['estado_civil']; ?></td>
+	<td><?php echo $row['status']; ?></td>
+	<td><?php echo $row['nombre']; ?></td>
+	<td><?php echo $row['nombre_materia']; ?></td>
+
 </tr>
 </table>
 

@@ -85,7 +85,9 @@ location.href = "../../login_admin/index.php";
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">
+
                 <div class="Cco">
+
                 <a href="../../control_admin/perfil/perfil.php">
                 <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
@@ -100,11 +102,12 @@ location.href = "../../login_admin/index.php";
                 </div>
 
 
-
+                <a href="../../control_admin/publicar/publicar.php">
                  <div class="mod3 btn btn-1 btn-1b">
                   <span class="modico3"></span>
                   <p>PUBLICAR</p>
                 </div>
+                </a>
                 <div class="mod4 btn btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>

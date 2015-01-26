@@ -221,10 +221,10 @@ location.href = "../../login_admin/index.php";
                   </div>
                   <div class="info-alumno">
 
-<?php
-include_once("php/mostrar.php");
-?>
-</table>
+                    <?php
+                    include_once("php/mostrar.php");
+                    ?>
+                    </table>
                   </div>
             </div>
 

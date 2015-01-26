@@ -218,7 +218,7 @@ $conn->conectar();
       <span class="Mico"></span>
   </div>
 </div>
-        <div class="tem"><p>PERFIL</p></div>
+        <div class="tem"><p><span class="perfil-ico"></span>PERFIL</p></div>
         <?php
           include("mostrar.php");
         ?>

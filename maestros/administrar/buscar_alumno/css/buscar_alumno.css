@@ -88,29 +88,39 @@ overflow: hidden;
 	margin: 0 auto;
 	margin-top: 10px;
 	font-size: 14px;
+	margin-left: 43px;
 }
 #resultTable thead{
 	background-color:#09C;
 }
 #resultTable thead th{
-	width: 119px;
+	width: 160px;
+	/*margin-left: 40px !important;*/
 	height: 0px;
 	color: white;
-
 	text-transform: uppercase;
 }
+.materia{
+	width: 290px !important;
+}
+.materia2{
+	width: 300px !important;
+
+}
+
+	.medio{
+		width: 130px !important	;
+	}
+
 #resultTable tbody{
 
 	font-size: 14px;
 	text-align: center;
 
 }
-#resultTable {
-	width: 950px;
-	margin-left: 25px;
-}
-#resultTable tbody td{
 
+#resultTable tbody td{
+	/*width: 40px !important;*/
 	height: 35px;
 	border-bottom: 1px solid rgba(0,0,0,0.1);
 	color:#09C;
@@ -162,30 +172,34 @@ margin-top:10px;
 	font-family: "buscar";
 	content:"\e607";
 }
-
 .ContentBuscar{
-/*----------------------------------------*/
-width: 1000px;
+
+width: 1010px;
 height: 350px;
 z-index: -10;
-margin-left: 12px;
+margin-left: -5px;
 /*margin: 0 auto !important;*/
-overflow: hidden;
+
+ overflow: hidden;
 overflow-x:hidden;
 overflow-y:scroll;
 }
 .ContentBuscar tbody{
+	/*width: 100px;*/
 float: top;
 top: 0px;
 
 }
 .datosAlumno{
+
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width:950px;
+	width: 950px;
 	margin: 0 auto;
-	/*margin-left: 130px;*/
+
+	/*margin-left: 20px;*/
+
 	height: 30px;
 	margin-top: 10px !important;
 }
@@ -196,24 +210,22 @@ top: 0px;
 .datos{
 	text-transform: uppercase;
 }
+.datosAlumno table{
+	/*margin-left: 10px;*/
+}
 .datosAlumno table th{
-	width: 125px;
+	/*padding-left: -10px;*/
+	width: 140px;
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;
-}
-.materia{
-/*width: 50px !important;*/
+
 }
 .datosBucar1{
 	text-align: center;
 
 }
-.mostrar{
-	width: 10px !important;
-	padding: 10px 20px;
 
-}
 .control{
 	text-align: center;
 }

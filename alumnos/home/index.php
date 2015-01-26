@@ -14,7 +14,7 @@ location.href = "../login_alumno/index.php";
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="shortcut icon" href="image/favicon.ico">
+        <link rel="shortcut icon" href="../image_globales/favicon.ico">
         <title>ALUMNOS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -103,50 +103,18 @@ location.href = "../login_alumno/index.php";
 
             </div>
 
+    <section class="fondo-slider">
 
-     <section class="fondo-slider">
-     <div class="slider-container">
-        <ul id="slider" class="slider-wrapper">
-            <li class="slide-current">
-                <img src="image/1.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Diseño web</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
-                </div>
-            </li>
 
-            <li>
-                <img src="image/2.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Desarrollo web</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
-                </div>
-            </li>
-
-            <li>
-                <img src="image/3.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Javascript</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
-                </div>
-            </li>
-
-            <li>
-                <img src="image/4.jpg" alt="Slider Imagen 1">
-                <div class="caption">
-                    <h3 class="caption-title">Maquetacion</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
-                </div>
-            </li>
-        </ul>
-        </div>
+        <?php
+        include_once("php/banner.php");
+         ?>
     </section>
 
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>
 <script src="js/menu.js"></script>
-<script src="js/slider.js"></script>
 
 
     </body>

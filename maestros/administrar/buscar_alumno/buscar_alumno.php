@@ -49,7 +49,7 @@ if (!isset($_SESSION['maestro-session'])) {
       <div class="userimg">
         <?php include_once("php/miniatura.php"); ?>
       </div>
-      <div class="datos"><p><?php echo  $_SESSION['maestro-session'] ;?></p></div>
+      <div class="datos"><p><?php echo $_SESSION['maestro-session'] ;?></p></div>
     </div>
   </nav>
 
@@ -84,7 +84,7 @@ if (!isset($_SESSION['maestro-session'])) {
   <!-- incio de menu config -->
   <div class="Ccontent">
     <div class="Cco">
-      <a href="../../control_admin/perfil/perfil.php">
+      <a href="../../control/perfil/perfil.php">
         <div class="mod btn btn-1 btn-1e">
           <span class="modico "></span>
           <p>PERFIL</p>
@@ -181,14 +181,14 @@ if (!isset($_SESSION['maestro-session'])) {
   <div class="datosAlumno">
     <table>
       <thead class="datosBucar1">
-        <th class="materia">Materías</th>
-        <th>Nombre</th>
+        <th class="materia2">Materías</th>
+
+        <th >Nombre</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th>profesor</th>
-        <th>Grado</th>
-        <th>Grupo</th>
-        <th>mostrar</th>
+        <th class="medio">Grado</th>
+        <th class="medio">Grupo</th>
+        <th class="medio">mostrar</th>
       </thead>
     </table>
   </div>
@@ -201,7 +201,8 @@ if (!isset($_SESSION['maestro-session'])) {
         <th ></th>
         <th ></th>
         <th></th>
-        <th class="masBuscar"></th>
+        <th></th>
+        <th></th>
       </thead>
 
       <tbody>

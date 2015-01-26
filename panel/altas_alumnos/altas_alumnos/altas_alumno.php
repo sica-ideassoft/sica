@@ -333,8 +333,9 @@ location.href = "../../login_admin/index.php";
         </tr>
         <tr>
           <td><label for="">Edad:</label></td>
-          <td><label for="">Grado:</label></td>
-          <td><label for="">Grupo:</label></td>
+          <td><label for="">Grado-grupo:</label></td>
+          <td><label for="">Estado</label></td>
+
 
         </tr>
 
@@ -346,53 +347,47 @@ location.href = "../../login_admin/index.php";
               }
              ?>
           </select><label for="">Años</label> </td>
-          <td class='grado'><select name="grado"  id="grado">
+
+          <td class='grupo'><select name="grupo"  id="grupo">
               <?php include_once("php/grupo.php");
-               grado();
-              ?>
-          </select>
-          <label for="">ro</label></td>
-          <!-- <td><input type="text" name="grado"  id="grado" ></td> -->
-          <!-- <td><input type="text" name="grupo" id="grupo"></td> -->
-           <td><select name="grupo" id="grupo" id="">
-              <?php
                grupo();
               ?>
-          </select></td>
-
-        </tr>
-        <tr>
-          <td><label for="">Estado</label></td>
-          <td><label for="">Municipio:</label></td>
-          <td><label for="">Colonia:</label></td>
-
-        </tr>
-        <tr>
+          </select>
           <td><select name="estado" id="estado">
             <?php
             include_once("php/select.php");
               estado();
              ?>
           </select></td>
-          <!-- <td><input type="text" name="estado" id="estado" ></td> -->
-          <td><input type="text" name="municipio" id="municipio" ></td>
-          <td><input type="colonia" id="colonia" class='colonia'></td>
+
         </tr>
         <tr>
+          <td><label for="">Municipio:</label></td>
+          <td><label for="">Colonia:</label></td>
            <td>
           <label for="">Calle:</label>
           <label for="" class="Linterior">#Int.:</label>
           <label for="" class="Lexterior">#Ext.:</label>
           </td>
-          <td><label for="">Nacionalidad</label></td>
-          <td><label for="">Estado Civil:</label></td>
+
         </tr>
         <tr>
+
+          <!-- <td><input type="text" name="estado" id="estado" ></td> -->
+          <td><input type="text" name="municipio" id="municipio" ></td>
+          <td><input type="colonia" id="colonia" class='colonia'></td>
         <td>
           <input type="text" name="calle"  class ="calle" id="calle">
            <input type="text" name="interior" class="interior" id="interior" placeholder="#">
            <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#">
           </td>
+        </tr>
+        <tr>
+          <td><label for="">Nacionalidad</label></td>
+          <td><label for="">Estado Civil:</label></td>
+          <td><label for="">Fotografia:</label></td>
+        </tr>
+        <tr>
         <td><select name="nacionalidad" id="nacionalidad">
           <option value="Mexicana">Mexicana</option>
           <option value="Extrangera">Extrangera</option>
@@ -404,15 +399,8 @@ location.href = "../../login_admin/index.php";
           <option value="divorciado">Divorceado</option>
           <option value="viudo">Viudo</option>
         </select></td>
-
-      </tr>
-      <tr>
-          <td><label for="">Fotografia:</label></td>
-
-      </tr>
-      <tr>
-
          <td colspan="2"><input type="file" name="file" id="file"></td>
+
       </tr>
 <!--       <tr>
           <td><label for="">Status:</label></td>

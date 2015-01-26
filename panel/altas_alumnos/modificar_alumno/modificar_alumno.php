@@ -254,8 +254,8 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['A_paterno_alumno'];?></td>
                 <td><?php echo$row['A_materno_alumno'];?></td>
                 <td><?php echo$row['matricula'];?></td>
-                <td><?php echo$row['grado_alumno'];?></td>
-                <td><?php echo$row['grupo_alumno'];?></td>
+                <td><?php echo$row['grado'];?></td>
+                <td><?php echo$row['grupo'];?></td>
 
 
 <td><a class="liEliminar" href="#"

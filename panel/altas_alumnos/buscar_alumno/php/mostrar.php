@@ -1,7 +1,12 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
 $id = $_GET["id"];
-$sql=mysql_query("SELECT * FROM alumno WHERE id_alumno = '".$id."'");
+$sql=mysql_query("SELECT
+a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
+	g.grado,g.grupo,g.id_grupo
+	FROM alumno a
+	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
+	WHERE a.id_alumno = '".$id."'");
 ?>
 
 <?php
@@ -42,8 +47,8 @@ while($row = mysql_fetch_array($sql)){
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
 	<td><?php echo $row['edad']; ?> años</td>
-	<td><?php echo $row['grado_alumno']; ?> ro</td>
-	<td><?php echo $row['grupo_alumno']; ?></td>
+	<td><?php echo $row['grado']; ?> ro</td>
+	<td><?php echo $row['grupo']; ?></td>
 </tr>
 
 <tr>

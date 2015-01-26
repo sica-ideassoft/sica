@@ -13,7 +13,6 @@ $correo       = mysql_real_escape_string($_POST['correo']);
 $genero       = mysql_real_escape_string($_POST['genero']);
 $nacimiento   = mysql_real_escape_string($_POST['nacimiento']);
 $edad         = mysql_real_escape_string($_POST['edad']);
-$grado        = mysql_real_escape_string($_POST['grado']);
 $grupo        = mysql_real_escape_string($_POST['grupo']);
 $estado       = mysql_real_escape_string($_POST['estado']);
 $municipio    = mysql_real_escape_string($_POST['municipio']);
@@ -26,6 +25,14 @@ $civil        = mysql_real_escape_string($_POST['civil']);
 $ip           = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
 
 
+
+  $fname = $_FILES["file"]["name"];
+   move_uploaded_file($_FILES["file"]["tmp_name"],
+  "upload/" . $_FILES["file"]["name"]);
+
+
+
+
 $checkuser = mysql_query("SELECT matricula FROM alumno WHERE matricula='".$matricula ."'");
 $username_exist = mysql_num_rows($checkuser);
 if ($username_exist>0) {
@@ -34,7 +41,7 @@ if ($username_exist>0) {
 }else{
 
 
-$query = mysql_query("INSERT INTO alumno(id_alumno,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,grado_alumno,grupo_alumno,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$grado','$grupo','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','".$fname."','activo','$ip')");
+$query = mysql_query("INSERT INTO alumno(id_alumno,id_grupo,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$grupo','$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','$fname','activo','$ip')");
 }
 // }
 
