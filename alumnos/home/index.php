@@ -41,21 +41,12 @@ location.href = "../login_alumno/index.php";
             </div>
             <div class="contuser">
 
-                <div class="salir">
-                        <li><a href="../logout.php"><span></span>SALIR</a></li>
-                    </div>
                 <div class="user1">
                 <img src="image/user.png" alt="" width="" class="user11">
                 </div>
 
               </div>
-               <div class="flecha">
-                    <ul>
-                        <li>
-                            <a href=""></a>
-                        </li>
-                    </ul>
-               </div>
+
 
             </div>
         </header>
@@ -104,19 +95,41 @@ location.href = "../login_alumno/index.php";
             </div>
 
     <section class="fondo-slider">
-
-
         <?php
         include_once("php/banner.php");
          ?>
     </section>
+<!-- fin de menu 2 -->
+<!-- inicio de menu secundario -->
 
-            <!-- fin de menu 2 -->
+<div id="lessoncup">
+    <div id="titlebox">
+        <div id="titles">
+            <ul class="ul-submenu">
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
+                </a></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/tareas.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/mensajes.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/estadisticas.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/nuve.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""> <img src="../image_globales/menu/materias.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href="../logout.php"><img src="../image_globales/menu/exit.svg" width="85" height="82"></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/noticias.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/confi.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/condiciones.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li>
+            </ul>
+        </div>
+        <div id="more">Más</div>
+    </div>
+</div>
+<!--fin menu secundario -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>
 <script src="js/menu.js"></script>
-
-
+<script src="js/menu-secundario.js"></script>
     </body>
 </html>
 

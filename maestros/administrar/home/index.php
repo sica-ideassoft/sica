@@ -149,7 +149,7 @@ location.href = "../../login_maestro/index.php";
         <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a href='../buscar_calificaciones/buscar_calificaciones.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
@@ -183,22 +183,13 @@ location.href = "../../login_maestro/index.php";
 
       <!-- inicio de section -->
       <section class="seccion1">
-        <div class="tem">
- <div class="estacion">
-            <span class="estudent"></span>
-        </div>
-        <p>home</p>
-        </div>
-			<div class="home">
+      <div class="tem">
+    <div class="estacion">
+      <span class="estudent"></span>
+    </div>
+    <p>HOME</p>
+  </div>
       <?php include_once("php/materias.php"); ?>
-			</div>
-            <div class="control">
-
-
-              <table class="table2">
-            </table>
-
-			</div>
 
       </section>
 
