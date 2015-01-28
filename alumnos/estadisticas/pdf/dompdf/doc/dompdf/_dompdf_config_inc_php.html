@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs for page dompdf_config.inc.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="file-name">/dompdf_config.inc.php</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+									<a href="#sec-includes">Includes</a>
+			|							<a href="#sec-constants">Constants</a>
+			|									<a href="#sec-functions">Functions</a>
+			</div>
+	<div class="info-box-body">	
+		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DOMPDF - PHP5 HTML to PDF renderer</p>
+<div class="description"><p>File: $RCSfile: dompdf_config.inc.php,v $  Created on: 2004-08-04</p><p>Copyright (c) 2004 - Benj Carson &lt;benjcarson@digitaljunkies.ca&gt;</p><p>This library is free software; you can redistribute it and/or  modify it under the terms of the GNU Lesser General Public  License as published by the Free Software Foundation; either  version 2.1 of the License, or (at your option) any later version.</p><p>This library is distributed in the hope that it will be useful,  but WITHOUT ANY WARRANTY; without even the implied warranty of  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU  Lesser General Public License for more details.</p><p>You should have received a copy of the GNU Lesser General Public License  along with this library in the file LICENSE.LGPL; if not, write to the  Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307 USA</p><p>Alternatively, you may distribute this software under the terms of the  PHP License, version 3.0 or later.  A copy of this license should have  been distributed with this file in the file LICENSE.PHP .  If this is not  the case, you can obtain a copy at http://www.php.net/license/3_0.txt.</p><p>The latest version of DOMPDF might be available at:  http://www.digitaljunkies.ca/dompdf</p></div>
+	<ul class="tags">
+				<li><span class="field">version:</span> 0.3</li>
+				<li><span class="field">author:</span> Benj Carson &lt;<a href="mailto:benjcarson@digitaljunkies.ca">benjcarson@digitaljunkies.ca</a>&gt;</li>
+				<li><span class="field">copyright:</span> 2004 Benj Carson</li>
+				<li><span class="field">link:</span> <a href="http://www.digitaljunkies.ca/dompdf">http://www.digitaljunkies.ca/dompdf</a></li>
+			</ul>
+		
+			</div>
+</div>
+		
+
+	<a name="sec-includes"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Includes</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Includes</span>
+			|							<a href="#sec-constants">Constants</a>
+				|													<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="_DOMPDF_INC_DIR_/functions_inc_php"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="include-title">
+			<span class="include-type">require_once</span>
+			(<span class="include-name">DOMPDF_INC_DIR."/functions.inc.php"</span>)
+			(line <span class="line-number">203</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If true, the entire tree is dumped to stdout in dompdf.cls.php</p>
+	
+</div>
+		</div>
+	</div>
+	
+	<a name="sec-constants"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|						<span class="disabled">Constants</span>
+			|										<a href="#sec-functions">Functions</a>
+					</div>
+		<div class="info-box-body">	
+			<a name="defineDOMPDF_DEFAULT_FONT"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_DEFAULT_FONT</span> = &quot;serif&quot;
+			(line <span class="line-number">120</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default font family</p>
+<div class="description"><p>Used if no suitable fonts can be found</p></div>
+	
+		
+</div>
+<a name="defineDOMPDF_DEFAULT_PAPER_SIZE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_DEFAULT_PAPER_SIZE</span> = &quot;letter&quot;
+			(line <span class="line-number">111</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default paper size.</p>
+<div class="description"><p>If you live outside of North America, feel free to change this ;)</p></div>
+	<ul class="tags">
+				<li><span class="field">see:</span> CPDF_Adapter::PAPER_SIZES for valid sizes</li>
+			</ul>
+	
+		
+</div>
+<a name="defineDOMPDF_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_DIR</span> = realpath(dirname(__FILE__))
+			(line <span class="line-number">48</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The root of your DOMPDF installation</p>
+	
+		
+</div>
+<a name="defineDOMPDF_DPI"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_DPI</span> = &quot;150&quot;
+			(line <span class="line-number">131</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Image DPI setting</p>
+<div class="description"><p>This setting determines the default DPI setting for jpeg &amp; png images.  The DPI may be overridden by explictly setting the image's width &amp; height  style attributes (i.e. if the image's native width is 600 pixels and you  specify the image's width as 72 points, the image will have a DPI of 600  in the rendered PDF.</p></div>
+	
+		
+</div>
+<a name="defineDOMPDF_ENABLE_PHP"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_ENABLE_PHP</span> = true
+			(line <span class="line-number">143</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable inline PHP</p>
+<div class="description"><p>If this setting is set to true then DOMPDF will automatically evaluate  inline PHP contained within &lt;script type=&quot;text/php&quot;&gt; ... &lt;/script&gt; tags.</p><p>Enabling this for documents you do not trust (e.g. arbitrary remote html  pages) is a security risk.  Set this option to false if you wish to process  untrusted documents.</p></div>
+	
+		
+</div>
+<a name="defineDOMPDF_ENABLE_REMOTE"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_ENABLE_REMOTE</span> = false
+			(line <span class="line-number">152</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Enable remote file access</p>
+<div class="description"><p>If this setting is set to true, DOMPDF will access remote sites for  images and CSS files as required.</p></div>
+	
+		
+</div>
+<a name="defineDOMPDF_FONT_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_FONT_DIR</span> = DOMPDF_DIR.&quot;/lib/fonts/&quot;
+			(line <span class="line-number">66</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The location of the DOMPDF font directory</p>
+<div class="description"><p>Note this directory must be writable by the webserver process (or user  executing DOMPDF from the CLI).  *Please note the trailing slash.*</p></div>
+	
+		
+</div>
+<a name="defineDOMPDF_INC_DIR"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_INC_DIR</span> = DOMPDF_DIR.&quot;/include&quot;
+			(line <span class="line-number">53</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The location of the DOMPDF include directory</p>
+	
+		
+</div>
+<a name="defineDOMPDF_LIB_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_LIB_DIR</span> = DOMPDF_DIR.&quot;/lib&quot;
+			(line <span class="line-number">58</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The location of the DOMPDF lib directory</p>
+	
+		
+</div>
+<a name="defineDOMPDF_PDF_BACKEND"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_PDF_BACKEND</span> = &quot;auto&quot;
+			(line <span class="line-number">102</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The PDF rendering backend to use</p>
+<div class="description"><p>Valid settings are 'PDFLib', 'CPDF' (the bundled R&amp;OS PDF class)  and 'auto'.  'auto' will look for PDFLib and use it if found, or if  not it will fall back on CPDF.</p><p>Both PDFLib &amp; CPDF rendering backends provide sufficient rendering  capabilities for dompdf, however additional features (e.g. object,  image and font support, etc.)  differ between backends.  Please see  <a href="../dompdf/PDFLib_Adapter.html">PDFLib_Adapter</a>, <a href="../dompdf/CPDF_Adapter.html">CPDF_Adapter</a> and the documentation  for each backend for more information.</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.ros.co.nz/pdf">http://www.ros.co.nz/pdf</a></li>
+				<li><span class="field">link:</span> <a href="http://www.pdflib.com">http://www.pdflib.com</a></li>
+			</ul>
+	
+		
+</div>
+<a name="defineDOMPDF_TEMP_DIR"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">DOMPDF_TEMP_DIR</span> = &quot;/tmp&quot;
+			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The location of the system's temporary directory.</p>
+<div class="description"><p>This directory must be writeable by the webserver process.  It is used to download remote images.</p></div>
+	
+		
+</div>
+<a name="defineTTF2AFM"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="const-title">
+			<span class="const-name">TTF2AFM</span> = &quot;/usr/bin/ttf2pt1&quot;
+			(line <span class="line-number">84</span>)
+		</span>
+	</div>
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The path to the tt2pt1 utility (used to convert ttf to afm)</p>
+<div class="description"><p>Not strictly necessary, but useful if you would like to install  additional fonts using the <a href="../dompdf/_load_font_php.html">load_font.php</a> utility.</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://ttf2pt1.sourceforge.net/">http://ttf2pt1.sourceforge.net/</a></li>
+			</ul>
+	
+		
+</div>
+		</div>
+	</div>
+	
+	
+	<a name="sec-functions"></a>	
+	<div class="info-box">
+		<div class="info-box-title">Functions</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-includes">Includes</a>
+				|										<a href="#sec-constants">Constants</a>
+				|									<span class="disabled">Functions</span>
+		</div>
+		<div class="info-box-body">	
+			<a name="functionDOMPDF_autoload" id="functionDOMPDF_autoload"><!-- --></a>
+<div class="oddrow">
+	
+	<div>
+		<span class="method-title">DOMPDF_autoload</span> (line <span class="line-number">162</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">DOMPDF autoload function</p>
+<div class="description"><p>If you have an existing autoload function, add a call to this function  from your existing __autoload() implementation.</p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			DOMPDF_autoload
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+<a name="function__autoload" id="function__autoload"><!-- --></a>
+<div class="evenrow">
+	
+	<div>
+		<span class="method-title">__autoload</span> (line <span class="line-number">173</span>)
+	</div> 
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default __autoload() function</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__autoload
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$class</span>)
+			</div>
+
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$class</span>			</li>
+				</ul>
+		
+	
+</div>
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 04 Mar 2005 13:31:17 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

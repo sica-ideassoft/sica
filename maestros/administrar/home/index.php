@@ -151,7 +151,7 @@ location.href = "../../login_maestro/index.php";
           </li>
                <li><a href='../buscar_calificaciones/buscar_calificaciones.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='../altas_calificaciones/altas_calificaciones.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
 
 

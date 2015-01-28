@@ -22,7 +22,7 @@
    sodipodi:docname="mensajes.svg"><metadata
      id="metadata19"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
      id="defs17" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -57,7 +57,7 @@
        id="tspan3008"
        x="4.7682018"
        y="21.763142"
-       style="font-size:2.83269286px">MENSAJES</tspan></text>
+       style="font-size:2.83269285999999987px;fill:#333333">MENSAJES</tspan></text>
 <path
      style="fill:none"
      inkscape:connector-curvature="0"

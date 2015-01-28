@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Frame</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Frame</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The main Frame class</p>
+<div class="description"><p>This class represents a single HTML element.  This class stores  positioning information as well as containing block location and  dimensions. Style information for the element is stored in a <a href="../dompdf/Style.html">Style</a> object.  Tree structure is maintained via the parent &amp; children  links.</p></div>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_include_frame_cls_php.html">/include/frame.cls.php</a> (line <span class="field">54</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_containing_block" title="details" class="var-name">$_containing_block</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_decorator" title="details" class="var-name">$_decorator</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_first_child" title="details" class="var-name">$_first_child</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_id" title="details" class="var-name">$_id</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_last_child" title="details" class="var-name">$_last_child</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_next_sibling" title="details" class="var-name">$_next_sibling</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_node" title="details" class="var-name">$_node</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_original_style" title="details" class="var-name">$_original_style</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_parent" title="details" class="var-name">$_parent</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_position" title="details" class="var-name">$_position</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_prev_sibling" title="details" class="var-name">$_prev_sibling</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">mixed</span>
+					<a href="#$_style" title="details" class="var-name">$_style</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result">Frame</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">DomNode</span>&nbsp;<span class="var-name">$node</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#append_child" title="details" class="method-name">append_child</a>
+											(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_border_box" title="details" class="method-name">get_border_box</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_children" title="details" class="method-name">get_children</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_containing_block" title="details" class="method-name">get_containing_block</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_decorator" title="details" class="method-name">get_decorator</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_first_child" title="details" class="method-name">get_first_child</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_id" title="details" class="method-name">get_id</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_last_child" title="details" class="method-name">get_last_child</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_margin_height" title="details" class="method-name">get_margin_height</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_margin_width" title="details" class="method-name">get_margin_width</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_next_sibling" title="details" class="method-name">get_next_sibling</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_node" title="details" class="method-name">get_node</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_original_style" title="details" class="method-name">get_original_style</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_padding_box" title="details" class="method-name">get_padding_box</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_parent" title="details" class="method-name">get_parent</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_position" title="details" class="method-name">get_position</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_prev_sibling" title="details" class="method-name">get_prev_sibling</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#get_style" title="details" class="method-name">get_style</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert_child_after" title="details" class="method-name">insert_child_after</a>
+											(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$new_child</span>, <span class="var-type">Frame</span>&nbsp;<span class="var-name">$ref</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#insert_child_before" title="details" class="method-name">insert_child_before</a>
+											(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$new_child</span>, <span class="var-type">Frame</span>&nbsp;<span class="var-name">$ref</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#prepend_child" title="details" class="method-name">prepend_child</a>
+											(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#remove_child" title="details" class="method-name">remove_child</a>
+											(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#reset" title="details" class="method-name">reset</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_containing_block" title="details" class="method-name">set_containing_block</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$y</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$w</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$h</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_decorator" title="details" class="method-name">set_decorator</a>
+											(<span class="var-type">Frame_Decorator</span>&nbsp;<span class="var-name">$decorator</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_id" title="details" class="method-name">set_id</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$id</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_position" title="details" class="method-name">set_position</a>
+											([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$y</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_style" title="details" class="method-name">set_style</a>
+											(<span class="var-type">Style</span>&nbsp;<span class="var-name">$style</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$_containing_block" id="$_containing_block"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_containing_block</span>
+						(line <span class="line-number">70</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_decorator" id="$_decorator"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_decorator</span>
+						(line <span class="line-number">76</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_first_child" id="$_first_child"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_first_child</span>
+						(line <span class="line-number">63</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_id" id="$_id"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_id</span>
+						(line <span class="line-number">58</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_last_child" id="$_last_child"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_last_child</span>
+						(line <span class="line-number">64</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_next_sibling" id="$_next_sibling"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_next_sibling</span>
+						(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_node" id="$_node"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_node</span>
+						(line <span class="line-number">57</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_original_style" id="$_original_style"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_original_style</span>
+						(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_parent" id="$_parent"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_parent</span>
+						(line <span class="line-number">62</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_position" id="$_position"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_position</span>
+						(line <span class="line-number">72</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_prev_sibling" id="$_prev_sibling"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_prev_sibling</span>
+						(line <span class="line-number">66</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_style" id="$_style"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_style</span>
+						(line <span class="line-number">59</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">80</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">Frame</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">DomNode</span>&nbsp;<span class="var-name">$node</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodappend_child" id="append_child"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">append_child</span> (line <span class="line-number">327</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			append_child
+		</span>
+					(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_box" id="get_border_box"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_box</span> (line <span class="line-number">206</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_border_box
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_children" id="get_children"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_children</span> (line <span class="line-number">132</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_children
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_containing_block" id="get_containing_block"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_containing_block</span> (line <span class="line-number">135</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_containing_block
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">null</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_decorator" id="get_decorator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_decorator</span> (line <span class="line-number">125</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_decorator
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_first_child" id="get_first_child"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_first_child</span> (line <span class="line-number">127</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_first_child
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_id" id="get_id"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_id</span> (line <span class="line-number">122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_id
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_last_child" id="get_last_child"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_last_child</span> (line <span class="line-number">128</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_last_child
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_margin_height" id="get_margin_height"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_margin_height</span> (line <span class="line-number">154</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_margin_height
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_margin_width" id="get_margin_width"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_margin_width</span> (line <span class="line-number">167</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_margin_width
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_next_sibling" id="get_next_sibling"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_next_sibling</span> (line <span class="line-number">130</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_next_sibling
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_node" id="get_node"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_node</span> (line <span class="line-number">121</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_node
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_original_style" id="get_original_style"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_original_style</span> (line <span class="line-number">124</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_original_style
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_padding_box" id="get_padding_box"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_padding_box</span> (line <span class="line-number">179</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_padding_box
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_parent" id="get_parent"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_parent</span> (line <span class="line-number">126</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_parent
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_position" id="get_position"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_position</span> (line <span class="line-number">141</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_position
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$i</span> = <span class="var-default">null</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_prev_sibling" id="get_prev_sibling"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_prev_sibling</span> (line <span class="line-number">129</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_prev_sibling
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_style" id="get_style"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_style</span> (line <span class="line-number">123</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			get_style
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinsert_child_after" id="insert_child_after"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_child_after</span> (line <span class="line-number">389</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_child_after
+		</span>
+					(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$new_child</span>, <span class="var-type">Frame</span>&nbsp;<span class="var-name">$ref</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinsert_child_before" id="insert_child_before"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">insert_child_before</span> (line <span class="line-number">355</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insert_child_before
+		</span>
+					(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$new_child</span>, <span class="var-type">Frame</span>&nbsp;<span class="var-name">$ref</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodprepend_child" id="prepend_child"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">prepend_child</span> (line <span class="line-number">300</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			prepend_child
+		</span>
+					(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodremove_child" id="remove_child"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">remove_child</span> (line <span class="line-number">429</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			remove_child
+		</span>
+					(<span class="var-type">Frame</span>&nbsp;<span class="var-name">$child</span>, [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$update_node</span> = <span class="var-default">true</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodreset" id="reset"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">reset</span> (line <span class="line-number">105</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			reset
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodset_containing_block" id="set_containing_block"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_containing_block</span> (line <span class="line-number">257</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_containing_block
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$y</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$w</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$h</span> = <span class="var-default">null</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodset_decorator" id="set_decorator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_decorator</span> (line <span class="line-number">255</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_decorator
+		</span>
+					(<span class="var-type">Frame_Decorator</span>&nbsp;<span class="var-name">$decorator</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodset_id" id="set_id"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_id</span> (line <span class="line-number">238</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_id
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$id</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="methodset_position" id="set_position"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_position</span> (line <span class="line-number">283</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_position
+		</span>
+					([<span class="var-type">mixed</span>&nbsp;<span class="var-name">$x</span> = <span class="var-default">null</span>], [<span class="var-type">mixed</span>&nbsp;<span class="var-name">$y</span> = <span class="var-default">null</span>])
+			</div>
+	
+		
+		
+	</div>
+<a name="methodset_style" id="set_style"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_style</span> (line <span class="line-number">248</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_style
+		</span>
+					(<span class="var-type">Style</span>&nbsp;<span class="var-name">$style</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">459</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 04 Mar 2005 13:31:18 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

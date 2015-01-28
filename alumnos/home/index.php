@@ -5,7 +5,9 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
+include_once("php/resultados.php");
 ?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -63,7 +65,7 @@ location.href = "../login_alumno/index.php";
 
                     </div>
                     <div class="Nuser">
-                        <p><?php echo  $_SESSION['alumno'] ;?></p>
+                        <p><?php echo  $row["nombre_alumno"];?></p>
                     </div>
 
                 </div>
@@ -88,9 +90,7 @@ location.href = "../login_alumno/index.php";
                     <li><a href="../inscripciones/index.php"><span class="insc"></span>INSCRIPCIONES</a></li>
                 </div>
 
-                <div class="titulo2">
-                    <p>ACTIVIDAD</p>
-                </div>
+
 
             </div>
 
@@ -117,7 +117,7 @@ location.href = "../login_alumno/index.php";
                 <li class="li-submenu"><a href=""> <img src="../image_globales/menu/materias.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href="../logout.php"><img src="../image_globales/menu/exit.svg" width="85" height="82"></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/noticias.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/confi.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href="../configuracion/index.php"><img src="../image_globales/menu/confi.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/condiciones.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li>
             </ul>

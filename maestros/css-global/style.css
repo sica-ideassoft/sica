@@ -946,6 +946,12 @@ font-size: 40px;
 	padding-right: 10px;
 	color: white;
 }
+.icoAltasMactivo:before{
+	font-family: "menu";
+	content: "\e616";
+	padding-right: 10px;
+	color: black;
+}
 .ul2 li a{
   		/*quitar el lineado punteado molesto*/
   outline: none;

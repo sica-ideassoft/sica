@@ -1,0 +1,2312 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class Style</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class Style</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Represents CSS properties.</p>
+<div class="description"><p>The Style class is responsible for handling and storing CSS properties.  It includes methods to resolve colours and lengths, as well as getters &amp;  setters for many CSS properites.</p><p>Actual CSS parsing is performed in the <a href="../dompdf/Stylesheet.html">Stylesheet</a> class.</p></div>
+		<p class="notes">
+			Located in <a class="field" href="_include_style_cls_php.html">/include/style.cls.php</a> (line <span class="field">53</span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$BLOCK_TYPES" title="details" class="var-name">$BLOCK_TYPES</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$BORDER_STYLES" title="details" class="var-name">$BORDER_STYLES</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">float</span>
+					<a href="#$default_font_size" title="details" class="var-name">$default_font_size</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">float</span>
+					<a href="#$default_line_height" title="details" class="var-name">$default_line_height</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$INLINE_TYPES" title="details" class="var-name">$INLINE_TYPES</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array;</span>
+					<a href="#$TABLE_TYPES" title="details" class="var-name">$TABLE_TYPES</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_defaults" title="details" class="var-name">$_defaults</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_inherited" title="details" class="var-name">$_inherited</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">float</span>
+					<a href="#$_parent_font_size" title="details" class="var-name">$_parent_font_size</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type">array</span>
+					<a href="#$_props" title="details" class="var-name">$_props</a>
+				</div>
+								<div class="var-title">
+					<span class="var-type"><a href="../dompdf/Stylesheet.html">Stylesheet</a></span>
+					<a href="#$_stylesheet" title="details" class="var-name">$_stylesheet</a>
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+								
+				<div class="method-definition">
+											<span class="method-result">Style</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">Stylesheet</span>&nbsp;<span class="var-name">$stylesheet</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_background_color" title="details" class="method-name">get_background_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_background_position" title="details" class="method-name">get_background_position</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_border_bottom" title="details" class="method-name">get_border_bottom</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_bottom_color" title="details" class="method-name">get_border_bottom_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float|string</span>
+										<a href="#get_border_bottom_width" title="details" class="method-name">get_border_bottom_width</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_border_left" title="details" class="method-name">get_border_left</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_left_color" title="details" class="method-name">get_border_left_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float|string</span>
+										<a href="#get_border_left_width" title="details" class="method-name">get_border_left_width</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_properties" title="details" class="method-name">get_border_properties</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_border_right" title="details" class="method-name">get_border_right</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_right_color" title="details" class="method-name">get_border_right_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float|string</span>
+										<a href="#get_border_right_width" title="details" class="method-name">get_border_right_width</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_spacing" title="details" class="method-name">get_border_spacing</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_border_top" title="details" class="method-name">get_border_top</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_border_top_color" title="details" class="method-name">get_border_top_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float|string</span>
+										<a href="#get_border_top_width" title="details" class="method-name">get_border_top_width</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#get_color" title="details" class="method-name">get_color</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#get_font_family" title="details" class="method-name">get_font_family</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float</span>
+										<a href="#get_font_size" title="details" class="method-name">get_font_size</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float</span>
+										<a href="#get_line_height" title="details" class="method-name">get_line_height</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result"><a href="../dompdf/Stylesheet.html">Stylesheet</a></span>
+										<a href="#get_stylesheet" title="details" class="method-name">get_stylesheet</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float</span>
+										<a href="#get_word_spacing" title="details" class="method-name">get_word_spacing</a>
+										()
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#inherit" title="details" class="method-name">inherit</a>
+											(<span class="var-type">Style</span>&nbsp;<span class="var-name">$parent</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">float</span>
+										<a href="#length_in_pt" title="details" class="method-name">length_in_pt</a>
+											(<span class="var-type">float|array</span>&nbsp;<span class="var-name">$length</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$ref_size</span> = <span class="var-default">null</span>])
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#merge" title="details" class="method-name">merge</a>
+											(<span class="var-type">Style</span>&nbsp;<span class="var-name">$style</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#munge_color" title="details" class="method-name">munge_color</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">array</span>
+										<a href="#munge_colour" title="details" class="method-name">munge_colour</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_background_color" title="details" class="method-name">set_background_color</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border" title="details" class="method-name">set_border</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_bottom" title="details" class="method-name">set_border_bottom</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_color" title="details" class="method-name">set_border_color</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_left" title="details" class="method-name">set_border_left</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_right" title="details" class="method-name">set_border_right</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_spacing" title="details" class="method-name">set_border_spacing</a>
+											(<span class="var-type">float</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_style" title="details" class="method-name">set_border_style</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_top" title="details" class="method-name">set_border_top</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_border_width" title="details" class="method-name">set_border_width</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_color" title="details" class="method-name">set_color</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_font_size" title="details" class="method-name">set_font_size</a>
+											(<span class="var-type">string|float</span>&nbsp;<span class="var-name">$size</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_list_style" title="details" class="method-name">set_list_style</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_margin" title="details" class="method-name">set_margin</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_margin_bottom" title="details" class="method-name">set_margin_bottom</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_margin_left" title="details" class="method-name">set_margin_left</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_margin_right" title="details" class="method-name">set_margin_right</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_margin_top" title="details" class="method-name">set_margin_top</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_padding" title="details" class="method-name">set_padding</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_padding_bottom" title="details" class="method-name">set_padding_bottom</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_padding_left" title="details" class="method-name">set_padding_left</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_padding_right" title="details" class="method-name">set_padding_right</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_padding_top" title="details" class="method-name">set_padding_top</a>
+											(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_page_break_after" title="details" class="method-name">set_page_break_after</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$break</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#set_page_break_before" title="details" class="method-name">set_page_break_before</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$break</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#_get_border" title="details" class="method-name">_get_border</a>
+											(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$side</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#_set_border" title="details" class="method-name">_set_border</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$side</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$border_spec</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">mixed</span>
+										<a href="#__get" title="details" class="method-name">__get</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prop</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">void</span>
+										<a href="#__set" title="details" class="method-name">__set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$prop</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$val</span>)
+									</div>
+								
+				<div class="method-definition">
+											<span class="method-result">string</span>
+										<a href="#__toString" title="details" class="method-name">__toString</a>
+										()
+									</div>
+							</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="var$BLOCK_TYPES" id="$BLOCK_TYPES"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$BLOCK_TYPES</span>
+			 = <span class="var-default">array(&quot;block&quot;,&quot;inline-block&quot;, &quot;table-cell&quot;, &quot;list-item&quot;)</span>			(line <span class="line-number">81</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of all block types.  Should really be a constant.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$BORDER_STYLES" id="$BORDER_STYLES"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$BORDER_STYLES</span>
+			 = <span class="var-default">array(&quot;none&quot;, &quot;hidden&quot;, &quot;dotted&quot;, &quot;dashed&quot;, &quot;solid&quot;,<br />                                &quot;double&quot;, &quot;groove&quot;, &quot;ridge&quot;, &quot;inset&quot;, &quot;outset&quot;)</span>			(line <span class="line-number">95</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of valid border styles.  Should also really be a constant.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$default_font_size" id="$default_font_size"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">float</span>
+			<span class="var-name">$default_font_size</span>
+			 = <span class="var-default"> 12</span>			(line <span class="line-number">60</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default font size, in points.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$default_line_height" id="$default_line_height"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">float</span>
+			<span class="var-name">$default_line_height</span>
+			 = <span class="var-default"> 1.2</span>			(line <span class="line-number">67</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default line height, as a fraction of the font size.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$INLINE_TYPES" id="$INLINE_TYPES"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$INLINE_TYPES</span>
+			 = <span class="var-default">array(&quot;inline&quot;)</span>			(line <span class="line-number">74</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of all inline types.  Should really be a constant.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$TABLE_TYPES" id="$TABLE_TYPES"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array;</span>
+			<span class="var-name">$TABLE_TYPES</span>
+			 = <span class="var-default">array(&quot;table&quot;, &quot;inline-table&quot;)</span>			(line <span class="line-number">88</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of all table types.  Should really be a constant.</p>
+	<ul class="tags">
+				<li><span class="field">static:</span> </li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_defaults" id="$_defaults"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_defaults</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">105</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Default style values.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/propidx.html">http://www.w3.org/TR/CSS21/propidx.html</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_inherited" id="$_inherited"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_inherited</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number">114</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">List of inherited properties</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+				<li><span class="field">static:</span> </li>
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/propidx.html">http://www.w3.org/TR/CSS21/propidx.html</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_parent_font_size" id="$_parent_font_size"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">float</span>
+			<span class="var-name">$_parent_font_size</span>
+						(line <span class="line-number">137</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Font size of parent element in document tree.  Used for relative font  size resolution.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_props" id="$_props"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type">array</span>
+			<span class="var-name">$_props</span>
+						(line <span class="line-number">129</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Main array of all CSS properties &amp; values</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_stylesheet" id="$_stylesheet"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<span class="var-title">
+			<span class="var-type"><a href="../dompdf/Stylesheet.html">Stylesheet</a></span>
+			<span class="var-name">$_stylesheet</span>
+						(line <span class="line-number">122</span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The stylesheet this style belongs to</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+				<li><span class="field">see:</span> <a href="../dompdf/Stylesheet.html">Stylesheet</a></li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+						
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number">152</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Class constructor</p>
+	
+	<div class="method-signature">
+		<span class="method-result">Style</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">Stylesheet</span>&nbsp;<span class="var-name">$stylesheet</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../dompdf/Stylesheet.html">Stylesheet</a></span>
+				<span class="var-name">$stylesheet</span><span class="var-description">: the stylesheet this Style is associated with.</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodget_background_color" id="get_background_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_background_color</span> (line <span class="line-number">895</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the background colour as an array</p>
+<div class="description"><p>The returned array has the same format as <a href="../dompdf/Style.html#methodget_color">Style::get_color()</a></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-color">http://www.w3.org/TR/CSS21/colors.html#propdef-background-color</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_background_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_background_position" id="get_background_position"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_background_position</span> (line <span class="line-number">908</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the background position as an array</p>
+<div class="description"><p>The returned array has the following format:  <pre><ol><code><pre><li><span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">x</span><span class="src-sym">,</span><span class="src-id">y</span><span class="src-sym">, </span><span class="src-str">&quot;x&quot; </span>=&gt; <span class="src-id">x</span><span class="src-sym">, </span><span class="src-str">&quot;y&quot; </span>=&gt; <span class="src-id">y</span><span class="src-sym">)</span></li>
+</pre></code></ol></pre></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-position">http://www.w3.org/TR/CSS21/colors.html#propdef-background-position</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_background_position
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_bottom" id="get_border_bottom"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_bottom</span> (line <span class="line-number">1096</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return full border properties as a string</p>
+<div class="description"><p>Border properties are returned just as specified in CSS:  <pre>[width] [style] [color]</pre>  e.g. &quot;1px solid blue&quot;</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties">http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_border_bottom
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_bottom_color" id="get_border_bottom_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_bottom_color</span> (line <span class="line-number">1003</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border colour as an array</p>
+<div class="description"><p>See <a href="../dompdf/Style.html#methodget_color">Style::get_color()</a></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-color-properties">http://www.w3.org/TR/CSS21/box.html#border-color-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_bottom_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_bottom_width" id="get_border_bottom_width"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_bottom_width</span> (line <span class="line-number">1033</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border width, as it is currently stored</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">http://www.w3.org/TR/CSS21/box.html#border-width-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float|string</span>
+		<span class="method-name">
+			get_border_bottom_width
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_left" id="get_border_left"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_left</span> (line <span class="line-number">1097</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return full border properties as a string</p>
+<div class="description"><p>Border properties are returned just as specified in CSS:  <pre>[width] [style] [color]</pre>  e.g. &quot;1px solid blue&quot;</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties">http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_border_left
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_left_color" id="get_border_left_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_left_color</span> (line <span class="line-number">1009</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border colour as an array</p>
+<div class="description"><p>See <a href="../dompdf/Style.html#methodget_color">Style::get_color()</a></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-color-properties">http://www.w3.org/TR/CSS21/box.html#border-color-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_left_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_left_width" id="get_border_left_width"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_left_width</span> (line <span class="line-number">1038</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border width, as it is currently stored</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">http://www.w3.org/TR/CSS21/box.html#border-width-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float|string</span>
+		<span class="method-name">
+			get_border_left_width
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_properties" id="get_border_properties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_properties</span> (line <span class="line-number">1057</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return an array of all border properties.</p>
+<div class="description"><p>The returned array has the following structure:  <pre><ol><code><pre><li> <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;top&quot; </span>=&gt; <span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">&quot;width&quot; </span>=&gt; <span class="src-sym">[</span><span class="src-id">border</span>-<span class="src-id">width</span><span class="src-sym">]</span><span class="src-sym">,</span></li>
+<li>                      <span class="src-str">&quot;style&quot; </span>=&gt; <span class="src-sym">[</span><span class="src-id">border</span>-<span class="src-id">style</span><span class="src-sym">]</span><span class="src-sym">,</span></li>
+<li>                      <span class="src-str">&quot;color&quot; </span>=&gt; <span class="src-sym">[</span><span class="src-id">border</span>-<span class="src-id">color </span>(array)<span class="src-sym">]</span><span class="src-sym">)</span><span class="src-sym">,</span></li>
+<li>       <span class="src-str">&quot;bottom&quot; </span>... <span class="src-sym">)</span></li>
+</pre></code></ol></pre></p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_properties
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_right" id="get_border_right"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_right</span> (line <span class="line-number">1095</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return full border properties as a string</p>
+<div class="description"><p>Border properties are returned just as specified in CSS:  <pre>[width] [style] [color]</pre>  e.g. &quot;1px solid blue&quot;</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties">http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_border_right
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_right_color" id="get_border_right_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_right_color</span> (line <span class="line-number">997</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border colour as an array</p>
+<div class="description"><p>See <a href="../dompdf/Style.html#methodget_color">Style::get_color()</a></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-color-properties">http://www.w3.org/TR/CSS21/box.html#border-color-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_right_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_right_width" id="get_border_right_width"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_right_width</span> (line <span class="line-number">1028</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border width, as it is currently stored</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">http://www.w3.org/TR/CSS21/box.html#border-width-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float|string</span>
+		<span class="method-name">
+			get_border_right_width
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_spacing" id="get_border_spacing"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_spacing</span> (line <span class="line-number">1109</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns border spacing as an array</p>
+<div class="description"><p>The array has the format (h_space,v_space)</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing">http://www.w3.org/TR/CSS21/tables.html#propdef-border-spacing</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_spacing
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_top" id="get_border_top"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_top</span> (line <span class="line-number">1094</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return full border properties as a string</p>
+<div class="description"><p>Border properties are returned just as specified in CSS:  <pre>[width] [style] [color]</pre>  e.g. &quot;1px solid blue&quot;</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties">http://www.w3.org/TR/CSS21/box.html#border-shorthand-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_border_top
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_top_color" id="get_border_top_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_top_color</span> (line <span class="line-number">991</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border colour as an array</p>
+<div class="description"><p>See <a href="../dompdf/Style.html#methodget_color">Style::get_color()</a></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-color-properties">http://www.w3.org/TR/CSS21/box.html#border-color-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_border_top_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_border_top_width" id="get_border_top_width"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_border_top_width</span> (line <span class="line-number">1023</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the border width, as it is currently stored</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-width-properties">http://www.w3.org/TR/CSS21/box.html#border-width-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float|string</span>
+		<span class="method-name">
+			get_border_top_width
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_color" id="get_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_color</span> (line <span class="line-number">883</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the colour as an array</p>
+<div class="description"><p>The array has the following format:  <pre><ol><code><pre><li><span class="src-key">array</span><span class="src-sym">(</span><span class="src-id">r</span><span class="src-sym">,</span><span class="src-id">g</span><span class="src-sym">,</span><span class="src-id">b</span><span class="src-sym">, </span><span class="src-str">&quot;r&quot; </span>=&gt; <span class="src-id">r</span><span class="src-sym">, </span><span class="src-str">&quot;g&quot; </span>=&gt; <span class="src-id">g</span><span class="src-sym">, </span><span class="src-str">&quot;b&quot; </span>=&gt; <span class="src-id">b</span><span class="src-sym">, </span><span class="src-str">&quot;hex&quot; </span>=&gt; <span class="src-str">&quot;#rrggbb&quot;</span><span class="src-sym">)</span></li>
+</pre></code></ol></pre></p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/colors.html#propdef-color">http://www.w3.org/TR/CSS21/colors.html#propdef-color</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			get_color
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_font_family" id="get_font_family"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_font_family</span> (line <span class="line-number">729</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Getter for the 'font-family' CSS property.</p>
+<div class="description"><p>Uses the <a href="../dompdf/Font_Metrics.html">Font_Metrics</a> class to resolve the font family into an  actual font file.</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family">http://www.w3.org/TR/CSS21/fonts.html#propdef-font-family</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			get_font_family
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_font_size" id="get_font_size"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_font_size</span> (line <span class="line-number">784</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the resolved font size, in points</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size">http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			get_font_size
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_line_height" id="get_line_height"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_line_height</span> (line <span class="line-number">864</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height">http://www.w3.org/TR/CSS21/visudet.html#propdef-line-height</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			get_line_height
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_stylesheet" id="get_stylesheet"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_stylesheet</span> (line <span class="line-number">332</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">returns the <a href="../dompdf/Stylesheet.html">Stylesheet</a> this Style is associated with.</p>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../dompdf/Stylesheet.html">Stylesheet</a></span>
+		<span class="method-name">
+			get_stylesheet
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodget_word_spacing" id="get_word_spacing"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">get_word_spacing</span> (line <span class="line-number">853</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/text.html#propdef-word-spacing">http://www.w3.org/TR/CSS21/text.html#propdef-word-spacing</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			get_word_spacing
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+<a name="methodinherit" id="inherit"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">inherit</span> (line <span class="line-number">451</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Set inherited properties in this style using values in $parent</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			inherit
+		</span>
+					(<span class="var-type">Style</span>&nbsp;<span class="var-name">$parent</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../dompdf/Style.html">Style</a></span>
+				<span class="var-name">$parent</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodlength_in_pt" id="length_in_pt"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">length_in_pt</span> (line <span class="line-number">348</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Converts any CSS length value into an absolute length in points.</p>
+<div class="description"><p>length_in_pt() takes a single length (e.g. '1em') or an array of  lengths and returns an absolute length.  If an array is passed, then  the return value is the sum of all elements.</p><p>If a reference size is not provided, the default font size is used  (<a href="../dompdf/Style.html#var$default_font_size">Style::$default_font_size</a>).</p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">float</span>
+		<span class="method-name">
+			length_in_pt
+		</span>
+					(<span class="var-type">float|array</span>&nbsp;<span class="var-name">$length</span>, [<span class="var-type">float</span>&nbsp;<span class="var-name">$ref_size</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float|array</span>
+				<span class="var-name">$length</span><span class="var-description">: the length or array of lengths to resolve</span>			</li>
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$ref_size</span><span class="var-description">: an absolute reference size to resolve percentage lengths</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodmerge" id="merge"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">merge</span> (line <span class="line-number">475</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Override properties in this style with those in $style</p>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			merge
+		</span>
+					(<span class="var-type">Style</span>&nbsp;<span class="var-name">$style</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../dompdf/Style.html">Style</a></span>
+				<span class="var-name">$style</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodmunge_color" id="munge_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">munge_color</span> (line <span class="line-number">647</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias for <a href="../dompdf/Style.html#methodmunge_colour">Style::munge_colour()</a></p>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			munge_color
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$color</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$color</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodmunge_colour" id="munge_colour"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">munge_colour</span> (line <span class="line-number">490</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an array(r, g, b, &quot;r&quot;=&gt; r, &quot;g&quot;=&gt;g, &quot;b&quot;=&gt;b, &quot;hex&quot;=&gt;&quot;#rrggbb&quot;)  based on the provided CSS colour value.</p>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			munge_colour
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$colour</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_background_color" id="set_background_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_background_color</span> (line <span class="line-number">1137</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the background colour</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/colors.html#propdef-background-color">http://www.w3.org/TR/CSS21/colors.html#propdef-background-color</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_background_color
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$colour</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border" id="set_border"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border</span> (line <span class="line-number">1361</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_bottom" id="set_border_bottom"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_bottom</span> (line <span class="line-number">1358</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_bottom
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_color" id="set_border_color"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_color</span> (line <span class="line-number">1410</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_color
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_left" id="set_border_left"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_left</span> (line <span class="line-number">1359</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_left
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_right" id="set_border_right"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_right</span> (line <span class="line-number">1357</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_right
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_spacing" id="set_border_spacing"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_spacing</span> (line <span class="line-number">1502</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border spacing</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_spacing
+		</span>
+					(<span class="var-type">float</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">float</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_style" id="set_border_style"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_style</span> (line <span class="line-number">1453</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_style
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_top" id="set_border_top"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_top</span> (line <span class="line-number">1356</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_top
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_border_width" id="set_border_width"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_border_width</span> (line <span class="line-number">1369</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the border styles</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#border-properties">http://www.w3.org/TR/CSS21/box.html#border-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_border_width
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_color" id="set_color"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_color</span> (line <span class="line-number">1122</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets colour</p>
+<div class="description"><p>The colour parameter can be any valid CSS colour value</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/colors.html#propdef-color">http://www.w3.org/TR/CSS21/colors.html#propdef-color</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_color
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$colour</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$colour</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_font_size" id="set_font_size"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_font_size</span> (line <span class="line-number">1153</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the font size</p>
+<div class="description"><p>$size can be any acceptable CSS size</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size">http://www.w3.org/TR/CSS21/fonts.html#propdef-font-size</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_font_size
+		</span>
+					(<span class="var-type">string|float</span>&nbsp;<span class="var-name">$size</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|float</span>
+				<span class="var-name">$size</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_list_style" id="set_list_style"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_list_style</span> (line <span class="line-number">1520</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the list style</p>
+<div class="description"><p>This is not currently implemented</p></div>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/generate.html#propdef-list-style">http://www.w3.org/TR/CSS21/generate.html#propdef-list-style</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_list_style
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_margin" id="set_margin"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_margin</span> (line <span class="line-number">1203</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the margin size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#margin-properties">http://www.w3.org/TR/CSS21/box.html#margin-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_margin
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_margin_bottom" id="set_margin_bottom"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_margin_bottom</span> (line <span class="line-number">1195</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the margin size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#margin-properties">http://www.w3.org/TR/CSS21/box.html#margin-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_margin_bottom
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_margin_left" id="set_margin_left"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_margin_left</span> (line <span class="line-number">1199</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the margin size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#margin-properties">http://www.w3.org/TR/CSS21/box.html#margin-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_margin_left
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_margin_right" id="set_margin_right"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_margin_right</span> (line <span class="line-number">1191</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the margin size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#margin-properties">http://www.w3.org/TR/CSS21/box.html#margin-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_margin_right
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_margin_top" id="set_margin_top"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_margin_top</span> (line <span class="line-number">1187</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the margin size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#margin-properties">http://www.w3.org/TR/CSS21/box.html#margin-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_margin_top
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_padding" id="set_padding"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_padding</span> (line <span class="line-number">1270</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the padding size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#padding-properties">http://www.w3.org/TR/CSS21/box.html#padding-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_padding
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_padding_bottom" id="set_padding_bottom"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_padding_bottom</span> (line <span class="line-number">1262</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the padding size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#padding-properties">http://www.w3.org/TR/CSS21/box.html#padding-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_padding_bottom
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_padding_left" id="set_padding_left"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_padding_left</span> (line <span class="line-number">1266</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the padding size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#padding-properties">http://www.w3.org/TR/CSS21/box.html#padding-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_padding_left
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_padding_right" id="set_padding_right"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_padding_right</span> (line <span class="line-number">1258</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the padding size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#padding-properties">http://www.w3.org/TR/CSS21/box.html#padding-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_padding_right
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_padding_top" id="set_padding_top"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_padding_top</span> (line <span class="line-number">1254</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the padding size</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/box.html#padding-properties">http://www.w3.org/TR/CSS21/box.html#padding-properties</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_padding_top
+		</span>
+					(<span class="var-type">$val</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$val</span>
+				<span class="var-name">$val</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_page_break_after" id="set_page_break_after"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_page_break_after</span> (line <span class="line-number">1171</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets page break properties</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/page.html#page-breaks">http://www.w3.org/TR/CSS21/page.html#page-breaks</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_page_break_after
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$break</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$break</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="methodset_page_break_before" id="set_page_break_before"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">set_page_break_before</span> (line <span class="line-number">1164</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets page break properties</p>
+	<ul class="tags">
+				<li><span class="field">link:</span> <a href="http://www.w3.org/TR/CSS21/page.html#page-breaks">http://www.w3.org/TR/CSS21/page.html#page-breaks</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set_page_break_before
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$break</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$break</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method_get_border" id="_get_border"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">_get_border</span> (line <span class="line-number">1077</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Return a single border property</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			_get_border
+		</span>
+					(<span class="var-type">mixed</span>&nbsp;<span class="var-name">$side</span>)
+			</div>
+	
+		
+		
+	</div>
+<a name="method_set_border" id="_set_border"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">_set_border</span> (line <span class="line-number">1319</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets a single border</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			_set_border
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$side</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$border_spec</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$side</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$border_spec</span><span class="var-description">: ([width] [style] [color])</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method__get" id="__get"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__get</span> (line <span class="line-number">702</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PHP5 overloaded getter</p>
+<div class="description"><p>Along with <a href="../dompdf/Style.html#method__set">Style::__set()</a> __get() provides access to all CSS  properties directly.  Typically __get() is not called directly outside  of this class.</p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">mixed</span>
+		<span class="method-name">
+			__get
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prop</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prop</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method__set" id="__set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">__set</span> (line <span class="line-number">668</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PHP5 overloaded setter</p>
+<div class="description"><p>This function along with <a href="../dompdf/Style.html#method__get">Style::__get()</a> permit a user of the  Style class to access any (CSS) property using the following syntax:  <pre><ol><code><pre><li>  <span class="src-id"><a href="../dompdf/Style.html">Style</a></span><span class="src-sym">-&gt;</span><span class="src-id">margin_top </span>= <span class="src-str">&quot;1em&quot;</span><span class="src-sym">;</span></li>
+<li>  echo <span class="src-sym">(</span><span class="src-id"><a href="../dompdf/Style.html">Style</a></span><span class="src-sym">-&gt;</span><span class="src-id">margin_top</span><span class="src-sym">)</span><span class="src-sym">;</span></li>
+</pre></code></ol></pre></p><p>__set() automatically calls the provided set function, if one exists,  otherwise it sets the property directly.  Typically, __set() is not  called directly from outside of this class.</p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$prop</span>, <span class="var-type">mixed</span>&nbsp;<span class="var-name">$val</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$prop</span><span class="var-description">: the property to set</span>			</li>
+					<li>
+				<span class="var-type">mixed</span>
+				<span class="var-name">$val</span><span class="var-description">: the value of the property</span>			</li>
+				</ul>
+		
+		
+	</div>
+<a name="method__toString" id="__toString"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">__toString</span> (line <span class="line-number">1535</span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Generate a string representation of the Style</p>
+<div class="description"><p>This dumps the entire property array into a string via print_r.  Useful  for debugging.</p></div>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			__toString
+		</span>
+				()
+			</div>
+	
+		
+		
+	</div>
+						
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Fri, 04 Mar 2005 13:31:19 -0700 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.3.0RC3</a>
+	</p>
+	</div></body>
+</html>

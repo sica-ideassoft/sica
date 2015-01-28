@@ -5,6 +5,7 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
+include_once("php/resultados.php");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -20,8 +21,8 @@ location.href = "../login_alumno/index.php";
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
         <link rel="stylesheet" href="../css_global/normalize.css">
-
         <link rel="stylesheet" href="../css_global/style.css">
+        <link rel="stylesheet" href="css/calificaciones.css">
 
 
     </head>
@@ -68,7 +69,7 @@ location.href = "../login_alumno/index.php";
 
                     </div>
                     <div class="Nuser">
-                        <p><?php echo  $_SESSION['alumno'] ;?></p>
+                        <p><?php echo  $row["nombre_alumno"]?></p>
                     </div>
 
                 </div>
@@ -89,12 +90,10 @@ location.href = "../login_alumno/index.php";
                 </div>
                 <div class="menu3">
                     <li><a href="../home/index.php"><span class="home"></span>HOME</a></li>
-                    <li class="activo"><a href="#"><span class="esta"></span>ESTADISTICA</a></li>
-                    <li ><a href="../inscripciones/index.php"><span class="insc"></span>INSCRIPCIONES</a></li>
-                </div>
 
-                <div class="titulo2">
-                    <p>ACTIVIDAD</p>
+                    <li class="activo"><a href="#"><span class="esta"></span>ESTADISTICA</a></li>
+
+                    <li ><a href="../inscripciones/index.php"><span class="insc"></span>INSCRIPCIONES</a></li>
                 </div>
 
             </div>
@@ -125,6 +124,144 @@ location.href = "../login_alumno/index.php";
     </div>
 </div>
 <!--fin menu secundario -->
+<section class="content-cal">
+    <div class="cal-scroll">
+        <div class="header-cal">
+            <figure>
+                <img src="image/cantera.svg" alt="">
+            </figure>
+             <figure>
+                <img class="ico-prepa" src="image/prepa.svg" alt="">
+            </figure>
+            <h5>historial académico</h5>
+            <div class="info-alumno">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="" class="title">nombre:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+    <label for=""><?php echo $row["nombre_alumno"]." ".$row["A_paterno_alumno"]." ".$row["A_materno_alumno"];?></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="" class="title">programa educativo:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">informática</label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <label for="" class="title">promedio:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">71.6</label>
+                        </td>
+                    </tr>
+
+                     <tr>
+                        <td>
+                            <label for="" class="title">creditos:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">101.5 de 100</label>
+                        </td>
+                    </tr>
+                </table>
+                <table class="tabla2">
+                    <tr>
+                        <td>
+                            <label for="" class="title">Matricula:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for=""><?php echo $row["matricula"];?></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="" class="title">Nivel:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">preparatoria bachillerato</label>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <label for="" class="title">promedio:</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">71.6</label>
+                        </td>
+                    </tr>
+
+                     <tr>
+                        <td>
+                            <label for="" class="title">fecha de consulta</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="">2010-12-01</label>
+                        </td>
+                    </tr>
+                </table >
+                     <table  class="table3">
+                    <tr>
+                        <td>
+                            <label for="" class="title">aprobadas:</label>
+                        </td>
+                        <td>
+                            <label for="">16</label>
+                        </td>
+                    </tr>
+                    <tr>
+
+                        <td>
+                            <label for="" class="title">reprobadas:</label>
+                        </td>
+                        <td>
+                            <label for="">25</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="" class="title">no presentadas:</label>
+                        </td>
+                        <td>
+                            <label for="">7</label>
+                        </td>
+                    </tr>
+
+
+                     <tr>
+                        <td>
+                            <label for="" class="title">total:</label>
+                        </td>
+                        <td>
+                            <label for="">40</label>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>

@@ -3,6 +3,7 @@
 	background-color:rgba(60, 60, 60, 1);
 	position: absolute;
 	margin-top: 60px;
+	z-index: -1;
 }
 .slide-current img{
 	width: 100% ;

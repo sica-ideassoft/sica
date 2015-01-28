@@ -5,6 +5,7 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
+include_once("php/resultados.php");
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -69,7 +70,7 @@ location.href = "../login_alumno/index.php";
 
                     </div>
                     <div class="Nuser">
-                        <p><?php echo  $_SESSION['alumno'] ;?></p>
+                        <p><?php echo  $row["nombre_alumno"];?></p>
                     </div>
 
                 </div>
@@ -89,14 +90,15 @@ location.href = "../login_alumno/index.php";
                     <p>SERVICIOS</p>
                 </div>
                 <div class="menu3">
+
+
                     <li><a href="../home/index.php"><span class="home"></span>HOME</a></li>
+
                     <li><a href="../estadisticas/index.php"><span class="esta"></span>ESTADISTICA</a></li>
                     <li class="activo"><a href="#"><span class="insc"></span>INSCRIPCIONES</a></li>
                 </div>
 
-                <div class="titulo2">
-                    <p>ACTIVIDAD</p>
-                </div>
+
 
             </div>
 
