@@ -2,7 +2,7 @@
 
 include('functions.php');
 
-$id=$_GET["id"];
+$id=$_POST["id"];
 
 if($resultset=getSQLResultSet("SELECT * FROM 'datosPersonales' WHERE id_persona='$id'")){
 

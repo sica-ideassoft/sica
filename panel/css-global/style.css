@@ -30,6 +30,10 @@ header{
 	border-bottom: 1px solid #fff;
 
 }
+.botton{
+	border-style: none;
+	background-color: transparent;
+}
 .icoblack{
 	color:black !important;
 }

@@ -47,8 +47,13 @@ WHERE m.nombre_materia LIKE '%".$busca."%'");
 		<td><?php echo $f['credito']?></td>
 		<td><?php echo $f['cal_min']?></td>
 		?>
+		<td>
+        <form action="mostrar_materias.php" name="formulario1" method="post">
+        <input type="hidden" name="id" value="<?php echo $f['id_materia']?>"/>
+        <button name="enviar"class="botton"><span class="mas"></span></button>
+        </form>
+        </td>
 
-		<td class="lia"><a href="mostrar_materias.php?id=<?php echo $f['id_materia']?>"><span class="mas"></span></a></td>
 		</tr>
 <?php
 }

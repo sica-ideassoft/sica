@@ -4,7 +4,7 @@ include_once("../conectar.php");
 $conn = new DB;
 $conn->conectar();
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 $sql= mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
 
 ?>

@@ -182,8 +182,7 @@ include_once("php/paginacion.php");
 <li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a   href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
+
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
             <li><a  class='activo' href='../modificar_grupo/modificar_grupo.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>

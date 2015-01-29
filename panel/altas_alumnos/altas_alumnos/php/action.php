@@ -39,8 +39,6 @@ if ($username_exist>0) {
 	header("location:../error.php");
 	exit();
 }else{
-
-
 $query = mysql_query("INSERT INTO alumno(id_alumno,id_grupo,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$grupo','$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','$fname','activo','$ip')");
 }
 // }

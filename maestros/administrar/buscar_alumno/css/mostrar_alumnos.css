@@ -86,3 +86,40 @@ margin-left: -30px;
 	padding-left: 10px;
 	color: #024960;
 }
+.img-maestro{
+	width: 180px;
+	height: 500px;
+	position: absolute;
+}
+.foto-maestro{
+background-color: rgba(0,0,0,0.6);
+width: 120px;
+height: 140px;
+margin-left: 30px;
+}
+.foto img{
+box-shadow: 7px 7px 7px rgba(0,0,0,0.7);
+
+}
+.info-maestro{
+	width: 840px;
+	height: 500px;
+	float: right;
+
+}
+.content-name{
+	width: 100%;
+
+	text-align: center;
+}
+.name{
+	font-family: helvetica;
+	color:rgb(6, 3, 23);
+	text-transform: uppercase;
+	margin-left: 13px;
+}
+.content-maestro{
+	width: 100%;
+	height: 100%;
+
+}

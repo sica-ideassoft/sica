@@ -2,6 +2,7 @@
 .title{
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 12px;
 }
 
 .header-cal h5{
@@ -11,6 +12,7 @@
 }
 .tabla2{
 	text-align: center;
+	margin-left: 60px;
 }
 .table3{
 float: right;
@@ -63,14 +65,17 @@ overflow-x:hidden;
 overflow-y:scroll;
 }
 .header-cal	figure img{
-	width: 300px;
+	width: 250px;
 
 }
 .ico-prepa {
-	margin-top: 15px;
-	width: 320px !important;
+	margin-top: 10px;
+	width: 290px !important;
 }
 @media screen and (max-width:800px){
+.tabla2{
+	margin-left: 0px;
+}
 .content-cal{
 width: 600px;
 
@@ -131,6 +136,9 @@ padding: 10px 10px 10px 15px;
 	font-size: 15px;
 	}
 .tabla2{
+
+
+
 	float: right;
 }
 .cal-scroll{
@@ -194,6 +202,7 @@ height: 480px;
 .title{
 	text-transform: uppercase;
 	font-weight: bold;
+	font-size: 10px;
 }
 .tabla2{
 	text-align: right;

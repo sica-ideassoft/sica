@@ -182,8 +182,7 @@ include_once("php/paginacion.php");
    <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
+
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
@@ -260,25 +259,26 @@ include_once("php/paginacion.php");
 
 <td><a class="liEliminar" href="#"
  onclick="delEmpresa(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
-                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_alumno'];?>"><span class="modificar"></span></a></td>
-                <td><a class="liMostrar" href="mostrar_alumno.php?id=<?php echo $row['id_alumno'];?>"><span class="mostrar"></span></a></td>
+ <td>
+   <form action="modificar.php" name="formulario1" method="post">
+  <input type="hidden" name="id" value="<?php echo $row['id_alumno'];?>"/>
+  <button name="enviar"class="botton"><span class="modificar"></span></button>
+  </form>
+ </td>
+                <!-- <td><a  href="?id=<?php echo $row['id_alumno'];?>"><span ></span></a></td> -->
+                <td>
+
+                  <form action="mostrar_alumno.php" name="formulario1" method="post">
+                  <input type="hidden" name="id" value="<?php echo $row['id_alumno'];?>"/>
+                  <button name="enviar"class="botton"><span class="mostrar"></span></button>
+                  </form>
+                </td>
+
                 </tr>
               <?php
               }
               ?>
-<script type="text/javascript">
-function delEmpresa(id) {
-alertify.confirm("Realmente quiere eliminar el Alumno.",
-  function(){
-    alertify.success('Ok');
-    window.location = "php/delete.php?id="+id;
-  },
-  function(){
-    // alertify.error('Cancel');
-  });
 
-}
-</script>
             </tbody>
           </table>
 

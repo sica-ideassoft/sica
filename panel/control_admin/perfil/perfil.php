@@ -181,6 +181,16 @@ $conn->conectar();
           </ul>
         </li>
 
+      <li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+          <ul>
+          </li>
+
+            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a  href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+
+          </ul>
+        </li>
       <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->

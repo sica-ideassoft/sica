@@ -41,9 +41,13 @@ include_once("php/resultados.php");
             </div>
             <div class="contuser">
 
-                <div class="user1">
-                <img src="image/user.png" alt="" width="" class="user11">
-                </div>
+                <figure class="img-header">
+
+                   <?php
+                        include("php/miniatura.php");
+                   ?>
+
+                </figure>
 
               </div>
                <div class="flecha">
@@ -63,8 +67,10 @@ include_once("php/resultados.php");
 
                 <div class="Cdatos">
                     <div class="figura">
-                    <figure>
-                        <img src="image/user.png" alt="">
+                    <figure class="img-alumnos">
+                      <?php
+                        include("php/miniatura.php");
+                     ?>
                     </figure>
 
                     </div>

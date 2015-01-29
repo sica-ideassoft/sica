@@ -177,8 +177,6 @@ location.href = "../../login_admin/index.php";
    <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>

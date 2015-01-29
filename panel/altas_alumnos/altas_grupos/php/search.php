@@ -6,7 +6,14 @@ $conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'");
+$busqueda=mysql_query("SELECT
+	g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+	m.id_maestro,m.nombre,
+	a.id_materia,a.nombre_materia
+    FROM grupos g
+    INNER JOIN maestro m ON m.id_maestro = g.id_maestro
+    INNER JOIN materias a ON g.id_materia = a.id_materia
+    WHERE a.nombre_materia LIKE '%".$busca."%' OR m.nombre LIKE '%".$busca."%' OR g.grado LIKE '%".$busca."%'");
 
 // $row=mysql_fetch_array($busqueda);
 	//
@@ -23,12 +30,11 @@ $busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR
 
 	?>
 			<tr>
+				<td><?php echo $f['nombre_materia'];?></td>
 				<td><?php echo $f['nombre'];?></td>
-				<td><?php echo $f['A_paterno'];?></td>
-				<td><?php echo $f['A_materno'];?></td>
-				<td><?php echo $f['telefono'];?></td>
+				<td><?php echo $f['grado'];?></td>
+				<td><?php echo $f['grupo'];?></td>
 	?>
-		<td class="lia"><a href="mostrar_grupo.php?id=<?php echo $f['id_maestro'] ?>"><span class="mas"></span></a></td></tr>
 <?php
 }
 

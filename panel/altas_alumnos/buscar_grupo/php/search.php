@@ -33,8 +33,13 @@ $busqueda=mysql_query("SELECT  g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.gr
 				<td><?php echo $f['nombre'];?></td>
 				<td><?php echo $f['grado'];?></td>
 				<td><?php echo $f['grupo'];?></td>
-	?>
-		<td class="lia"><a href="mostrar_grupo.php?id=<?php echo $f['id_maestro'] ?>"><span class="mas"></span></a></td></tr>
+		 		<td>
+                <form action="mostrar_grupo.php" name="formulario1" method="post">
+                <input type="hidden" name="id" value="<?php echo $f['id_maestro']?>"/>
+                <button name="enviar"class="botton"><span class="mas"></span></button>
+                </form>
+                </td>
+
 <?php
 }
 

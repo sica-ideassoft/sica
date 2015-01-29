@@ -5,6 +5,7 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
+include_once("php/check.php");
 include_once("php/resultados.php");
 ?>
 
@@ -42,10 +43,13 @@ include_once("php/resultados.php");
                 <p><span class="cantera"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="contuser">
+                <figure class="img-header">
 
-                <div class="user1">
-                <img src="image/user.png" alt="" width="" class="user11">
-                </div>
+                   <?php
+                        include("php/miniatura.php");
+                     ?>
+
+                </figure>
 
               </div>
 
@@ -59,15 +63,32 @@ include_once("php/resultados.php");
 
                 <div class="Cdatos">
                     <div class="figura">
-                    <figure>
-                        <img src="image/user.png" alt="">
+                    <figure class="img-alumnos">
+                      <?php
+                        include("php/miniatura.php");
+                     ?>
                     </figure>
-
                     </div>
                     <div class="Nuser">
                         <p><?php echo  $row["nombre_alumno"];?></p>
                     </div>
 
+                </div>
+                <div class="imagen">
+                   <form action="php/recibir.php" method="POST" enctype="multipart/form-data">
+                   <table>
+                       <tr>
+                           <td>
+                    <input type="file" name="imagen" id="imagen" />
+
+                           </td>
+                           <td>
+                    <input type="submit" name="subir" value="SUBIR"/>
+
+                           </td>
+                       </tr>
+                   </table>
+                    </form>
                 </div>
                 <div class="color">
                    <li class="Rcolor azul" id="azul" ><a href="#"></a></li>
@@ -75,7 +96,6 @@ include_once("php/resultados.php");
                    <li class="Rcolor rosa" id="rosa"><a href="#"></a></li>
                    <li class="Rcolor morado"><a href="#"></a></li>
                    <li class="Rcolor naranja"><a href="#"></a></li>
-
                 </div>
 
                  <div class="titulo1">

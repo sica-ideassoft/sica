@@ -3,7 +3,7 @@ include_once("../conectar.php");
 $conn = new DB();
 $conn->conectar();
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 
 $consulta = mysql_query("SELECT *
 FROM maestro m

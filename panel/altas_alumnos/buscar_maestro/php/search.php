@@ -28,11 +28,18 @@ $busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR
 				<td><?php echo $f['A_paterno'];?></td>
 				<td><?php echo $f['A_materno'];?></td>
 				<td><?php echo $f['telefono'];?></td>
-	?>
-		<td class="lia"><a href="mostrar_maestros.php?id=<?php echo $f['id_maestro'] ?>"><span class="mas"></span></a></td></tr>
+				<td>
+				<form action="mostrar_maestros.php" name="formulario1" method="post">
+				<input type="hidden" name="id" value="<?php echo $f['id_maestro'];?>"/>
+				<button name="enviar"class="botton"><span class="mas"></span></button>
+				</form>
+				</td></tr>
+
 <?php
 }
 
 }
 
 ?>
+
+

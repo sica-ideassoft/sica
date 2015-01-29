@@ -180,8 +180,7 @@ include_once("php/paginacion.php");
    <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
+
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
@@ -251,28 +250,27 @@ include_once("php/paginacion.php");
                 ?>
                <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_maestro'];?>);"><span class="eliminar"></span></a></td>
 
-                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_maestro'];?>"><span class="modificar"></span></a></td>
+               <td>
+                <form action="modificar.php" name="formulario1" method="post">
+                <input type="hidden" name="id" value="<?php echo $row['id_maestro'];?>"/>
+                <button name="enviar"class="botton"><span class="modificar"></span></button>
+                </form>
+                </td>
 
-                <td><a class="liMostrar" href="mostrar_maestro.php?id=<?php echo $row['id_maestro'];?>"><span class="mostrar"></span></a></td>
+
+                <td>
+                <form action="mostrar_maestro.php" name="formulario1" method="post">
+                <input type="hidden" name="id" value="<?php echo $row['id_maestro'];?>"/>
+                <button name="enviar"class="botton"><span class="mostrar"></span></button>
+                </form>
+                </td>
+
                 </tr>
                 <?php
               }
               ?>
             </tbody>
           </table>
-
-<script type="text/javascript">
-function delEmpresa(id) {
-  alertify.confirm("Realmente quiere eliminar al Maestro?.",
-  function(){
-    // alertify.success('Ok');
-    window.location = "php/delete.php?action=del&id="+id;
-  },
-  function(){
-    // alertify.error('Cancel');
-  });
-}
-</script>
           <div class="control">
             <table class="table2">
 

@@ -37,16 +37,14 @@ while($f=mysql_fetch_array($busqueda)){
 		<td><?php echo $f['matricula']; ?></td>
 		<td><?php echo $f['grado']; ?></td>
 		<td><?php echo $f['grupo']; ?></td>
-		<td class="lia"><a  id="eliminar" href="mostrar_alumnos.php?id=<?php echo $f['id_alumno']?>" ><span class="mas"></span></a></td>
+		<td>
+		<form action="mostrar_alumnos.php" name="formulario1" method="post">
+		<input type="hidden" name="id" value="<?php echo $f['id_alumno'];?>"/>
+		<button name="enviar"class="botton"><span class="mas"></span></button>
+		</form>
+		</td>
+
 	</tr>
-
-	<script>
-
-		function enviar(id)
-		{
-   			document.location("mostrar_alumnos.php?id="+id)
-		}
-	</script>
 
 	<?php
 }

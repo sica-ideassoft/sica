@@ -33,6 +33,10 @@ header{
 .icoblack{
 	color:black !important;
 }
+.botton{
+	border-style: none;
+	background-color: transparent;
+}
 .activo{
 background-color: #0FF !important;
 color: #000  !important;

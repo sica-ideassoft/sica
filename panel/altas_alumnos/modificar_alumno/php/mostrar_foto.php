@@ -1,18 +1,18 @@
-	<?php
+<?php
 include_once("../conectar.php");
 $conn = new DB();
 $conn->conectar();
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 
 $consulta = mysql_query("SELECT * FROM alumno where id_alumno = '".$id."'");
+
 while($filas=mysql_fetch_array($consulta)){
 
-	$destino = "../../../maestros/control/perfil/";
-
-	// $ruta=$filas['imagen'];
-	// $ruta = $destino.$ruta;
-	// $user=$filas['nombre'];
+	$destino = "../../../alumnos/home/php/";
+	$ruta=$filas['fotografia'];
+	$ruta = $destino.$ruta;
+	$user=$filas['nombre_alumno'];
 
 
 
@@ -22,7 +22,8 @@ while($filas=mysql_fetch_array($consulta)){
        <img src="<?php echo $ruta ;?>" width="119" height="139"/>
  </figure>
  <div class="content-name">
-       <label for="" class="name"><?php echo $filas["nombre_alumno"]; ;?></label>
+
+       <label for="" class="name"><?php echo $user ;?></label>
  </div>
  <div class="content-name">
        <label for="" class="" id='status'><?php echo $filas["status"];?></label>

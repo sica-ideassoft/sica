@@ -4,7 +4,7 @@ include_once("../conectar.php");
 $conn = new DB;
 $conn->conectar();
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 $sql = mysql_query("SELECT * FROM maestro m
 INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'");
 // $sql=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");

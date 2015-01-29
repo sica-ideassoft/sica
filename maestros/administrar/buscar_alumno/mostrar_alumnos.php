@@ -27,6 +27,9 @@ if (!isset($_SESSION['maestro-session'])) {
   <link rel="stylesheet" href="css/buscar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
   <link rel="stylesheet" href="css/mostrar_alumnos.css">
+  <link rel="stylesheet" href="css/status.css">
+
+
 
 </head>
 <body>
@@ -187,11 +190,9 @@ if (!isset($_SESSION['maestro-session'])) {
   <!-- inicio de bloque  -->
   <div class="content-alumno">
     <div class="img-alumno">
-      <figure class="foto-alumno">
-        <img src="" alt="">
-      </figure>
-      <label for=""></label>
-
+      <?php
+      include_once("php/mostrar_foto.php");
+       ?>
     </div>
     <div class="info-alumno">
 
@@ -221,10 +222,10 @@ if (!isset($_SESSION['maestro-session'])) {
 <script src="js/jquery-ui.js"></script>
 <script src="js/calendario.js"></script>
 <script src="js/script.js"></script>
-
 <script src="js/menu.js"></script>
 <script src="js/val_campos.js"></script>
 <script src="js/buscar.js"></script>
+<script src="js/status.js"></script>
 
 
 </body>

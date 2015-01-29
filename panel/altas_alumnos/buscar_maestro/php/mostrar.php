@@ -1,7 +1,7 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
 
-$id = $_GET["id"];
+$id = $_POST["id"];
 
 $sql = mysql_query("SELECT *
 FROM maestro m

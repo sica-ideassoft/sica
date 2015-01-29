@@ -181,8 +181,7 @@ location.href = "../../login_admin/index.php";
          <li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
+
             <li><a class='activo' href='../altas_grupos/altas_grupo.php'><span class="icoAltasActivo"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
@@ -361,11 +360,11 @@ location.href = "../../login_admin/index.php";
 <div class="datosAlumno">
 <table>
     <thead class="datosBucar1">
-        <th>Nombre</th>
-        <th>A paterno</th>
-        <th>A materno</th>
-        <th>Telefono</th>
-        <th>mostrar</th>
+        <th>Matería</th>
+        <th>Profesor</th>
+        <th>Grado</th>
+        <th>Grupo</th>
+
     </thead>
 </table>
 </div>
@@ -377,7 +376,7 @@ location.href = "../../login_admin/index.php";
         <th></th>
         <th></th>
         <th></th>
-        <th class="masBuscar"></th>
+
     </thead>
 
     <tbody>

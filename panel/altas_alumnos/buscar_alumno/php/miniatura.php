@@ -20,8 +20,6 @@ while($filas=mysql_fetch_array($consulta)){
 
 	$dir = $url.$imagen;
 
-
-
 	$usuario=$filas['user'];
 	$pass=$filas['password'];
 
