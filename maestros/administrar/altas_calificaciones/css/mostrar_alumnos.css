@@ -8,11 +8,88 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.tem{
+	height: 60px;
+}
+.control{
+
+}
+.table2{
+	height: 10px;
+}
+.history{
+margin: 0 auto;
+margin-top: 30px;
+}
+.history td input[type="text"]{
+
+padding-left: 5px;
+border-radius: 5px;
+width: 200px;
+height: 27px;
+color: rgb(0, 0, 0);
+border-style: none;
+background-color: rgba(255, 255, 255, 0.2);
+box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3) inset;
+float: right;
+margin-right: 10px;
+
+}
+.cali{
+text-align: center;}
+
+.btn-cal:hover{
+	border-style: none;
+}
 
 .content-alumno{
 	width: 100%;
 	height: 100%;
 
+}
+.table2 td input {
+    width: 100px;
+    height: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+}
+input[type="submit"] {
+    cursor: pointer;
+}
+.conent1 {
+    background: linear-gradient(rgb(238, 44, 44), rgb(205, 55, 0)) repeat scroll 0% 0% transparent;
+    width: 35px;
+    height: 40px;
+    border-radius: 0px 5px 5px 0px;
+    position: absolute;
+    margin-left: 180px;
+    margin-top: -40px;
+}
+.color {
+    	background: linear-gradient(rgb(135, 239, 51), rgb(19, 90, 37)) repeat scroll 0% 0% transparent;
+}
+.conent1 span {
+    vertical-align: middle;
+    position: absolute;
+    height: 40px;
+}
+.icoaltas {
+    margin-left: 10px !important;
+    margin-top: 10px !important;
+    margin-right: auto;
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.altasbtn {
+   border-bottom: 4px solid rgb(28, 95, 24);
+background: linear-gradient(rgb(26, 233, 57), rgb(68, 141, 57)) repeat scroll 0% 0% transparent;
+    border-style: none none solid;
+    width: 190px !important;
+    border-radius: 5px;
+
+}
+.altasbtn:hover{
+	border-style: none;
 }
 .img-alumno{
 	width: 180px;
@@ -34,15 +111,18 @@ margin-left: 30px;
 }
 .tabla-mostrar{
 	width: 830px;
-	height: 450px;
+	height: 100px;
+	text-align: center;
 }
 .tabla-mostrar .dato{
 text-transform: uppercase;
 color: #09C;
 background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.3),rgba(226, 226, 226, 0.6));
+
 }
 .tabla-mostrar  td{
 	color: rgba(0, 0, 0, 0.6);
+
 }
 .tabla-mostrar tr td label{
 	font-weight: bold;
@@ -50,12 +130,15 @@ background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.3),rgba(226, 2
 .control .regresar{
 	text-decoration: none;
 	color: white;
-	padding: 10px 45px;
+	padding: 9px 45px;
 	background: -webkit-linear-gradient(#6a5acd, 	#836fff) repeat scroll 0% 0% transparent;
 	background: -o-linear-gradient(#6a5acd, 	#836fff) repeat scroll 0% 0% transparent;
 	background: linear-gradient(#6a5acd, 	#836fff) repeat scroll 0% 0% transparent;
 	text-align: center;
 	border-radius: 5px;
+	margin-left: 40px;
+	display: inline-block;
+
 }
 .control .regresar{
 		border-bottom: 3px solid #473c8b;
@@ -64,13 +147,23 @@ background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.3),rgba(226, 2
 	border-style: none;
 }
 .control table{
-	margin-top: 20px !important;
+	margin-top: 10px !important;
 	margin: 0 auto;
 	text-align: center;
 }
 .reg:after{
 	font-family: "iconitos";
 	content: "\e611";
+	color:white;
+}
+
+.icoaltas{
+margin-left: -10px !important;
+
+}
+.icoaltas:after{
+	font-family: "iconitos";
+	content: "\e631";
 	color:white;
 }
 .reg{

@@ -1,8 +1,8 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
-echo '<SCRIPT LANGUAGE="javascript">
-location.href = "../../login_admin/index.php";
+  echo '<SCRIPT LANGUAGE="javascript">
+  location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
@@ -35,113 +35,113 @@ location.href = "../../login_admin/index.php";
 
 </head>
 <body>
-      <!--[if lt IE 7]>
-          <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-          <![endif]-->
-    <header>
-      <nav>
-        <div class="cantera">
-          <img src="image/canter.png" alt="">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+<header>
+  <nav>
+    <div class="cantera">
+      <img src="image/canter.png" alt="">
 
-        </div>
-        <ul class="menu1">
-          <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
-          <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
-
-        </ul>
-
-        <div class="user">
-          <div class="userimg">
-            <?php include_once("php/miniatura.php"); ?>
-          </div>
-          <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
-        </div>
-      </nav>
-
-    </header>
-    <div class='heder2'>
-
-      <div class="heder21">
-        <div class="heder21sub1">
-          <li><a href="#alum"><span class="resp"></span></a></li>
-        </div>
-        <div class="heder21sub3">
-          <li><a  href="#confi"><span class="conf"></span></a></li>
-        </div>
-      </div>
-
-      <div class="heder22">
-        <ul class="heder21sub2">
-          <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-          <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
-          <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
-        </ul>
-      </div>
     </div>
-    <!-- inicio menu 4 -->
-    <div id="confi" class="contenido menu5">
-      <div class="Imenu5">
-        <p><span class="isica"></span><b>SICA</b> CANTERA</p>
+    <ul class="menu1">
+      <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
+      <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
+
+    </ul>
+
+    <div class="user">
+      <div class="userimg">
+        <?php include_once("php/miniatura.php"); ?>
       </div>
-      <div class="Imenu52">
-        <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
-      </div>
-<!-- incio de menu config -->
-      <div class="Ccontent">
-          <div class="Cco">
-          <a href="../../control_admin/perfil/perfil.php">
-          <div class="mod btn btn-1 btn-1e" >
-            <span class="modico "></span>
-            <p>PERFIL</p>
-            </div>
-            </a>
-
-          <div class="mod2 btn btn-1 btn-1a">
-            <span class="modico2 "></span>
-            <p>MATERIALES</p>
-          </div>
-
-           <div class="mod3 btn btn-1 btn-1b">
-            <span class="modico3"></span>
-            <p>PUBLICAR</p>
-          </div>
-          <div class="mod4 btn btn-1 btn-1c">
-            <span class="modico4"></span>
-            <p>AVISOS</p>
-          </div>
-
-        </div>
-
-      </div>
+      <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
     </div>
-    <!-- finde munu 4 -->
+  </nav>
 
-    <!-- inicio de menu2 -->
-    <div id="alum"class="contenido menu3">
-      <div class="Tmenu3">
-        <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
+</header>
+<div class='heder2'>
+
+  <div class="heder21">
+    <div class="heder21sub1">
+      <li><a href="#alum"><span class="resp"></span></a></li>
+    </div>
+    <div class="heder21sub3">
+      <li><a  href="#confi"><span class="conf"></span></a></li>
+    </div>
+  </div>
+
+  <div class="heder22">
+    <ul class="heder21sub2">
+      <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+      <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+      <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
+    </ul>
+  </div>
+</div>
+<!-- inicio menu 4 -->
+<div id="confi" class="contenido menu5">
+  <div class="Imenu5">
+    <p><span class="isica"></span><b>SICA</b> CANTERA</p>
+  </div>
+  <div class="Imenu52">
+    <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
+  </div>
+  <!-- incio de menu config -->
+  <div class="Ccontent">
+    <div class="Cco">
+      <a href="../../control_admin/perfil/perfil.php">
+        <div class="mod btn btn-1 btn-1e" >
+          <span class="modico "></span>
+          <p>PERFIL</p>
+        </div>
+      </a>
+
+      <div class="mod2 btn btn-1 btn-1a">
+        <span class="modico2 "></span>
+        <p>MATERIALES</p>
       </div>
-      <div class="Tmenu52">
-        <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+
+      <div class="mod3 btn btn-1 btn-1b">
+        <span class="modico3"></span>
+        <p>PUBLICAR</p>
       </div>
-      <div class="Mcontent">
-        <div id='cssmenu'>
-                  <ul class="ul2">
+      <div class="mod4 btn btn-1 btn-1c">
+        <span class="modico4"></span>
+        <p>AVISOS</p>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+<!-- finde munu 4 -->
+
+<!-- inicio de menu2 -->
+<div id="alum"class="contenido menu3">
+  <div class="Tmenu3">
+    <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
+  </div>
+  <div class="Tmenu52">
+    <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+  </div>
+  <div class="Mcontent">
+    <div id='cssmenu'>
+      <ul class="ul2">
         <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
         <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+          <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          </li>
+          <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+          </li>
+          <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
         <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
-          <li><a href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            <li><a href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_maestro/altas_maestro.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -150,9 +150,9 @@ location.href = "../../login_admin/index.php";
 
           </ul>
         </li>
-          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+        <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            <li><a  href='../buscar_materia/buscar_materia.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
@@ -163,186 +163,180 @@ location.href = "../../login_admin/index.php";
         </li>
 
 
- <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+        <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
-            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
-            </li>
-            <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+          <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          </li>
+          <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+          </li>
+          <li><a href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-<li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+        <li class='has-sub admin activo'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
 
-            <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
-            </li>
-            <li><a  class='activo' href='../modificar_grupo/modificar_grupo.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
+          <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+          </li>
+          <li><a  class='activo' href='../modificar_grupo/modificar_grupo.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-      <li><a><span>***</span></a></li>
-     </div>
-     <!-- fin de menu3 -->
+        <li><a><span>***</span></a></li>
+      </div>
+      <!-- fin de menu3 -->
 
-     <!-- inicio de menu4 -->
+      <!-- inicio de menu4 -->
 
-   </div>
+    </div>
 
 <!--    <div class='footcontent'>
 
-    <div class="headtabla1"><p>Recien Ingresados</p></div>
+<div class="headtabla1"><p>Recien Ingresados</p></div>
 
-    <table class="tabla1">
-      <div class="mosAlumno">
-        <div id="show"></div>
-      </div>
+<table class="tabla1">
+<div class="mosAlumno">
+<div id="show"></div>
+</div>
 
-    </table>
-  </div> -->
+</table>
+</div> -->
 </div>
 
 <!-- mensajes de validacion -->
 <div class="mensajes">
   <div class="Logom">
-      <label><b>Campos vacios</b> no se puede Enviar la petición</label>
+    <label><b>Campos vacios</b> no se puede Enviar la petición</label>
   </div>
   <div class="divmensaje">
-      <span class="Mico"></span>
+    <span class="Mico"></span>
   </div>
 </div>
 <!-- finde  mensajes de validacion -->
 <!-- mensajes de matricula validacion -->
 <div class="mensajesMatricula">
   <div class="Logom2">
-      <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
+    <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes matricula de validacion -->
-  <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesCurp">
   <div class="Logom2">
-      <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
+    <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
 
 
-  <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesTelefono">
   <div class="Logom2">
-      <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
+    <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
- <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesEmail">
   <div class="Logom2">
-      <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
+    <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
- <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesCorrecto">
   <div class="Logom3">
-      <label>Los datos se enviaron <b>Correctamente</b></label>
+    <label>Los datos se enviaron <b>Correctamente</b></label>
   </div>
   <div class="divmensaje3">
-      <span class="Mico3"></span>
+    <span class="Mico3"></span>
   </div>
 </div>
 
 <!-- <div class="mensajesAlumno">
-  <div class="Logom4">
-      <div id="show"></div>
-  </div>
-  <div class="divmensaje4">
-      <span class="Mico4"></span>
-  </div>
+<div class="Logom4">
+<div id="show"></div>
 </div>
- -->
+<div class="divmensaje4">
+<span class="Mico4"></span>
+</div>
+</div>
+-->
 <!-- finde  mensajes curp de validacion -->
 
 <!-- inicio de section -->
 <section class="seccion1">
   <div class="tem">
-<div class="estacion">
-            <span class="grupo"></span>
-        </div>
-  <p>MODIFICAR / ELIMINAR GRUPOS</p></div>
+    <div class="estacion">
+      <span class="grupo"></span>
+    </div>
+    <p>MODIFICAR / ELIMINAR GRUPOS</p></div>
 
-<?php
-include_once("php/modificar-grupo.php");
-$id = $_GET["id"];
-?>
-<script>
-   var id = "<?php echo $id;?>" ;
-</script>
+    <?php
+    include_once("php/modificar-grupo.php");
+    $id = $_POST["id"];
+    ?>
+    <script>
+      var id = "<?php echo $id;?>" ;
+    </script>
 
-  <form method="POST"  action="" name="form1" class="form1">
+    <form method="POST"  action="" name="form1" class="form1">
 
-    <table class='table1'>
+      <table class='table1'>
         <tr>
-      <td><label for="">Clave SEP:</label></td>
-      <td><label for="">Modulo:</label></td>
-    </tr>
-    <tr>
- <td><input type="text" name="sep"  id="sep" value=<?php echo $materia['claveSEP'];?>></input></td>
-<td><input type="text" name="modulo"  id="modulo" value=<?php echo $materia['modulo'];?>></input></td>
-    </tr>
-      <tr>
-        <td><label for="">Nombre:</label></td>
+        <td><label for="">Matería:</label></td>
         <td><label for="">Profesor:</label></td>
-      </tr>
+        </tr>
+        <tr>
+        <td><select name="materia" id="materia">
+          <?php
+          include_once("php/select.php");
+          materia();
+           ?>
+        </select></td>
 
-      <tr>
-        <td><input type="text" name="nombre"  id="nombre" alt="nombre" value=<?php echo $materia['nombre_materia'];?> ></input></td>
+        <td><select name="maestro" id="maestro">
+          <?php
 
-        <td><input type="text" name="profesor"  id="profesor" value=<?php echo $materia['profesor'];?>></input></td>
-      </tr>
-      <tr>
-        <td><label for="">Fecha Inicio:</label></td>
-        <td><label for="">Fecha fin:</label></td>
-
-      </tr>
-
-      <tr>
-        <td><input type="text" name="fecha1" id="fecha1" class="fecha" value=<?php echo $materia['fecha_inicio'];?>></td>
-        <td><input type="text" name="fecha2" id="fecha2" class="fecha" value=<?php echo $materia['fecha_fin'];?>></td>
-      </tr>
-      <tr>
-        <td><label for="">Creditos:</label></td>
-        <td><label for="">Calificacion:</label></td>
-
-      </tr>
-      <tr>
-
-<td class="edad"><select name="creditos" id="creditos"  value=<?php echo $materia['creditos'];?>>
-            <?php
-              for ($i=1; $i <= 20 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
-             ?>
-          </select><label for="">Creditos</label> </td>
-
-        <td><input type="text" name="calificacion" id="calificacion" value=<?php echo $materia['cal_min'];?>></td>
+          maestro();
+           ?>
+        </select></td>
 
         </tr>
+        <tr>
+          <td><label for="">Grado:</label></td>
+          <td><label for="">Grupo:</label></td>
+        </tr>
+
+        <tr>
+
+          <td><select name="grado" id="grado">
+          <?php
+          grado();
+           ?>
+        </select></td>
+          <td><select name="grupo" id="grupo">
+          <?php
+          grupo();
+           ?>
+        </select></td>
+
+        </tr>
+
 
       </table>
 
@@ -353,11 +347,9 @@ $id = $_GET["id"];
         <table class="table2">
 
           <tr>
-          <td>
-
-          </td><td>
-            <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
+            <td>
+              <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
+              <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
           </td> <td>
           <a class="regresar" href="modificar_grupo.php">REGRESAR</a><span class="reg"></span>
@@ -370,7 +362,7 @@ $id = $_GET["id"];
 
 
 
-<div class="space"></div>
+  <div class="space"></div>
 
 
 

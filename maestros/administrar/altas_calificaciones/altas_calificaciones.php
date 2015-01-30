@@ -24,7 +24,7 @@ include_once("php/paginacion.php");
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>ADMINISTRADOR</title>
+  <title>MAESTROS</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -232,8 +232,15 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['matricula'];?></td>
                 <td><?php echo$row['grado'];?></td>
                 <td><?php echo$row['grupo'];?></td>
+<td>
+               <form action="mostrar_calificaciones.php" name="formulario1" method="post">
+              <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
+              <button name="enviar"class="botton"><span class="mostrar"></span></button>
+              </form>
+              </td>
 
-                <td><a class="liMostrar" href="mostrar_calificaciones.php?id=<?php echo $row['id_alumno'];?>"><span class="mostrar"></span></a></td>
+
+
                 </tr>
               <?php
               }

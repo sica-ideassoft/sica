@@ -1,9 +1,9 @@
 <?php
-session_start();
-$user = $_SESSION['alumno'];
 include_once("../../../conectar.php");
 $conn = new DB;
 $conn->conectar();
+
+$user = $_SESSION['alumno'];
 
 $sql=mysql_query("SELECT
 	a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.password,a.fotografia,a.status,
@@ -15,6 +15,22 @@ $sql=mysql_query("SELECT
 	INNER JOIN calificacion c ON c.id_alumno = a.id_alumno
 	INNER JOIN materias m     ON m.id_materia = g.id_materia
 	WHERE a.matricula = '".$user."'");
-$row = mysql_fetch_array($sql);
 
- ?>
+
+while($historial = mysql_fetch_array($sql)){
+	?>
+
+		<tr>
+			<td><label><?php echo $historial["claveSEP"] ?></label></td>
+			<td><label><?php echo $historial["creditos"] ?></label></td>
+			<td class="materia"><label><?php echo $historial["nombre_materia"] ?></label></td>
+			<td><label><?php echo $historial["calificacion"] ?></label></td>
+			<td><label>2010-3</label></td>
+			<td><label>ORD</label></td>
+		</tr>
+
+	<?php
+
+}
+
+?>

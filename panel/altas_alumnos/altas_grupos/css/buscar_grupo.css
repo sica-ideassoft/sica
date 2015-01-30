@@ -93,7 +93,7 @@ overflow: hidden;
 	background-color:#09C;
 }
 #resultTable thead th{
-	width: 150px;
+	width: 187px;
 	height: 0px;
 	color: white;
 	text-transform: uppercase;
@@ -172,6 +172,8 @@ overflow-y:scroll;
 float: top;
 top: 0px;
 }
+
+
 .datosAlumno{
 	background-color: red;
 	text-align: center;
@@ -190,7 +192,7 @@ top: 0px;
 	text-transform: uppercase;
 }
 .datosAlumno table th{
-	width: 150px;
+	width: 180px;
 	color: white;
 	text-transform: uppercase;
 	padding: 5px;

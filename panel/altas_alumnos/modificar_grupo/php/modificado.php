@@ -3,17 +3,13 @@ include_once("../../conectar.php");
 $conn = new DB;
 $conn->conectar();
 
-$id          = mysql_real_escape_string($_POST["id"]);
-$sep         = mysql_real_escape_string($_POST["sep"]);
-$modulo      = mysql_real_escape_string($_POST["modulo"]);
-$nombre      = mysql_real_escape_string($_POST["nombre"]);
-$profesor    = mysql_real_escape_string($_POST['profesor']);
-$fecha1      = mysql_real_escape_string($_POST['fecha1']);
-$fecha2      = mysql_real_escape_string($_POST['fecha2']);
-$creditos    = mysql_real_escape_string($_POST['creditos']);
-$calificacion = mysql_real_escape_string($_POST['calificacion']);
+$id         = mysql_real_escape_string($_POST["id"]);
+$materia    = mysql_real_escape_string($_POST["materia"]);
+$maestro    = mysql_real_escape_string($_POST["maestro"]);
+$grado      = mysql_real_escape_string($_POST["grado"]);
+$grupo      = mysql_real_escape_string($_POST["grupo"]);
 
-$ssql = "UPDATE materias set claveSEP = '".$sep."',modulo = '".$modulo."',nombre = '".$nombre."',profesor = '".$profesor."',fecha_inicio = '".$fecha1."',fecha_fin = '".$fecha2."',credito = '".$creditos."',cal_min = '".$calificacion."' WHERE  id_materia='".$id."'";
+$ssql = "UPDATE grupos set id_maestro = '".$maestro."',id_materia = '".$materia."',grado = '".$grado."',grupo = '".$grupo."' WHERE  id_grupo='".$id."'";
 if(mysql_query($ssql)){
 	return true;
 }else{

@@ -58,7 +58,7 @@ height: 50px;
 	padding:5px;
 	/*margin:0 auto;*/
 	position: absolute;
-	z-index: 0;
+	z-index: 1;
 	right: 0px !important;
 
 	/*font-family:Arial, Helvetica, sans-serif; */
@@ -91,6 +91,7 @@ height: 50px;
 }
 
 #titles{
+	z-index: 2;
 	width:300px;
 	height:290px;
 	overflow:hidden;

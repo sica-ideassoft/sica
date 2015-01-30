@@ -251,11 +251,20 @@ include_once("php/paginacion.php");
                 echo "<td>".$row['grado']."</td>";
                 echo "<td>".$row['grupo']."</td>";
                 ?>
-                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_grupo'];?>);"><span class="eliminar"></span></a></td>
-
-                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_grupo'];?>"><span class="modificar"></span></a></td>
-                <td><a class="liMostrar" href="mostrar_grupo.php?id=<?php echo $row['id_grupo'];?>"><span class="mostrar"></span></a></td>
-
+                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_grupo'];?>);"><span class="
+                 eliminar"></span></a></td>
+                 <td>
+                   <form action="modificar.php" name="formulario1" method="post">
+                    <input type="hidden" name="id" value="<?php echo $row['id_grupo'];?>"/>
+                    <button name="enviar"class="botton"><span class="modificar"></span></button>
+                    </form>
+                 </td>
+                <td>
+                    <form action="mostrar_grupo.php" name="formulario1" method="post">
+                    <input type="hidden" name="id" value="<?php echo $row['id_grupo'];?>"/>
+                    <button name="enviar"class="botton"><span class="mostrar"></span></button>
+                    </form>
+                </td>
                 </tr>
 
                 <?php
@@ -263,18 +272,7 @@ include_once("php/paginacion.php");
               ?>
             </tbody>
           </table>
-<script type="text/javascript">
-function delEmpresa(id) {
-  alertify.confirm("Realmente quiere eliminar la Materia?.",
-  function(){
-    alertify.success('Ok');
-    window.location = "php/delete.php?action=del&id="+id;
-  },
-  function(){
-    // alertify.error('Cancel');
-  });
-}
-</script>
+
           <div class="control">
             <table class="table2">
 

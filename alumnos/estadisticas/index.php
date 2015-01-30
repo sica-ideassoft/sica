@@ -141,7 +141,7 @@ include_once("php/resultados.php");
             </figure>
             <h5>historial académico</h5>
             <div class="info-alumno">
-                <table>
+                <table class="table1">
                     <tr>
                         <td>
                             <label for="" class="title">nombre:</label>
@@ -169,7 +169,9 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">71.6</label>
+                            <label for="">
+                            <?php echo $row["calificacion"];?>
+                            </label>
                         </td>
                     </tr>
 
@@ -205,16 +207,7 @@ include_once("php/resultados.php");
                             <label for="">preparatoria bachillerato</label>
                         </td>
                     </tr>
-                     <tr>
-                        <td>
-                            <label for="" class="title">promedio:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">71.6</label>
-                        </td>
-                    </tr>
+
 
                      <tr>
                         <td>
@@ -223,9 +216,15 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">2010-12-01</label>
+                            <label for="">
+                                <script>
+                                     var f = new Date();
+document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+                                </script>
+                            </label>
                         </td>
                     </tr>
+
                 </table >
                      <table  class="table3">
                     <tr>
@@ -264,10 +263,42 @@ include_once("php/resultados.php");
                         </td>
                     </tr>
                 </table>
+        <div class="content-histrial">
+                <table class="historial">
+                    <thead>
+                        <tr>
+                            <td>clave sep</td>
+                            <td>creditos</td>
+                            <td class="materia">asignatura</td>
+                            <td>cal</td>
+                            <td>ciclo</td>
+                            <td>tipo de evaluación</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                           include_once("php/historial.php");
+                        ?>
+
+                    </tbody>
+                </table>
+            </div>
+
             </div>
         </div>
     </div>
 </section>
+
+<div class="pdf">
+    <div class="img-pdf">
+        <a href="pdf/pdf/cantera.php"><img src="image/downloads.png" alt=""></a>
+    </div>
+    <div class='pdf-label'>
+        <p>pdf</p>
+    </div>
+</div>
+
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>

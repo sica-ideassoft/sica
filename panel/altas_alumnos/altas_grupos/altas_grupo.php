@@ -360,8 +360,8 @@ location.href = "../../login_admin/index.php";
 <div class="datosAlumno">
 <table>
     <thead class="datosBucar1">
-        <th>Matería</th>
-        <th>Profesor</th>
+        <th class="materia-head">Matería</th>
+        <th >Profesor</th>
         <th>Grado</th>
         <th>Grupo</th>
 
@@ -372,7 +372,7 @@ location.href = "../../login_admin/index.php";
 <table id="resultTable" >
 
     <thead class="datosBucar">
-        <th></th>
+        <th class="materia"></th>
         <th></th>
         <th></th>
         <th></th>

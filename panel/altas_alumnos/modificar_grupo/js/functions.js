@@ -7,19 +7,16 @@ $(function() {
   $("#enviar").click(function(e) {
     e.preventDefault();
  id
- var sep       = $("#sep").val();
- var modulo    = $("#modulo").val();
- var nombre    = $("#nombre").val();
- var profesor  = $("#profesor").val();
- var fecha1    = $("#fecha1").val();
- var fecha2    = $("#fecha2").val();
- var creditos  = $("#creditos").val();
- var calificacion = $("#calificacion").val();
+ var materia       = $("#materia").val();
+ var maestro    = $("#maestro").val();
+ var grado    = $("#grado").val();
+ var grupo    = $("#grupo").val();
 
 
-var dataString ='id='+ id +'&sep='+ sep +'&modulo='+ modulo + '&nombre='+ nombre + '&profesor='+ profesor  + '&fecha1='+ fecha1  + '&fecha2='+ fecha2  + '&creditos='+ creditos  + '&calificacion='+ calificacion;
 
-if(sep === '' ||modulo === '' ||nombre === '' || profesor === "" || fecha1 === "" || fecha2 === "" || creditos === "" || calificacion === "")
+var dataString ='id='+ id +'&materia='+ materia +'&maestro='+ maestro + '&grado='+ grado+ '&grupo='+ grupo;
+
+if(materia === '' ||maestro === '' ||grado === '' ||grupo === '')
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

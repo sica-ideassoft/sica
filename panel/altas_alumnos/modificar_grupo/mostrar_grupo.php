@@ -133,7 +133,7 @@ location.href = "../../login_admin/index.php";
         <li class='has-sub admin   '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-               <li><a   href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
+               <li><a   href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>

@@ -139,19 +139,19 @@ if (!isset($_SESSION['maestro-session'])) {
       </li>
 
       <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
-        <ul>
-        </li>
-        <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-        </li>
-        <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
-        </li>
+          <ul>
+          </li>
+               <li><a href='../buscar_calificaciones/buscar_calificaciones.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+            </li>
+            <li><a  href='../altas_calificaciones/altas_calificaciones.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            </li>
 
 
-      </ul>
-    </li>
+          </ul>
+        </li>
 
-    <li><a><span>***</span></a></li>
-  </div>
+      <li><a><span>***</span></a></li>
+           </div>
   <!-- fin de menu3 -->
 
   <!-- inicio de menu4 -->

@@ -165,7 +165,34 @@ include_once("php/resultados.php");
             </div>
         </div>
     </div>
+
+
+
+    <div class="content-histrial">
+     <table class="historial">
+                    <thead>
+                        <tr>
+                            <td>clave sep</td>
+                            <td>creditos</td>
+                            <td class="materia">asignatura</td>
+                            <td>cal</td>
+                            <td>ciclo</td>
+                            <td>tipo de evaluación</td>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <?php
+                           include_once("php/historial.php");
+                        ?>
+
+                    </tbody>
+                </table>
+            </div>
+
+</div>
 </section>
+
 <footer>
     <p>Este documento, es de carácter informativo queda prohibida la violación de la información publicada ya que
         es de carácter privado y de uso exclusivo del control escolar del Centro de Capacitación publicadas son las

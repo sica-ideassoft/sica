@@ -62,6 +62,7 @@ location.href = "../../login_maestro/index.php";
   </nav>
 
 </header>
+
 <div class='heder2'>
 
   <div class="heder21">
@@ -79,6 +80,23 @@ location.href = "../../login_maestro/index.php";
       <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
       <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
     </ul>
+  </div>
+</div>
+<div class="mensajes">
+  <div class="Logom">
+      <label><b>Campos vacios</b> no se puede Enviar la petición</label>
+  </div>
+  <div class="divmensaje">
+      <span class="Mico"></span>
+  </div>
+</div>
+
+<div class="mensajesCorrecto">
+  <div class="Logom3">
+      <label>Los datos se enviaron <b>Correctamente</b></label>
+  </div>
+  <div class="divmensaje3">
+      <span class="Mico3"></span>
   </div>
 </div>
 <!-- inicio menu 4 -->
@@ -210,45 +228,22 @@ include_once("php/mostrar.php");
             </div>
 
   <div class="control">
-    <table>
-      <tr>
-        <td>
-          <a class="regresar" href="altas_calificaciones.php">REGRESAR</a><span class="reg"></span>
-        </td>
-      </tr>
-    </table>
+  <table class="table2">
+
+          <tr>
+          <td>
+            <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
+            <div class="conent1 color"> <span class="icoaltas"></span></div>
+            </input>
+          </td>
+          <td>
+            <a class="regresar" href="altas_calificaciones.php">REGRESAR</a><span class="reg"></span>
+
+        </td></tr>
+      </table>
+</form>
   </section>
-  <!-- inicio de mensaje de confirmacion -->
-  <!-- <div class="Mconfirma">
-    <div class="contentM">
-      <div class="Mhead">
-        <div class="icoAlert"><span></span></div>
-        <div class="confirmacion"><p>Confirmación</p></div>
-        <div class="icoCerrar"><span></span></div>
-      </div>
-      <div class="Mbody">
-        <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
-      </div> -->
-      <div class="Mfooter">
-        <!-- inicio de botones de confirmacion -->
-        <table class="table2">
-        </td><td>
-        <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
-        <div class="conent1 color"> <span class="icoaltas"></span></div>
-      </input>
-    </td><td>
-    <input type="reset" value="CANCELAR" class="cancelarBtn">
 
-    <div class="conent1"> <span class="icoCancelar"></span></div>
-  </input>
-
-</td></tr>
-</table>
-</div>
-</div>
-</div>
-<!-- fin de mensaje de confrimacion -->
-<!-- fin de section -->
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
@@ -258,7 +253,9 @@ include_once("php/mostrar.php");
 <!-- <script src="js/confirmacion.js"></script> -->
 <script src="js/eliminar.js"></script>
 <script src="js/val_campos.js"></script>
+<script src="js/functions.js"></script>
 <script src="js/status.js"></script>
+
 
 
 </body>

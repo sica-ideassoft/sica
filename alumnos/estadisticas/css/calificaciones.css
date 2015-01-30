@@ -1,4 +1,72 @@
 
+.pdf{
+	width: 120px;
+	height: 50px;
+	background-color: rgba(255,255,255,0.8);
+bottom: 70px;
+right: 10px;
+position: absolute;
+z-index: 2;
+
+}
+.img-pdf{
+
+	width: 60px;
+	height: 50px;
+
+}
+.img-pdf img{
+width: 60px;
+height: 50px;
+opacity: 0.6;
+}
+.img-pdf img:hover{
+opacity: 1;
+-moz-transition:all ease 2s;
+-webkit-transition:all ease 2s;
+}
+.pdf-label{
+right: 0px;
+top: 0px;
+position: absolute;
+width: 60px;
+	height: 50px;
+color: black;
+text-transform: uppercase;
+font-weight: bold;
+text-align: center;
+
+}
+.historial{
+width: 1000px !important;
+
+}
+.historial tbody tr:nth-child(odd){
+	background-color:  rgba(255,255,255,0.7) !important;
+
+}
+.historial tbody tr:nth-child(even){
+	background-color:#f2f2f2 !important;
+	color: black;
+}
+.historial tbody td{
+	text-align: center;
+}
+.historial thead{
+background: linear-gradient(rgb(247, 247, 247), rgb(223, 227, 238)) repeat scroll 0% 0% transparent;
+width: 100%;
+}
+.historial thead tr td{
+width: 100px;
+text-transform: uppercase;
+font-size: 12px;
+text-align: center;
+
+}
+.materia{
+	width: 240px;
+}
+/*fin de tabla histial*/
 .title{
 	text-transform: uppercase;
 	font-weight: bold;
@@ -11,12 +79,13 @@
 	text-transform: uppercase;
 }
 .tabla2{
+
+	margin-bottom: 50px;
 	text-align: center;
 	margin-left: 60px;
 }
 .table3{
 float: right;
-
 }
 .info-alumno table td{
 padding-top: 5px;
@@ -73,6 +142,27 @@ overflow-y:scroll;
 	width: 290px !important;
 }
 @media screen and (max-width:800px){
+.content-histrial{
+	margin-left: 10px;
+	width: 570px;
+	height:100%;
+
+overflow: hidden;
+overflow-x:hidden;
+overflow-x:scroll;
+/*background-color: red;*/
+}
+
+.content-cal{
+width: 568px;
+
+}
+.pdf{
+	width: 60px;
+}
+.pdf-label{
+	display: none;
+}
 .tabla2{
 	margin-left: 0px;
 }
@@ -92,7 +182,7 @@ padding: 10px 10px 10px 15px;
 }
 .cal-scroll{
 width: 600px;
-height: 1024px;
+height: 1215px;
 float: right !important;
 	}
 .header-cal	figure img{
@@ -121,10 +211,22 @@ padding-left: 10px !important;
 }
 }
 @media screen and (max-width:768px){
+.content-histrial{
+	margin-left: 10px;
+	width: 540px;
+	height:100%;
+
+overflow: hidden;
+overflow-x:hidden;
+overflow-x:scroll;
+/*background-color: red;*/
+}
+
 .content-cal{
 width: 568px;
 
 }
+
 .info-alumno table td{
 padding-top: 1px;
 
@@ -136,14 +238,11 @@ padding: 10px 10px 10px 15px;
 	font-size: 15px;
 	}
 .tabla2{
-
-
-
 	float: right;
 }
 .cal-scroll{
 width: 568px;
-height: 1024px;
+height: 958px;
 float: right !important;
 	}
 .header-cal	figure img{
@@ -172,9 +271,15 @@ padding-left: 10px !important;
 }
 }
 @media screen and (max-width:360px){
+.content-histrial{
+	margin-left: 10px;
+	width: 330px;
+	height:100%;
+	/*background-color: red;*/
+}
 .cal-scroll{
 width: 360px;
-height: 640px;
+height: 575px;
 	}
 
 .info-alumno{
@@ -189,9 +294,15 @@ height: 640px;
 }
 }
 @media screen and (max-width: 320px){
+.content-histrial{
+	margin-left: 5px;
+	width: 290px;
+	height:100%;
+	/*background-color: red;*/
+}
 .cal-scroll{
 width: 320px;
-height: 480px;
+height: 417px;
 
 }
 

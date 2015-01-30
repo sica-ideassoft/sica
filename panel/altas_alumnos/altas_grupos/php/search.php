@@ -13,7 +13,7 @@ $busqueda=mysql_query("SELECT
     FROM grupos g
     INNER JOIN maestro m ON m.id_maestro = g.id_maestro
     INNER JOIN materias a ON g.id_materia = a.id_materia
-    WHERE a.nombre_materia LIKE '%".$busca."%' OR m.nombre LIKE '%".$busca."%' OR g.grado LIKE '%".$busca."%'");
+    WHERE a.nombre_materia LIKE '%".$busca."%' OR m.nombre LIKE '%".$busca."%' OR g.grado LIKE '%".$busca."%' OR g.grupo LIKE '%".$busca."%'");
 
 // $row=mysql_fetch_array($busqueda);
 	//
