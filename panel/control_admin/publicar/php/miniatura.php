@@ -14,15 +14,17 @@ $conn->conectar();
 
 $consulta=mysql_query("SELECT * from admin where user ='".$user."'");
 while($filas=mysql_fetch_array($consulta)){
-
+	$url = "../perfil/";
 	$imagen=$filas['imagen'];
+	$dir = $url.$imagen;
+
 	$usuario=$filas['user'];
 	$pass=$filas['password'];
 
 ?>
 
  <figure class="miniatura">
-       <img src="<?php echo $imagen;?>"/>
+       <img src="<?php echo $dir;?>"/>
  </figure>
 
 

@@ -21,8 +21,8 @@ while($filas=mysql_fetch_array($consulta)){
 
 ?>
 
- <figure class='perfil'>
-       <img src="<?php echo $ruta ;?>" width="119" height="139"/>
+ <figure class='pree-banner'>
+       <img src="<?php echo $ruta ;?>" width="200" height="100"/>
  </figure>
 
 
