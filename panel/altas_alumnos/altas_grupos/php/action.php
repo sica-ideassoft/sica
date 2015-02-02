@@ -16,7 +16,12 @@ $checgrupo = mysql_query("SELECT id_materia,grado,grupo FROM grupos where
 	id_materia='".$materia."'");
 
 $gruponame_exist = mysql_num_rows($checgrupo);
-if ($gruponame_exist>0) {
+
+$checgrado = mysql_query("SELECT id_materia,grado,grupo FROM grupos where
+	id_materia='".$grado."'");
+
+$gradoname_exist = mysql_num_rows($checgrado);
+if ($gruponame_exist>0||$gradoname_exist>0) {
 	header("location:../error.php");
 	exit();
 }else{

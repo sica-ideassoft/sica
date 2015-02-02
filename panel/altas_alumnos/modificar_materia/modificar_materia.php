@@ -250,9 +250,7 @@ include_once("php/paginacion.php");
                 echo "<td>".$row['credito']."</td>";
                 echo "<td>".$row['cal_min']."</td>";
                 ?>
-                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
-
-
+                 <td><a class="liEliminar" href="#"  onclick="delMateria(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
                 <td>
                 <form action="modificar.php" name="formulario1" method="post">
                 <input type="hidden" name="id" value="<?php echo $row['id_materia'];?>"/>
@@ -274,18 +272,6 @@ include_once("php/paginacion.php");
               ?>
             </tbody>
           </table>
-<script type="text/javascript">
-function delEmpresa(id) {
-  alertify.confirm("Realmente quiere eliminar la Materia?.",
-  function(){
-    // alertify.success('Ok');
-    window.location = "php/delete.php?action=del&id="+id;
-  },
-  function(){
-    // alertify.error('Cancel');
-  });
-}
-</script>
           <div class="control">
             <table class="table2">
 
@@ -306,6 +292,7 @@ function delEmpresa(id) {
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
+      <script src="js/aliminar.js"></script>
 <script src="alertifyjs/alertify.js"></script>
 
     </body>

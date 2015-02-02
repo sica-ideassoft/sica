@@ -1,21 +1,50 @@
-<form method="POST" action="">
-<select name="search" id="">
-	<option value="1">1</option>
-	<option value="2">2</option>
-	<option value="3">3</option>
-	<option value="4">4</option>
+<form method="POST" action="" class="form-select">
+<select name="search" id="" class='select'>
+	<option value="1">1ra estación</option>
+	<option value="2">2da estación</option>
+	<option value="3">3ra estación</option>
+	<option value="4">4ta estación</option>
 </select>
-<input type="submit" value="Buscar" name="buscar">
+<input type="submit" value="Buscar" name="buscar" class='buscar'>
 </form>
 
 <?php
-$link = @mysql_connect("localhost", "root","tescha4951");
-@mysql_select_db("calificaciones", $link);
-$buscar = $_POST['search'];
-$result = mysql_query("SELECT * FROM banner WHERE id_banner LIKE '%$buscar%' ORDER BY tema ", $link);
-while($row = mysql_fetch_array($result)){
+$buscar = @$_POST['search'];
+$result = mysql_query("SELECT * FROM banner WHERE id_banner LIKE '%$buscar%' ORDER BY id_banner asc");
+$row = mysql_fetch_array($result);
+  $ruta="php/".$row['imagen'];
+	?>
+ <figure class='pree-banner'>
+       <img src="<?php echo $ruta;?>" width="270" height="130"/>
+ </figure>
 
-           echo "<td>".$row["id_banner"]."</td> \n";
-            echo "<td>".$row["tema"]."</td> \n";
-}
-?>
+
+    <form enctype="multipart/form-data" action="php/recibir.php" method="post" name="form1">
+
+      <table class='table4'>
+      <tr>
+      <td>
+      	<label for="" class="label-table4">Imagen:</label>
+      </td>
+        <td>
+          <input type="file" name="imagen" class="imagen1" id="imagen" value="sad">
+        </td>
+
+      </tr>
+      <tr>
+      		<td>
+      			<label for="" class="label-table4">Tema:</label>
+      		</td>
+        <td><input type="text" name="tema" id="tema" class='tema' value=<?php echo $row["tema"]; ?>></td>
+      </tr>
+
+
+      		<td>
+      			<label for="" class="label-table4">Anuncio:</label>
+      		</td>
+
+      <td><input type="text" id="anuncio" name="anuncio" value="<?php echo utf8_encode($row['anuncio']); ?>" class='anuncio'></input>
+      </tr>
+      <input type="hidden" name="id" value="<?php echo $buscar; ?>">
+    </table>
+

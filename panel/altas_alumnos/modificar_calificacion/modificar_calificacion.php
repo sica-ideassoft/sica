@@ -290,13 +290,7 @@ include_once("php/paginacion.php");
               ?>
             </tbody>
           </table>
-<script type="text/javascript">
-function delEmpresa(id) {
-  if (window.confirm("Aviso:\nDesea eliminar el registro seleccionado?")) {
-    window.location = "php/delete.php?action=del&id="+id;
-  }
-}
-</script>
+
           <div class="control">
             <table class="table2">
 

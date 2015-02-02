@@ -257,8 +257,8 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['grupo'];?></td>
 
 
-<td><a class="liEliminar" href="#"
- onclick="delEmpresa(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
+ <td><a class="liEliminar" href="#"
+ onclick="delAlumno(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
  <td>
    <form action="modificar.php" name="formulario1" method="post">
   <input type="hidden" name="id" value="<?php echo $row['id_alumno'];?>"/>
@@ -281,7 +281,6 @@ include_once("php/paginacion.php");
 
             </tbody>
           </table>
-
           <div class="control">
             <table class="table2">
 
@@ -299,7 +298,7 @@ include_once("php/paginacion.php");
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
-      <!-- <script src="js/confirmacion.js"></script> -->
+      <script src="js/confirmacion.js"></script>
       <script src="js/eliminar.js"></script>
       <script src="js/val_campos.js"></script>
       <script src="alertifyjs/alertify.js"></script>

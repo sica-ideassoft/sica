@@ -1,5 +1,5 @@
-function delAlumno(id){
-  alertify.confirm("Realmente quiere modificar el Alumno?.",
+function delMateria(id){
+  alertify.confirm("Realmente quiere <b>Eliminar</b> la materia?.",
     function(){
     window.location="php/delete.php?id="+id;
     },function()

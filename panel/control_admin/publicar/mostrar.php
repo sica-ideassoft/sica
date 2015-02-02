@@ -20,10 +20,10 @@ while($filas=mysql_fetch_array($consulta)){
 	$pass=$filas['password'];
 
 ?>
-
+<!--
  <figure class='pree-banner'>
        <img src="<?php echo $ruta ;?>" width="200" height="100"/>
  </figure>
-
+ -->
 
 <?php }?>

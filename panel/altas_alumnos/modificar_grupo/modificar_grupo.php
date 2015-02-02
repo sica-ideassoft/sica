@@ -251,7 +251,7 @@ include_once("php/paginacion.php");
                 echo "<td>".$row['grado']."</td>";
                 echo "<td>".$row['grupo']."</td>";
                 ?>
-                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_grupo'];?>);"><span class="
+                 <td><a class="liEliminar" href="#"  onclick="delGrupo(<?php echo $row['id_grupo'];?>);"><span class="
                  eliminar"></span></a></td>
                  <td>
                    <form action="modificar.php" name="formulario1" method="post">
@@ -293,6 +293,7 @@ include_once("php/paginacion.php");
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
+      <script src="js/eliminar.js"></script>
 <script src="alertifyjs/alertify.js"></script>
 
     </body>

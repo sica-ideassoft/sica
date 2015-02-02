@@ -5,15 +5,6 @@ $conn->conectar();
 
 
 
-
-$consulta=mysql_query("SELECT * FROM banner ");
-$filas=mysql_fetch_array($consulta);
-	// $url = "../../control/perfil/";
-	// $imagen=$filas['imagen'];
-
-	// $dir = $url.$imagen;
-
-
 ?>
 <script src="js/jquery.js"></script>
 <script src="js/slider.js"></script>
@@ -21,44 +12,83 @@ $filas=mysql_fetch_array($consulta);
 <div class="slider-container">
         <ul id="slider" class="slider-wrapper">
             <li class="slide-current">
-                <img src="image/1.jpg" alt="Slider Imagen 1">
+            <?php
+            $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '1'");
+            $filas=mysql_fetch_array($consulta);
+            $ruta = "../../panel/control_admin/publicar/php/";
+            $url = $ruta.$filas['imagen'];
+             ?>
+                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
-                    <h3 class="caption-title">Diseño web</h3>
+                    <h3 class="caption-title">
+                    <?php
+                    echo utf8_decode($filas['tema']);
+                     ?></h3>
                     <p><?php
-
-                    	echo $filas["id_banner"];
                     	echo $filas["anuncio"];
-
 					?></p>
                 </div>
             </li>
 
             <li>
-
-                <img src="image/2.jpg" alt="Slider Imagen 1">
+                <?php
+                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '2'");
+                $filas=mysql_fetch_array($consulta);
+                $ruta = "../../panel/control_admin/publicar/php/";
+                $url = $ruta.$filas['imagen'];
+                 ?>
+                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
-                    <h3 class="caption-title">Desarrollo web</h3>
-                      <p><?php
+                <h3 class="caption-title">
+                    <?php
+                    echo utf8_decode($filas['tema']);
+                     ?></h3>
+                    <p><?php
+                        echo $filas["anuncio"];
 
-                    echo $filas["id_banner"];
-                    $contador++;
-                     ?></p>
+                    ?></p>
                 </div>
             </li>
 
             <li>
-                <img src="image/3.jpg" alt="Slider Imagen 1">
+
+                <?php
+                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '3'");
+                $filas=mysql_fetch_array($consulta);
+                $ruta = "../../panel/control_admin/publicar/php/";
+                $url = $ruta.$filas['imagen'];
+                 ?>
+                <img src="<?php echo $url;?>" alt="Slider Imagen 1">
                 <div class="caption">
-                    <h3 class="caption-title">Javascript</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
+                <h3 class="caption-title">
+                    <?php
+                    echo utf8_decode($filas['tema']);
+                     ?></h3>
+                    <p><?php
+                        echo $filas["anuncio"];
+
+                    ?></p>
                 </div>
             </li>
 
             <li>
-                <img src="image/4.jpg" alt="Slider Imagen 1">
+
+                <?php
+                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '4'");
+                $filas=mysql_fetch_array($consulta);
+                $ruta = "../../panel/control_admin/publicar/php/";
+                $url = $ruta.$filas['imagen'];
+                 ?>
+                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
-                    <h3 class="caption-title">Maquetacion</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, ea.</p>
+                <h3 class="caption-title">
+                <?php
+                    echo utf8_decode($filas['tema']);
+                     ?></h3>
+                    <p><?php
+                        echo $filas["anuncio"];
+
+                    ?></p>
                 </div>
             </li>
         </ul>

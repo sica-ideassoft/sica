@@ -1,5 +1,5 @@
-function delAlumno(id){
-  alertify.confirm("Realmente quiere modificar el Alumno?.",
+function delGrupo(id){
+  alertify.confirm("Realmente quiere <b>Eliminar</b> el grupo?.",
     function(){
     window.location="php/delete.php?id="+id;
     },function()

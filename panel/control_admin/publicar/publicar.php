@@ -6,8 +6,6 @@ if (!isset($_SESSION['admin-sica'])) {
 </script>';
 }
 ?>
-
-
 <?php
 include_once("../conectar.php");
 $conn = new DB();
@@ -237,45 +235,30 @@ $conn->conectar();
 
     ?>
   </section>
-  <?php
 
-  include_once("php/buscar.php");
-   ?>
+
   <section class="carga">
     <?php
-    include("mostrar.php");
+    include_once("php/buscar.php");
+    // include("mostrar.php");
     ?>
 
-    <form enctype="multipart/form-data" action="recibir.php" method="post" name="form1">
-
-      <table class='table4'>
-      <tr>
-        <td>
-          <input type="file" name="imagen" class="imagen1" id="imagen">
-        </td>
-
-      </tr>
-      <tr>
-        <td><input type="text" name="usuario" id="usuario" class='usuario' value=<?php echo $usuario; ?>><span class="usuario1"></span></td>
-      </tr>
-      <td><input type="password" id="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
-      </tr>
-      <tr>
-      <td>
-      <input type="submit" value="MODIFICAR" class="modificarbtn" id="modificar">
-      <div class="icomodif"> <span class="icomodif1"></span></div>
-      </input>
-    </tr>
-    </table>
-
-  </form>
 </section>
 
 <div class="control">
 
-
+  <table class="table2">
+    <tr>
+      <td>
+      <input type="submit" value="MODIFICAR" class="modificarbtn" id="modificar">
+      <div class="icomodif"> <span class="icomodif1"></span></div>
+      </input>
+      </td>
+      </tr>
+   </table>
 </div>
 
+  </form>
 
 
 

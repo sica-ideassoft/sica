@@ -9,6 +9,7 @@
 	font-weight: normal;
 	font-style: normal;
 }
+
 	.form1 .table1 input[type="file"]{
 
 		border: 1px solid transparent;
@@ -115,11 +116,12 @@
 
 	}
 	.pree-banner{
-	width: 200px;
-	height: 100px;
+	width: 270px;
+	height: 130px;
 	background-color: rgba(0,0,0,0.2);
 	margin: 0 auto;
-	margin-top: 160px;
+	margin-top: -70px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,.6);
 /*position: absolute;*/
 
 	}
