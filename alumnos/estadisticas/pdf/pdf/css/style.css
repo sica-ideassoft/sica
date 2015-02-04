@@ -8,6 +8,7 @@ background-size: 25px;
 background-repeat: no-repeat;
 background-position: center;
 font-family: helvetica;
+
 }
 h2{
 	margin: 0 auto;
@@ -130,3 +131,16 @@ text-align: center;
 .materia{
 width: 250px !important;
 }
+.qr{
+
+	}
+
+/*.qr-content img{
+
+	margin-right: 30px;
+	width: 260px;
+	right: 0px;
+	position: fixed;
+	bottom: 0px;
+	z-index: 1000 !important;
+}*/

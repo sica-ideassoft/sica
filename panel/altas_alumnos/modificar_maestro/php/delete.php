@@ -1,5 +1,6 @@
 <?php
-require("../../conexion.php");
+
+include_once("../../../../conexion/conexion.php");
 
 $id=$_GET["id"];
 	$sql = "DELETE FROM maestro WHERE id_maestro = ".$id;

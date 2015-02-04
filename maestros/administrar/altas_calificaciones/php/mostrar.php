@@ -1,8 +1,8 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-	include_once("../conectar.php");
-	$conn = new DB;
-	$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $id = $_POST["id"];
 $sql=mysql_query("SELECT

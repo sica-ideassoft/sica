@@ -10,7 +10,7 @@ include_once("php/resultados.php");
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="../image_globales/favicon.ico">
-    <title>Caliifcaciones</title>
+    <title>Calificaciones</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="css/normalize.css">
@@ -188,6 +188,17 @@ include_once("php/resultados.php");
 
                     </tbody>
                 </table>
+
+                <div class="qr">
+                <figure class="qr-content">
+                <?php
+                $id=$_GET['id'];
+                $dir = "../../temp/";
+                ?>
+
+                    <img src="<?php echo $dir.$id; ?>" alt="">
+                </figure>
+            </div>
             </div>
 
 </div>

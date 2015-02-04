@@ -1,7 +1,8 @@
 <?php
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
+  include_once("../../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 $check = mysql_query("SELECT * FROM materias order by id_materia desc");
 if(isset($_POST['sep']) && isset($_POST['nombre'])&& isset($_POST['fecha1']) && isset($_POST['fecha2']) && isset($_POST['creditos']) && isset($_POST['calificacion']))
 {

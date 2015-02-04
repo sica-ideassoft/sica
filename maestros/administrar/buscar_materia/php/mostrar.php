@@ -5,7 +5,7 @@ $id = $_POST["id"];
 
 
 $queris = mysql_query("SELECT
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 m.id_materia,m.claveSEP,m.nombre_materia,m.credito,m.cal_min,
 o.id_maestro,o.nombre,
 u.id_login_maestro,u.id_maestro,u.user

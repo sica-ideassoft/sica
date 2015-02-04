@@ -1,12 +1,12 @@
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $user = $_SESSION['maestro-session'];
 
 $query =  mysql_query("SELECT
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 m.id_materia,m.claveSEP,m.nombre_materia,m.credito,
 o.id_maestro,o.nombre,
 u.id_login_maestro,u.id_maestro,u.user
@@ -25,9 +25,18 @@ and u.user = '$user'");
           <h2><?php echo $row["nombre_materia"];  ?>
           <a href="#"><?php echo $row["credito"];  ?></a></h2>
           <ul>
-            <li><label>Grado: </label><span class="echo"><?php echo $row["grado"];  ?></span></li>
-            <li><label>Grupo: </label><span class="echo"><?php echo $row["grupo"];  ?></span></li>
-            <li><label>Profesor: </label><span class="echo"><?php echo $row["nombre"];  ?></span></li>
+            <li><label>Grado: </label>
+            <span class="echo"><?php
+              $grado = substr($row['grupo'], -2,1);
+              echo $grado;
+            ?></span></li>
+            <li><label>Grupo: </label>
+            <span class="echo"><?php
+                $grupo = substr($row['grupo'], -1);
+                echo $grupo;
+              ?></span></li>
+            <li><label>Profesor: </label>
+            <span class="echo"><?php echo $row["nombre"];  ?></span></li>
           </ul>
         </div>
 

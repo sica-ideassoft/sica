@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("../conexion.php");
-include_once('../PDO_Pagination.php');
+include_once("../../../conexion/conexion.php");
+include_once('../../../conexion/PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -245,12 +245,15 @@ include_once("php/paginacion.php");
               <?php
               foreach($model as $row)
               {
-                echo "<tr>";
-                echo "<td>".$row['nombre_materia']."</td>";
-                echo "<td>".$row['nombre']."</td>";
-                echo "<td>".$row['grado']."</td>";
-                echo "<td>".$row['grupo']."</td>";
                 ?>
+                <tr>
+                <td><?php echo $row['nombre_materia'];?></td>
+                <td><?php echo $row['nombre'];?></td>
+                <td><?php $grado = substr($row['grupo'], -2,1);
+                    echo $grado;?></td>
+                <td><?php $grupo = substr($row['grupo'], -1);
+                    echo $grupo; ?></td>
+
                  <td><a class="liEliminar" href="#"  onclick="delGrupo(<?php echo $row['id_grupo'];?>);"><span class="
                  eliminar"></span></a></td>
                  <td>

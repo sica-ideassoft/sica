@@ -1,8 +1,8 @@
 
 <?php
-include_once("../conectar.php");
-$conn = new DB;
-$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $id = $_GET["id"];
 

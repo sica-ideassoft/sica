@@ -1,13 +1,13 @@
 
 <?php
-include_once("../conectar.php");
-$conn = new DB;
-$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $id = $_POST["id"];
 
 $peticion=mysql_query("SELECT
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 m.nombre,
 s.nombre_materia
 FROM grupos g

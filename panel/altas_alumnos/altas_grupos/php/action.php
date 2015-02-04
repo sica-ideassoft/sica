@@ -1,33 +1,31 @@
 <?php
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $check = mysql_query("SELECT * FROM grupos order by id_grupo desc");
-if(isset($_POST['maestro']) && isset($_POST['materia']) && isset($_POST['grado'])&& isset($_POST['grupo']))
-{
+
 $maestro  = mysql_real_escape_string($_POST['maestro']);
 $materia  = mysql_real_escape_string($_POST['materia']);
-$grado    = mysql_real_escape_string($_POST['grado']);
-$grupo    = mysql_real_escape_string($_POST['grupo']);
+$grupos   = mysql_real_escape_string($_POST['grupos']);
 
 
-$checgrupo = mysql_query("SELECT id_materia,grado,grupo FROM grupos where
-	id_materia='".$materia."'");
+// $checMateria = mysql_query("SELECT id_materia,grupo FROM grupos where
+// 	id_materia='".$materia."'");
 
-$gruponame_exist = mysql_num_rows($checgrupo);
+// $MateriaName_exist = mysql_num_rows($checMateria);
+$checGrupo = mysql_query("SELECT id_materia,grupo FROM grupos where
+	grupo='".$grupos."'");
 
-$checgrado = mysql_query("SELECT id_materia,grado,grupo FROM grupos where
-	id_materia='".$grado."'");
+$GrupoName_exist = mysql_num_rows($checGrupo);
 
-$gradoname_exist = mysql_num_rows($checgrado);
-if ($gruponame_exist>0||$gradoname_exist>0) {
+if ($GrupoName_exist>0) {
 	header("location:../error.php");
 	exit();
 }else{
 
-$query = mysql_query("INSERT INTO grupos (id_grupo,id_maestro,id_materia,grado,grupo) values (null,'$maestro','$materia','$grado','$grupo')");
+$query = mysql_query("INSERT INTO grupos (id_grupo,id_maestro,id_materia,grupo) values (null,'$maestro','$materia','$grupos')");
 }
-}
+
 
 ?>

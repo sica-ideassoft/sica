@@ -1,7 +1,7 @@
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 if(isset($_POST['btnGuardar'])){
 	$checkuser = mysql_query("SELECT nombre FROM alumno WHERE nombre='".$_POST['nombre']."'");

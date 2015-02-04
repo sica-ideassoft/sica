@@ -1,4 +1,3 @@
-
 .pdf{
 	width: 120px;
 	height: 50px;
@@ -37,6 +36,7 @@ font-weight: bold;
 text-align: center;
 
 }
+
 .historial{
 width: 1000px !important;
 
@@ -132,6 +132,35 @@ margin: 0 auto;
 overflow: hidden;
 overflow-x:hidden;
 overflow-y:scroll;
+position: relative;
+}
+.qr{
+	width: auto;
+	height: auto;
+}
+.qr-content{
+	float: right;
+	overflow: hidden;
+	margin-right: 20px;
+}
+.div-footer{
+
+	width: 100%;
+	height: auto;
+    background: linear-gradient(rgb(10, 90, 117), rgb(19, 97, 123)) repeat scroll 0% 0% transparent;
+	display: block !important;
+	overflow: hidden;
+	position: static;
+
+
+}
+.div-footer p{
+
+	font-size: 14px;
+	color: white;
+	text-align:justify;
+	width: 96%;
+	padding:0px 0px 0px 15px;
 }
 .header-cal	figure img{
 	width: 250px;
@@ -184,6 +213,7 @@ padding: 10px 10px 10px 15px;
 width: 600px;
 height: 1215px;
 float: right !important;
+
 	}
 .header-cal	figure img{
 	width: 180px;
@@ -277,6 +307,7 @@ padding-left: 10px !important;
 	height:100%;
 	/*background-color: red;*/
 }
+
 .cal-scroll{
 width: 360px;
 height: 575px;
@@ -292,6 +323,9 @@ height: 575px;
 	width: 140px !important;
 	margin-top: 3px;
 }
+.div-footer p{
+	padding:7px;
+	}
 }
 @media screen and (max-width: 320px){
 .content-histrial{

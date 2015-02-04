@@ -6,8 +6,8 @@ location.href = "../../login_maestro/index.php";
 </script>';
 
 }
-include_once("../conexion.php");
-include_once('../PDO_Pagination.php');
+include_once("../../../conexion/conexion.php");
+include_once('../../../conexion/PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>
@@ -225,13 +225,14 @@ include_once("php/paginacion.php");
               {
                 ?>
                 <tr>
-                <td><?php echo$row['nombre_materia'];?></td>
-                <td><?php echo$row['nombre_alumno'];?></td>
-                <td><?php echo$row['A_paterno_alumno'];?></td>
-                <td><?php echo$row['A_materno_alumno'];?></td>
-                <td><?php echo$row['matricula'];?></td>
-                <td><?php echo$row['grado'];?></td>
-                <td><?php echo$row['grupo'];?></td>
+                <td><?php echo $row['nombre_materia'];?></td>
+                <td><?php echo $row['nombre_alumno'];?></td>
+                <td><?php echo $row['A_paterno_alumno'];?></td>
+                <td><?php echo $row['A_materno_alumno'];?></td>
+                <td><?php echo $row['matricula'];?></td>
+                <td><?php echo $row['grado'];?></td>
+                <td><?php echo $row['grupo'];?></td>
+
 <td>
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">
               <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
@@ -258,6 +259,7 @@ include_once("php/paginacion.php");
                 $pagination->pages("btn");
                 ?>
               </div>
+
             </table>
 
       </section>

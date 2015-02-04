@@ -1,4 +1,8 @@
 <?php
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -9,9 +13,6 @@ location.href = "../../login_admin/index.php";
 
 
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
  ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->

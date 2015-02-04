@@ -1,4 +1,9 @@
 <?php
+
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 session_start();
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -9,9 +14,6 @@ $user = $_SESSION['maestro-session'];
 
 ?>
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];

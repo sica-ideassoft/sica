@@ -379,6 +379,7 @@ $id = $_POST["id"];
 
         </tr>
         <tr>
+
 <td><input type="text" name="municipio"  id="municipio" value=<?php echo $alumno['municipio']; ?>></td>
 
         <td>

@@ -9,9 +9,10 @@ $user = $_SESSION['maestro-session'];
 
 ?>
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
+
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];

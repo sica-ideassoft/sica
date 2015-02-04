@@ -1,4 +1,8 @@
 <?php
+  include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_maestro/index.php";
@@ -8,9 +12,7 @@ $user = $_SESSION['maestro-session'];
 ?>
 
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
+
 
 $consulta=mysql_query("SELECT * from user_maestro where user ='".$user."'");
 while($filas=mysql_fetch_array($consulta)){

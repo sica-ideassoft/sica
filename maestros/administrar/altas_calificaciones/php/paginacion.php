@@ -1,14 +1,11 @@
 <?php
 $user = $_SESSION['maestro-session'];
-
-
-
 $search = null;
 if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
-	$search = htmlspecialchars($_REQUEST["search"]);
-	$pagination->param = "&search=$search";
-	$pagination->rowCount("SELECT
+$search = htmlspecialchars($_REQUEST["search"]);
+$pagination->param = "&search=$search";
+$pagination->rowCount("SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
 g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo, /*grupo*/
 o.id_maestro,o.nombre,/*maestro*/
@@ -34,16 +31,11 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_grupo   = g.id_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = '".$user."'
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row,$pagination->max_rows";
 	$query = $connection->prepare($sql);
 	$query->execute();
 
 	$model = array();
-
-
-
-
-
 
 	while($rows = $query->fetch())
 	{

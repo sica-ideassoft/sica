@@ -263,12 +263,13 @@ document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
                         </td>
                     </tr>
                 </table>
+
         <div class="content-histrial">
                 <table class="historial">
                     <thead>
                         <tr>
                             <td>clave sep</td>
-                            <td>creditos</td>
+                            <td>créditos</td>
                             <td class="materia">asignatura</td>
                             <td>cal</td>
                             <td>ciclo</td>
@@ -283,16 +284,34 @@ document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 
                     </tbody>
                 </table>
-            </div>
 
             </div>
+
+       </div>
+
         </div>
+        <div class="qr">
+                <div class="qr-content">
+                    <?php
+                        include_once("qr.php");
+
+                     ?>
+                </div>
+            </div>
+            <div class="div-footer">
+            <p>
+                Este documento, es de carácter informativo queda prohibida la violación de la información publicada ya que es
+                de carácter privado y de uso exclusivo del control escolar del Centro de Capacitación publicadas son las finales
+                del parcial correspondiente al periodo establecido en el plan de estudiosas.
+            </p>
+            </div>
     </div>
 </section>
 
 <div class="pdf">
     <div class="img-pdf">
-        <a href="pdf/pdf/cantera.php"><img src="image/downloads.png" alt=""></a>
+
+        <a href="pdf/pdf/cantera.php?id=<?php echo basename($filename);?>"><img src="image/downloads.png" alt=""></a>
     </div>
     <div class='pdf-label'>
         <p>pdf</p>

@@ -5,8 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("../conexion.php");
-include_once('../PDO_Pagination.php');
+include_once("../../../conexion/conexion.php");
+include_once('../../../conexion/PDO_Pagination.php');
 include_once("php/paginacion.php");
 
 ?>

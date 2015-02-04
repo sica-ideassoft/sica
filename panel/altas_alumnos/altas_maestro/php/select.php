@@ -1,7 +1,7 @@
 <?php
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 header('Content-Type: text/html; charset=UTF-8');
 // $consulta = mysql_query("SELECT nombre FROM maestro");
 $consulta = mysql_query("SELECT nombre FROM estados_mexico");

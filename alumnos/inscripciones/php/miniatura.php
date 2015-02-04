@@ -1,5 +1,7 @@
 <?php
-
+include_once("../../conexion/conectar.php");
+$conn = new DB();
+$conn->conectar();
 if (!isset($_SESSION['alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
@@ -8,9 +10,6 @@ location.href = "../login_alumno/index.php";
 $matricula = $_SESSION['alumno'];
  ?>
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
 
 $consulta=mysql_query("SELECT fotografia FROM alumno where matricula ='".$matricula."'");
 

@@ -1,11 +1,8 @@
 <?php
-include_once("conexion.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
-
-if(isset($_POST['nombre']) && isset($_POST['paterno']) && isset($_POST['materno'])&& isset($_POST['clavep'])&& isset($_POST['curp'])&& isset($_POST['telefono'])&& isset($_POST['correo'])&& isset($_POST['genero'])&& isset($_POST['edad'])&& isset($_POST['civil'])&& isset($_POST['nacimiento'])&& isset($_POST['estado'])&& isset($_POST['municipio'])&& isset($_POST['calle'])&& isset($_POST['interior'])&& isset($_POST['exterior'])&& isset($_POST['nacionalidad'])&& isset($_POST['user'])&& isset($_POST['password']))
-{
 $nombre       = mysql_real_escape_string($_POST['nombre']);
 $paterno      = mysql_real_escape_string($_POST['paterno']);
 $materno      = mysql_real_escape_string($_POST['materno']);
@@ -47,7 +44,5 @@ $id = trim($row[0]);
 $maestro = mysql_query("INSERT INTO user_maestro(id_login_maestro,id_maestro,user,password) values (null,'".$id."','".$user."','".$password."')");
 	}
 
-
-}
 ?>
 

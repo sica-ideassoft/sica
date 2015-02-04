@@ -5,9 +5,10 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("../conexion.php");
-include_once('../PDO_Pagination.php');
+include_once("../../../conexion/conexion.php");
+include_once('../../../conexion/PDO_Pagination.php');
 include_once("php/paginacion.php");
+
 
 ?>
 
@@ -253,8 +254,14 @@ include_once("php/paginacion.php");
                 <td><?php echo$row['A_paterno_alumno'];?></td>
                 <td><?php echo$row['A_materno_alumno'];?></td>
                 <td><?php echo$row['matricula'];?></td>
-                <td><?php echo$row['grado'];?></td>
-                <td><?php echo$row['grupo'];?></td>
+                <td><?php
+                  $grado = substr($row['grupo'], -2,1);
+                    echo $grado;
+                 ?></td>
+                <td><?php
+                  $grupo = substr($row['grupo'], -1);
+                    echo $grupo;
+                ?></td>
 
 
  <td><a class="liEliminar" href="#"

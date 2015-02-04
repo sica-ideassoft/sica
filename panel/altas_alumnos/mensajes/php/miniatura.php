@@ -1,4 +1,8 @@
 <?php
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 if (!isset($_SESSION['admin-sica'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
@@ -7,9 +11,6 @@ location.href = "../../login_admin/index.php";
 $user = $_SESSION['admin-sica'];
  ?>
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
 
 $consulta=mysql_query("SELECT * FROM admin where user ='".$user."'");
 

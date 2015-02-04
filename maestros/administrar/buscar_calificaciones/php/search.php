@@ -1,12 +1,15 @@
 <?php
+
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
+
 session_start();
 $user = $_SESSION['maestro-session'];
 echo $user;
 
 
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){

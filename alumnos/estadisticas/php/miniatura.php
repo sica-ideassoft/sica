@@ -8,7 +8,7 @@ location.href = "../login_alumno/index.php";
 $matricula = $_SESSION['alumno'];
  ?>
 <?php
-include_once("../conectar.php");
+include_once("../../conexion/conectar.php");
 $conn = new DB();
 $conn->conectar();
 

@@ -1,9 +1,13 @@
 <?php
-require("../../conexion.php");
+  include_once("../../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
-$id=$_GET["id"];
+	$id = mysql_real_escape_string($_GET["id"]);
+
 	$sql = "DELETE FROM alumno WHERE id_alumno = ".$id;
-	$query = $connection->prepare($sql);
-	$query->execute();
+	mysql_query($sql);
 	header("location:../modificar_alumno.php");
-?>
+
+
+ ?>

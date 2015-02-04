@@ -7,9 +7,10 @@ location.href = "../login_maestro/index.php";
 }
 ?>
 <?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
+
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
  ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->

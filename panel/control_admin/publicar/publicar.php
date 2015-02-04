@@ -1,4 +1,8 @@
 <?php
+include_once("../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
+
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
   echo '<SCRIPT LANGUAGE="javascript">
@@ -6,11 +10,7 @@ if (!isset($_SESSION['admin-sica'])) {
 </script>';
 }
 ?>
-<?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
-?>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->

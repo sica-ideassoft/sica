@@ -3,7 +3,7 @@
 $id = $_POST["id"];
 $sql=mysql_query("SELECT
  	a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
-	g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
+	g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 	s.id_materia,s.nombre_materia,
 	m.nombre,m.id_maestro,
 	u.id_login_maestro,u.id_maestro,u.user
@@ -53,8 +53,14 @@ $nombre = $row['nombre'];
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
 	<td><?php echo $row['edad']; ?> Años</td>
-	<td><?php echo $row['grado']; ?></td>
-	<td><?php echo $row['grupo']; ?></td>
+	<td><?php
+	$grado = substr($row['grupo'], -2,1);
+				echo $grado;
+	?></td>
+	<td><?php
+	$grupo = substr($row['grupo'], -1);
+				echo $grupo;
+	?></td>
 </tr>
 
 <tr>
@@ -89,3 +95,4 @@ $nombre = $row['nombre'];
 }
 
  ?>
+

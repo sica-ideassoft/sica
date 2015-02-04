@@ -1,7 +1,7 @@
 <?php
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../../conexion/conectar.php");
+  $conn = new DB;
+  $conn->conectar();
 
 $nombre       = mysql_real_escape_string($_POST['nombre']);
 $paterno      = mysql_real_escape_string($_POST['paterno']);
@@ -39,7 +39,7 @@ if ($username_exist>0) {
 	header("location:../error.php");
 	exit();
 }else{
-$query = mysql_query("INSERT INTO alumno(id_alumno,id_grupo,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,fotografia,status,ip) values (null,'$grupo','$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','$fname','activo','$ip')");
+$query = mysql_query("INSERT INTO alumno(id_alumno,id_grupo,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,password,fotografia,status,ip) values (null,'$grupo','$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','sica-alumno','$fname','activo','$ip')");
 }
 // }
 

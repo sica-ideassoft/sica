@@ -12,9 +12,10 @@ $(function() {
  var grado    = $("#grado").val();
  var grupo    = $("#grupo").val();
 
+var grupos = grado + grupo;
 
 
-var dataString ='id='+ id +'&materia='+ materia +'&maestro='+ maestro + '&grado='+ grado+ '&grupo='+ grupo;
+var dataString ='id='+ id +'&materia='+ materia +'&maestro='+ maestro + '&grupos='+ grupos;
 
 if(materia === '' ||maestro === '' ||grado === '' ||grupo === '')
 {
