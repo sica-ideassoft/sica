@@ -132,15 +132,13 @@ text-align: center;
 width: 250px !important;
 }
 .qr{
-
+position: absolute;
+/*background-color: red;*/
+bottom: 75px;
 	}
-
-/*.qr-content img{
-
-	margin-right: 30px;
-	width: 260px;
-	right: 0px;
-	position: fixed;
-	bottom: 0px;
-	z-index: 1000 !important;
-}*/
+.qr-content{
+	margin-left: 715px;
+}
+.qr-content img{
+	width: 80px;
+}

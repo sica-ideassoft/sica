@@ -3,7 +3,6 @@
 	require_once("dompdf/dompdf_config.inc.php");
 	 //Cargamos la librería de DOMPDF
 	$file = file_get_contents("Calificaciones.php");
-
 	$dompdf = new DOMPDF();
     $dompdf->set_paper("Letter", "portrait");
     $dompdf->load_html($file);

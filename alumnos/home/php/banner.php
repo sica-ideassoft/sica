@@ -3,8 +3,6 @@ include_once("../../conexion/conectar.php");
 $conn = new DB();
 $conn->conectar();
 
-
-
 ?>
 <script src="js/jquery.js"></script>
 <script src="js/slider.js"></script>

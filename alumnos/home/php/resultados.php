@@ -3,7 +3,7 @@ include_once("../../conexion/conectar.php");
 $conn = new DB;
 $conn->conectar();
 
-$user = $_SESSION['alumno'];
+$matricula = $_SESSION['alumno'];
 
 ?>
 <?php
@@ -13,7 +13,7 @@ $sql=mysql_query("SELECT
 	g.id_grupo,g.id_maestro,g.id_materia,g.grupo
 	FROM alumno a
 	INNER JOIN grupos  g ON g.id_grupo = a.id_grupo
-	WHERE a.matricula = '".$user."'");
+	WHERE a.matricula = '".$matricula."'");
 ?>
 
 <?php

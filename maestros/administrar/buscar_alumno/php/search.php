@@ -1,5 +1,5 @@
 <?php
-include_once("../../../conexion/conectar.php");
+include_once("../../../../conexion/conectar.php");
   $conn = new DB;
   $conn->conectar();
 
@@ -55,7 +55,7 @@ while($f=mysql_fetch_array($busqueda)){
 
 
 		<td>
-        <form action="mostrar_alumnos.php" name="formulario1" method="post">
+        <form action="mostrar_alumno.php" name="formulario1" method="post">
         <input type="hidden" name="id" value="<?php echo $f['id_alumno']?>"/>
         <button name="enviar"class="botton"><span class="mas"></span></button>
         </form>

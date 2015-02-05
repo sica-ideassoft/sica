@@ -182,7 +182,7 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">101.5 de 100</label>
+                            <label for=""><?php echo $row["creditos"];?> de 100</label>
                         </td>
                     </tr>
                 </table>
@@ -219,7 +219,7 @@ include_once("php/resultados.php");
                             <label for="">
                                 <script>
                                      var f = new Date();
-document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
+document.write( f.getFullYear() +  "/" + (f.getMonth() +1) + "/" + f.getDate() );
                                 </script>
                             </label>
                         </td>
@@ -310,8 +310,10 @@ document.write(f.getDate() + "/" + (f.getMonth() +1) + "/" + f.getFullYear());
 
 <div class="pdf">
     <div class="img-pdf">
+        <a href="pdf/pdf/cantera.php">
+        <img src="image/downloads.png" alt="">
+        </a>
 
-        <a href="pdf/pdf/cantera.php?id=<?php echo basename($filename);?>"><img src="image/downloads.png" alt=""></a>
     </div>
     <div class='pdf-label'>
         <p>pdf</p>

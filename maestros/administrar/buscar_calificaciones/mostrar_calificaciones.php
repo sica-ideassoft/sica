@@ -24,9 +24,9 @@ if (!isset($_SESSION['maestro-session'])) {
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/buscar_alumno.css">
+  <link rel="stylesheet" href="css/buscar_calificaciones.css">
   <link rel="stylesheet" href="css/mensajes.css">
-  <link rel="stylesheet" href="css/mostrar_alumnos.css">
+  <link rel="stylesheet" href="css/mostrar_calificaciones.css">
 
 </head>
 <body>
@@ -123,7 +123,7 @@ if (!isset($_SESSION['maestro-session'])) {
     <div id='cssmenu'>
       <ul class="ul2">
         <li ><a href='../home/index.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin activo'><a   href='#'><span class="icoAlumno">ALUMNOS</span></a>
+        <li class='has-sub admin'><a   href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
           <li ><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
@@ -140,7 +140,7 @@ if (!isset($_SESSION['maestro-session'])) {
         </ul>
       </li>
 
-      <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+      <li class='has-sub admin  activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
         <ul>
         </li>
         <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
@@ -207,7 +207,7 @@ if (!isset($_SESSION['maestro-session'])) {
   <table>
     <tr>
       <td>
-        <a class="regresar" href="buscar_alumno.php">REGRESAR</a><span class="reg"></span>
+        <a class="regresar" href="buscar_calificaciones.php">REGRESAR</a><span class="reg"></span>
       </td>
     </tr>
   </table>

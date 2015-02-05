@@ -7,7 +7,7 @@ $search = htmlspecialchars($_REQUEST["search"]);
 $pagination->param = "&search=$search";
 $pagination->rowCount("SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo, /*grupo*/
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo, /*grupo*/
 o.id_maestro,o.nombre,/*maestro*/
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
 u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/
@@ -21,7 +21,7 @@ and u.user = '".$user."'
 	$pagination->config(3, 5);
 	$sql = "SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo, /*grupo*/
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo, /*grupo*/
 o.id_maestro,o.nombre,/*maestro*/
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
 u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/
@@ -48,7 +48,7 @@ else
 	$pagination->config(3, 7);
 	$sql = "SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo, /*grupo*/
+g.id_grupo,g.id_maestro,g.id_materia,g.grupo, /*grupo*/
 o.id_maestro,o.nombre,/*maestro*/
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
 u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/

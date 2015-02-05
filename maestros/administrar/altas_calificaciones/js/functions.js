@@ -3,12 +3,14 @@ $(function() {
   $("#enviar").click(function(e) {
     e.preventDefault();
 
+
  var credito = $("#credito").val();
  var cal     = $("#cal").val();
+ var eval    = $("#eval").val();
 
- var dataString ='id='+ id +'&grupo='+ grupo +'&credito='+ credito +'&cal='+ cal;
+ var dataString ='id='+ id +'&materia='+ materia +'&credito='+ credito +'&cal='+ cal+'&eval='+ eval;
 
-if(credito === '' ||cal === '')
+if(credito === '' ||cal === ''||eval === '')
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

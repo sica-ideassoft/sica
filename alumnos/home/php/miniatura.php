@@ -1,5 +1,4 @@
 <?php
-
 if (!isset($_SESSION['alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";

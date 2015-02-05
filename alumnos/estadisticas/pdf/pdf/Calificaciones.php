@@ -66,7 +66,9 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">71.6</label>
+                            <label for="">
+                                <?php echo $row["calificacion"];?>
+                            </label>
                         </td>
                     </tr>
 
@@ -77,7 +79,7 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">101.5 de 100</label>
+                    <label for=""><?php echo $row["creditos"];?>  de 100</label>
                         </td>
                     </tr>
                 </table>
@@ -158,7 +160,9 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                            <label for="">2010-12-01</label>
+                               <label for="">
+                                   <?php echo date("Y-m-d"); ?>
+                               </label>
                         </td>
                     </tr>
                 </table >
@@ -190,13 +194,14 @@ include_once("php/resultados.php");
                 </table>
 
                 <div class="qr">
-                <figure class="qr-content">
                 <?php
-                $id=$_GET['id'];
-                $dir = "../../temp/";
-                ?>
 
-                    <img src="<?php echo $dir.$id; ?>" alt="">
+                   $matricula = $row['matricula'];
+                   $url = "../../temp/";
+                   $ext = ".jpg";
+                 ?>
+                <figure class="qr-content">
+                    <img src="<?php echo $url.$matricula.$ext;?>" alt="">
                 </figure>
             </div>
             </div>

@@ -1,13 +1,11 @@
 <?php
-
 if (!isset($_SESSION['alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
 $matricula = $_SESSION['alumno'];
- ?>
-<?php
+
 include_once("../../conexion/conectar.php");
 $conn = new DB();
 $conn->conectar();

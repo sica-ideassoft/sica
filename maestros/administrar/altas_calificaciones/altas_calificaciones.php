@@ -207,7 +207,7 @@ include_once("php/paginacion.php");
           <table>
             <thead class="datosmodificar">
               <tr >
-                <th>Materia</th>
+                <th class="materia">Materia</th>
                 <th>nombre</th>
                 <th>A paterno</th>
                 <th>A materno</th>
@@ -225,13 +225,19 @@ include_once("php/paginacion.php");
               {
                 ?>
                 <tr>
-                <td><?php echo $row['nombre_materia'];?></td>
+                <td class="materia"><?php echo $row['nombre_materia'];?></td>
                 <td><?php echo $row['nombre_alumno'];?></td>
                 <td><?php echo $row['A_paterno_alumno'];?></td>
                 <td><?php echo $row['A_materno_alumno'];?></td>
                 <td><?php echo $row['matricula'];?></td>
-                <td><?php echo $row['grado'];?></td>
-                <td><?php echo $row['grupo'];?></td>
+                <td><?php
+                  $grado = substr($row['grupo'], -2,1);
+                    echo $grado;
+                 ?></td>
+                <td><?php
+                  $grupo = substr($row['grupo'], -1);
+                    echo $grupo;
+                ?></td>
 
 <td>
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">

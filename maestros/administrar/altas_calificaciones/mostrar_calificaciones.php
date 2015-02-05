@@ -231,6 +231,7 @@ include_once("php/mostrar.php");
   <table class="table2">
 
           <tr>
+
           <td>
             <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
             <div class="conent1 color"> <span class="icoaltas"></span></div>
