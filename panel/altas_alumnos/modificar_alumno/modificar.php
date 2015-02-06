@@ -331,6 +331,7 @@ $id = $_POST["id"];
       </tr>
       <tr>
         <td><input type="text" name="correo" id="correo" value=<?php echo $alumno['correo']; ?>></td>
+
         <td><select name="genero" id="genero" value=<?php echo $alumno['genero']; ?>>
           <option value="masculino">Masculino</option>
           <option value="femenino">Femenino</option>
@@ -347,13 +348,15 @@ $id = $_POST["id"];
         </tr>
 
         <tr>
-          <td class="edad"><select name="edad" id="edad" value=<?php echo $alumno['edad']; ?>>
+          <td class="edad">
+          <select name="edad" id="edad" value=<?php echo $alumno['edad']; ?>>
             <?php
               for ($i=10; $i <= 90 ; $i++) {
             echo "<option>".$i."</option>";
               }
              ?>
-          </select><label for="">Años</label> </td>
+          </select>
+          <label for="">Años</label> </td>
            <td class='grupo'><select name="grupo"  id="grupo">
               <?php include_once("php/grupo.php");
                grupo();

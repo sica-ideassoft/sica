@@ -321,18 +321,23 @@ location.href = "../../login_admin/index.php";
                 modulo();
               ?>
                 </select></td>
+                <td>
+                <select name="grado" id="grado">
+                <?php
+                include_once("php/grupo.php");
+                grado();
+                 ?>
+                 </select>
+                </td>
+                <td>
+                <select name="grupo" id="grupo">
+                <?php
+                include_once("php/grupo.php");
+                grupo();
+                 ?>
+                 </select>
+                </td>
 
-                <td><select name="grado" id="grado">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                </select></td>
-
-                <td><select name="grupo" id="grupo">
-                    <option value="A">A</option>
-                    <option value="B">B</option>
-                    <option value="C">C</option>
-                </select></td>
               </tr>
               <tr>
           <table class="tableBtn">

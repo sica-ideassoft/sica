@@ -135,7 +135,7 @@ include_once("php/paginacion.php");
             <div class="Mcontent">
               <div id='cssmenu'>
                  <ul class="ul2">
-        <li><a href='#'><span class="icoHome">HOME</span></a></li>
+        <li><a href="../home/index.php"><span class="icoHome">HOME</span></a></li>
         <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>

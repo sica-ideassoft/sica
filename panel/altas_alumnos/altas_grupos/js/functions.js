@@ -7,6 +7,7 @@ $(function() {
     var grupo    = $("#grupo").val();
     var grupos = grado + grupo;
 
+
 var dataString = 'maestro='+ maestro + '&materia='+ materia + '&grupos=' + grupos ;
 
 if(maestro === '' || materia === "")

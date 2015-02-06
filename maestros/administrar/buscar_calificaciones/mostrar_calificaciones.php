@@ -143,9 +143,9 @@ if (!isset($_SESSION['maestro-session'])) {
       <li class='has-sub admin  activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
         <ul>
         </li>
-        <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+        <li><a   class="activo" href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
         </li>
-        <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+        <li><a  href='../altas_calificaciones/altas_calificaciones.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
         </li>
 
 

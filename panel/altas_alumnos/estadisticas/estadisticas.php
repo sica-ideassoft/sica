@@ -212,13 +212,19 @@ location.href = "../../login_admin/index.php";
         </div>
         <p>estadisticas</p>
         </div>
+
+
+    <?php
+    include_once("php/datos.php");
+     ?>
+    <div id="chart_div" >
+
+    </div>
+
             <div class="control">
 
               <table class="table2">
             </table>
-
-        </form>
-
       </section>
 
       <!-- fin de section -->
@@ -229,7 +235,8 @@ location.href = "../../login_admin/index.php";
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
-
+      <script src="js/jsapi.js"></script>
+      <script src="js/grafica.js"></script>
 
     </body>
     </html>

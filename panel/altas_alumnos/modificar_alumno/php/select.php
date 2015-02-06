@@ -2,6 +2,10 @@
 include_once("../../../conexion/conectar.php");
   $conn = new DB;
   $conn->conectar();
+
+echo $id;
+
+
 header('Content-Type: text/html; charset=UTF-8');
 // $consulta = mysql_query("SELECT nombre FROM maestro");
 $consulta = mysql_query("SELECT nombre FROM estados_mexico order by id_estado");

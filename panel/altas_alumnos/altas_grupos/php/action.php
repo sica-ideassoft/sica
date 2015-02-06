@@ -14,12 +14,11 @@ $grupos   = mysql_real_escape_string($_POST['grupos']);
 // 	id_materia='".$materia."'");
 
 // $MateriaName_exist = mysql_num_rows($checMateria);
-$checGrupo = mysql_query("SELECT id_materia,grupo FROM grupos where
-	grupo='".$grupos."'");
+$checGrupo = mysql_query("SELECT id_materia,grupo
+	FROM grupos where
+	id_materia='".$materia."' AND grupo='".$grupos."'");
 
-$GrupoName_exist = mysql_num_rows($checGrupo);
-
-if ($GrupoName_exist>0) {
+if (mysql_num_rows($checGrupo) > 0) {
 	header("location:../error.php");
 	exit();
 }else{
