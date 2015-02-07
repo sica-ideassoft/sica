@@ -1,15 +1,13 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
+include_once("../../../../conexion/conexion.php");
+$conn =  new Conexion();
 session_start();
 $user = $_SESSION['maestro-session'];
 echo $user;
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT
+$sql = "SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
 g.id_grupo,g.id_maestro,g.id_materia,g.grupo, /*grupo*/
 o.id_maestro,o.nombre,/*maestro*/
@@ -22,12 +20,11 @@ INNER JOIN alumno  a      ON a.id_grupo   = g.id_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = '".$user."'
 WHERE a.nombre_alumno LIKE '%".$busca."%'
-	");
+	";
 
-// $row=mysql_fetch_array($busqueda);
-	//
+$query = $conn->query($sql);
 
-	if(mysql_num_rows($busqueda)==0) {
+	if($query->rowCount() ==0) {
 	?>
 		<tr>
 			<td colspan='7'>El alumno no existe</td>
@@ -36,7 +33,7 @@ WHERE a.nombre_alumno LIKE '%".$busca."%'
 	<?php
 	}
 
-while($f=mysql_fetch_array($busqueda)){
+while($f=$query->fetch()){
 
 	?>
 	<tr>

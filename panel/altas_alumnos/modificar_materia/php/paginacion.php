@@ -1,4 +1,7 @@
 <?php
+include_once("../../../conexion/PDO_Pagination.php");
+$conn = new Conexion();
+$pagination = new PDO_Pagination($conn);
 $search = null;
 if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
@@ -10,17 +13,14 @@ WHERE nombre_materia LIKE '%$search%' OR claveSEP LIKE '%$search%'
 OR credito LIKE '%$search%' OR cal_min LIKE '%$search%'");
 
 
-
-// "SELECT * FROM materias WHERE nombre LIKE '%$search%' OR profesor LIKE '%$search%' OR credito LIKE '%$search%'");
 $pagination->config(3, 5);
-// $sql = "SELECT * FROM materias WHERE nombre LIKE '%$search%' OR profesor LIKE '%$search%' OR credito LIKE '%$search%' ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
 
 $sql = "SELECT * FROM materias
 WHERE nombre_materia LIKE '%$search%' OR claveSEP LIKE '%$search%'
 	OR credito LIKE '%$search%'
 	OR cal_min LIKE '%$search%'
 	ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
-$query = $connection->prepare($sql);
+$query = $conn->prepare($sql);
 $query->execute();
 
 $model = array();
@@ -39,7 +39,7 @@ $sql = "SELECT * FROM materias
 ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
 
 // $sql = "SELECT * FROM materias ORDER BY id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
-$query = $connection->prepare($sql);
+$query = $conn->prepare($sql);
 $query->execute();
 $model = array();
 

@@ -1,4 +1,7 @@
 <?php
+include_once("../../../conexion/PDO_Pagination.php");
+$conn = new Conexion();
+$pagination = new PDO_Pagination($conn);
 $search = null;
 if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 {
@@ -21,7 +24,7 @@ FROM grupos g
 INNER JOIN maestro m  ON g.id_maestro = m.id_maestro
 INNER JOIN materias s ON g.id_materia = s.id_materia
 WHERE m.nombre LIKE '%$search%' OR s.nombre_materia LIKE '%$search%' OR g.grupo LIKE '%$search%'  ORDER BY g.id_grupo ASC LIMIT $pagination->start_row, $pagination->max_rows";
-$query = $connection->prepare($sql);
+$query = $conn->prepare($sql);
 $query->execute();
 
 $model = array();
@@ -49,7 +52,7 @@ FROM grupos g
 INNER JOIN maestro m  ON g.id_maestro = m.id_maestro
 INNER JOIN materias s ON g.id_materia = s.id_materia
 ORDER BY g.id_grupo ASC LIMIT $pagination->start_row, $pagination->max_rows";
-$query = $connection->prepare($sql);
+$query = $conn->prepare($sql);
 $query->execute();
 $model = array();
 

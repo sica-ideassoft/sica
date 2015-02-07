@@ -1,5 +1,6 @@
 <?php
-require_once('Connection.simple.php');
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $conn = dbConnect();
 	$OK = true;

@@ -1,16 +1,16 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
+$conn = new Conexion();
 $id = $_POST["id"];
-$sql=mysql_query("SELECT
+$sql="SELECT
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
 	g.id_grupo,g.id_maestro,g.id_materia,g.grupo
 	FROM alumno a
 	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
-	WHERE a.id_alumno = '".$id."'");
-?>
+	WHERE a.id_alumno = '".$id."'";
 
-<?php
-while($row = mysql_fetch_array($sql)){
+$query = $conn->query($sql);
+while($row = $query->fetch()){
 
 ?>
 <table class="tabla-mostrar">

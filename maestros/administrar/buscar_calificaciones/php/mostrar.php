@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-$id = $_GET["id"];
-$sql=mysql_query("SELECT
+$conn =  new Conexion();
+$id = $_POST["id"];
+$sql = "SELECT
  	a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
 	g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,
 	s.id_materia,s.nombre_materia,
@@ -12,11 +13,11 @@ $sql=mysql_query("SELECT
 	INNER JOIN materias s  ON s.id_materia = g.id_materia
 	INNER JOIN maestro m ON m.id_maestro = g.id_maestro
 	INNER JOIN user_maestro u ON u.id_maestro = m.id_maestro
-	WHERE id_alumno = '".$id."'");
-?>
+	WHERE id_alumno = '".$id."'";
 
-<?php
-while($row = mysql_fetch_array($sql)){
+$query = $conn->query($sql);
+
+while($row = $query->fetch()){
 $nombre = $row['nombre'];
 ?>
 <table class="tabla-mostrar">

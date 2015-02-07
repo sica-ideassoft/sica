@@ -1,7 +1,6 @@
 <?php
-	include_once("../../../conexion/conectar.php");
-	$conn = new DB;
-	$conn->conectar();
+	include_once("../../../conexion/conexion.php");
+	$conn =  new Conexion();
 
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -12,9 +11,9 @@ $user = $_SESSION['maestro-session'];
  ?>
 <?php
 
-$consulta=mysql_query("SELECT * FROM user_maestro where user ='".$user."'");
-
-while($filas=mysql_fetch_array($consulta)){
+$sql = "SELECT * FROM user_maestro where user ='".$user."'";
+$query = $conn->query($sql);
+while($filas=$query->fetch()){
 	$url = "../../control/perfil/";
 	$imagen=$filas['imagen'];
 

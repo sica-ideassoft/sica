@@ -1,8 +1,6 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 if(isset($_POST['btnGuardar'])){
 $imagen = $_POST["imagen"];

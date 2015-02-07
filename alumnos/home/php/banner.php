@@ -1,8 +1,6 @@
 <?php
-include_once("../../conexion/conectar.php");
-$conn = new DB();
-$conn->conectar();
-
+include_once("../../conexion/conexion.php");
+$conn = new Conexion();
 ?>
 <script src="js/jquery.js"></script>
 <script src="js/slider.js"></script>
@@ -11,8 +9,11 @@ $conn->conectar();
         <ul id="slider" class="slider-wrapper">
             <li class="slide-current">
             <?php
-            $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '1'");
-            $filas=mysql_fetch_array($consulta);
+            $sql= "SELECT * FROM banner WHERE id_banner = '1'";
+            $query=$conn->query($sql);
+
+            $filas=$query->fetch();
+
             $ruta = "../../panel/control_admin/publicar/php/";
             $url = $ruta.$filas['imagen'];
              ?>
@@ -30,8 +31,10 @@ $conn->conectar();
 
             <li>
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '2'");
-                $filas=mysql_fetch_array($consulta);
+                $consulta="SELECT * FROM banner WHERE id_banner = '2'";
+                $query = $conn->query($consulta);
+                $filas = $query->fetch();
+
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>
@@ -51,8 +54,9 @@ $conn->conectar();
             <li>
 
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '3'");
-                $filas=mysql_fetch_array($consulta);
+                $sql="SELECT * FROM banner WHERE id_banner = '3'";
+                $query =$conn->query($sql);
+                $filas = $query->fetch();
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>
@@ -72,8 +76,9 @@ $conn->conectar();
             <li>
 
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner WHERE id_banner = '4'");
-                $filas=mysql_fetch_array($consulta);
+                $sql="SELECT * FROM banner WHERE id_banner = '4'";
+                $query = $conn->query($sql);
+                $filas= $query->fetch();
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>

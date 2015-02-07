@@ -1,8 +1,7 @@
 <?php
 
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+  $conn = new Conexion();
 
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -10,12 +9,10 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 $user = $_SESSION['maestro-session'];
-?>
 
-<?php
-
-$consulta=mysql_query("SELECT * from user_maestro where user ='".$user."'");
-while($filas=mysql_fetch_array($consulta)){
+$sql = "SELECT * from user_maestro where user ='".$user."'";
+$query = $conn->query($sql);
+while($filas=$query->fetch()){
 
 	$imagen=$filas['imagen'];
 	$usuario=$filas['user'];

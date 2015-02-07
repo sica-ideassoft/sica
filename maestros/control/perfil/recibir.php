@@ -7,12 +7,8 @@ location.href = "../login_maestro/index.php";
 }
 $user = $_SESSION['maestro-session'];
 
-?>
-<?php
-
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+  $conn = new Conexion();
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];
@@ -21,11 +17,14 @@ $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
 
-$sql = "UPDATE user_maestro set imagen = '".$rutaDestino."' WHERE  user ='".$user."'";
+$sql=$conn->prepare("UPDATE user_maestro set imagen = :imagen WHERE  user =:user");
 
-$res=mysql_query($sql);
+$sql->bindParam(':imagen',$rutaDestino);
+$sql->bindParam(':user',$user);
 
-if ($res){
+$sql->execute();
+
+if ($sql){
 	header("location:perfil.php");
 }else{
     echo 'no se pudo modificar';

@@ -1,7 +1,6 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 if (!isset($_SESSION['admin-sica'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -9,12 +8,11 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 $user = $_SESSION['admin-sica'];
- ?>
-<?php
 
-$consulta=mysql_query("SELECT * FROM admin where user ='".$user."'");
+$sql = "SELECT * FROM admin where user ='".$user."'";
+$query = $conn->query($sql);
 
-while($filas=mysql_fetch_array($consulta)){
+while($filas=$query->fetch()){
 	$url = "../../control_admin/perfil/";
 	$imagen=$filas['imagen'];
 

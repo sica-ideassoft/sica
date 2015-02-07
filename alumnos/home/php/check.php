@@ -1,13 +1,14 @@
 <?php
-include_once("../../conexion/conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../conexion/conexion.php");
+$conn = new Conexion();
 
 $matricula = $_SESSION['alumno'];
 
-$imagen = mysql_query("SELECT fotografia FROM alumno WHERE matricula='".$matricula."'");
+$sql ="SELECT fotografia FROM alumno WHERE matricula='".$matricula."'";
 
-$row = mysql_fetch_array($imagen);
+$query = $conn->query($sql);
+$row = $query->fetch();
+
 $foto = $row["fotografia"];
 
 // $checkimg = mysql_query("SELECT fotografia FROM alumno WHERE matricula='".$matricula."'");

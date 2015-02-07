@@ -1,14 +1,14 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $id = $_POST["id"];
 
-$consulta = mysql_query("SELECT *
+$sql = "SELECT *
 FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'");
-while($filas=mysql_fetch_array($consulta)){
+INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'";
+$query = $conn->query($sql);
+while($filas=$query->fetch()){
 
 	$destino = "../../../maestros/control/perfil/";
 

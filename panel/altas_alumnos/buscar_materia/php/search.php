@@ -1,16 +1,15 @@
 <?php
-  include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+  include_once("../../../../conexion/conexion.php");
+  $conn = new Conexion();
 
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM materias
-WHERE nombre_materia LIKE '%".$busca."%' OR claveSEP LIKE '%".$busca."%' OR credito LIKE '%".$busca."%' OR cal_min LIKE '%".$busca."%' ORDER BY claveSEP asc ");
+$sql = "SELECT * FROM materias
+WHERE nombre_materia LIKE '%".$busca."%' OR claveSEP LIKE '%".$busca."%' OR credito LIKE '%".$busca."%' OR cal_min LIKE '%".$busca."%' ORDER BY claveSEP asc ";
+$query = $conn->query($sql);
 
-
-	if(mysql_num_rows($busqueda)==0) {
+	if($query->rowCount()==0) {
 	?>
 		<tr class= "existe">
 			<td  colspan='9'>La matería no existe</td>
@@ -18,7 +17,7 @@ WHERE nombre_materia LIKE '%".$busca."%' OR claveSEP LIKE '%".$busca."%' OR cred
 
 	<?php
 	}
-	while($f=mysql_fetch_array($busqueda)){
+	while($f=$query->fetch()){
 
 
 	?>

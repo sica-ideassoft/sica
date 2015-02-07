@@ -1,10 +1,13 @@
 <?php
     $user = $_SESSION['alumno'];
+    $conn = new Conexion();
     include('phpqrcode/qrlib.php');
     // include('qrconfig.php');
 
-    $query = mysql_query("SELECT * FROM alumno WHERE matricula  = '$user'");
-    $row = mysql_fetch_array($query);
+    $sql = "SELECT * FROM alumno WHERE matricula  = '$user'";
+    $query = $conn->query($sql);
+
+    $row = $query->fetch();
 
     $alumno1 = $row['nombre_alumno'].' ';
     $apellido1  = $row['A_paterno_alumno'].' ';

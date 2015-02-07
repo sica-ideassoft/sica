@@ -1,9 +1,6 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
-
+include_once("../../../../conexion/conexion.php");
+$conn =  new Conexion();
 session_start();
 if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
@@ -11,15 +8,12 @@ location.href = "../../login_maestro/index.php";
 </script>';
 }
 $user = $_SESSION['maestro-session'];
-?>
-<?php
 
-// $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
 
 
-$busqueda=mysql_query("SELECT
+$sql = "SELECT
 g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 m.id_materia,m.claveSEP,m.nombre_materia,m.credito,m.cal_min,
 o.id_maestro,o.nombre,
@@ -29,10 +23,10 @@ INNER JOIN grupos g ON m.id_materia = g.id_materia
 INNER JOIN maestro o  ON o.id_maestro = g.id_maestro
 INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
 and u.user = '$user'
-WHERE m.nombre_materia LIKE '%".$busca."%'");
+WHERE m.nombre_materia LIKE '%".$busca."%'";
 
-
-	if(mysql_num_rows($busqueda)==0) {
+$query = $conn->query($sql);
+	if($query->rowCount()==0) {
 	?>
 		<tr class= "existe">
 			<td  colspan='5'>La matería no existe</td>
@@ -40,7 +34,7 @@ WHERE m.nombre_materia LIKE '%".$busca."%'");
 
 	<?php
 	}
-	while($f=mysql_fetch_array($busqueda)){
+	while($f=$query->fetch()){
 
 	?>
 		<tr>

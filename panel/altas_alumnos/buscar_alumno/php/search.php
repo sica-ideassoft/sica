@@ -1,24 +1,21 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-// $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
 
-$busqueda=mysql_query("SELECT
+$sql = "SELECT
 	a.id_alumno,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.id_grupo,
 	g.grupo,g.id_grupo
 	FROM alumno a
 	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
 	WHERE a.nombre_alumno LIKE '%".$busca."%' OR a.A_paterno_alumno LIKE '%".$busca."%' OR a.A_materno_alumno LIKE '%".$busca."%'
-	OR a.matricula LIKE '%".$busca."%'");
+	OR a.matricula LIKE '%".$busca."%'";
 
-// $row=mysql_fetch_array($busqueda);
-	//
+$query = $conn->query($sql);
 
-	if(mysql_num_rows($busqueda)==0) {
+	if($query->rowCount()==0) {
 	?>
 		<tr>
 			<td colspan='7'>El alumno no existe</td>
@@ -27,7 +24,7 @@ $busqueda=mysql_query("SELECT
 	<?php
 	}
 
-while($f=mysql_fetch_array($busqueda)){
+while($f=$query->fetch()){
 
 	?>
 	<tr>

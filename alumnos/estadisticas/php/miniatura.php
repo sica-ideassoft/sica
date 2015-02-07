@@ -6,13 +6,12 @@ location.href = "../login_alumno/index.php";
 }
 $matricula = $_SESSION['alumno'];
 
-include_once("../../conexion/conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../conexion/conexion.php");
+$conn = new Conexion();
 
-$consulta=mysql_query("SELECT fotografia FROM alumno where matricula ='".$matricula."'");
-
-while($filas=mysql_fetch_array($consulta)){
+$sql="SELECT fotografia FROM alumno where matricula ='".$matricula."'";
+$query = $conn->query($sql);
+while($filas=$query->fetch()){
 	$url = "../home/php/";
 	$imagen=$filas['fotografia'];
 	$dir = $url.$imagen;

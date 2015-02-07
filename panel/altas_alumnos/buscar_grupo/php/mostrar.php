@@ -1,16 +1,14 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 $id = $_POST["id"];
 
-$sql = mysql_query("SELECT *
+$sql = "SELECT *
 FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'");
-// $sql=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");
-?>
-
-<?php
-while($row = mysql_fetch_array($sql)){
+INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'";
+$query = $conn->query($sql);
+while($row = $query->fetch()){
 $nombre = $row['nombre'];
 ?>
 <table class="tabla-mostrar">

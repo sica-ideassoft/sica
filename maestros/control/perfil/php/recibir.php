@@ -1,8 +1,7 @@
 <?php
 
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 session_start();
 if (!isset($_SESSION['maestro-session'])) {
@@ -11,9 +10,6 @@ location.href = "../login_maestro/index.php";
 </script>';
 }
 $user = $_SESSION['maestro-session'];
-
-?>
-<?php
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];

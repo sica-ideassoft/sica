@@ -1,10 +1,16 @@
 <?php
-include_once("PDO_Pagination.php");
-$root = 'root';
-$password = 'tescha4951';
-$host = 'localhost';
-$dbname = 'calificaciones';
-$connection = new PDO("mysql:host=$host;dbname=$dbname;", $root, $password);
-$pagination = new PDO_Pagination($connection);
+class Conexion extends PDO
+{
+	public function __construct()
+	{
+		try{
+		parent::__construct('mysql:host=localhost;dbname=calificaciones','root','tescha4951');
+		parent::setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+		}catch(Exception $ex){
+			echo $ex->getMessage();
+		}
+	}
+}
+
 
 ?>

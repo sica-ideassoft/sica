@@ -5,16 +5,12 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 $user = $_SESSION['admin-sica'];
-?>
+include_once("../../../conexion/conexion.php");
+  $conn = new Conexion();
 
-<?php
-include_once("../conectar.php");
-$conn = new DB();
-$conn->conectar();
-
-$consulta=mysql_query("SELECT * FROM admin where user ='".$user."'");
-
-while($filas=mysql_fetch_array($consulta)){
+$sql = "SELECT * FROM admin where user ='".$user."'";
+$query = $conn->query($sql);
+while($filas=$query->fetch()){
 	$url = "../../control_admin/perfil/";
 	$imagen=$filas['imagen'];
 

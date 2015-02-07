@@ -1,10 +1,8 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-
+$conn =  new Conexion();
 $id = $_POST["id"];
-
-
-$queris = mysql_query("SELECT
+$queris = "SELECT
 g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
 m.id_materia,m.claveSEP,m.nombre_materia,m.credito,m.cal_min,
 o.id_maestro,o.nombre,
@@ -13,17 +11,16 @@ FROM materias m
 INNER JOIN grupos g ON m.id_materia = g.id_materia
 INNER JOIN maestro o  ON o.id_maestro = g.id_maestro
 INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
-and u.user = '$user'");
+and u.user = '$user'";
 
-$listar2 = mysql_fetch_array($queris);
+$query = $conn->query($queris);
+$listar2 = $query->fetch();
 
 // echo $listar2['nombre'];
 
-$sql=mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
-?>
-
-<?php
-while($row = mysql_fetch_array($sql)){
+$sql="SELECT * FROM materias WHERE id_materia = '".$id."'";
+$query = $conn->query($sql);
+while($row = $query->fetch()){
 $nombre = $row['nombre_materia'];
 ?>
 <table class="tabla-mostrar">

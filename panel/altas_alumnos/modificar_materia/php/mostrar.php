@@ -1,16 +1,13 @@
 <link rel="stylesheet" href="css/mostrar_materia.css">
 <?php
-  include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+  include_once("../../../conexion/conexion.php");
+  $conn = new Conexion();
 
 $id = $_POST["id"];
-$sql= mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
+$sql="SELECT * FROM materias WHERE id_materia = '".$id."'";
 
-?>
-
-<?php
-while($row = mysql_fetch_array($sql)){
+$query = $conn->query($sql);
+while($row = $query->fetch()){
 $nombre = $row['nombre_materia'];
 ?>
 <table class="tabla-mostrar">

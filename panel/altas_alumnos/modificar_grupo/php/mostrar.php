@@ -1,23 +1,20 @@
 <link rel="stylesheet" href="css/mostrar_grupo.css">
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $id = $_POST["id"];
-$sql = mysql_query("SELECT
+$sql ="SELECT
 	g.id_maestro,g.id_materia,g.grupo,
 	m.id_materia,m.nombre_materia,
 	p.id_maestro,p.nombre
 	FROM grupos g
 	INNER JOIN maestro p  ON p.id_maestro = g.id_maestro
 	INNER JOIN materias m ON m.id_materia = g.id_materia
-	WHERE g.id_grupo = '$id'");
-// $sql=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");
-?>
+	WHERE g.id_grupo = '$id'";
 
-<?php
-while($row = mysql_fetch_array($sql)){
+$query = $conn->query($sql);
+while($row = $query->fetch()){
 
 ?>
 <table class="tabla-mostrar">

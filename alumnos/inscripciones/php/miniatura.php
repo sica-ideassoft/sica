@@ -1,19 +1,16 @@
 <?php
-include_once("../../conexion/conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../conexion/conexion.php");
+$conn = new Conexion();
 if (!isset($_SESSION['alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
 }
 $matricula = $_SESSION['alumno'];
- ?>
-<?php
 
-$consulta=mysql_query("SELECT fotografia FROM alumno where matricula ='".$matricula."'");
-
-while($filas=mysql_fetch_array($consulta)){
+$consulta="SELECT fotografia FROM alumno where matricula ='".$matricula."'";
+$query = $conn->query($consulta);
+while($filas=$query->fetch()){
 	$url = "../home/php/";
 	$imagen=$filas['fotografia'];
 	$dir = $url.$imagen;

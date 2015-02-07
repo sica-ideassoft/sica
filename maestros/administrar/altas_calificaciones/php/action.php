@@ -1,24 +1,20 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
+// (id_calificacion,id_alumno,id_materia,creditos,calificacion,Tipo_evaluacion,acumulado)
 
-$id       = mysql_real_escape_string($_POST['id']);
-$materia  = mysql_real_escape_string($_POST['materia']);
-$credito  = mysql_real_escape_string($_POST['credito']);
-$cal      = mysql_real_escape_string($_POST['cal']);
-$eval     = mysql_real_escape_string($_POST['eval']);
+$sql = $conn->prepare('INSERT INTO calificacion '
+	   .'VALUES (:idC, :id, :materia, :credito, :cal, :eval,:acum)');
+$vacio = "";
 
+$sql->bindParam(':idC',$vacio);
+$sql->bindParam(':id',$_POST['id']);
+$sql->bindParam(':materia',$_POST['materia']);
+$sql->bindParam(':credito',$_POST['credito']);
+$sql->bindParam(':cal',$_POST['cal']);
+$sql->bindParam(':eval',$_POST['eval']);
+$sql->bindParam(':acum',$vacio);
 
-
-// $checkuser = mysql_query("SELECT user FROM calificacion WHERE user='".$id."'");
-// $username_exist = mysql_num_rows($checkuser);
-// if ($userclave_exist>0||$username_exist>0) {
-// 	header("location:../error.php");
-// 	exit();
-// }else{
-$query = mysql_query("INSERT INTO calificacion(id_calificacion,id_alumno,id_materia,creditos,calificacion,Tipo_evaluacion,acumulado) values (null,'$id','$materia','$credito','$cal','$eval','2')");
-// }
-// }
+$sql->execute();
 
 ?>

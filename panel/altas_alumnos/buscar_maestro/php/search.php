@@ -1,18 +1,15 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn= new Conexion();
 
-// $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
-	OR telefono LIKE '%".$busca."%'");
+$sql = "SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
+	OR telefono LIKE '%".$busca."%'";
 
-// $row=mysql_fetch_array($busqueda);
-	//
+$query = $conn->query($sql);
 
-	if(mysql_num_rows($busqueda)==0) {
+	if($query->rowCount()==0) {
 	?>
 		<tr>
 			<td colspan='5'>El maestro no existe</td>
@@ -20,7 +17,7 @@ $busqueda=mysql_query("SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR
 
 	<?php
 	}
-	while($f=mysql_fetch_array($busqueda)){
+	while($f=$query->fetch()){
 
 	?>
 			<tr>
