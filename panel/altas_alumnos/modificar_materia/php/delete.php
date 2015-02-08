@@ -1,9 +1,8 @@
 <?php
 require("../../../../conexion/conexion.php");
-
-	$id=$_GET["id"];
-	$sql = "DELETE FROM materias WHERE id_materia = ".$id;
-	$query = $connection->prepare($sql);
-	$query->execute();
+$conn = new Conexion();
+	$sql =$conn ->prepare("DELETE FROM materias WHERE id_materia = :id");
+	$sql->bindParam(':id',$_GET["id"]);
+	$sql->execute();
 	header("location:../modificar_materia.php");
 ?>

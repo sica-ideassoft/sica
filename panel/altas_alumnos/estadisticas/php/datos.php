@@ -1,8 +1,10 @@
 <?php
 include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $sql = "SELECT * FROM alumno";
-$query = $connection->query($sql);
+$query = $conn->query($sql);
+
 $array_alumno = array();
 
 while($row = $query->fetch()){

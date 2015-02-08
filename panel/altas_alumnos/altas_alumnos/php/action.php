@@ -1,46 +1,46 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$nombre       = mysql_real_escape_string($_POST['nombre']);
-$paterno      = mysql_real_escape_string($_POST['paterno']);
-$materno      = mysql_real_escape_string($_POST['materno']);
-$matricula    = mysql_real_escape_string($_POST['matricula']);
-$curp         = mysql_real_escape_string($_POST['curp']);
-$telefono     = mysql_real_escape_string($_POST['telefono']);
-$correo       = mysql_real_escape_string($_POST['correo']);
-$genero       = mysql_real_escape_string($_POST['genero']);
-$nacimiento   = mysql_real_escape_string($_POST['nacimiento']);
-$edad         = mysql_real_escape_string($_POST['edad']);
-$grupo        = mysql_real_escape_string($_POST['grupo']);
-$estado       = mysql_real_escape_string($_POST['estado']);
-$municipio    = mysql_real_escape_string($_POST['municipio']);
-$colonia      = mysql_real_escape_string($_POST['colonia']);
-$calle        = mysql_real_escape_string($_POST['calle']);
-$interior     = mysql_real_escape_string($_POST['interior']);
-$exterior     = mysql_real_escape_string($_POST['exterior'] );
-$nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
-$civil        = mysql_real_escape_string($_POST['civil']);
-$ip           = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
-
-
-
-  $fname = $_FILES["file"]["name"];
-   move_uploaded_file($_FILES["file"]["tmp_name"],
-  "upload/" . $_FILES["file"]["name"]);
-
-
-
-
-$checkuser = mysql_query("SELECT matricula FROM alumno WHERE matricula='".$matricula ."'");
-$username_exist = mysql_num_rows($checkuser);
-if ($username_exist>0) {
+$sqll = $conn->prepare("SELECT matricula FROM alumno WHERE matricula=:matricula");
+$sqll->bindParam(":matricula",$_POST['matricula']);
+$sqll->execute();
+if ($sqll->fetchColumn()>0) {
 	header("location:../error.php");
 	exit();
 }else{
-$query = mysql_query("INSERT INTO alumno(id_alumno,id_grupo,nombre_alumno,A_paterno_alumno,A_materno_alumno,matricula,curp,telefono,correo,genero,fecha_nacimiento,edad,estado,municipio,colonia,calle,Ninterior,Nexterior,nacionalidad,estado_civil,password,fotografia,status,ip) values (null,'$grupo','$nombre','$paterno','$materno','$matricula','$curp','$telefono','$correo','$genero','$nacimiento','$edad','$estado','$municipio','$colonia','$calle','$interior','$exterior','$nacionalidad','$civil','sica-alumno','$fname','activo','$ip')");
+
+$sql =$conn->prepare("INSERT INTO alumno  VALUES (:idA,:grupo,:nombre,:paterno,:materno,:matricula,:curp,:telefono,:correo,:genero,:nacimiento,:edad,:estado,:municipio,:colonia,:calle,:interior,:exterior,:nacionalidad,:civil,:pass,:fname,:activo,:ip)");
+
+$vacio = "";
+$activado = "activo";
+$password = "sica-alumno";
+
+$sql->bindParam(":idA",$vacio);
+$sql->bindParam(":grupo",$_POST['grupo']);
+$sql->bindParam(":nombre",$_POST['nombre']);
+$sql->bindParam(":paterno",$_POST['paterno']);
+$sql->bindParam(":materno",$_POST['materno']);
+$sql->bindParam(":matricula",$_POST['matricula']);
+$sql->bindParam(":curp",$_POST['curp']);
+$sql->bindParam(":telefono",$_POST['telefono']);
+$sql->bindParam(":correo",$_POST['correo']);
+$sql->bindParam(":genero",$_POST['genero']);
+$sql->bindParam(":nacimiento",$_POST['nacimiento']);
+$sql->bindParam(":edad",$_POST['edad']);
+$sql->bindParam(":estado",$_POST['estado']);
+$sql->bindParam(":municipio",$_POST['municipio']);
+$sql->bindParam(":colonia",$_POST['colonia']);
+$sql->bindParam(":calle",$_POST['calle']);
+$sql->bindParam(":interior",$_POST['interior']);
+$sql->bindParam(":exterior",$_POST['exterior']);
+$sql->bindParam(":nacionalidad",$_POST['nacionalidad']);
+$sql->bindParam(":civil",$_POST['civil']);
+$sql->bindParam(":pass",$password);
+$sql->bindParam(":fname",$vacio);
+$sql->bindParam(":activo",$activado);
+$sql->bindParam(":ip",$_SERVER['REMOTE_ADDR']);
+$sql->execute();
 }
-// }
 
 ?>

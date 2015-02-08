@@ -1,14 +1,13 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 header('Content-Type: text/html; charset=UTF-8');
 // $consulta = mysql_query("SELECT nombre FROM maestro");
-$consulta = mysql_query("SELECT nombre FROM estados_mexico");
-
+$sql = "SELECT nombre FROM estados_mexico";
+$query = $conn->query($sql);
 function estado(){
-	global $consulta;
-	while($row = mysql_fetch_array($consulta)){
+	global $query;
+	while($row = $query->fetch()){
 		?>
 		<option value="<?php echo utf8_encode($row['nombre']); ?>"><?php echo utf8_encode($row['nombre']); ?></option>
 		<?php

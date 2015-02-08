@@ -1,29 +1,28 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$check = mysql_query("SELECT * FROM grupos order by id_grupo desc");
-
-$maestro  = mysql_real_escape_string($_POST['maestro']);
-$materia  = mysql_real_escape_string($_POST['materia']);
-$grupos   = mysql_real_escape_string($_POST['grupos']);
+// $check = mysql_query("SELECT * FROM grupos order by id_grupo desc");
 
 
-// $checMateria = mysql_query("SELECT id_materia,grupo FROM grupos where
-// 	id_materia='".$materia."'");
+$checGrupo =$conn->prepare("SELECT id_materia,grupo FROM grupos where
+	id_materia=:materia AND grupo=:grupos");
+$checGrupo->bindParam(':grupos',$_POST['grupos']);
+$checGrupo->bindParam(':materia',$_POST['materia']);
+$checGrupo->execute();
 
-// $MateriaName_exist = mysql_num_rows($checMateria);
-$checGrupo = mysql_query("SELECT id_materia,grupo
-	FROM grupos where
-	id_materia='".$materia."' AND grupo='".$grupos."'");
-
-if (mysql_num_rows($checGrupo) > 0) {
+if ($checGrupo->fetchColumn(0)) {
 	header("location:../error.php");
 	exit();
 }else{
 
-$query = mysql_query("INSERT INTO grupos (id_grupo,id_maestro,id_materia,grupo) values (null,'$maestro','$materia','$grupos')");
+$vacio = "";
+$sql = $conn->prepare("INSERT INTO grupos  VALUES (:idG,:maestro,:materia,:grupos)");
+$sql->bindParam(':idG',$vacio);
+$sql->bindParam(':maestro',$_POST['maestro']);
+$sql->bindParam(':materia',$_POST['materia']);
+$sql->bindParam(':grupos',$_POST['grupos']);
+$sql->execute();
 }
 
 

@@ -131,7 +131,7 @@ if (!isset($_SESSION['admin-sica'])) {
           </li>
           <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
           </li>
-          <li><a  href='#'><span class="icoAltas"><b>ALTAS</b></span></a>
+          <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
           </li>
           <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 

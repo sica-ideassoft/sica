@@ -1,16 +1,13 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 // $consulta = mysql_query("SELECT nombre FROM maestro");
-$consulta = mysql_query("SELECT *
-FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro");
-
+$sql = "SELECT * FROM maestro m INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro";
+$query = $conn->query($sql);
 function maestro(){
-	global $consulta;
-	while($row = mysql_fetch_array($consulta)){
+	global $query;
+	while($row = $query->fetch()){
 		?>
 		<option value="<?php echo $row['id_maestro']; ?>"><?php echo $row['nombre']; ?></option>
 		<?php
@@ -18,18 +15,16 @@ function maestro(){
 
 }
 
-$modulo = mysql_query("SELECT * FROM materias");
+$modulo = "SELECT * FROM materias";
+$modulos = $conn->query($modulo);
 function modulo(){
-	global $modulo;
-	while($row = mysql_fetch_array($modulo)){
+	global $modulos;
+	while($row =$modulos->fetch()){
 		?>
 		<option value="<?php echo $row['id_materia']; ?>"><?php echo $row['nombre_materia']; ?></option>
 		<?php
 	}
 
 }
-
-
-
 
 ?>

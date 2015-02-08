@@ -10,8 +10,12 @@
 
 <?php
 $buscar = @$_POST['search'];
-$result = mysql_query("SELECT * FROM banner WHERE id_banner LIKE '%$buscar%' ORDER BY id_banner asc");
-$row = mysql_fetch_array($result);
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
+$result ="SELECT * FROM banner WHERE id_banner LIKE '%$buscar%' ORDER BY id_banner asc";
+$query = $conn->query($result);
+
+$row = $query->fetch();
   $ruta="php/".$row['imagen'];
 	?>
  <figure class='pree-banner'>
@@ -43,7 +47,7 @@ $row = mysql_fetch_array($result);
       			<label for="" class="label-table4">Anuncio:</label>
       		</td>
 
-      <td><input type="text" id="anuncio" name="anuncio" value="<?php echo utf8_encode($row['anuncio']); ?>" class='anuncio'></input>
+      <td><input type="text" id="anuncio" name="anuncio" value="<?php echo $row['anuncio']; ?>" class='anuncio'></input>
       </tr>
       <input type="hidden" name="id" value="<?php echo $buscar; ?>">
     </table>

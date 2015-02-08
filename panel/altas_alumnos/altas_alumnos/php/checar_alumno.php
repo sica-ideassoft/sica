@@ -1,11 +1,11 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 if(isset($_POST['btnGuardar'])){
-	$checkuser = mysql_query("SELECT nombre FROM alumno WHERE nombre='".$_POST['nombre']."'");
-	$username_exist = mysql_num_rows($checkuser);
+	$sql = "SELECT nombre FROM alumno WHERE nombre='".$_POST['nombre']."'";
+	$query = $conn->query($sql);
+	$username_exist = $query->rowCount();
 	if ($username_exist>0) {
 		?>
 		<script src="alertifyjs/alertify.js"></script>

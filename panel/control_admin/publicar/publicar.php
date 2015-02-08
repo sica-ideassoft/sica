@@ -1,8 +1,4 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
   echo '<SCRIPT LANGUAGE="javascript">

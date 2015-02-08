@@ -2,9 +2,7 @@
 <?php
 $id = $_GET["id"];
 $sql=mysql_query("SELECT * FROM alumno WHERE id_alumno = '".$id."'");
-?>
 
-<?php
 while($row = mysql_fetch_array($sql)){
 $nombre = $row['nombre'];
 ?>

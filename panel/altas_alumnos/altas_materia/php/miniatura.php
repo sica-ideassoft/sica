@@ -1,29 +1,23 @@
 
 <?php
-  include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 if (!isset($_SESSION['admin-sica'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-$user = $_SESSION['admin-sica'];
-?>
 
-<?php
+$sql = $conn->prepare("SELECT * FROM admin where user =:user");
+$sql->bindParam(':user',$_SESSION['admin-sica']);
+$sql->execute();
 
-$consulta=mysql_query("SELECT * FROM admin where user ='".$user."'");
-
-while($filas=mysql_fetch_array($consulta)){
+while($filas=$sql->fetch()){
 	$url = "../../control_admin/perfil/";
 	$imagen=$filas['imagen'];
 
 	$dir = $url.$imagen;
-
-
-
 	$usuario=$filas['user'];
 	$pass=$filas['password'];
 

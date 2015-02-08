@@ -7,18 +7,15 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-$user = $_SESSION['admin-sica'];
 
-$sql = "SELECT * FROM admin where user ='".$user."'";
-$query = $conn->query($sql);
-while($filas=$query->fetch()){
+$sql = $conn->prepare("SELECT * FROM admin where user =:user");
+$sql->bindParam(':user',$_SESSION['admin-sica']);
+$sql->execute();
+while($filas=$sql->fetch()){
 	$url = "../../control_admin/perfil/";
 	$imagen=$filas['imagen'];
 
 	$dir = $url.$imagen;
-
-
-
 	$usuario=$filas['user'];
 	$pass=$filas['password'];
 

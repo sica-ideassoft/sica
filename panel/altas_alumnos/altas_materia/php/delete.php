@@ -1,12 +1,10 @@
 <?php
-  include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+  include_once("../../../../conexion/conexion.php");
+  $conn = new Conexion();
 
-$id = mysql_real_escape_string($_POST["id"]);
-
-	$sql = "DELETE FROM materias WHERE id_materia = '".$id."'";
-	mysql_query($sql);
+	$sql =$conn->prepare("DELETE FROM materias WHERE id_materia = :id");
+	$sql->bindParam(':id',$_POST["id"]);
+	$sql->execute();
 	header("location:../calendarios.php");
 
 ?>

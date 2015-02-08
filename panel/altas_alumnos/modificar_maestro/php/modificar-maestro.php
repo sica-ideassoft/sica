@@ -1,16 +1,19 @@
 
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$id = $_POST["id"];
+$peticion=$conn->prepare("SELECT * FROM maestro WHERE id_maestro = :id");
+$peticion->bindParam(':id',$_POST["id"]);
+$peticion->execute();
 
-$peticion=mysql_query("SELECT * FROM maestro WHERE id_maestro = '".$id."'");
+$alumno = $peticion->fetch();
 
-$alumno = mysql_fetch_array($peticion);
+$peticion_user=$conn->prepare("SELECT * FROM user_maestro WHERE id_maestro = :id");
+$peticion_user->bindParam(':id',$_POST["id"]);
+$peticion_user->execute();
 
-$peticion_user=mysql_query("SELECT * FROM user_maestro WHERE id_maestro = '".$id."'");
-$maestro_user = mysql_fetch_array($peticion_user);
+$maestro_user = $peticion_user->fetch();
+
 
 ?>

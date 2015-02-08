@@ -1,12 +1,11 @@
 
 <?php
-  include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$id = $_POST["id"];
-
-$peticion=mysql_query("SELECT * FROM materias WHERE id_materia = '".$id."'");
-$materia= mysql_fetch_array($peticion);
+$sql =$conn->prepare("SELECT * FROM materias WHERE id_materia =:id");
+$sql->bindParam(':id',$_POST["id"]);
+$sql->execute();
+$materia = $sql->fetch();
 
 ?>

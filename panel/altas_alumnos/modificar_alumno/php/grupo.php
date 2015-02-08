@@ -1,16 +1,13 @@
 <?php
 include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+$conn = new Conexion();
 
-$query = mysql_query("SELECT
-	g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
-	id_create_grupo 	create_grado 	create_grupo 	descripcion
-
-	FROM grupos");
+$sql = "SELECT id_grupo,id_maestro,id_materia,grupo
+	FROM grupos";
+$query = $conn->query($sql);
 function grupo(){
 	global $query;
-	while($row = mysql_fetch_array($query)){
+	while($row =$query->fetch()){
 	?>
 	<option value="<?php echo $row['id_grupo'];?>">
 	<?php echo $row['grupo'];?>

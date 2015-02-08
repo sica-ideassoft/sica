@@ -1,9 +1,6 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
-
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 ?>
 <script src="js/jquery.js"></script>
 <script src="js/slider.js"></script>
@@ -13,8 +10,11 @@ include_once("../../../conexion/conectar.php");
             <li class="slide-current">
 
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner where id_banner='1'");
-                $filas=mysql_fetch_array($consulta);
+                $banner = 1;
+                $consulta=$conn->prepare("SELECT * FROM banner where id_banner=:banner");
+                $consulta->bindParam(':banner',$banner);
+                $consulta->execute();
+                $filas=$consulta->fetch();
                 $ruta = "php/";
                     ?>
                 <img src="<?php echo $ruta.$filas['imagen']; ?>" alt="Slider Imagen 1">
@@ -30,8 +30,11 @@ include_once("../../../conexion/conectar.php");
             <li>
 
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner where id_banner='2'");
-                $filas=mysql_fetch_array($consulta);
+                $banner = 2;
+                $consulta=$conn->prepare("SELECT * FROM banner where id_banner=:banner");
+                $consulta->bindParam(':banner',$banner);
+                $consulta->execute();
+                $filas=$consulta->fetch();
                 $ruta = "php/";
                     ?>
                 <img src="<?php echo $ruta.$filas['imagen']; ?>" alt="Slider Imagen 1">
@@ -47,8 +50,11 @@ include_once("../../../conexion/conectar.php");
 
             <li>
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner where id_banner='3'");
-                $filas=mysql_fetch_array($consulta);
+                $banner = 3;
+                $consulta= $conn->prepare("SELECT * FROM banner where id_banner=:banner");
+                $consulta->bindParam(':banner',$banner);
+                $consulta->execute();
+                $filas=$consulta->fetch();
                 $ruta = "php/";
                     ?>
                 <img src="<?php echo $ruta.$filas['imagen']; ?>" alt="Slider Imagen 1">
@@ -63,8 +69,11 @@ include_once("../../../conexion/conectar.php");
 
             <li>
                 <?php
-                $consulta=mysql_query("SELECT * FROM banner where id_banner='4'");
-                $filas=mysql_fetch_array($consulta);
+                $banner = 4;
+                $consulta=$conn->prepare("SELECT * FROM banner where id_banner=:banner");
+                $consulta->bindParam(':banner',$banner);
+                $consulta->execute();
+                $filas=$consulta->fetch();
                 $ruta = "php/";
                     ?>
                 <img src="<?php echo $ruta.$filas['imagen']; ?>" alt="Slider Imagen 1">

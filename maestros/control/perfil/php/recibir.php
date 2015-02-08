@@ -17,10 +17,9 @@ $nombreImagen=$_FILES['imagen']['name'];
 $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
-
 $sql = "UPDATE user_maestro set imagen = '".$rutaDestino."' WHERE  user ='".$user."'";
+$res= $conn->query($sql);
 
-$res=mysql_query($sql);
 
 if ($res){
 	?>

@@ -1,35 +1,35 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$id           = mysql_real_escape_string($_POST["id"]);
-$nombre       = mysql_real_escape_string($_POST['nombre']);
-$paterno      = mysql_real_escape_string($_POST['paterno']);
-$materno      = mysql_real_escape_string($_POST['materno']);
-$clavep       = mysql_real_escape_string($_POST['clavep']);
-$curp         = mysql_real_escape_string($_POST['curp']);
-$telefono     = mysql_real_escape_string($_POST['telefono']);
-$correo       = mysql_real_escape_string($_POST['correo']);
-$genero       = mysql_real_escape_string($_POST['genero']);
-$edad         = mysql_real_escape_string($_POST['edad']);
-$civil        = mysql_real_escape_string($_POST['civil']);
-$nacimiento   = mysql_real_escape_string($_POST['nacimiento']);
-$estado       = mysql_real_escape_string($_POST['estado']);
-$municipio    = mysql_real_escape_string($_POST['municipio']);
-$calle        = mysql_real_escape_string($_POST['calle']);
-$interior     = mysql_real_escape_string($_POST['interior']);
-$exterior     = mysql_real_escape_string($_POST['exterior']);
-$nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
-$user         = mysql_real_escape_string($_POST['user']);
-$password     = mysql_real_escape_string($_POST['password']);
+$sql = $conn->prepare("UPDATE maestro set nombre = :nombre,A_paterno = :paterno,A_materno=:materno,clave=:clavep,curp=:curp,telefono=:telefono,correo=:correo,genero=:genero,edad=:edad,estado_civil=:civil,fecha_nacimiento=:nacimiento,Estado=:estado,municipio=:municipio,calle=:calle,Ninterior=:interior,Nexterior=:exterior,nacionalidad=:nacionalidad WHERE id_maestro= :id");
 
-
-$sql = "UPDATE maestro set nombre = '".$nombre."',A_paterno = '".$paterno."',A_materno='".$materno."',clave='".$clavep."',curp='".$curp."',telefono='".$telefono."',correo='".$correo."',genero='".$genero."',edad='".$edad."',estado_civil='".$civil."',fecha_nacimiento='".$nacimiento."',Estado='".$estado."',municipio='".$municipio."',calle='".$calle."',Ninterior='".$interior."',Nexterior='".$exterior."',nacionalidad='".$nacionalidad."' WHERE id_maestro= '".$id."'";
+$sql->bindParam(':id',$_POST["id"]);
+$sql->bindParam(':nombre',$_POST['nombre']);
+$sql->bindParam(':paterno',$_POST['paterno']);
+$sql->bindParam(':materno',$_POST['materno']);
+$sql->bindParam(':clavep',$_POST['clavep']);
+$sql->bindParam(':curp',$_POST['curp']);
+$sql->bindParam(':telefono',$_POST['telefono']);
+$sql->bindParam(':correo',$_POST['correo']);
+$sql->bindParam(':genero',$_POST['genero']);
+$sql->bindParam(':edad',$_POST['edad']);
+$sql->bindParam(':civil',$_POST['civil']);
+$sql->bindParam(':nacimiento',$_POST['nacimiento']);
+$sql->bindParam(':estado',$_POST['estado']);
+$sql->bindParam(':municipio',$_POST['municipio']);
+$sql->bindParam(':calle',$_POST['calle']);
+$sql->bindParam(':interior',$_POST['interior']);
+$sql->bindParam(':exterior',$_POST['exterior']);
+$sql->bindParam(':nacionalidad',$_POST['nacionalidad']);
+$sql->execute();
 
 
-$ssql = "UPDATE user_maestro set user = '".$user."',password = '".$password."' WHERE id_maestro= '".$id."'";
+$ssql = $conn->prepare("UPDATE user_maestro set user = :user,password = :password WHERE id_maestro= :id");
+$ssql->bindParam(':id',$_POST["id"]);
+$ssql->bindParam(':user',$_POST['user']);
+$ssql->bindParam(':password',$_POST['password']);
+$ssql->execute();
 
-$maestro = mysql_query($sql);
-$user = mysql_query($ssql);
+
  ?>

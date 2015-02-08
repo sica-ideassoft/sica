@@ -2,11 +2,10 @@
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
-$id = $_POST["id"];
-
-$sql = "SELECT * FROM alumno where id_alumno = '".$id."'";
-$query = $conn->query($sql);
-while($filas=$query->fetch()){
+$sql = $conn->prepare("SELECT * FROM alumno where id_alumno = :id");
+$sql->bindParam(':id',$_POST["id"]);
+$sql->execute();
+while($filas=$sql->fetch()){
 
 	$destino = "../../../alumnos/home/php/";
 	$ruta=$filas['fotografia'];

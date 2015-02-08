@@ -86,7 +86,7 @@ else
     $("#file").val("");
     // $("#status").val("");
         }, error: function () {
-         alertify.alert().set('message', 'La matricula ya existe').show();
+         alertify.alert().set('message', 'La matricula ya <b>existe</b>').show();
         }
       });
 }

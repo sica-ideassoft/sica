@@ -1,7 +1,6 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];
@@ -9,18 +8,16 @@ $nombreImagen=$_FILES['imagen']['name'];
 $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
-$id=$_POST['id'];
-$tema=$_POST['tema'];
-$anuncio=$_POST['anuncio'];
+$sql =$conn->prepare("UPDATE banner set imagen = :rutaDestino,tema = :tema,anuncio = :anuncio WHERE  id_banner =:id");
 
+$sql->bindParam(':id',$_POST['id']);
+$sql->bindParam(':rutaDestino',$rutaDestino);
+$sql->bindParam(':tema',$_POST['tema']);
+$sql->bindParam(':anuncio',$_POST['anuncio']);
+$sql->execute();
 
-$sql = "UPDATE banner set imagen = '".$rutaDestino."',tema = '".$tema."',anuncio = '".$anuncio."' WHERE  id_banner ='".$id."'";
-
-$res=mysql_query($sql);
-if ($res){
+if ($sql== true){
 	header("location:../publicar.php");
-}else{
-    echo 'no se pudo modificar';
-}
 
+}
 ?>

@@ -54,7 +54,7 @@ else
           setTimeout($('.mensajesCorrecto').fadeIn(1000).fadeOut(10000), 1000);
 
         }, error: function () {
-         alertify.alert().set('message', 'La clave del libro ya existe').show();
+         alertify.alert().set('message', 'La clave del libro ya <b>existe</b>').show();
         }
       });
 }

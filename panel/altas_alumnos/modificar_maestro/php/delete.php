@@ -1,10 +1,10 @@
 <?php
+  include_once("../../../../conexion/conexion.php");
+  $conn = new Conexion();
 
-include_once("../../../../conexion/conexion.php");
-
-$id=$_GET["id"];
-	$sql = "DELETE FROM maestro WHERE id_maestro = ".$id;
-	$query = $connection->prepare($sql);
-	$query->execute();
+	$sql =$conn->prepare("DELETE FROM maestro  WHERE id_maestro = :id ");
+	$sql->bindParam(':id',$_GET["id"]);
+	$sql->execute();
 	header("location:../modificar_maestro.php");
+
 ?>

@@ -311,7 +311,6 @@ if (!isset($_SESSION['admin-sica'])) {
 
         <td><select name="maestro" id="maestro">
           <?php
-
           maestro();
            ?>
         </select></td>
@@ -326,11 +325,14 @@ if (!isset($_SESSION['admin-sica'])) {
 
           <td><select name="grado" id="grado">
           <?php
-          grado();
+           include_once("php/grupo.php");
+                grado();
            ?>
         </select></td>
           <td><select name="grupo" id="grupo">
           <?php
+          include("php/grupo.php");
+
           grupo();
            ?>
         </select></td>

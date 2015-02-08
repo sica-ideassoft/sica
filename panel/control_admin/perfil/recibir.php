@@ -1,7 +1,6 @@
 <?php
-include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
@@ -9,10 +8,6 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
-$user = $_SESSION['admin-sica'];
-
-?>
-<?php
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];
@@ -20,18 +15,18 @@ $nombreImagen=$_FILES['imagen']['name'];
 $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
-$usuario=$_POST['usuario'];
-$pass=$_POST['password'];
 
+$sql = $conn->prepare("UPDATE admin set imagen = :rutaDestino,user = :usuario,password = :pass WHERE  user =:user");
+$sql->bindParam(':user',$_SESSION['admin-sica']);
+$sql->bindParam(':rutaDestino',$rutaDestino);
+$sql->bindParam(':usuario',$_POST['usuario']);
+$sql->bindParam(':pass',$_POST['password']);
+$sql->execute();
 
-$sql = "UPDATE admin set imagen = '".$rutaDestino."',user = '".$usuario."',password = '".$pass."' WHERE  user ='".$user."'";
+if($sql->execute()===true){
 
-$res=mysql_query($sql);
-
-if ($res){
 	header("location:../../logout.php");
-}else{
-    echo 'no se pudo modificar';
 }
+
 
 ?>

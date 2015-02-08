@@ -1,47 +1,59 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$nombre       = mysql_real_escape_string($_POST['nombre']);
-$paterno      = mysql_real_escape_string($_POST['paterno']);
-$materno      = mysql_real_escape_string($_POST['materno']);
-$clavep       = mysql_real_escape_string($_POST['clavep']);
-$curp         = mysql_real_escape_string($_POST['curp']);
-$telefono     = mysql_real_escape_string($_POST['telefono']);
-$correo       = mysql_real_escape_string($_POST['correo']);
-$genero       = mysql_real_escape_string($_POST['genero']);
-$edad         = mysql_real_escape_string($_POST['edad']);
-$civil        = mysql_real_escape_string($_POST['civil']);
-$nacimiento   = mysql_real_escape_string($_POST['nacimiento']);
-$estado       = mysql_real_escape_string($_POST['estado']);
-$municipio    = mysql_real_escape_string($_POST['municipio']);
-$calle        = mysql_real_escape_string($_POST['calle']);
-$interior     = mysql_real_escape_string($_POST['interior']);
-$exterior     = mysql_real_escape_string($_POST['exterior']);
-$nacionalidad = mysql_real_escape_string($_POST['nacionalidad']);
-$user         = mysql_real_escape_string($_POST['user']);
-$password     = mysql_real_escape_string($_POST['password']);
-$ip           = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
+$sqll = $conn->prepare("SELECT clave FROM maestro WHERE clave=:clavep");
+$sqll->bindParam(':clavep',$_POST['clavep']);
+$sqll->execute();
 
-$checkclave = mysql_query("SELECT clave FROM maestro WHERE clave='".$clavep."'");
+$sqll2 = $conn->prepare("SELECT user FROM user_maestro WHERE user=:user");
+$sqll2->bindParam(':user',$_POST['user']);
+$sqll2->execute();
 
-$userclave_exist = mysql_num_rows($checkclave);
-
-$checkuser = mysql_query("SELECT user FROM user_maestro WHERE user='".$user."'");
-$username_exist = mysql_num_rows($checkuser);
-if ($userclave_exist>0||$username_exist>0) {
+if ($sqll->fetchColumn(0)) {
+	header("location:../error.php");
+	exit();
+}
+else if($sqll2->fetchColumn(0)){
 	header("location:../error.php");
 	exit();
 }else{
 
-$maestro = mysql_query("INSERT INTO maestro(id_maestro,nombre,A_paterno,A_materno,clave,curp,telefono,correo,genero,edad,estado_civil,fecha_nacimiento,Estado,municipio,calle,Ninterior,Nexterior,nacionalidad,ip) values (null,'$nombre','$paterno','$materno','$clavep','$curp','$telefono','$correo','$genero','$edad','$civil','$nacimiento','$estado','$municipio','$calle',$interior,$exterior,'$nacionalidad','$ip')");
+$sql = $conn->prepare("INSERT INTO maestro VALUES (:idm,:nombre,:paterno,:materno,:clavep,:curp,:telefono,:correo,:genero,:edad,:civil,:nacimiento,:estado,:municipio,:calle,:interior,:exterior,:nacionalidad,:ip)");
+$vacio = '';
+$sql->bindParam(':idm',$vacio);
+$sql->bindParam(':nombre',$_POST['nombre']);
+$sql->bindParam(':paterno',$_POST['paterno']);
+$sql->bindParam(':materno',$_POST['materno']);
+$sql->bindParam(':clavep',$_POST['clavep']);
+$sql->bindParam(':curp',$_POST['curp']);
+$sql->bindParam(':telefono',$_POST['telefono']);
+$sql->bindParam(':correo',$_POST['correo']);
+$sql->bindParam(':genero',$_POST['genero']);
+$sql->bindParam(':edad',$_POST['edad']);
+$sql->bindParam(':civil',$_POST['civil']);
+$sql->bindParam(':nacimiento',$_POST['nacimiento']);
+$sql->bindParam(':estado',$_POST['estado']);
+$sql->bindParam(':municipio',$_POST['municipio']);
+$sql->bindParam(':calle',$_POST['calle']);
+$sql->bindParam(':interior',$_POST['interior']);
+$sql->bindParam(':exterior',$_POST['exterior']);
+$sql->bindParam(':nacionalidad',$_POST['nacionalidad']);
+$sql->bindParam(':ip',$_SERVER['REMOTE_ADDR']);
+$sql->execute();
 
-$rs = mysql_query("SELECT MAX(id_maestro) AS id FROM maestro");
-if ($row = mysql_fetch_row($rs)) {
-$id = trim($row[0]);
-}
-$maestro = mysql_query("INSERT INTO user_maestro(id_login_maestro,id_maestro,user,password) values (null,'".$id."','".$user."','".$password."')");
+$stmt = $conn->query("SELECT MAX(id_maestro) AS id FROM maestro");
+$lastId = $stmt->fetch(PDO::FETCH_NUM);
+$id = $lastId[0];
+
+
+$maestro =$conn ->prepare("INSERT INTO user_maestro VALUES (:idU,:id,:user,:password,:imagen)");
+$maestro->bindParam(':idU',$vacio);
+$maestro->bindParam(':id',$id);
+$maestro->bindParam(':user',$_POST['user']);
+$maestro->bindParam(':password',$_POST['password']);
+$maestro->bindParam(':imagen',$vacio);
+$maestro->execute();
 	}
 
 ?>

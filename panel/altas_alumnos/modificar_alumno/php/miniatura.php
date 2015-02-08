@@ -8,7 +8,6 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 $user = $_SESSION['admin-sica'];
-
 $sql = "SELECT * FROM admin where user ='".$user."'";
 $query = $conn->query($sql);
 while($filas=$query->fetch()){

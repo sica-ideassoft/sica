@@ -1,7 +1,8 @@
 <?php
-$sql=mysql_query("SELECT * FROM materias ORDER BY id_materia ASC");
+$conn = new Conexion();
+$sql=$conn->query("SELECT * FROM materias ORDER BY id_materia ASC");
 
-  while($row = mysql_fetch_array($sql)){
+  while($row = $sql->fetch()){
     ?>
     <div class='model'>
 

@@ -1,10 +1,9 @@
 <?php
 include_once("../../../conexion/conexion.php");
- $conn = new Conexion();
-
+$conn = new Conexion();
 $sql ="SELECT * FROM create_grupo";
- // id_create_grupo 	create_grado 	create_grupo 	descripcion
 $query = $conn->query($sql);
+
 function grado(){
 	global $query;
 	while($row =$query->fetch()){
@@ -12,7 +11,6 @@ function grado(){
 	<option value="<?php echo $row['create_grado'];?>">
 	<?php echo $row['create_grado']; ?>
 	</option>
-
 	<?php
 
 }

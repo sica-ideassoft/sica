@@ -1,21 +1,17 @@
 <?php
-  include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-$id          = mysql_real_escape_string($_POST["id"]);
-$sep         = mysql_real_escape_string($_POST["sep"]);
-$nombre      = mysql_real_escape_string($_POST["nombre"]);
-$fecha1      = mysql_real_escape_string($_POST['fecha1']);
-$fecha2      = mysql_real_escape_string($_POST['fecha2']);
-$creditos    = mysql_real_escape_string($_POST['creditos']);
-$calificacion = mysql_real_escape_string($_POST['calificacion']);
+$sql = $conn->prepare("UPDATE materias set claveSEP = :sep,nombre_materia = :nombre,fecha_inicio = :fecha1,fecha_fin =:fecha2,credito = :creditos,cal_min =:calificacion WHERE  id_materia=:id");
 
-$ssql = "UPDATE materias set claveSEP = '".$sep."',nombre_materia = '".$nombre."',fecha_inicio = '".$fecha1."',fecha_fin = '".$fecha2."',credito = '".$creditos."',cal_min = '".$calificacion."' WHERE  id_materia='".$id."'";
-if(mysql_query($ssql)){
-	return true;
-}else{
-	echo "no se pudo modificar la materia";
-}
+$sql->bindParam(':id',$_POST["id"]);
+$sql->bindParam(':sep',$_POST["sep"]);
+$sql->bindParam(':nombre',$_POST["nombre"]);
+$sql->bindParam(':fecha1',$_POST['fecha1']);
+$sql->bindParam(':fecha2',$_POST['fecha2']);
+$sql->bindParam(':creditos',$_POST['creditos']);
+$sql->bindParam(':calificacion',$_POST['calificacion']);
+
+$sql->execute();
 
  ?>

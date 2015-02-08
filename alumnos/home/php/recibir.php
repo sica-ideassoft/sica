@@ -1,11 +1,7 @@
 <?php
 session_start();
-$matricula = $_SESSION['alumno'];
-?>
-<?php
-include_once("../../../conexion/conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../conexion/conexion.php");
+$conn = new Conexion();
 
 $rutaEnServidor='imagenes';
 $rutaTemporal=$_FILES['imagen']['tmp_name'];
@@ -14,14 +10,13 @@ $rutaDestino=$rutaEnServidor.'/'.$nombreImagen;
 move_uploaded_file($rutaTemporal,$rutaDestino);
 
 
-$sql = "UPDATE alumno set fotografia = '".$rutaDestino."' WHERE  matricula ='".$matricula."'";
+$sql = $conn->prepare("UPDATE alumno set fotografia = :rutaDestino WHERE  matricula =:matricula");
+$sql->bindParam(':matricula',$_SESSION['alumno']);
+$sql->bindParam(':rutaDestino',$rutaDestino);
+$sql->execute();
 
-$res=mysql_query($sql);
-
-if ($res){
+if ($sql){
 	header("location:../index.php");
-}else{
-    echo 'no se pudo modificar';
 }
 
 
