@@ -224,6 +224,7 @@ font-family: "menu";
 content: "\e624";
 font-size: 30px;
 color: #000;
+margin-left: -20px;
 }
 .userimg .miniatura img{
 	width: 45px;

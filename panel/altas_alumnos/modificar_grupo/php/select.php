@@ -4,13 +4,11 @@ $conn = new Conexion();
 
 $sql = "SELECT * FROM maestro m INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro";
 $query = $conn->query($sql);
-
 function maestro(){
-
 	global $query;
-	while($row =$query->fetch()){
+	while($rows =$query->fetch()){
 		?>
-		<option value="<?php echo $row['id_maestro']; ?>"><?php echo $row['nombre']; ?></option>
+		<option value="<?php echo $rows['id_maestro']; ?>"><?php echo $rows['nombre']; ?></option>
 		<?php
 	}
 
@@ -27,27 +25,32 @@ function materia(){
 	}
 
 }
-$grado = mysql_query("SELECT * FROM create_grupo");
+
+$grado ="SELECT * FROM create_grupo";
+$grados= $conn->query($grado);
 function grado(){
-	global $grado;
-	while($row = mysql_fetch_array($grado)){
+	global $grados;
+	while($rows = $grados->fetch()){
 		?>
-<option value="<?php echo $row['create_grado'];?>">
-<?php echo $row['create_grado'];?></option>
+		<option value="<?php echo $rows['create_grado']; ?>"><?php echo $rows['create_grado']; ?></option>
 		<?php
 	}
+
 }
 
-$grupo = mysql_query("SELECT * FROM create_grupo");
+$grupo ="SELECT * FROM create_grupo";
+$grupos= $conn->query($grupo);
 function grupo(){
-	global $grupo;
-	while($row = mysql_fetch_array($grupo)){
+	global $grupos;
+	while($rows = $grupos->fetch()){
 		?>
-<option value="<?php echo $row['create_grupo'];?>">
-<?php echo $row['create_grupo'];?></option>
+		<option value="<?php echo $rows['create_grupo']; ?>"><?php echo $rows['create_grupo']; ?></option>
 		<?php
 	}
+
 }
+
+
 
 
 

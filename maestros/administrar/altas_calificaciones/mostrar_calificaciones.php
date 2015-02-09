@@ -207,7 +207,7 @@ location.href = "../../login_maestro/index.php";
   <div class="estacion">
             <span class="estudent"></span>
   </div>
-  <p>MODIFICAR / ELIMINAR ALUMNOS</p>
+  <p>MODIFICAR / ELIMINAR CALIFICACIONES</p>
   </div>
 
             <div class="content-alumno">

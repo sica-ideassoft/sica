@@ -20,6 +20,80 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.pdf-cerrar{
+	padding: 20px;
+	position: absolute;
+	background-color: rgb(0, 183, 255);
+	right: 0px;
+	top: 0px;
+	text-transform: bold;
+	font-weight: uppercase;
+	font-size: 20px;
+	cursor:pointer;
+}
+.modal-pdf{
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0;
+	z-index: 100;
+	padding-top: 30px;
+	position: fixed;
+	background-color: rgba(0,0,0,0.7);
+	text-align: center;
+	display: none;
+}
+.mas{
+	position: absolute;
+	right: 0px;
+	padding: 20px 30px;
+	background-color:rgb(123, 0, 255);
+	margin-right: 20px;
+	margin-bottom: 60px;
+	bottom: 0px;
+	color: white;
+	border-bottom: 3px solid rgb(52, 19, 99);
+	text-decoration: none;
+	cursor:pointer;
+
+}
+.ico-mas:after{
+	font-family: "buscar";
+	content: "\e607";
+	font-size: 20px;
+}
+.mas:hover{
+	border-style: none;
+}
+.table2{
+	margin: 0 auto;
+	margin-top: 10px;
+}
+.table2 tr td input[type="file"]{
+	width: 240px;
+	height: 35px;
+	background-color:rgb(23, 144, 246);
+	border-style: none;
+	margin-left: 30px;
+	color: white;
+	margin-left: -10px;
+	border-radius: 5px;
+}
+.table2 tr td .btmPdf{
+	width: 250px;
+	background-color: rgb(0, 102, 255);
+	height: 35px;
+	border-style: none;
+	color: white;
+	border-bottom: 3px solid blue;
+	margin-left: 40px;
+	border-radius: 5px;
+}.table2 tr td .btmPdf:hover{
+	border-style: none;
+}
+.content-pdf{
+	text-align: center;
+}
 .datos{
 	text-transform: uppercase;
 }

@@ -2,13 +2,19 @@
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
-$sql = "SELECT * FROM alumno";
+$sql = "SELECT
+		a.id_alumno,a.id_grupo,
+        g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
+        m.id_maestro
+		FROM grupos g
+		INNER JOIN maestro m  ON m.id_maestro = g.id_maestro
+		INNER JOIN alumno  a  ON a.id_grupo = g.id_grupo";
 $query = $conn->query($sql);
-
 $array_alumno = array();
 
 while($row = $query->fetch()){
-	$array_alumno[] =$row;
+	$array_alumno[]= $row;
+
 }
-echo json_encode($array_alumno);
- ?>
+$alumnos = json_encode($array_alumno);
+?>

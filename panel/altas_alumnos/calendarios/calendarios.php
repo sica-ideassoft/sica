@@ -247,42 +247,25 @@ if (!isset($_SESSION['admin-sica'])) {
     </div>
     <p>calendarios</p>
   </div>
-<div class="modulo">
-<table>
-<td>
-  <a href="" class="btnModulo" id="btnModulo">NUEVO MODULO<span class="icoModulo"></span></a>
-  </td>
-</table>
-  <div class="altas-modulo" id="altas-modulo">
-      <form action="">
-            <table>
-              <tr>
-                <td><input type="text" name="nombre" id="nombre" placeholder="nombre"></td>
-                <td><input type="text" name="modulo" id="modulo" placeholder="modulo"></td>
-                <td><input type="text" name="facha"  id="fecha" class="fecha" placeholder="0000-00-00"></td>
-                <td><input type="submit" class="agregar" id="agregar" value="AGREGAR">
-                  <span class="icoAgregar"></span>
-                </td>
-              </tr>
-            </table>
-      </form>
+  <div class="modal-pdf">
+  <div class="pdf-cerrar">X</div>
+  <?php include_once("php/calendario.php"); ?>
+  <embed src="<?php echo $url.$row['calendario']; ?>" width="800" height="630">
   </div>
-</div>
-<div class="modulos-view">
-  <p>calendario de modulos generación 1-2014</p>
-  <div class='cerrar'></div>
-  <div class="model-con">
-  <?php
-include_once("php/mostrar_modulo.php");
-   ?>
+
+  <div class="content-pdf">
+  <?php include_once("php/calendario.php"); ?>
+  <embed src="<?php echo $url.$row['calendario']; ?>" width="500" height="450">
+  <a href="" class='mas'><span class="ico-mas"></span></a>
   </div>
-</div>
-
-
   <div class="control">
-
-<a href="" class='modal'>mostrar<span class="modal-mas"></span></a>
-
+  <form action="php/recibir.php" method="POST" enctype="multipart/form-data">
+      <table class="table2">
+        <tr>
+          <td><td><input type="file" name="pdf" ></td>
+          <td></td><td><button name="btmPdf" class="btmPdf">NUEVO CALENDARIO</button></td>
+        </tr>
+      </table>
   </form>
 
 </section>
@@ -298,10 +281,11 @@ include_once("php/mostrar_modulo.php");
 <script src="js/nuevo-modulo.js"></script>
 
 <script src="alertifyjs/alertify.js"></script>
-
+<script src="js/modal.js"></script>
 
 
 
 </body>
 </html>
+
 

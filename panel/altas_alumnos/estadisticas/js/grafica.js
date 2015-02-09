@@ -1,12 +1,17 @@
       google.load('visualization', '1.0', {'packages':['corechart']});
       google.setOnLoadCallback(drawChart);
+
+      // var libros = JSON.parse(cadenaLibros);
+
       function drawChart() {
 
         var data = new google.visualization.DataTable();
         data.addColumn('string', 'Topping');
         data.addColumn('number', 'Slices');
+
         data.addRows([
-          ['Mushrooms', 2],
+
+          ['Mushrooms',2],
           ['Onions', 4],
           ['Olives', 1],
           ['Zucchini', 1],

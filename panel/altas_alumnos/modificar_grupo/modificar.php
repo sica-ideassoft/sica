@@ -325,15 +325,13 @@ if (!isset($_SESSION['admin-sica'])) {
 
           <td><select name="grado" id="grado">
           <?php
-           include_once("php/grupo.php");
-                grado();
+            grado();
+
            ?>
         </select></td>
           <td><select name="grupo" id="grupo">
           <?php
-          include("php/grupo.php");
-
-          grupo();
+            grupo();
            ?>
         </select></td>
 

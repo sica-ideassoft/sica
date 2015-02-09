@@ -2,9 +2,6 @@
 include_once("../../../../conexion/conexion.php");
 $conn = new Conexion();
 
-// $check = mysql_query("SELECT * FROM grupos order by id_grupo desc");
-
-
 $checGrupo =$conn->prepare("SELECT id_materia,grupo FROM grupos where
 	id_materia=:materia AND grupo=:grupos");
 $checGrupo->bindParam(':grupos',$_POST['grupos']);

@@ -23,9 +23,9 @@ location.href = "../../login_admin/index.php";
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
   <link rel="stylesheet" href="css/estadisticas.css">
-  <link rel="stylesheet" href="css/mensajes.css">
+  <!-- <link rel="stylesheet" href="css/mensajes.css"> -->
 
 
 
@@ -217,9 +217,20 @@ location.href = "../../login_admin/index.php";
     <?php
     include_once("php/datos.php");
      ?>
+     <div id="json">
+
+     </div>
     <div id="chart_div" >
 
     </div>
+    <script>
+    var myArray =<?php echo json_encode($alumnos); ?>;
+
+      console.log(myArray);
+
+    document.getElementById('json').innerHTML = myArray.id_alumno;
+
+    </script>
 
             <div class="control">
 

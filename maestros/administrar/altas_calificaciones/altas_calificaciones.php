@@ -194,7 +194,7 @@ include_once("php/paginacion.php");
         <div class="estacion">
             <span class="estudent"></span>
         </div>
-        <p>modificar / eliminar alumnos</p>
+        <p>modificar / eliminar calificaciones</p>
         </div>
         <form method="POST" class="formBuscar" action="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">

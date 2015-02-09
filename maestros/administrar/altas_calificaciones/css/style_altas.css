@@ -284,8 +284,10 @@ background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 
 }
 .estudent{
+
 	width: 50px;
 	height: 50px;
+
 	position: absolute;
 
 }
