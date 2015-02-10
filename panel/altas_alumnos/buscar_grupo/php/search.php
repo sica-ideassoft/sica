@@ -1,23 +1,19 @@
 <?php
-include_once("../../conectar.php");
-$conn = new DB();
-$conn->conectar();
+include_once("../../../../conexion.php");
+$conn = new Conexion();
 
 // $busca=$_POST['name'];
-$busca= "%".$_POST['name']."%";
+$busca= '%'.$_POST["name"].'%';
 if($busca!=""){
-
-
-$busqueda=mysql_query("SELECT  g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,m.id_maestro,m.nombre,s.id_materia,s.nombre_materia
+$sql = $conn ->execute("SELECT  g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.grupo,m.id_maestro,m.nombre,s.id_materia,s.nombre_materia
 	FROM grupos g
 	INNER JOIN maestro m ON g.id_maestro = m.id_maestro
 	INNER JOIN materias s ON g.id_materia = s.id_materia
-	WHERE m.nombre LIKE '%".$busca."%' OR s.nombre_materia LIKE '%".$busca."%'");
-
-// $row=mysql_fetch_array($busqueda);
-	//
-
-	if(mysql_num_rows($busqueda)==0) {
+	WHERE m.nombre LIKE :busca OR s.nombre_materia LIKE :busca");
+$sql->binParam(':buscar',$buscar);
+$sql->execute();
+// mysql_num_rows($busqueda)==0
+	if($sql->rowCount()==0) {
 	?>
 		<tr>
 			<td colspan='5'>El grupo no existe</td>
@@ -25,7 +21,7 @@ $busqueda=mysql_query("SELECT  g.id_grupo,g.id_maestro,g.id_materia,g.grado,g.gr
 
 	<?php
 	}
-	while($f=mysql_fetch_array($busqueda)){
+	while($f=$sql->fetch()){
 
 	?>
 			<tr>

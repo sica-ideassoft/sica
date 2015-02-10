@@ -4,9 +4,11 @@ include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 $sql = $conn->prepare("SELECT
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
-	g.grupo,g.id_grupo
+	g.grupo,g.id_grupo,
+	e.id_estado_civil,e.p_estado_civil
 	FROM alumno a
 	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
+	INNER JOIN estado_civil e ON e.id_estado_civil = a.estado_civil
 	WHERE a.id_alumno = :id ");
 
 $sql->bindParam(':id',$_POST["id"]);
@@ -81,10 +83,9 @@ $nombre = $row['nombre_alumno'];
 	<td>#<?php echo $row['Ninterior']; ?></td>
 	<td>#<?php echo $row['Nexterior']; ?></td>
 	<td><?php echo $row['nacionalidad']; ?></td>
-	<td><?php echo $row['estado_civil']; ?></td>
+	<td><?php echo $row['p_estado_civil']; ?></td>
 </tr>
 <tr>
-
 	<td class="dato"><label for="">Status:</label></td>
 </tr>
 <tr>

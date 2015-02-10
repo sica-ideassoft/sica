@@ -57,6 +57,7 @@ background-image: linear-gradient(to bottom,rgba(255, 255, 255, 0.3),rgba(226, 2
 }
 .tabla-mostrar  td{
 	color: rgba(0, 0, 0, 0.6);
+	width: 200px;
 }
 .tabla-mostrar tr td label{
 	font-weight: bold;

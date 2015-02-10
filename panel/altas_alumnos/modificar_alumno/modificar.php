@@ -193,17 +193,7 @@ location.href = "../../login_admin/index.php";
 
    </div>
 
-<!--    <div class='footcontent'>
 
-    <div class="headtabla1"><p>Recien Ingresados</p></div>
-
-    <table class="tabla1">
-      <div class="mosAlumno">
-        <div id="show"></div>
-      </div>
-
-    </table>
-  </div> -->
 </div>
 
 <!-- mensajes de validacion -->
@@ -401,12 +391,10 @@ $id = $_POST["id"];
           <option value="Mexicana">Mexicana</option>
           <option value="Extrangera">Extrangera</option>
         </select></td>
-        <td><select name="civil"  id="civil" value=<?php echo $alumno['estado_civil']; ?>>
-          <option value="soltero">Soltero</option>
-          <option value="casado">Casado</option>
-          <option value="libre">Union libre</option>
-          <option value="divorciado">Divorceado</option>
-          <option value="viudo">Viudo</option>
+        <td><select name="civil"  id="civil" >
+          <?php
+            civil();
+           ?>
         </select></td>
         <td>
           <select name="status" id="status" value=<?php echo $alumno['status']; ?>>

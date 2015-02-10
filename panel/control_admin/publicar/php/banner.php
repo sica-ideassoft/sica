@@ -41,9 +41,9 @@ $conn = new Conexion();
 
                 <div class="caption">
                     <h3 class="caption-title">
-                       <?php echo utf8_encode($filas['tema']);?>
+                       <?php echo $filas['tema'];?>
                     </h3>
-                    <p><?php echo utf8_encode($filas['anuncio']);?></p>
+                    <p><?php echo $filas['anuncio'];?></p>
                 </div>
 
             </li>

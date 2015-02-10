@@ -194,6 +194,7 @@ font-weight: bold;
 	text-align: center;
 	margin:20px 0px 0px 20px;
 	text-transform: uppercase;
+	width: 480px;
 }
 .module h2 {
 	background: linear-gradient(rgb(57, 173, 230), rgb(47, 139, 159)) repeat scroll 0% 0% transparent;

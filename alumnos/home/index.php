@@ -113,7 +113,8 @@ include_once("php/resultados.php");
 
 
             </div>
-
+<section class="content-principal">
+    <div class="principal">
     <section class="fondo-slider">
         <?php
         include_once("php/banner.php");
@@ -128,7 +129,7 @@ include_once("php/resultados.php");
             <ul class="ul-submenu">
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
                 </a></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href="../calendario/index.php"><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/tareas.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/mensajes.svg" width="85" height="82"></a></li>
@@ -142,9 +143,22 @@ include_once("php/resultados.php");
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li>
             </ul>
         </div>
+
         <div id="more">Más</div>
+
     </div>
+
 </div>
+
+<div class="mensajes-alumno">
+<div class="mensajes">
+
+</div>
+
+</div>
+</div>
+</section>
+
 <!--fin menu secundario -->
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>

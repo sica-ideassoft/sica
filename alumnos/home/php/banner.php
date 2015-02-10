@@ -17,7 +17,7 @@ $conn = new Conexion();
             $ruta = "../../panel/control_admin/publicar/php/";
             $url = $ruta.$filas['imagen'];
              ?>
-                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
+                <img class="img-banner" src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
                     <h3 class="caption-title">
                     <?php
@@ -38,7 +38,7 @@ $conn = new Conexion();
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>
-                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
+                <img class="img-banner" src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
                 <h3 class="caption-title">
                     <?php
@@ -60,7 +60,7 @@ $conn = new Conexion();
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>
-                <img src="<?php echo $url;?>" alt="Slider Imagen 1">
+                <img class="img-banner" src="<?php echo $url;?>" alt="Slider Imagen 1">
                 <div class="caption">
                 <h3 class="caption-title">
                     <?php
@@ -82,7 +82,7 @@ $conn = new Conexion();
                 $ruta = "../../panel/control_admin/publicar/php/";
                 $url = $ruta.$filas['imagen'];
                  ?>
-                <img src="<?php echo $url; ?>" alt="Slider Imagen 1">
+                <img class="img-banner" src="<?php echo $url; ?>" alt="Slider Imagen 1">
                 <div class="caption">
                 <h3 class="caption-title">
                 <?php

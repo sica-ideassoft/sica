@@ -16,4 +16,15 @@ function estado(){
 
 }
 
+$sqll = "SELECT id_estado_civil,p_estado_civil FROM estado_civil";
+$querys = $conn->query($sqll);
+function civil(){
+	global $querys ;
+	while($rows = $querys ->fetch()){
+		?>
+		<option value="<?php echo $rows['id_estado_civil']; ?>"><?php echo $rows['p_estado_civil']; ?></option>
+		<?php
+	}
+
+}
 ?>

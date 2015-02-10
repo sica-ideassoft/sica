@@ -1,0 +1,16 @@
+.content-calendario{
+	top: 60px;
+	right: 0px;
+	width: 1079px;
+	height: 640px;
+	/*background-color: red;*/
+	position: absolute;
+	overflow: hidden;
+	overflow-x:hidden;
+	overflow-y:scroll;
+	text-align: center;
+}
+.content-calendario embed{
+	width: 800px;
+	height: 635px;
+}

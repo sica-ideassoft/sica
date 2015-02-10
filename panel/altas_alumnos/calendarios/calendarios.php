@@ -207,8 +207,7 @@ if (!isset($_SESSION['admin-sica'])) {
    <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
-            </li>
+
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
             <li><a href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
@@ -217,26 +216,9 @@ if (!isset($_SESSION['admin-sica'])) {
         </li>
       <li><a><span>***</span></a></li>
     </div>
-    <!-- fin de menu3 -->
-
-    <!-- inicio de menu4 -->
 
   </div>
 
-
-<!--          <div class='footcontent'>
-<table class="tabla1">
-<thead>
-<td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-</thead>
-<tbody>
-<td><p>1200</p></td><td><p>hola</p></td>
-</tbody>
-<tfoot>
-
-</tfoot>
-</table>
-</div> -->
 </div>
 
 <!-- inicio de section -->
@@ -250,7 +232,7 @@ if (!isset($_SESSION['admin-sica'])) {
   <div class="modal-pdf">
   <div class="pdf-cerrar">X</div>
   <?php include_once("php/calendario.php"); ?>
-  <embed src="<?php echo $url.$row['calendario']; ?>" width="800" height="630">
+  <embed src="<?php echo $url.$row['calendario']; ?>" width="800" height="100%">
   </div>
 
   <div class="content-pdf">

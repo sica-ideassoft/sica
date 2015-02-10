@@ -357,7 +357,7 @@ alert(ar);
           </select>
           <td><select name="estado" id="estado">
             <?php
-            include_once("php/select.php");
+            include("php/select.php");
               estado();
              ?>
           </select></td>
@@ -387,7 +387,7 @@ alert(ar);
         <tr>
           <td><label for="">Nacionalidad</label></td>
           <td><label for="">Estado Civil:</label></td>
-          <td><label for="">Fotografia:</label></td>
+
         </tr>
         <tr>
         <td><select name="nacionalidad" id="nacionalidad">
@@ -395,13 +395,11 @@ alert(ar);
           <option value="Extrangera">Extrangera</option>
         </select></td>
         <td><select name="civil"  id="civil">
-          <option value="soltero">Soltero</option>
-          <option value="casado">Casado</option>
-          <option value="libre">Union libre</option>
-          <option value="divorciado">Divorceado</option>
-          <option value="viudo">Viudo</option>
+              <?php
+              civil();
+              ?>
         </select></td>
-         <td colspan="2"><input type="file" name="file" id="file"></td>
+
 
       </tr>
 <!--       <tr>

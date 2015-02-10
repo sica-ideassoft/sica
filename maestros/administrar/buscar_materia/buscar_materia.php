@@ -184,7 +184,7 @@ if (!isset($_SESSION['maestro-session'])) {
     <p>buscar materias</p>
   </div>
 
-  <form method="get" class="search" action="mostrar_materia.php?id=<?php echo $row['id_materia'] ?>">
+  <form method="get" class="search" action="">
 
     <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
 

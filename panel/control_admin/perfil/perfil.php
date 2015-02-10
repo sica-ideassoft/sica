@@ -251,7 +251,7 @@ location.href = "../../login_admin/index.php";
                <td><p class="texto">Password:</p></td>
               </tr>
               <tr>
-         <td><input type="password" id="password" name="password" value=<?php echo $pass; ?> class='password'><span class="password1"/></span></input>
+         <td><input type="password" id="password" name="password" value="" class='password' placeholder="password"><span class="password1"/></span></input>
              </tr>
            </table>
 

@@ -26,7 +26,7 @@ $(function() {
     var exterior     = $("#exterior").val();
     var nacionalidad = $("#nacionalidad").val();
     var civil        = $("#civil").val();
-    var file       = $("#file").val();
+
     // var status    = $("#status").val();
 
 var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grupo='+ grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&file=' + file;

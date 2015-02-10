@@ -160,25 +160,8 @@ location.href = "../../login_maestro/index.php";
 
       <li><a><span>***</span></a></li>
            </div>
-           <!-- fin de menu3 -->
-
-           <!-- inicio de menu4 -->
 
          </div>
-
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p></p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
       <!-- inicio de section -->

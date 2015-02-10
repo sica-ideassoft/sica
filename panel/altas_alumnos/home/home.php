@@ -108,10 +108,12 @@ location.href = "../../login_admin/index.php";
                   <p>PUBLICAR</p>
                 </div>
                 </a>
+                <a href="../../control_admin/avisos/avisos.php">
                 <div class="mod4 btn btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>
                 </div>
+                </a>
 
               </div>
 

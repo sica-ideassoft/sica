@@ -1,3 +1,39 @@
+.mensajes{
+	width: 300px;
+	height: 100px;
+	background-color: red;
+	position: absolute;
+}
 .color{
 	margin-top: 4px !important;
+}
+.principal{
+	width: 100px;
+}
+.content-principal{
+	width: 1080px;
+	height:640px;
+	top: 60px;
+	right: 0px;
+	position: absolute;
+	/*background-color: tomato;*/
+	z-index: -1;
+	/*overflow: hidden;/*/
+	overflow: hidden;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.mensajes-alumno{
+	width: 1070px;
+	/*height: 100%;*/
+	position: absolute;
+	margin-top: 360px;
+	right: 0px;
+	background-color:rgba(255,255,255,0.3);
+}
+
+
+#lessoncup{
+	position: fixed;
+	margin-top: 0px;
 }

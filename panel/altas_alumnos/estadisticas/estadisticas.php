@@ -172,7 +172,7 @@ location.href = "../../login_admin/index.php";
    <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_grupo/buscar_grupo.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+
             </li>
             <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
@@ -182,29 +182,9 @@ location.href = "../../login_admin/index.php";
         </li>
       <li><a><span>***</span></a></li>
            </div>
-           <!-- fin de menu3 -->
-
-           <!-- inicio de menu4 -->
 
          </div>
-
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p>1200</p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
-
-
-      <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem">
          <div class="estacion">
