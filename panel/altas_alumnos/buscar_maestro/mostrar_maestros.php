@@ -94,10 +94,10 @@ location.href = "../../login_admin/index.php";
                   </div>
                   </a>
 
-                <div class="mod2 btn btn-1 btn-1a">
+              <!--   <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
-                </div>
+                </div> -->
 
                  <div class="mod3 btn btn-1 btn-1b">
                   <span class="modico3"></span>

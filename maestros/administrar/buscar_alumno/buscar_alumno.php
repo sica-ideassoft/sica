@@ -67,8 +67,8 @@ if (!isset($_SESSION['maestro-session'])) {
 
   <div class="heder22">
     <ul class="heder21sub2">
-      <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-      <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+      <!-- <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+      <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li> -->
       <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
     </ul>
   </div>
@@ -91,7 +91,7 @@ if (!isset($_SESSION['maestro-session'])) {
         </div>
       </a>
 
-      <div class="mod2 btn btn-1 btn-1a">
+      <!-- <div class="mod2 btn btn-1 btn-1a">
         <span class="modico2 "></span>
         <p>MATERIALES</p>
       </div>
@@ -103,7 +103,7 @@ if (!isset($_SESSION['maestro-session'])) {
       <div class="mod4 btn btn-1 btn-1c">
         <span class="modico4"></span>
         <p>AVISOS</p>
-      </div>
+      </div> -->
 
     </div>
 

@@ -4,7 +4,7 @@
 	session_start();
 	if (!isset($_SESSION['maestro-session']) ){
 
-				$sql = 'SELECT user,password FROM user_maestro WHERE user="'. $_POST['username'].'" && password="'. $_POST['password'].'" LIMIT 1';
+				$sql = 'SELECT user,password FROM user_maestro WHERE user="'. $_POST['username'].'" && password="'.md5(sha1($_POST['password'])).'" LIMIT 1';
 				if ($query = $conn->query($sql)){
 					if ($query->rowCount() == 1 ){
 						$user = $query->fetch();

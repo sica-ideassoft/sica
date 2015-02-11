@@ -113,7 +113,7 @@ include_once("php/resultados.php");
     <div id="titlebox">
         <div id="titles">
             <ul class="ul-submenu">
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
+                <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
                 </a></a></li>
                 <li class="li-submenu"><a href="../calendario/index.php"><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li>
@@ -126,10 +126,10 @@ include_once("php/resultados.php");
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/noticias.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/confi.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/condiciones.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li> -->
             </ul>
         </div>
-        <div id="more">Más</div>
+        <!-- <div id="more">Más</div> -->
     </div>
 </div>
 <!--fin menu secundario -->

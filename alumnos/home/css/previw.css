@@ -1,0 +1,90 @@
+.mes-cont{
+	margin:20px 8px 10px 5px;
+	width: 340px;
+	height: 130px;
+	position: relative;
+	display: inline-block;
+}
+.mes-cont img{
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+#leyent{
+	position: absolute;
+	width: 320px;
+	height: 35px;
+background-color: red;
+	bottom: 0px;
+	color: white;
+	overflow: hidden;
+	padding: 10px;
+}
+#leyent a{
+	color: white;
+	text-align: justify;
+
+
+}
+.mes-principal{
+
+	width: 100%;
+	height: 75px;
+	background-color: rgba(255,255,255,0.7);
+	top: 0px;
+	position: absolute;
+
+}
+.mes-principal p{
+	text-align: justify;
+	overflow: hidden;
+	margin: 2px;
+	/*background-color: red;*/
+	width: 330px;
+	height: 65px;
+	padding: 3px;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	text-transform: bold;
+	font-family:helvetica;
+	font-size: 20px;
+
+}
+.urgente{
+	background-color:rgba(255, 70, 30, 0.43);
+
+}
+.informativo{
+	background-color:rgba(91, 255, 30, 0.43);
+}
+.recordeatorio{
+	background-color:rgba(30, 255, 191, 0.43);
+}
+#leyenda{
+right: 0px;
+position: absolute;
+bottom:0px;
+/*color: transparent;*/
+}
+
+.cerrar{
+position: absolute;
+background-color: rgb(255, 117, 0);
+z-index: 10;
+text-align: center;
+right: 0px;
+color: white;
+
+}
+.cerrar a{
+ padding: 10px;
+ color: white;
+ text-decoration: none;
+ font-weight: bold;
+}
+.btnEliminar{
+	background: transparent;
+	border-style: none;
+}

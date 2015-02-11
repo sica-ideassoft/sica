@@ -28,10 +28,10 @@ $(function() {
  var exterior        = $("#exterior").val();
  var nacionalidad = $("#nacionalidad").val();
  var civil        = $("#civil").val();
- var foto         = $("#foto").val();
+
  var status       = $("#status").val();
 
-var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio+ '&colonia='+ colonia + '&calle='+ calle+ '&interior='+ interior+ '&exterior='+ exterior  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&foto='+ foto + '&status='+ status  ;
+var dataString ='id='+ id +'&nombre='+ nombre +'&paterno='+ paterno + '&materno='+ materno + '&matricula='+ matricula  + '&curp='+ curp  + '&telefono='+ telefono  + '&correo='+ correo  + '&genero='+ genero + '&nacimiento='+ nacimiento+ '&edad='+ edad + '&grupo='+ grupo + '&estado='+ estado + '&municipio='+ municipio+ '&colonia='+ colonia + '&calle='+ calle+ '&interior='+ interior+ '&exterior='+ exterior  + '&nacionalidad='+ nacionalidad + '&civil='+ civil + '&status='+ status  ;
 
 if(nombre === '' ||paterno === '' ||materno === '' || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === ""|| nacimiento === ""|| edad === ""|| grupo === ""|| estado === ""|| municipio === ""|| colonia === ""|| calle === ""||interior === ""||exterior === ""|| nacionalidad === "" || civil === ""|| status === "")
 {

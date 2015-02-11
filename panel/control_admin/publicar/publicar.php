@@ -98,11 +98,11 @@ if (!isset($_SESSION['admin-sica'])) {
         <div class='flecha'></div>
       </div>
 
-      <div class="mod2 btn btn-1 btn-1a">
+<!--       <div class="mod2 btn btn-1 btn-1a">
         <span class="modico2 "></span>
         <p>MATERIALES</p>
       </div>
-
+ -->
       <div class="mod3 btn btn-1 btn-1b">
         <span class="modico3"></span>
         <p>PUBLICAR</p>
@@ -187,30 +187,11 @@ if (!isset($_SESSION['admin-sica'])) {
         </li>
         <li><a><span>***</span></a></li>
       </div>
-      <!-- fin de menu3 -->
-
-      <!-- inicio de menu4 -->
 
     </div>
 
-<!--        <div class='footcontent'>
-<table class="tabla1">
-<thead>
-<td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-</thead>
-<tbody>
-<td><p>1200</p></td><td><p>hola</p></td>
-</tbody>
-<tfoot>
-
-</tfoot>
-</table>
-</div> -->
 </div>
 
-
-<!-- finde  mensajes curp de validacion -->
-<!-- inicio de section -->
 <section class="seccion1">
 
 

@@ -96,10 +96,10 @@ location.href = "../../login_admin/index.php";
                   </a>
 
 
-                <div class="mod2 btn btn-1 btn-1a">
+             <!--    <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
-                </div>
+                </div> -->
 
 
                 <a href="../../control_admin/publicar/publicar.php">

@@ -7,10 +7,7 @@ location.href = "../../login_admin/index.php";
 }
 
 ?>
-<script>
-var ar = <?php echo json_encode($nombrecom) ?>;
-alert(ar);
-</script>
+
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -101,11 +98,11 @@ alert(ar);
             <p>PERFIL</p>
             </div>
             </a>
-
+<!--
           <div class="mod2 btn btn-1 btn-1a">
             <span class="modico2 "></span>
             <p>MATERIALES</p>
-          </div>
+          </div> -->
 
            <div class="mod3 btn btn-1 btn-1b">
             <span class="modico3"></span>
@@ -191,23 +188,9 @@ alert(ar);
         </li>
       <li><a><span>***</span></a></li>
      </div>
-     <!-- fin de menu3 -->
-
-     <!-- inicio de menu4 -->
 
    </div>
 
-<!--    <div class='footcontent'>
-
-    <div class="headtabla1"><p>Recien Ingresados</p></div>
-
-    <table class="tabla1">
-      <div class="mosAlumno">
-        <div id="show"></div>
-      </div>
-
-    </table>
-  </div> -->
 </div>
 
 <!-- mensajes de validacion -->
@@ -454,9 +437,9 @@ alert(ar);
 <script src="js/jquery-ui.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/calendario.js"></script>
-<script src="js/functions.js"></script>
 <script src="js/script.js"></script>
 <script src="alertifyjs/alertify.js"></script>
+<script src="js/functions.js"></script>
 
 
 </body>

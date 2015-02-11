@@ -1,4 +1,5 @@
 $(function() {
+
   var expr      = /^[a-zA-Z0-9_\.\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-\.]+$/;
   var numeros   = /^[0-9]+$/;
   var Ecurp     = /[a-zA-Z]{4,4}[0-9]{6}[a-zA-Z]{6,6}[0-9]{2}/;
@@ -29,9 +30,9 @@ $(function() {
 
     // var status    = $("#status").val();
 
-var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grupo='+ grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil+ '&file=' + file;
+var dataString = 'nombre='+ nombre + '&paterno='+ paterno + '&materno=' + materno + '&matricula=' + matricula + '&curp=' + curp + '&telefono=' + telefono + '&correo=' + correo+ '&genero=' + genero + '&nacimiento=' + nacimiento + '&edad=' + edad + '&grupo='+ grupo + '&estado=' + estado + '&municipio=' + municipio+ '&colonia=' + colonia + '&calle=' + calle + '&interior=' + interior+ '&exterior=' + exterior+ '&nacionalidad=' + nacionalidad + '&civil=' + civil;
 
-if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === ""|| file === "" )
+if(nombre === '' || paterno === "" || materno === "" || matricula === "" || curp === "" || telefono === "" || correo === "" || genero === "" || nacimiento === "" || edad === "" || grupo === "" || estado === "" || municipio === "" || colonia === "" || calle === "" || interior === ""|| exterior === "" || nacionalidad === "" || civil === "" )
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(4000), 1000);
   return false;
@@ -83,7 +84,7 @@ else
     $("#exterior").val("");
     $("#nacionalidad").val("");
     $("#civil").val("");
-    $("#file").val("");
+
     // $("#status").val("");
         }, error: function () {
          alertify.alert().set('message', 'La matricula ya <b>existe</b>').show();

@@ -101,11 +101,11 @@ include_once("php/paginacion.php");
                   <p>PERFIL</p>
                   </div>
                 </a>
-
+<!--
                 <div class="mod2 btn1 btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
-                </div>
+                </div> -->
 
                  <div class="mod3 btn1 btn-1 btn-1b">
                   <span class="modico3"></span>

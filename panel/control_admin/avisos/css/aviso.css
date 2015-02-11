@@ -32,7 +32,7 @@
 		width: 250px;
 		height: 27px;
 		border-style: none;
-		color: #20B2AA !important;
+
 		background-color:#e3e3e3;
 		-moz-box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
 	    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
@@ -46,7 +46,7 @@
 	right: 0px;
 	top: 0px;
 	position: absolute;
-	background-color: rgba(255,255,255,0.5);
+	/*background-color: rgba(255,255,255,0.5);*/
 	overflow: hidden;
 	overflow-x:hidden;
 	overflow-y:scroll;
@@ -77,7 +77,7 @@ font-size: 17px;
 		width: 250px;
 		height: 27px;
 		border-style: none;
-		color: #20B2AA !important;
+
 		background-color:#e3e3e3;
 		-moz-box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
 	    -webkit-box-shadow: inset 0 2px 2px rgba(0,0,0,.1);
@@ -200,6 +200,7 @@ font-size: 17px;
 		height: 30px;
 		border-radius: 5px;
 		border-style: none;
+		color: rgba(0,0,0,0.3) !important;
 		background-color:rgba(255,255,255,0.2);
 		 -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
 	    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.3);
@@ -494,4 +495,30 @@ margin-top: 10px !important;
 .usuario,.password{
 	padding-left: 10px;
 	color: #024960;
+}
+.content-aviso label{
+	color: rgb(120, 0, 0);
+}
+.control{
+	text-align: center;
+}
+
+.teble2{
+
+	margin: auto;
+}
+
+input[name="btnEnviar"]{
+	width: 200px;
+	height: 40px;
+	margin-top: 10px;
+	border-style: none;
+	background-color: rgb(0, 111, 255);
+	border-bottom: 3px solid blue;
+	color: white;
+	text-transform: uppercase;
+	border-radius: 5px;
+}
+input[name="btnEnviar"]:hover{
+	border-bottom: none;
 }

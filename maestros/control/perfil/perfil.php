@@ -95,7 +95,7 @@ location.href = "../login_maestro/index.php";
                   <p>PERFIL</p>
 <div class='flecha'></div>
                   </div>
-
+<!--
                 <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
@@ -108,7 +108,7 @@ location.href = "../login_maestro/index.php";
                 <div class="mod4 btn btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>
-                </div>
+                </div> -->
 
               </div>
 

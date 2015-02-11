@@ -51,7 +51,7 @@ $maestro =$conn ->prepare("INSERT INTO user_maestro VALUES (:idU,:id,:user,:pass
 $maestro->bindParam(':idU',$vacio);
 $maestro->bindParam(':id',$id);
 $maestro->bindParam(':user',$_POST['user']);
-$maestro->bindParam(':password',$_POST['password']);
+$maestro->bindParam(':password',md5(sha1($_POST['password'])));
 $maestro->bindParam(':imagen',$vacio);
 $maestro->execute();
 	}

@@ -76,8 +76,8 @@ location.href = "../../login_maestro/index.php";
 
   <div class="heder22">
     <ul class="heder21sub2">
-      <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-      <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+     <!--  <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+      <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li> -->
       <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
     </ul>
   </div>
@@ -117,7 +117,7 @@ location.href = "../../login_maestro/index.php";
         </div>
       </a>
 
-      <div class="mod2 btn1 btn-1 btn-1a">
+      <!-- <div class="mod2 btn1 btn-1 btn-1a">
         <span class="modico2 "></span>
         <p>MATERIALES</p>
       </div>
@@ -129,7 +129,7 @@ location.href = "../../login_maestro/index.php";
       <div class="mod4 btn1 btn-1 btn-1c">
         <span class="modico4"></span>
         <p>AVISOS</p>
-      </div>
+      </div> -->
 
     </div>
 

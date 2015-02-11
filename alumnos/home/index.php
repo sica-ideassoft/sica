@@ -25,6 +25,7 @@ include_once("php/resultados.php");
         <link rel="stylesheet" href="../css_global/normalize.css">
         <link rel="stylesheet" href="../css_global/style.css">
         <link rel="stylesheet" href="css/home.css">
+          <link rel="stylesheet" href="css/previw.css">
         <link rel="stylesheet" href="css/style_slider.css">
 
 
@@ -130,30 +131,30 @@ include_once("php/resultados.php");
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
                 </a></a></li>
                 <li class="li-submenu"><a href="../calendario/index.php"><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/tareas.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/mensajes.svg" width="85" height="82"></a></li>
+                <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li> -->
+                <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/tareas.svg" width="85" height="82"></a></li> -->
+              <!--   <li class="li-submenu"><a href=""><img src="../image_globales/menu/mensajes.svg" width="85" height="82"></a></li> -->
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/estadisticas.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/nuve.svg" width="85" height="82"></a></li>
-                <li class="li-submenu"><a href=""> <img src="../image_globales/menu/materias.svg" width="85" height="82"></a></li>
+                <!-- <li class="li-submenu"><a href=""> <img src="../image_globales/menu/materias.svg" width="85" height="82"></a></li> -->
                 <li class="li-submenu"><a href="../logout.php"><img src="../image_globales/menu/exit.svg" width="85" height="82"></li>
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/noticias.svg" width="85" height="82"></a></li>
+                <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/noticias.svg" width="85" height="82"></a></li> -->
                 <li class="li-submenu"><a href="../configuracion/index.php"><img src="../image_globales/menu/confi.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/condiciones.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/informacion.svg" width="85" height="82"></a></li>
             </ul>
         </div>
 
-        <div id="more">Más</div>
+        <!-- <div id="more">Más</div> -->
 
     </div>
 
 </div>
 
 <div class="mensajes-alumno">
-<div class="mensajes">
-
-</div>
+    <?php
+    include_once("php/preview.php");
+     ?>
 
 </div>
 </div>

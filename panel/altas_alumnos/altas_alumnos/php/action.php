@@ -5,7 +5,8 @@ $conn = new Conexion();
 $sqll = $conn->prepare("SELECT matricula FROM alumno WHERE matricula=:matricula");
 $sqll->bindParam(":matricula",$_POST['matricula']);
 $sqll->execute();
-if ($sqll->fetchColumn()>0) {
+
+if ($sqll->fetchColumn(0)) {
 	header("location:../error.php");
 	exit();
 }else{
@@ -36,7 +37,7 @@ $sql->bindParam(":interior",$_POST['interior']);
 $sql->bindParam(":exterior",$_POST['exterior']);
 $sql->bindParam(":nacionalidad",$_POST['nacionalidad']);
 $sql->bindParam(":civil",$_POST['civil']);
-$sql->bindParam(":pass",$password);
+$sql->bindParam(":pass",md5(sha1($password)));
 $sql->bindParam(":fname",$vacio);
 $sql->bindParam(":activo",$activado);
 $sql->bindParam(":ip",$_SERVER['REMOTE_ADDR']);

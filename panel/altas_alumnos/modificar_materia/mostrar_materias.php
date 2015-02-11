@@ -98,10 +98,10 @@ location.href = "../../login_admin/index.php";
                   </div>
                   </a>
 
-                <div class="mod2 btn btn-1 btn-1a">
+               <!--  <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
-                </div>
+                </div> -->
 
                  <div class="mod3 btn btn-1 btn-1b">
                   <span class="modico3"></span>
@@ -154,11 +154,11 @@ location.href = "../../login_admin/index.php";
         </li>
           <li class='has-sub admin  activo'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a class='activo' href="../buscar_materia/buscar_materia.php"><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
+          <li><a  href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a class='activo'href='../modificar_materia/modificar_materia.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>

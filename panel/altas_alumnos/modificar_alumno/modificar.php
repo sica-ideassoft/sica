@@ -98,10 +98,10 @@ location.href = "../../login_admin/index.php";
             </div>
             </a>
 
-          <div class="mod2 btn btn-1 btn-1a">
+ <!--          <div class="mod2 btn btn-1 btn-1a">
             <span class="modico2 "></span>
             <p>MATERIALES</p>
-          </div>
+          </div> -->
 
            <div class="mod3 btn btn-1 btn-1b">
             <span class="modico3"></span>
@@ -405,15 +405,7 @@ $id = $_POST["id"];
          </td>
 
       </tr>
-      <tr>
-          <td><label for="">Fotografia:</label></td>
-        </tr>
-        <tr>
-         <td colspan="2"><input type="file" name="foto" id="foto" value=<?php echo $alumno['fotografia']; ?>></td>
-         <td>
 
-
-        </tr>
       </table>
       <div class="control">
 

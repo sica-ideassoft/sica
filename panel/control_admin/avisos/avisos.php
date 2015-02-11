@@ -27,6 +27,7 @@ if (!isset($_SESSION['admin-sica'])) {
   <link rel="stylesheet" href="css/aviso.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/mensajes.css">
+  <link rel="stylesheet" href="css/previw.css">
 
 
   <link rel="stylesheet" href="alertifyjs/css/alertify.css">
@@ -98,10 +99,10 @@ if (!isset($_SESSION['admin-sica'])) {
         <div class='flecha'></div>
       </div>
 
-      <div class="mod2 btn btn-1 btn-1a">
+   <!--    <div class="mod2 btn btn-1 btn-1a">
         <span class="modico2 "></span>
         <p>MATERIALES</p>
-      </div>
+      </div> -->
 
       <div class="mod3 btn btn-1 btn-1b">
         <span class="modico3"></span>
@@ -209,53 +210,45 @@ if (!isset($_SESSION['admin-sica'])) {
 <div class="tem"><p><span class="aviso-ico"></span>AVISOS</p></div>
 
 <section class="content-aviso">
-<form action="" method="post" enctype="">
+  <div class="mensajes-previw">
+        <?php
+        include_once("php/preview.php");
+         ?>
+
+  </div>
+<form action="php/recibir.php" method="post" enctype="multipart/form-data">
     <table class="table-principal">
-
-
-      <tr>
-      <td><label for="">url:</label></td>
-      </tr>
-      <tr>
-        <td>
-          <input type="text" placeholder="http://ideasSoft.com">
-        </td>
-      </tr>
-      <tr>
-        <td><label for="">Imagen:</label></td>
-      </tr>
-      <tr>
-        <td>
-          <input type="file" class="imagen" id="imagen" name="imagen">
-        </td>
-      </tr>
-      <tr>
-        <td><label for="">Prioridad:</label></td>
-      </tr>
-      <tr>
-      <td>
-        <select name="" id="">
-          <option value=""></option>
-          <option value=""></option>
+      <tr><td><label for="">url:</label></td></tr>
+      <tr><td><input type="text" name="url" placeholder="http://ideasSoft.com"></td>      </tr>
+      <tr><td><label for="">Imagen:</label></td></tr><tr>
+      <td><input type="file" class="imagen" id="imagen" name="imagen"></td></tr>
+      <tr><td><label for="">Prioridad:</label></td></tr>
+      <tr><td>
+        <select name="prioridad" id="">
+          <option value="1">urgente</option>
+          <option value="2">informativo</option>
+          <option value="3">recordatorio</option>
         </select>
         </td>
       </tr>
-      <tr>
-      <td><label for="">Aviso:</label></td>
-      </tr>
-      <tr>
-        <td>
-          <textarea></textarea>
-        </td>
-      </tr>
+      <tr><td><label for="">Aviso:</label></td></tr>
+      <tr><td><textarea name='aviso'></textarea></td></tr>
     </table>
 </form>
-  <div class="mensajes-previw">
 
-  </div>
+
 </section>
 
 <div class="control">
+<table class="teble2">
+  <tr>
+    <td><input type="submit" name="btnEnviar" value='subir mensaje'></td>
+  </tr>
+</table>
+
+</div>
+</form>
+
 </section>
 
 <!-- fin de section -->
@@ -266,7 +259,8 @@ if (!isset($_SESSION['admin-sica'])) {
 <script src="js/menu.js"></script>
 <script src="js/validar.js"></script>
 <script src="alertifyjs/alertify.js"></script>
-<script src='js/slider.js'></script>
+<script src="js/previw.js"></script>
+
 
 
 
