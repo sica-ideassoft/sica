@@ -96,12 +96,12 @@ include_once("php/paginacion.php");
 <!-- incio de menu config -->
             <div class="Ccontent">
                 <div class="Cco">
-                  <a href="../../control_admin/perfil/perfil.php">
-                <div class="mod btn1 btn-1 btn-1e">
+                <a href="../../control/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
                   <p>PERFIL</p>
                   </div>
-                </a>
+                  </a>
 
              <!--    <div class="mod2 btn1 btn-1 btn-1a">
                   <span class="modico2 "></span>

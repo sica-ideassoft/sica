@@ -20,7 +20,6 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
 .datos{
 	text-transform: uppercase;
 }
@@ -34,7 +33,20 @@ background: -webkit-linear-gradient(#00ffff,rgba(0, 91, 150, 0.8) );
   background: linear-gradient(#00d2ff,rgba(0, 91, 150, 0.8) );
 }
 
+.mod{
+	width: 41% !important;
+	border-bottom: none !important;
+}
+.mod3{
+	width: 42% !important;
+height: 85px !important;
+	border-bottom: none !important;
 
+}
+.mod4{
+	border-bottom: none !important;
+
+}
 #cssmenu ul ul li .modificar{
 background-color:	#00ffff;
 color: black;

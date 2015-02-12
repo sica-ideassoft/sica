@@ -1,14 +1,23 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
 $conn = new Conexion();
-
 $sql=$conn->prepare("SELECT
 a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
 	g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
-	e.id_estado_civil,e.p_estado_civil
+	e.id_estado_civil,e.p_estado_civil,
+	s.id_status,s.status_create,
+	o.id_genero_persona,o.genero_create,
+	d.id_edad,d.edad_create,
+	x.id_estado,x.nombre_estado,
+	n.id_nacionalidad,n.nacionalidad_create
 	FROM alumno a
 	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
 	INNER JOIN estado_civil e ON e.id_estado_civil= a.estado_civil
+	INNER JOIN status s ON s.id_status = a.status
+	INNER JOIN genero o ON o.id_genero_persona = a.genero
+	INNER JOIN edad d ON d.id_edad = a.edad
+	INNER JOIN estados_mexico x ON x.id_estado = a.estado
+	INNER JOIN nacionalidad n ON n.id_nacionalidad = a.nacionalidad
 	WHERE a.id_alumno = :id");
 $sql->bindParam(':id',$_POST["id"]);
 $sql->execute();
@@ -37,7 +46,7 @@ while($row = $sql->fetch()){
 	<td><?php echo $row['curp']; ?></td>
 	<td><?php echo $row['telefono']; ?></td>
 	<td><?php echo $row['correo']; ?></td>
-	<td><?php echo $row['genero']; ?></td>
+	<td><?php echo $row['genero_create']; ?></td>
 </tr>
 <tr>
 	<td class="dato"><label for="">F. Nacimineto:</label></td>
@@ -48,7 +57,7 @@ while($row = $sql->fetch()){
 
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['edad']; ?> años</td>
+	<td><?php echo utf8_encode($row['edad_create']); ?></td>
 	<td><?php
 			$grado = substr($row['grupo'], -2,1);
 				echo $grado;
@@ -66,7 +75,7 @@ while($row = $sql->fetch()){
 	<td class="dato"><label for="">Calle:</label></td>
 </tr>
 <tr>
-	<td><?php echo $row['estado']; ?></td>
+	<td><?php echo $row['nombre_estado']; ?></td>
 	<td><?php echo $row['municipio']; ?></td>
 	<td><?php echo $row['colonia']; ?></td>
 	<td><?php echo $row['calle']; ?></td>
@@ -80,7 +89,7 @@ while($row = $sql->fetch()){
 <tr>
 	<td>#<?php echo $row['Ninterior']; ?></td>
 	<td>#<?php echo $row['Nexterior']; ?></td>
-	<td><?php echo $row['nacionalidad']; ?></td>
+	<td><?php echo $row['nacionalidad_create']; ?></td>
 	<td><?php echo $row['p_estado_civil']; ?></td>
 </tr>
 <tr>
@@ -89,7 +98,7 @@ while($row = $sql->fetch()){
 </tr>
 <tr>
 
-	<td ><label id="status"><?php echo $row['status']; ?></label></td>
+	<td ><label id="status"><?php echo $row['status_create']; ?></label></td>
 </tr>
 </table>
 

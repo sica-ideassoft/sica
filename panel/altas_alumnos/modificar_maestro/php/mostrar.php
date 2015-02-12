@@ -4,7 +4,14 @@ include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
 $sql =$conn->prepare("SELECT * FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = :id");
+INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro
+INNER JOIN nacionalidad n ON n.id_nacionalidad =  m.nacionalidad
+INNER JOIN genero g ON g.id_genero_persona =  m.genero
+INNER JOIN edad e ON e.id_edad =  m.edad
+INNER JOIN estado_civil c ON c.id_estado_civil =  m.estado_civil
+INNER JOIN estados_mexico x ON x.id_estado =  m.Estado
+
+where m.id_maestro and u.id_maestro = :id");
 $sql->bindParam(':id',$_POST["id"]);
 $sql->execute();
 
@@ -33,8 +40,8 @@ while($row = $sql->fetch()){
 <tr>
 	<td><?php echo $row['telefono']; ?></td>
 	<td><?php echo $row['correo']; ?></td>
-	<td><?php echo $row['genero']; ?></td>
-	<td><?php echo $row['edad']; ?> Años</td>
+	<td><?php echo $row['genero_create']; ?></td>
+	<td><?php echo utf8_encode($row['edad_create']); ?></td>
 </tr>
 <tr>
 	<td class="dato"><label for="">E. Civil:</label></td>
@@ -44,9 +51,9 @@ while($row = $sql->fetch()){
 </tr>
 
 <tr>
-	<td><?php echo $row['estado_civil']; ?></td>
+	<td><?php echo $row['p_estado_civil']; ?></td>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['Estado']; ?></td>
+	<td><?php echo $row['nombre_estado']; ?></td>
 	<td><?php echo $row['municipio']; ?></td>
 </tr>
 <tr>
@@ -61,7 +68,7 @@ while($row = $sql->fetch()){
 	<td><?php echo $row['calle']; ?></td>
 	<td>#<?php echo $row['Ninterior']; ?></td>
 	<td>#<?php echo $row['Nexterior']; ?></td>
-	<td><?php echo $row['nacionalidad']; ?></td>
+	<td><?php echo $row['nacionalidad_create']; ?></td>
 
 </tr>
 <tr>

@@ -3,9 +3,21 @@
 $conn = new Conexion();
 $id = $_POST["id"];
 
-$sql = "SELECT *
+$sql = "SELECT  m.id_maestro,m.nombre,m.A_paterno,m.A_materno,m.clave,m.curp,m.telefono,m.correo,m.genero,m.edad,m.estado_civil,m.fecha_nacimiento,m.Estado,m.municipio,m.calle,m.Ninterior,m.Nexterior,m.nacionalidad,
+	u.id_login_maestro,u.id_maestro,u.user,u.password,u.imagen,
+	e.id_estado_civil,e.p_estado_civil,
+	o.id_genero_persona,o.genero_create,
+	d.id_edad,d.edad_create,
+	x.id_estado,x.nombre_estado,
+	n.id_nacionalidad,n.nacionalidad_create
 FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro where m.id_maestro and u.id_maestro = '".$id."'";
+INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro
+INNER JOIN estado_civil e ON e.id_estado_civil= m.estado_civil
+	INNER JOIN genero o ON o.id_genero_persona = m.genero
+	INNER JOIN edad d ON d.id_edad = m.edad
+	INNER JOIN estados_mexico x ON x.id_estado = m.Estado
+	INNER JOIN nacionalidad n ON n.id_nacionalidad = m.nacionalidad
+where m.id_maestro and u.id_maestro = '".$id."'";
 
 $query = $conn->query($sql);
 while($row = $query->fetch()){
@@ -33,7 +45,7 @@ $nombre = $row['nombre'];
 	<td><?php echo $row['curp']; ?></td>
 	<td><?php echo $row['telefono']; ?></td>
 	<td><?php echo $row['correo']; ?></td>
-	<td><?php echo $row['genero']; ?></td>
+	<td><?php echo $row['genero_create']; ?></td>
 </tr>
 <tr>
 	<td class="dato"><label for="">Edad:</label></td>
@@ -43,10 +55,10 @@ $nombre = $row['nombre'];
 </tr>
 
 <tr>
-	<td><?php echo $row['edad']; ?> Años</td>
-	<td><?php echo $row['estado_civil']; ?></td>
+	<td><?php echo utf8_encode($row['edad_create']); ?></td>
+	<td><?php echo $row['p_estado_civil']; ?></td>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
-	<td><?php echo $row['Estado']; ?></td>
+	<td><?php echo utf8_encode($row['nombre_estado']); ?></td>
 </tr>
 
 <tr>
@@ -68,7 +80,7 @@ $nombre = $row['nombre'];
 </tr>
 <tr>
 
-	<td><?php echo $row['nacionalidad']; ?></td>
+	<td><?php echo $row['nacionalidad_create']; ?></td>
 	<td><?php echo $row['user']; ?></td>
 </tr>
 </table>

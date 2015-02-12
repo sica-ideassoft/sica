@@ -1,34 +1,29 @@
 <?php
-  include_once("../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
-
+include_once("../../../conexion/conexion.php");
+$conn= new Conexion();
+header('Content-Type: text/html; charset=UTF-8');
 // $consulta = mysql_query("SELECT nombre FROM maestro");
-$consulta = mysql_query("SELECT *
-FROM maestro m
-INNER JOIN user_maestro u ON m.id_maestro =  u.id_maestro");
 
-function maestro(){
-	global $consulta;
-	while($row = mysql_fetch_array($consulta)){
+$id = $_POST['id'];
+$sqll1 = $conn->prepare("SELECT * FROM materias where id_materia = :id");
+$sqll1->bindParam(':id',$id);
+$sqll1->execute();
+$rou1=$sqll1->fetch();
+
+$credito = $rou1['credito'];
+$sql1 =$conn->prepare("SELECT  id_credito,credito  FROM credito order by id_credito=:credito desc");
+
+$sql1->bindParam(':credito',$credito);
+$sql1->execute();
+function credito(){
+	global $sql1;
+	while($row1 =$sql1->fetch()){
 		?>
-		<option value="<?php echo $row['user']; ?>"><?php echo $row['nombre']; ?></option>
+		<option value="<?php echo $row1['id_credito']; ?>"><?php echo $row1['credito'];?></option>
 		<?php
 	}
 
 }
-$modulo = mysql_query("SELECT nombre FROM modulos");
-function modulo(){
-	global $modulo;
-	while($row = mysql_fetch_array($modulo)){
-		?>
-		<option value="<?php echo $row['nombre']; ?>"><?php echo $row['nombre']; ?></option>
-		<?php
-	}
-
-}
-
-
-
 
 ?>
+

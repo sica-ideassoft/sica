@@ -84,13 +84,12 @@ if (!isset($_SESSION['maestro-session'])) {
   <!-- incio de menu config -->
   <div class="Ccontent">
     <div class="Cco">
-      <a href="../../control/perfil/perfil.php">
-        <div class="mod btn btn-1 btn-1e">
-          <span class="modico "></span>
-          <p>PERFIL</p>
-        </div>
-      </a>
-
+                <a href="../../control/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
     <!--   <div class="mod2 btn btn-1 btn-1a">
         <span class="modico2 "></span>
         <p>MATERIALES</p>

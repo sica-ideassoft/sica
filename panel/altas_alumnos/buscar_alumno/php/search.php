@@ -6,6 +6,7 @@ $busca= "%".$_POST['name']."%";
 if($busca!=""){
 
 $sql = "SELECT
+
 	a.id_alumno,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.id_grupo,
 	g.grupo,g.id_grupo
 	FROM alumno a

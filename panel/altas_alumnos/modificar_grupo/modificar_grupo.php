@@ -94,29 +94,37 @@ include_once("php/paginacion.php");
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">
-                <div class="Cco">
-                  <a href="../../control_admin/perfil/perfil.php">
-                <div class="mod btn1 btn-1 btn-1e">
+                 <div class="Cco">
+
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
                   <p>PERFIL</p>
                   </div>
-                </a>
-<!--
-                <div class="mod2 btn1 btn-1 btn-1a">
+                  </a>
+
+
+             <!--    <div class="mod2 btn btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
                 </div> -->
 
-                 <div class="mod3 btn1 btn-1 btn-1b">
+
+                <a href="../../control_admin/publicar/publicar.php">
+                 <div class="mod3 btn btn-1 btn-1b">
                   <span class="modico3"></span>
                   <p>PUBLICAR</p>
                 </div>
-                <div class="mod4 btn1 btn-1 btn-1c">
+                </a>
+                <a href="../../control_admin/avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>
                 </div>
+                </a>
 
               </div>
+
 
             </div>
           </div>

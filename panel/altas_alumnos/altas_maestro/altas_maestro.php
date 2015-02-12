@@ -5,6 +5,8 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+include_once("php/select.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -91,28 +93,35 @@ location.href = "../../login_admin/index.php";
 <!-- incio de menu config -->
       <div class="Ccontent">
           <div class="Cco">
-          <a href="../../control_admin/perfil/perfil.php">
-          <div class="mod btn btn-1 btn-1e" >
-            <span class="modico "></span>
-            <p>PERFIL</p>
-            </div>
-            </a>
 
-     <!--      <div class="mod2 btn btn-1 btn-1a">
-            <span class="modico2 "></span>
-            <p>MATERIALES</p>
-          </div> -->
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
 
-           <div class="mod3 btn btn-1 btn-1b">
-            <span class="modico3"></span>
-            <p>PUBLICAR</p>
-          </div>
-          <div class="mod4 btn btn-1 btn-1c">
-            <span class="modico4"></span>
-            <p>AVISOS</p>
-          </div>
 
-        </div>
+             <!--    <div class="mod2 btn btn-1 btn-1a">
+                  <span class="modico2 "></span>
+                  <p>MATERIALES</p>
+                </div> -->
+
+
+                <a href="../../control_admin/publicar/publicar.php">
+                 <div class="mod3 btn btn-1 btn-1b">
+                  <span class="modico3"></span>
+                  <p>PUBLICAR</p>
+                </div>
+                </a>
+                <a href="../../control_admin/avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
+                  <span class="modico4"></span>
+                  <p>AVISOS</p>
+                </div>
+                </a>
+
+              </div>
 
       </div>
     </div>
@@ -322,16 +331,15 @@ location.href = "../../login_admin/index.php";
         <td><input type="text" name="correo" id="correo" ></td>
 
        <td><select name="genero" id="genero">
-          <option value="masculino">Masculino</option>
-          <option value="femenino">Femenino</option>
+            <?php
+            genero();
+             ?>
         </select></td>
           <td class="edad"><select name="edad" id="edad" >
             <?php
-              for ($i=10; $i <= 90 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
+             edad();
              ?>
-          </select><label for="">Años</label> </td>
+          </td>
 
 
 
@@ -346,17 +354,14 @@ location.href = "../../login_admin/index.php";
 
         <tr>
         <td><select name="civil" id="civil">
-          <option value="soltero">Soltero</option>
-          <option value="casado">Casado</option>
-          <option value="libre">Union libre</option>
-          <option value="divorciado">Divorceado</option>
-          <option value="viudo">Viudo</option>
+         <?php
+          civil();
+           ?>
         </select></td>
          <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"></td>
           <td>
           <select name="estado"  id="estado" >
              <?php
-            include_once("php/select.php");
               estado();
              ?>
           </select>
@@ -379,8 +384,9 @@ location.href = "../../login_admin/index.php";
           </td>
 
           <td><select name="nacionalidad" id="nacionalidad">
-          <option value="Mexicana">Mexicana</option>
-          <option value="Extrangera">Extrangera</option>
+          <?php
+            nacionalidad();
+           ?>
         </select></td>
           </td>
         </tr>

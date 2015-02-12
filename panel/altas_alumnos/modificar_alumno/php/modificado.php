@@ -2,7 +2,7 @@
 include_once("../../../../conexion/conexion.php");
 $conn = new Conexion();
 
-$sql= $conn->prepare("UPDATE alumno set id_grupo= :grupo, nombre_alumno = :nombre,A_paterno_alumno = :paterno,A_materno_alumno =:materno,matricula =:matricula,curp = :curp,telefono =:telefono,correo =:correo,genero = :genero,fecha_nacimiento = :nacimiento,edad = :edad,estado =:estado,municipio =:municipio,colonia =:colonia,calle = :calle,Ninterior = :interior,Nexterior = :exterior,nacionalidad = :nacionalidad,fotografia = :foto,estado_civil = :civil,status =:status WHERE id_alumno=:id");
+$sql= $conn->prepare("UPDATE alumno set id_grupo= :grupo, nombre_alumno = :nombre,A_paterno_alumno = :paterno,A_materno_alumno =:materno,matricula =:matricula,curp = :curp,telefono =:telefono,correo =:correo,genero = :genero,fecha_nacimiento = :nacimiento,edad = :edad,estado =:estado,municipio =:municipio,colonia =:colonia,calle = :calle,Ninterior = :interior,Nexterior = :exterior,nacionalidad = :nacionalidad,estado_civil = :civil,status =:status WHERE id_alumno=:id");
 
 $sql->bindParam(':id',$_POST["id"]);
 $sql->bindParam(':grupo',$_POST['grupo']);
@@ -23,7 +23,6 @@ $sql->bindParam(':calle',$_POST['calle']);
 $sql->bindParam(':interior',$_POST['interior']);
 $sql->bindParam(':exterior',$_POST['exterior']);
 $sql->bindParam(':nacionalidad',$_POST['nacionalidad']);
-$sql->bindParam(':foto',$_POST['foto']);
 $sql->bindParam(':civil',$_POST['civil']);
 $sql->bindParam(':status',$_POST['status']);
 

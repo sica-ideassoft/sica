@@ -72,9 +72,7 @@ location.href = "../login_maestro/index.php";
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-                <li><a href="../../altas_alumnos/mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
-                <li><a href="../../altas_alumnos/calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
+                <li><a href="../../administrar/calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
             </div>
           </div>
@@ -148,9 +146,9 @@ location.href = "../login_maestro/index.php";
       <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
         <ul>
         </li>
-        <li><a href='../../administrar/buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+        <li><a href='../../administrar/buscar_calificaciones/buscar_calificaciones.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
         </li>
-        <li><a  href='../../administrar/altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+        <li><a  href='../../administrar/altas_calificaciones/altas_calificaciones.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
         </li>
 
 
@@ -165,24 +163,9 @@ location.href = "../login_maestro/index.php";
 
          </div>
 
-  <!--        <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p>1200</p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
 
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
-
-      <!-- finde  mensajes curp de validacion -->
-      <!-- inicio de section -->
       <section class="seccion1">
 
 

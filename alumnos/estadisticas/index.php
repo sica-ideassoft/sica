@@ -110,13 +110,13 @@ include_once("php/resultados.php");
     <div id="titlebox">
         <div id="titles">
             <ul class="ul-submenu">
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/home.svg" width="85" height="82">
+                <li class="li-submenu"><a href="../home/index.php"><img src="../image_globales/menu/home.svg" width="85" height="82">
                 </a></a></li>
                 <li class="li-submenu"><a href="../calendario/index.php"><img src="../image_globales/menu/calendario.svg" width="85" height="82"></a></li>
                 <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/historial.svg" width="85" height="82"></a></li> -->
                 <!-- <li class="li-submenu"><a href=""><img src="../image_globales/menu/tareas.svg" width="85" height="82"></a></li> -->
               <!--   <li class="li-submenu"><a href=""><img src="../image_globales/menu/mensajes.svg" width="85" height="82"></a></li> -->
-                <li class="li-submenu"><a href=""><img src="../image_globales/menu/estadisticas.svg" width="85" height="82"></a></li>
+                <li class="li-submenu"><a href="../estadisticas/index.php"><img src="../image_globales/menu/estadisticas.svg" width="85" height="82"></a></li>
                 <li class="li-submenu"><a href=""><img src="../image_globales/menu/nuve.svg" width="85" height="82"></a></li>
                 <!-- <li class="li-submenu"><a href=""> <img src="../image_globales/menu/materias.svg" width="85" height="82"></a></li> -->
                 <li class="li-submenu"><a href="../logout.php"><img src="../image_globales/menu/exit.svg" width="85" height="82"></li>

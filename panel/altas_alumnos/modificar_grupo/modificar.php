@@ -5,6 +5,8 @@ if (!isset($_SESSION['admin-sica'])) {
   location.href = "../../login_admin/index.php";
 </script>';
 }
+include_once("php/select.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -88,29 +90,37 @@ if (!isset($_SESSION['admin-sica'])) {
   </div>
   <!-- incio de menu config -->
   <div class="Ccontent">
-    <div class="Cco">
-      <a href="../../control_admin/perfil/perfil.php">
-        <div class="mod btn btn-1 btn-1e" >
-          <span class="modico "></span>
-          <p>PERFIL</p>
-        </div>
-      </a>
+       <div class="Cco">
 
-     <!--  <div class="mod2 btn btn-1 btn-1a">
-        <span class="modico2 "></span>
-        <p>MATERIALES</p>
-      </div>
- -->
-      <div class="mod3 btn btn-1 btn-1b">
-        <span class="modico3"></span>
-        <p>PUBLICAR</p>
-      </div>
-      <div class="mod4 btn btn-1 btn-1c">
-        <span class="modico4"></span>
-        <p>AVISOS</p>
-      </div>
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
 
-    </div>
+
+             <!--    <div class="mod2 btn btn-1 btn-1a">
+                  <span class="modico2 "></span>
+                  <p>MATERIALES</p>
+                </div> -->
+
+
+                <a href="../../control_admin/publicar/publicar.php">
+                 <div class="mod3 btn btn-1 btn-1b">
+                  <span class="modico3"></span>
+                  <p>PUBLICAR</p>
+                </div>
+                </a>
+                <a href="../../control_admin/avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
+                  <span class="modico4"></span>
+                  <p>AVISOS</p>
+                </div>
+                </a>
+
+              </div>
+
 
   </div>
 </div>
@@ -304,7 +314,6 @@ if (!isset($_SESSION['admin-sica'])) {
         <tr>
         <td><select name="materia" id="materia">
           <?php
-          include_once("php/select.php");
           materia();
            ?>
         </select></td>
@@ -317,7 +326,7 @@ if (!isset($_SESSION['admin-sica'])) {
 
         </tr>
         <tr>
-          <td><label for="">Grado:</label></td>
+
           <td><label for="">Grupo:</label></td>
         </tr>
 

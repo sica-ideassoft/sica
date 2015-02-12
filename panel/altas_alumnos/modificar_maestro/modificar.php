@@ -5,6 +5,7 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_admin/index.php";
 </script>';
 }
+include_once("php/select.php");
 ?>
 
 <!DOCTYPE html>
@@ -330,15 +331,14 @@ $id = $_POST["id"];
       </tr>
       <tr>
         <td><input type="text" name="correo" id="correo" value=<?php echo $alumno['correo']; ?>></td>
-       <td><select name="genero" id="genero" value=<?php echo $alumno['genero']; ?>>
-          <option value="masculino">Masculino</option>
-          <option value="femenino">Femenino</option>
+       <td><select name="genero" id="genero" value="">
+          <?php
+            genero();
+           ?>
         </select></td>
-          <td class="edad"><select name="edad" id="edad" value=<?php echo $alumno['edad']; ?>>
+          <td class="edad"><select name="edad" id="edad" value="">
             <?php
-              for ($i=10; $i <= 90 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
+              edad();
              ?>
           </select><label for="">Años</label> </td>
 
@@ -355,15 +355,18 @@ $id = $_POST["id"];
         </tr>
 
         <tr>
-          <td><select name="civil" id="civil" value=<?php echo $alumno['estado_civil']; ?>>
-          <option value="soltero">Soltero</option>
-          <option value="casado">Casado</option>
-          <option value="libre">Union libre</option>
-          <option value="divorciado">Divorceado</option>
-          <option value="viudo">Viudo</option>
+          <td><select name="civil" id="civil" value="">
+          <?php
+          civil();
+           ?>
         </select></td>
          <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"value=<?php echo $alumno['fecha_nacimiento']; ?>></td>
-          <td><input type="text" name="estado"  id="estado" value=<?php echo $alumno['Estado']; ?>></td>
+          <td><select name="estado"  id="estado" value="">
+              <?php
+              estado();
+               ?>
+               </select>
+          </td>
 
 
 
@@ -387,7 +390,11 @@ $id = $_POST["id"];
            <input type="text" name="interior" class="interior" id="interior" placeholder="#" value=<?php echo $alumno['Ninterior']; ?>>
            <input type="text" name='exterior' id="exterior" class="exterior" placeholder="#" value=<?php echo $alumno["Nexterior"]; ?>>
           </td>
-          <td><input type="text" name="nacionalidad" id="nacionalidad" value=<?php echo $alumno['nacionalidad']; ?>></td>
+          <td><select name="nacionalidad" id="nacionalidad" value="">
+            <?php
+            nacionalidad();
+            ?>
+          </td>
         </tr>
         <tr>
           <td><label for="">Usuario</label></td>
@@ -395,7 +402,7 @@ $id = $_POST["id"];
         </tr>
         <tr>
           <td><input type="text" name="user" id="user" value=<?php echo $maestro_user['user']; ?>></td>
-          <td><input type="password" name="password" id="password" value=<?php echo $maestro_user['password']; ?>></td>
+          <td><input type="password" name="password" id="password" value=""></td>
 
         </tr>
       </table>

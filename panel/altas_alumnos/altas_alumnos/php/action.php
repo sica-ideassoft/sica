@@ -14,7 +14,7 @@ if ($sqll->fetchColumn(0)) {
 $sql =$conn->prepare("INSERT INTO alumno  VALUES (:idA,:grupo,:nombre,:paterno,:materno,:matricula,:curp,:telefono,:correo,:genero,:nacimiento,:edad,:estado,:municipio,:colonia,:calle,:interior,:exterior,:nacionalidad,:civil,:pass,:fname,:activo,:ip)");
 
 $vacio = "";
-$activado = "activo";
+$activado = "1";
 $password = "sica-alumno";
 
 $sql->bindParam(":idA",$vacio);

@@ -90,29 +90,35 @@ if (!isset($_SESSION['admin-sica'])) {
   </div>
   <!-- incio de menu config -->
   <div class="Ccontent">
-    <div class="Cco">
-      <div class="mod btn btn-1 btn-1e">
-        <span class="modico "></span>
+     <div class="Cco">
+                <a href="../perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
 
-        <p>PERFIL</p>
-        <div class='flecha'></div>
-      </div>
 
-<!--       <div class="mod2 btn btn-1 btn-1a">
-        <span class="modico2 "></span>
-        <p>MATERIALES</p>
-      </div>
- -->
-      <div class="mod3 btn btn-1 btn-1b">
-        <span class="modico3"></span>
-        <p>PUBLICAR</p>
-      </div>
-      <div class="mod4 btn btn-1 btn-1c">
-        <span class="modico4"></span>
-        <p>AVISOS</p>
-      </div>
+             <!--    <div class="mod2 btn btn-1 btn-1a">
+                  <span class="modico2 "></span>
+                  <p>MATERIALES</p>
+                </div> -->
 
-    </div>
+
+                <a href="#">
+                 <div class="mod3 btn btn-1 btn-1b">
+                  <span class="modico3"></span>
+                  <p>PUBLICAR</p>
+                </div>
+                </a>
+                <a href="../avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
+                  <span class="modico4"></span>
+                  <p>AVISOS</p>
+                </div>
+                </a>
+
+              </div>
 
   </div>
 </div>
@@ -179,9 +185,9 @@ if (!isset($_SESSION['admin-sica'])) {
           <ul>
           </li>
 
-          <li><a  href='../altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
-          </li>
-          <li><a  href='../modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+           <li><a  href='../../altas_alumnos/altas_grupos/altas_grupo.php'><span class="icoAltas"><b>ALTAS</b></span></a>
+            </li>
+            <li><a  href='../../altas_alumnos/modificar_grupo/modificar_grupo.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>

@@ -5,6 +5,7 @@ if (!isset($_SESSION['admin-sica'])) {
   location.href = "../../login_admin/index.php";
 </script>';
 }
+include_once("php/select.php");
 ?>
 
 <!DOCTYPE html>
@@ -87,28 +88,35 @@ if (!isset($_SESSION['admin-sica'])) {
   <!-- incio de menu config -->
   <div class="Ccontent">
     <div class="Cco">
-      <a href="../../control_admin/perfil/perfil.php">
-        <div class="mod btn btn-1 btn-1e" >
-          <span class="modico "></span>
-          <p>PERFIL</p>
-        </div>
-      </a>
 
-   <!--    <div class="mod2 btn btn-1 btn-1a">
-        <span class="modico2 "></span>
-        <p>MATERIALES</p>
-      </div> -->
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
 
-      <div class="mod3 btn btn-1 btn-1b">
-        <span class="modico3"></span>
-        <p>PUBLICAR</p>
-      </div>
-      <div class="mod4 btn btn-1 btn-1c">
-        <span class="modico4"></span>
-        <p>AVISOS</p>
-      </div>
 
-    </div>
+             <!--    <div class="mod2 btn btn-1 btn-1a">
+                  <span class="modico2 "></span>
+                  <p>MATERIALES</p>
+                </div> -->
+
+
+                <a href="../../control_admin/publicar/publicar.php">
+                 <div class="mod3 btn btn-1 btn-1b">
+                  <span class="modico3"></span>
+                  <p>PUBLICAR</p>
+                </div>
+                </a>
+                <a href="../../control_admin/avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
+                  <span class="modico4"></span>
+                  <p>AVISOS</p>
+                </div>
+                </a>
+
+              </div>
 
   </div>
 </div>
@@ -322,11 +330,9 @@ if (!isset($_SESSION['admin-sica'])) {
         <td><input type="text" name="calificacion" id="calificacion"></td>
           <td class="edad"><select name="creditos" id="creditos" >
           <?php
-          for ($i=1; $i <= 20 ; $i++) {
-            echo "<option>".$i."</option>";
-          }
+          credito();
           ?>
-        </select><label for="">Creditos</label> </td>
+
       </tr>
       <tr>
         <td><label for="">Fecha Inicio:</label></td>

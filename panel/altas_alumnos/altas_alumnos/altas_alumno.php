@@ -92,28 +92,35 @@ location.href = "../../login_admin/index.php";
 <!-- incio de menu config -->
       <div class="Ccontent">
           <div class="Cco">
-          <a href="../../control_admin/perfil/perfil.php">
-          <div class="mod btn btn-1 btn-1e" >
-            <span class="modico "></span>
-            <p>PERFIL</p>
-            </div>
-            </a>
-<!--
-          <div class="mod2 btn btn-1 btn-1a">
-            <span class="modico2 "></span>
-            <p>MATERIALES</p>
-          </div> -->
 
-           <div class="mod3 btn btn-1 btn-1b">
-            <span class="modico3"></span>
-            <p>PUBLICAR</p>
-          </div>
-          <div class="mod4 btn btn-1 btn-1c">
-            <span class="modico4"></span>
-            <p>AVISOS</p>
-          </div>
+                <a href="../../control_admin/perfil/perfil.php">
+                <div class="mod btn btn-1 btn-1e">
+                  <span class="modico "></span>
+                  <p>PERFIL</p>
+                  </div>
+                  </a>
 
-        </div>
+
+             <!--    <div class="mod2 btn btn-1 btn-1a">
+                  <span class="modico2 "></span>
+                  <p>MATERIALES</p>
+                </div> -->
+
+
+                <a href="../../control_admin/publicar/publicar.php">
+                 <div class="mod3 btn btn-1 btn-1b">
+                  <span class="modico3"></span>
+                  <p>PUBLICAR</p>
+                </div>
+                </a>
+                <a href="../../control_admin/avisos/avisos.php">
+                <div class="mod4 btn btn-1 btn-1c">
+                  <span class="modico4"></span>
+                  <p>AVISOS</p>
+                </div>
+                </a>
+
+              </div>
 
       </div>
     </div>
@@ -309,8 +316,10 @@ location.href = "../../login_admin/index.php";
       <tr>
         <td><input type="text" name="correo" id="correo"></td>
         <td><select name="genero" id="genero">
-          <option value="masculino">Masculino</option>
-          <option value="femenino">Femenino</option>
+            <?php
+            require_once("php/select.php");
+            genero();
+             ?>
         </select></td>
 
         <td><input type="text" name="nacimiento" id="nacimiento" class="fecha"></td>
@@ -327,21 +336,18 @@ location.href = "../../login_admin/index.php";
         <tr>
           <td class="edad"><select name="edad" id="edad" >
             <?php
-              for ($i=10; $i <= 90 ; $i++) {
-            echo "<option>".$i."</option>";
-              }
+              edad();
              ?>
           </select><label for="">Años</label> </td>
 
           <td class='grupo'><select name="grupo"  id="grupo">
-              <?php include_once("php/grupo.php");
+              <?php
                grupo();
               ?>
           </select>
           <td><select name="estado" id="estado">
             <?php
-            include("php/select.php");
-              estado();
+             estado();
              ?>
           </select></td>
 
@@ -374,8 +380,9 @@ location.href = "../../login_admin/index.php";
         </tr>
         <tr>
         <td><select name="nacionalidad" id="nacionalidad">
-          <option value="Mexicana">Mexicana</option>
-          <option value="Extrangera">Extrangera</option>
+            <?php
+            nacionalidad();
+             ?>
         </select></td>
         <td><select name="civil"  id="civil">
               <?php

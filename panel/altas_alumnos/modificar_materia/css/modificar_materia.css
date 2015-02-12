@@ -20,7 +20,19 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.mod{
+	width: 41% !important;
+	border-bottom: none !important;
+}
+.mod3{
+	height: 85px !important;
+	width: 41% !important;
+	border-bottom: none !important;
 
+}.mod4 {
+	border-bottom: none !important;
+
+}
 .datos{
 	text-transform: uppercase;
 }
