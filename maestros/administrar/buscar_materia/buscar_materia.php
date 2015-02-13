@@ -199,7 +199,9 @@ if (!isset($_SESSION['maestro-session'])) {
         <th>Profesor</th>
         <th>Creditos</th>
         <th>Cal. minima</th>
-        <th>mostrar</th>
+        <th class="peque">Grado</th>
+        <th class="peque">Grupo</th>
+        <th class="peque">mostrar</th>
       </thead>
     </table>
   </div>
@@ -211,7 +213,9 @@ if (!isset($_SESSION['maestro-session'])) {
         <th></th>
         <th></th>
         <th></th>
-        <th class="masBuscar"></th>
+        <th class="peque"></th>
+        <th class="peque"></th>
+        <th class="masBuscar peque"></th>
       </thead>
 
       <tbody>

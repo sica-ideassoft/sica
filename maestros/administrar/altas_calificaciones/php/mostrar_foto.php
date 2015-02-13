@@ -1,11 +1,15 @@
 <?php
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
-$id = $_POST["id"];
 
-$sql = "SELECT * FROM alumno where id_alumno = '".$id."'";
-$query = $conn -> query($sql);
-while($filas=$query->fetch()){
+
+$sql = $conn->prepare("SELECT * FROM
+alumno a
+INNER JOIN status s ON  s.id_status = a.status
+where id_alumno = :id");
+$sql->bindParam(':id',$_POST["id"]);
+$sql->execute();
+while($filas=$sql->fetch()){
 
 	$destino = "../../../alumnos/home/php/";
 	$ruta=$filas['fotografia'];
@@ -24,7 +28,7 @@ while($filas=$query->fetch()){
        <label for="" class="name"><?php echo $user ;?></label>
  </div>
  <div class="content-name">
-       <label for="" class="" id='status'><?php echo $filas["status"];?></label>
+       <label for="" class="" id='status'><?php echo $filas["status_create"];?></label>
  </div>
 
 <?php }?>

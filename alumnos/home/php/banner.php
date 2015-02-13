@@ -21,7 +21,7 @@ $conn = new Conexion();
                 <div class="caption">
                     <h3 class="caption-title">
                     <?php
-                    echo utf8_decode($filas['tema']);
+                    echo $filas['tema'];
                      ?></h3>
                     <p><?php
                     	echo $filas["anuncio"];
@@ -42,7 +42,7 @@ $conn = new Conexion();
                 <div class="caption">
                 <h3 class="caption-title">
                     <?php
-                    echo utf8_decode($filas['tema']);
+                    echo $filas['tema'];
                      ?></h3>
                     <p><?php
                         echo $filas["anuncio"];
@@ -64,7 +64,7 @@ $conn = new Conexion();
                 <div class="caption">
                 <h3 class="caption-title">
                     <?php
-                    echo utf8_decode($filas['tema']);
+                    echo $filas['tema'];
                      ?></h3>
                     <p><?php
                         echo $filas["anuncio"];
@@ -86,7 +86,7 @@ $conn = new Conexion();
                 <div class="caption">
                 <h3 class="caption-title">
                 <?php
-                    echo utf8_decode($filas['tema']);
+                    echo $filas['tema'];
                      ?></h3>
                     <p><?php
                         echo $filas["anuncio"];

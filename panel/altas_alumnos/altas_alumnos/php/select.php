@@ -38,14 +38,15 @@ function genero(){
 	}
 
 }
-$sql = "SELECT id_grupo,id_maestro,id_materia,grupo FROM grupos";
+
+$sql = "SELECT id_create_grupo,create_grupo,create_grado,descripcion FROM create_grupo ";
 $query = $conn-> query($sql);
 function grupo(){
 	global $query;
 	while($row = $query->fetch()){
 	?>
-	<option value="<?php echo $row['id_grupo'];?>">
-	<?php echo $row['grupo']; ?>
+	<option value="<?php echo $row['id_create_grupo'];?>">
+	<?php echo $row['create_grado']."".$row['create_grupo']; ?>
 	</option>
 
 	<?php

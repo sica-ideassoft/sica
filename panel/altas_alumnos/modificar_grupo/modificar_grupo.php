@@ -203,19 +203,6 @@ include_once("php/paginacion.php");
 
          </div>
 
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p></p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
 
@@ -257,10 +244,10 @@ include_once("php/paginacion.php");
                 <tr>
                 <td><?php echo $row['nombre_materia'];?></td>
                 <td><?php echo $row['nombre'];?></td>
-                <td><?php $grado = substr($row['grupo'], -2,1);
-                    echo $grado;?></td>
-                <td><?php $grupo = substr($row['grupo'], -1);
-                    echo $grupo; ?></td>
+                <td><?php echo $row['create_grado']?></td>
+                <td><?php echo $row['create_grupo']?></td>
+
+
 
                  <td><a class="liEliminar" href="#"  onclick="delGrupo(<?php echo $row['id_grupo'];?>);"><span class="
                  eliminar"></span></a></td>

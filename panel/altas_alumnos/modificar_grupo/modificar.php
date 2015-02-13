@@ -331,13 +331,6 @@ include_once("php/select.php");
         </tr>
 
         <tr>
-
-          <td><select name="grado" id="grado">
-          <?php
-            grado();
-
-           ?>
-        </select></td>
           <td><select name="grupo" id="grupo">
           <?php
             grupo();

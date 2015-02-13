@@ -3,7 +3,7 @@ var $hide = document.getElementById("hide");
 var $menu = document.getElementById("menu2");
 
 var $body = document.querySelector("html");
-var body  = new Hammer($body);
+// var body  = new Hammer($body);
 
 var showMenu  = function(){
 
@@ -18,7 +18,6 @@ var hideMenu  = function(){
 	$show.classList.add("is-active");
 	$hide.classList.remove("is-active");
     $menu.classList.remove("is-active");
-
 }
 $show.addEventListener("click",showMenu);
 $hide.addEventListener("click",hideMenu);

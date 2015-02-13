@@ -19,6 +19,5 @@ $sql->execute();
 
 if ($sql== true){
 	header("location:../avisos.php");
-
 }
 ?>

@@ -3,7 +3,7 @@ include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
 $id = $_POST['id'];
-$sqll=$conn->prepare("SELECT  id_grupo,id_maestro,id_materia,grupo FROM grupos where id_grupo = :id");
+$sqll=$conn->prepare("SELECT  id_grupo,id_maestro,id_materia,id_create_grupo FROM grupos where id_grupo = :id");
 $sqll->bindParam(':id',$id);
 $sqll->execute();
 $row1 = $sqll->fetch();
@@ -42,25 +42,13 @@ function materia(){
 
 }
 
-$grado ="SELECT * FROM create_grupo";
-$grados= $conn->query($grado);
-function grado(){
-	global $grados;
-	while($rows = $grados->fetch()){
-		?>
-		<option value="<?php echo $rows['create_grado']; ?>"><?php echo $rows['create_grado'];?></option>
-		<?php
-	}
-
-}
-
 $grupo ="SELECT * FROM create_grupo";
 $grupos= $conn->query($grupo);
 function grupo(){
 	global $grupos;
 	while($rows = $grupos->fetch()){
 		?>
-		<option value="<?php echo $rows['create_grupo']; ?>"><?php echo $rows['create_grupo']; ?></option>
+		<option value="<?php echo $rows['id_create_grupo']; ?>"><?php echo $rows['create_grado']."".$rows['create_grupo']; ?></option>
 		<?php
 	}
 

@@ -109,7 +109,7 @@ overflow: hidden;
 }
 
 #resultTable tbody .nombre{
-	width: 300px;
+	width: 260px;
 }
 #resultTable tbody td{
 	height: 35px;
@@ -187,9 +187,9 @@ top: 0px;
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width: 900px ;
+	width: 940px ;
 	margin: 0 auto;
-	margin-left: 55px;
+	margin-left: 37px;
 	/*margin-left: 130px;*/
 	height: 30px;
 	margin-top: 10px !important;

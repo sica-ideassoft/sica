@@ -5,12 +5,14 @@ $conn = new Conexion();
 
 
 $sql =$conn->prepare("SELECT
-	g.id_maestro,g.id_materia,g.grupo,
+	g.id_maestro,g.id_materia,g.id_create_grupo,
 	m.id_materia,m.nombre_materia,
-	p.id_maestro,p.nombre
+	p.id_maestro,p.nombre,
+	c.id_create_grupo,c.create_grupo,c.create_grado
 	FROM grupos g
 	INNER JOIN maestro p  ON p.id_maestro = g.id_maestro
 	INNER JOIN materias m ON m.id_materia = g.id_materia
+	INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 	WHERE g.id_grupo =:id");
 $sql->bindParam(':id',$_POST["id"]);
 $sql->execute();
@@ -29,14 +31,8 @@ while($row = $sql->fetch()){
 <tr>
 	<td><?php echo $row['nombre']; ?></td>
 	<td><?php echo $row['nombre_materia']; ?></td>
-	<td><?php
-			$grado = substr($row['grupo'], -2,1);
-				echo $grado;
-		 ?></td>
-		<td><?php
-			$grupo = substr($row['grupo'], -1);
-				echo $grupo;
-		?></td>
+	<td><?php echo $row['create_grado']?></td>
+	<td><?php echo $row['create_grupo']?></td>
 </tr>
 </table>
 

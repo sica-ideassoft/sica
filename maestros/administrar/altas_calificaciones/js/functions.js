@@ -10,6 +10,8 @@ $(function() {
 
  var dataString ='id='+ id +'&materia='+ materia +'&credito='+ credito +'&cal='+ cal+'&eval='+ eval;
 
+
+
 if(credito === '' ||cal === ''||eval === '')
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);

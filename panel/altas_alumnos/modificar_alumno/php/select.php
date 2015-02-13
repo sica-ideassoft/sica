@@ -9,18 +9,22 @@ $sqll1 = $conn->prepare("SELECT * FROM alumno where id_alumno = :id");
 $sqll1->bindParam(':id',$id);
 $sqll1->execute();
 $rou1=$sqll1->fetch();
+$id_grupo = $rou1['id_create_grupo'];
 
-$id_grupo = $rou1['id_grupo'];
-
-$sql1 = $conn->prepare("SELECT id_grupo,id_maestro,id_materia,grupo FROM grupos order by id_grupo=:id_grupo desc");
+$sql1 = $conn->prepare("SELECT
+c.id_create_grupo,c.create_grupo,c.create_grado,c.descripcion,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo
+FROM grupos g
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
+order by c.id_create_grupo=:id_grupo desc");
 $sql1->bindParam(':id_grupo',$id_grupo);
 $sql1->execute();
 function grupo(){
 	global $sql1;
 	while($row1 =$sql1->fetch()){
 	?>
-	<option value="<?php echo $row1['id_grupo'];?>">
-	<?php echo $row1['grupo'];?>
+	<option value="<?php echo $row1['id_create_grupo'];?>">
+	<?php echo $row1['create_grado']."".$row1['create_grupo'];?>
 	</option>
 	<?php
 }

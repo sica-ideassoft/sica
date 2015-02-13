@@ -1,19 +1,11 @@
 <?php
-include_once("../../../../conexion/conectar.php");
-  $conn = new DB;
-  $conn->conectar();
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
 
-
-$id         = mysql_real_escape_string($_POST["id"]);
-$materia    = mysql_real_escape_string($_POST["materia"]);
-$maestro    = mysql_real_escape_string($_POST["maestro"]);
-$grupos     = mysql_real_escape_string($_POST["grupos"]);
-
-$ssql = "UPDATE grupos set id_maestro = '".$maestro."',id_materia = '".$materia."',grupo = '".$grupos."' WHERE  id_grupo='".$id."'";
-if(mysql_query($ssql)){
-	return true;
-}else{
-	echo "no se pudo modificar la materia";
-}
-
- ?>
+$sql =$conn->prepare("UPDATE grupos set id_maestro = :maestro,id_materia = :materia,id_create_grupo = :grupo WHERE  id_grupo=:id");
+$sql->bindParam(':id',$_POST["id"]);
+$sql->bindParam(':maestro',$_POST["maestro"]);
+$sql->bindParam(':materia',$_POST["materia"]);
+$sql->bindParam(':grupo',$_POST["grupo"]);
+$sql->execute();
+?>

@@ -7,26 +7,23 @@ echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_maestro/index.php";
 </script>';
 }
-$user = $_SESSION['maestro-session'];
-
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-
-
-$sql = "SELECT
-g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
+$sql =$conn->prepare("SELECT
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
 m.id_materia,m.claveSEP,m.nombre_materia,m.credito,m.cal_min,
 o.id_maestro,o.nombre,
-u.id_login_maestro,u.id_maestro,u.user
+u.id_login_maestro,u.id_maestro,u.user,
+c.id_create_grupo,c.create_grupo,c.create_grado
 FROM materias m
 INNER JOIN grupos g ON m.id_materia = g.id_materia
 INNER JOIN maestro o  ON o.id_maestro = g.id_maestro
 INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
-and u.user = '$user'
-WHERE m.nombre_materia LIKE '%".$busca."%'";
-
-$query = $conn->query($sql);
-	if($query->rowCount()==0) {
+INNER JOIN create_grupo c ON  c.id_create_grupo = g.id_create_grupo
+and u.user = :user WHERE m.nombre_materia LIKE '%".$busca."%'");
+$sql->bindParam(':user',$_SESSION['maestro-session']);
+$sql->execute();
+	if($sql->rowCount()==0) {
 	?>
 		<tr class= "existe">
 			<td  colspan='5'>La matería no existe</td>
@@ -34,7 +31,7 @@ $query = $conn->query($sql);
 
 	<?php
 	}
-	while($f=$query->fetch()){
+	while($f=$sql->fetch()){
 
 	?>
 		<tr>
@@ -42,6 +39,8 @@ $query = $conn->query($sql);
 		<td><?php echo $f['nombre']?></td>
 		<td><?php echo $f['credito']?></td>
 		<td><?php echo $f['cal_min']?></td>
+		<td class="peque"><?php echo $f['create_grado']?></td>
+		<td class="peque"><?php echo $f['create_grupo']?></td>
 		?>
 		<td>
         <form action="mostrar_materias.php" name="formulario1" method="post">

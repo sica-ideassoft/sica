@@ -171,20 +171,6 @@ include_once("php/paginacion.php");
 
            <!-- inicio de menu4 <-->
          </div>
-
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p></p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
 
@@ -198,6 +184,7 @@ include_once("php/paginacion.php");
         </div>
         <form method="POST" class="formBuscar" action="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
+
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
           <input type="submit"  class='btnSearch' value="-"></input>
@@ -230,18 +217,12 @@ include_once("php/paginacion.php");
                 <td><?php echo $row['A_paterno_alumno'];?></td>
                 <td><?php echo $row['A_materno_alumno'];?></td>
                 <td><?php echo $row['matricula'];?></td>
-                <td><?php
-                  $grado = substr($row['grupo'], -2,1);
-                    echo $grado;
-                 ?></td>
-                <td><?php
-                  $grupo = substr($row['grupo'], -1);
-                    echo $grupo;
-                ?></td>
-
-<td>
+                <td><?php echo $row['create_grado'];?></td>
+                <td><?php echo $row['create_grupo'];?></td>
+              <td>
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">
               <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
+              <input type="hidden" name="materia" value="<?php echo $row['id_materia']?>"/>
               <button name="enviar"class="botton"><span class="mostrar"></span></button>
               </form>
               </td>

@@ -240,7 +240,6 @@ if (!isset($_SESSION['admin-sica'])) {
       <tr><td><label for="">Aviso:</label></td></tr>
       <tr><td><textarea name='aviso'></textarea></td></tr>
     </table>
-</form>
 
 
 </section>

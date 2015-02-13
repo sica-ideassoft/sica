@@ -3,12 +3,9 @@ $(function() {
     e.preventDefault();
     var maestro  = $("#maestro").val();
     var materia  = $("#materia").val();
-    var grado    = $("#grado").val();
     var grupo    = $("#grupo").val();
-    var grupos = grado + grupo;
 
-
-var dataString = 'maestro='+ maestro + '&materia='+ materia + '&grupos=' + grupos ;
+var dataString = 'maestro='+ maestro + '&materia='+ materia + '&grupo=' + grupo ;
 
 if(maestro === '' || materia === "")
 {

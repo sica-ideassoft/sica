@@ -2,16 +2,18 @@
 <?php
 $conn = new Conexion();
 $sql=$conn->prepare("SELECT
-a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
-	g.id_grupo,g.id_maestro,g.id_materia,g.grupo,
+a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
+	g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
 	e.id_estado_civil,e.p_estado_civil,
 	s.id_status,s.status_create,
 	o.id_genero_persona,o.genero_create,
 	d.id_edad,d.edad_create,
 	x.id_estado,x.nombre_estado,
-	n.id_nacionalidad,n.nacionalidad_create
+	n.id_nacionalidad,n.nacionalidad_create,
+	c.id_create_grupo,c.create_grupo,c.create_grado,c.descripcion
 	FROM alumno a
-	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
+	INNER JOIN create_grupo c ON c.id_create_grupo = a.id_create_grupo
+	INNER JOIN grupos g ON g.id_create_grupo = c.id_create_grupo
 	INNER JOIN estado_civil e ON e.id_estado_civil= a.estado_civil
 	INNER JOIN status s ON s.id_status = a.status
 	INNER JOIN genero o ON o.id_genero_persona = a.genero
@@ -21,7 +23,7 @@ a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.m
 	WHERE a.id_alumno = :id");
 $sql->bindParam(':id',$_POST["id"]);
 $sql->execute();
-while($row = $sql->fetch()){
+$row = $sql->fetch();
 
 ?>
 <table class="tabla-mostrar">
@@ -58,14 +60,8 @@ while($row = $sql->fetch()){
 <tr>
 	<td><?php echo $row['fecha_nacimiento']; ?></td>
 	<td><?php echo utf8_encode($row['edad_create']); ?></td>
-	<td><?php
-			$grado = substr($row['grupo'], -2,1);
-				echo $grado;
-		 ?></td>
-		<td><?php
-			$grupo = substr($row['grupo'], -1);
-				echo $grupo;
-		?></td>
+	<td><?php echo $row['create_grado']; ?></td>
+	<td><?php echo $row['create_grupo']; ?></td>
 </tr>
 
 <tr>
@@ -101,8 +97,3 @@ while($row = $sql->fetch()){
 	<td ><label id="status"><?php echo $row['status_create']; ?></label></td>
 </tr>
 </table>
-
-<?php
-}
-
- ?>

@@ -48,7 +48,7 @@ location.href = "../../login_maestro/index.php";
     </div>
     <ul class="menu1">
       <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
-      <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
+      <li><a href="../home/index.php"><span class='home'></span>HOME</a></li>
 
     </ul>
 
@@ -185,23 +185,7 @@ location.href = "../../login_maestro/index.php";
     <!-- inicio de menu4 <-->
   </div>
 
-<!--   <div class='footcontent'>
-    <table class="tabla1">
-      <thead>
-        <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-      </thead>
-      <tbody>
-        <td><p></p></td><td><p>hola</p></td>
-      </tbody>
-      <tfoot>
-
-      </tfoot>
-    </table>
-  </div> -->
 </div>
-
-
-<!-- inicio de section -->
 <section class="seccion1">
   <div class="tem">
   <div class="estacion">

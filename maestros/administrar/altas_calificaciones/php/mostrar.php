@@ -2,17 +2,19 @@
 <?php
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
+
+$materia = $_POST["materia"];
 $id = $_POST["id"];
-$sql = "SELECT
-	a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
-	g.id_grupo,g.id_maestro,g.id_materia,g.grupo
+$sql = $conn->prepare("SELECT
+	a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
+	g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo
 	FROM alumno a
-	INNER JOIN grupos g ON g.id_grupo = a.id_grupo
-	WHERE a.id_alumno = '".$id."'";
+	INNER JOIN grupos g ON g.id_create_grupo = a.id_create_grupo
+	WHERE a.id_alumno = :id");
+$sql->bindParam(':id',$id);
+$sql->execute();
 
-$query = $conn->query($sql);
-
-while($row = $query->fetch()){
+$row = $sql->fetch();
 $nombre = $row['nombre_alumno'];
 ?>
 <table class="tabla-mostrar">
@@ -32,7 +34,7 @@ $nombre = $row['nombre_alumno'];
 
 <script>
 var id = "<?php echo $id; ?>" ;
-var materia = "<?php echo $row['id_materia']; ?>" ;
+var materia = "<?php echo $materia; ?>" ;
 </script>
 
 <form action="">
@@ -43,6 +45,7 @@ var materia = "<?php echo $row['id_materia']; ?>" ;
 	<td><label for="">Tipo de Evaluación</label></td>
 </tr>
 <tr>
+
 	<td><input type="text" class="redito" name="credito" id="credito" placeholder="creditos"></td>
 	<td><input type="text" class="cal" name='cal' id='cal' placeholder='cal...'></td>
 	<td>
@@ -54,8 +57,3 @@ var materia = "<?php echo $row['id_materia']; ?>" ;
 </tr>
 
 </table>
-
-<?php
-}
-
- ?>

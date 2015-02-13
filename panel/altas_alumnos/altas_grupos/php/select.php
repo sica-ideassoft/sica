@@ -28,35 +28,20 @@ function modulo(){
 
 }
 
-$sqll ="SELECT * FROM create_grupo";
- // id_create_grupo 	create_grado 	create_grupo 	descripcion
+$sqll ="SELECT id_create_grupo,create_grupo,create_grado,descripcion  FROM create_grupo";
+
 $query = $conn->query($sqll);
 function grado(){
 	global $query;
 	while($row =$query->fetch()){
 	?>
-	<option value="<?php echo $row['create_grado'];?>">
-	<?php echo $row['create_grado']; ?>
+	<option value="<?php echo $row['id_create_grupo'];?>">
+	<?php echo $row['create_grado']."".$row['create_grupo']; ?>
 	</option>
 
 	<?php
 
 }
 }
-function grupo(){
-global $conn;
-$sqll ="SELECT * FROM create_grupo";
-$querys = $conn->query($sqll);
 
-	while($row = $querys->fetch()){
-	?>
-	<option value="<?php echo $row['create_grupo'];?>">
-	<?php echo $row['create_grupo']; ?>
-	</option>
-
-	<?php
-
-}
-
-}
 ?>

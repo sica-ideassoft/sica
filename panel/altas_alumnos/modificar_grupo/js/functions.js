@@ -9,15 +9,11 @@ $(function() {
  id
  var materia       = $("#materia").val();
  var maestro    = $("#maestro").val();
- var grado    = $("#grado").val();
  var grupo    = $("#grupo").val();
 
-var grupos = grado + grupo;
+var dataString ='id='+ id +'&materia='+ materia +'&maestro='+ maestro + '&grupo='+ grupo;
 
-
-var dataString ='id='+ id +'&materia='+ materia +'&maestro='+ maestro + '&grupos='+ grupos;
-
-if(materia === '' ||maestro === '' ||grado === '' ||grupo === '')
+if(materia === '' ||maestro === '' ||grupo === '')
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

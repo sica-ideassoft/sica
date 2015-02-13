@@ -144,7 +144,7 @@ if (!isset($_SESSION['admin-sica'])) {
           </li>
           <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
           </li>
-          <li><a  href='#'><span class="icoAltas"><b>ALTAS</b></span></a>
+          <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
           </li>
           <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
@@ -309,7 +309,7 @@ if (!isset($_SESSION['admin-sica'])) {
         <tr>
           <td><label for="">Maestro:</label></td>
           <td><label for="">Matería:</label></td>
-          <td><label for="">Grado:</label></td>
+
           <td><label for="">Grupo:</label></td>
 
         </tr>
@@ -328,18 +328,9 @@ if (!isset($_SESSION['admin-sica'])) {
             ?>
           </select></td>
           <td>
-            <select name="grado" id="grado">
+         <select name="grupo" id="grupo">
               <?php
-              include("php/grupo.php");
               grado();
-              ?>
-            </select>
-          </td>
-          <td>
-            <select name="grupo" id="grupo">
-              <?php
-              include("php/grupo.php");
-              grupo();
               ?>
             </select>
           </td>

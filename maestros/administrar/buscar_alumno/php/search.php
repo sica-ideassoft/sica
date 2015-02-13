@@ -2,29 +2,30 @@
 include_once("../../../../conexion/conexion.php");
 $conn =  new Conexion();
 session_start();
-$user = $_SESSION['maestro-session'];
-echo $user;
+
+
 // $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$sql = "SELECT
-m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.grupo, /*grupo*/
-o.id_maestro,o.nombre,/*maestro*/
-a.id_alumno,a.id_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,/*alumno*/
-u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/
+$sql =$conn->prepare("SELECT
+m.id_materia,m.claveSEP,m.nombre_materia,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+o.id_maestro,o.nombre,
+a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+u.id_login_maestro,u.id_maestro,u.user,
+c.id_create_grupo,c.create_grupo,c.create_grado
 FROM materias m
 INNER JOIN grupos g       ON g.id_materia = m.id_materia
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
-INNER JOIN alumno  a      ON a.id_grupo   = g.id_grupo
+INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
-and u.user = '".$user."'
+and u.user = :user
 WHERE a.nombre_alumno LIKE '%".$busca."%'
-	";
-
-$query = $conn->query($sql);
-
-	if($query->rowCount() ==0) {
+	");
+$sql->bindParam(':user',$_SESSION['maestro-session']);
+$sql->execute();
+	if($sql->rowCount() ==0) {
 	?>
 		<tr>
 			<td colspan='7'>El alumno no existe</td>
@@ -33,7 +34,7 @@ $query = $conn->query($sql);
 	<?php
 	}
 
-while($f=$query->fetch()){
+while($f=$sql->fetch()){
 
 	?>
 	<tr>
@@ -41,14 +42,9 @@ while($f=$query->fetch()){
 		<td><?php echo $f['nombre_alumno']; ?></td>
 		<td><?php echo $f['A_paterno_alumno']; ?></td>
 		<td><?php echo $f['A_materno_alumno']; ?></td>
-		<td><?php
-			$grado = substr($f['grupo'], -2,1);
-				echo $grado;
-		 ?></td>
-		<td><?php
-			$grupo = substr($f['grupo'], -1);
-				echo $grupo;
-		?></td>
+		<td><?php echo $f['create_grado']; ?></td>
+		<td><?php echo $f['create_grupo']; ?></td>
+
 
 
 		<td>

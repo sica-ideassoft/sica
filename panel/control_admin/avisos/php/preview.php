@@ -17,7 +17,7 @@ while($row = $query->fetch()){
 	</div>
 	<img src="<?php echo $url.$row['imagen']; ?>" alt="">
 		<div class="mes-principal">
-		<span id="leyenda"><?php echo $row['prioridad'];?></span>
+
 			<p><?php echo $row['aviso'];?></p>
 		</div>
 		<div class="" id="leyent">
