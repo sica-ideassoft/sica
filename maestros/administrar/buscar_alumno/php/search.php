@@ -21,8 +21,7 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = :user
-WHERE a.nombre_alumno LIKE '%".$busca."%'
-	");
+WHERE a.nombre_alumno LIKE '%".$busca."%' ORDER BY m.id_materia");
 $sql->bindParam(':user',$_SESSION['maestro-session']);
 $sql->execute();
 	if($sql->rowCount() ==0) {

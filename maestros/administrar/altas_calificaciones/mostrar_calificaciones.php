@@ -7,8 +7,6 @@ location.href = "../../login_maestro/index.php";
 
 }
 ?>
-
-
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -189,9 +187,9 @@ location.href = "../../login_maestro/index.php";
 <section class="seccion1">
   <div class="tem">
   <div class="estacion">
-            <span class="estudent"></span>
+  <span class="icoCalificacion"></span>
   </div>
-  <p>MODIFICAR / ELIMINAR CALIFICACIONES</p>
+  <p>ALTAS CALIFICACIONES</p>
   </div>
 
             <div class="content-alumno">

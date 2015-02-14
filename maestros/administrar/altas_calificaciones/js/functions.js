@@ -2,17 +2,12 @@ $(function() {
 
   $("#enviar").click(function(e) {
     e.preventDefault();
-
-
- var credito = $("#credito").val();
  var cal     = $("#cal").val();
  var eval    = $("#eval").val();
 
- var dataString ='id='+ id +'&materia='+ materia +'&credito='+ credito +'&cal='+ cal+'&eval='+ eval;
+ var dataString ='id='+ id +'&materia='+ materia +'&creditos='+ creditos +'&cal='+ cal+'&eval='+ eval+'&min_materia='+ min_materia;
 
-
-
-if(credito === '' ||cal === ''||eval === '')
+if(cal === ''||eval === '')
 {
   setTimeout($('.mensajes').fadeIn(1000).fadeOut(10000), 1000);
   return false;

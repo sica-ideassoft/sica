@@ -174,11 +174,11 @@ color: #000;
 
 
 
-.seccion1{
+.content-materias{
 font-family:arial ;
-/*width: 1010px;
+width: 1025px;
 /*height: 350px;*/
-/*margin: 0 auto !important;*/
+
 overflow: hidden;
 overflow-x:hidden;
 overflow-y:scroll;
@@ -195,6 +195,7 @@ font-weight: bold;
 	margin:20px 0px 0px 20px;
 	text-transform: uppercase;
 	width: 480px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
 }
 .module h2 {
 	background: linear-gradient(rgb(57, 173, 230), rgb(47, 139, 159)) repeat scroll 0% 0% transparent;

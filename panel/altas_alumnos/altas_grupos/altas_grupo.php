@@ -203,17 +203,6 @@ if (!isset($_SESSION['admin-sica'])) {
 
   </div>
 
-<!--    <div class='footcontent'>
-
-<div class="headtabla1"><p>Recien Ingresados</p></div>
-
-<table class="tabla1">
-<div class="mosAlumno">
-<div id="show"></div>
-</div>
-
-</table>
-</div> -->
 </div>
 
 <!-- mensajes de validacion -->
@@ -278,18 +267,7 @@ if (!isset($_SESSION['admin-sica'])) {
   </div>
 </div>
 
-<!-- <div class="mensajesAlumno">
-<div class="Logom4">
-<div id="show"></div>
-</div>
-<div class="divmensaje4">
-<span class="Mico4"></span>
-</div>
-</div>
--->
-<!-- finde  mensajes curp de validacion -->
 
-<!-- inicio de section -->
 <section class="seccion1">
   <div class="tem">
     <div class="estacion">

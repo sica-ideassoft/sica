@@ -2,18 +2,12 @@
 include_once("../../conexion/conexion.php");
 $conn = new Conexion();
 
-$matricula = $_SESSION['alumno'];
+$sql = $conn->prepare("SELECT fotografia FROM alumno WHERE matricula=:matricula");
+$sql->bindParam(':matricula',$_SESSION['alumno']);
+$sql->execute();
 
-$sql ="SELECT fotografia FROM alumno WHERE matricula='".$matricula."'";
-
-$query = $conn->query($sql);
-$row = $query->fetch();
-
+$row = $sql->fetch();
 $foto = $row["fotografia"];
-
-// $checkimg = mysql_query("SELECT fotografia FROM alumno WHERE matricula='".$matricula."'");
-
-// $userimg_exist = mysql_num_rows($checkimg);
 if ($foto==true) {
 	?>
 	<style>

@@ -172,8 +172,10 @@ location.href = "../../login_maestro/index.php";
     </div>
     <p>HOME</p>
   </div>
+<div class="content-materias">
       <?php include_once("php/materias.php"); ?>
 
+</div>
       </section>
 
       <!-- fin de section -->

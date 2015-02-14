@@ -178,16 +178,16 @@ include_once("php/paginacion.php");
       <section class="seccion1">
         <div class="tem">
         <div class="estacion">
-            <span class="estudent"></span>
+            <span class="icoCalificacion"></span>
         </div>
-        <p>modificar / eliminar calificaciones</p>
+        <p>altas calificaciones</p>
         </div>
         <form method="POST" class="formBuscar" action="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
 
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
-          <input type="submit"  class='btnSearch' value="-"></input>
+          <input type="submit"  class='btnSearch' value="+"></input>
         </form>
         <br><br>
         <center>
@@ -223,6 +223,12 @@ include_once("php/paginacion.php");
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">
               <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
               <input type="hidden" name="materia" value="<?php echo $row['id_materia']?>"/>
+
+              <input type="hidden" name="credito" value="<?php echo $row['credito']?>"/>
+
+              <input type="hidden" name="cal_min" value="<?php echo $row['cal_min']?>"/>
+
+
               <button name="enviar"class="botton"><span class="mostrar"></span></button>
               </form>
               </td>

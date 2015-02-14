@@ -205,10 +205,11 @@ location.href = "../../login_admin/index.php";
     </div>
     <script>
     var myArray =<?php echo json_encode($alumnos); ?>;
+    var alumno = JSON.parse(myArray);
+    var alumno_json  = JSON.stringify(alumno);
+        console.log(alumno_json);
 
-      console.log(myArray);
-
-    document.getElementById('json').innerHTML = myArray.id_alumno;
+    document.getElementById('json').innerHTML = alumno_json.id_create_grupo;
 
     </script>
 

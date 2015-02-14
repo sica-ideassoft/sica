@@ -10,13 +10,15 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 $search = htmlspecialchars($_REQUEST["search"]);
 $pagination->param = "&search=$search";
 $pagination->rowCount("SELECT
-m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo, /*grupo*/
-o.id_maestro,o.nombre,/*maestro*/
-a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
-u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/
+m.id_materia,m.claveSEP,m.nombre_materia,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+o.id_maestro,o.nombre,
+a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+u.id_login_maestro,u.id_maestro,u.user,
+c.id_create_grupo,c.create_grupo,c.create_grado
 FROM materias m
 INNER JOIN grupos g       ON g.id_materia = m.id_materia
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
@@ -24,15 +26,17 @@ and u.user = '".$user."'
 	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%'");
 	$pagination->config(3, 5);
 	$sql = "SELECT
-m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo, /*grupo*/
-o.id_maestro,o.nombre,/*maestro*/
-a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
-u.id_login_maestro,u.id_maestro,u.user/*user_maestro*/
+m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+o.id_maestro,o.nombre,
+a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+u.id_login_maestro,u.id_maestro,u.user,
+c.id_create_grupo,c.create_grupo,c.create_grado
 FROM materias m
 INNER JOIN grupos g       ON g.id_materia = m.id_materia
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
-INNER JOIN alumno  a      ON a.id_create_grupo  = g.id_create_grupo
+INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = '".$user."'
 	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row,$pagination->max_rows";
@@ -50,27 +54,42 @@ else
 {
 	$pagination->rowCount("SELECT * FROM alumno");
 	$pagination->config(3, 7);
-	$sql = "SELECT
-m.id_materia,m.claveSEP,m.nombre_materia,/*materia*/
-g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo, /*grupo*/
-o.id_maestro,o.nombre,/*maestro*/
-a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status,/*alumno*/
-u.id_login_maestro,u.id_maestro,u.user,/*user_maestro*/
+
+
+$evaluar = $conn->prepare("SELECT  c.id_calificacion,c.id_alumno,c.id_materia,c.creditos,c.calificacion,c.Tipo_evaluacion,c.acumulado,
+	a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.status
+	FROM calificacion c
+	INNER JOIN alumno a ON a.id_alumno = c.id_alumno");
+$evaluar->execute();
+while($eval=$evaluar->fetch()){
+	$eval['id_alumno'];
+}
+
+
+$sql = "SELECT
+m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+o.id_maestro,o.nombre,
+a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+u.id_login_maestro,u.id_maestro,u.user,
 c.id_create_grupo,c.create_grupo,c.create_grado
+-- n.id_calificacion,n.id_alumno,n.id_materia,n.creditos,n.calificacion,n.Tipo_evaluacion,n.acumulado
 FROM materias m
 INNER JOIN grupos g       ON g.id_materia = m.id_materia
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
-INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
+-- INNER JOIN calificacion n ON n.id_alumno = a.id_alumno
 and u.user = '".$user."'
-	ORDER BY a.id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+ ORDER BY m.id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows";
+
 	$query = $conn->prepare($sql);
 	$query->execute();
 	$model = array();
-
 	while($rows = $query->fetch())
 	{
+
 		$model[] = $rows;
 	}
 }

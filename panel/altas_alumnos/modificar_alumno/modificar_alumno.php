@@ -212,7 +212,7 @@ include_once("php/paginacion.php");
     <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
     <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
-    <input type="submit"  class='btnSearch' value="-"></input>
+    <input type="submit"  class='btnSearch' value="+"></input>
   </form>
   <br><br>
   <center>
@@ -242,8 +242,7 @@ include_once("php/paginacion.php");
             <td><?php echo $row['A_materno_alumno'];?></td>
             <td><?php echo $row['matricula'];?></td>
             <td><?php echo $row['create_grado'];?></td>
-              <td><?php echo $row['create_grupo'];?></td>
-
+            <td><?php echo $row['create_grupo'];?></td>
 
                 <td><a class="liEliminar" href="#"
                   onclick="delAlumno(<?php echo $row['id_alumno'];?>);"><span class="eliminar"></span></a></td>
