@@ -1,5 +1,7 @@
 ﻿<?php
+session_start();
 include_once("php/resultados.php");
+
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -9,7 +11,7 @@ include_once("php/resultados.php");
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="../image_globales/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <title>Calificaciones</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -67,7 +69,7 @@ include_once("php/resultados.php");
                     <tr>
                         <td>
                             <label for="">
-                                <?php echo $row["calificacion"];?>
+                               <?php echo $row["calificacion"];?>
                             </label>
                         </td>
                     </tr>
@@ -79,7 +81,7 @@ include_once("php/resultados.php");
                     </tr>
                     <tr>
                         <td>
-                    <label for=""><?php echo $row["creditos"];?>  de 100</label>
+                    <label for=""><?php echo $credito["total"];?> de <?php echo $total_credito['total_credito']; ?></label>
                         </td>
                     </tr>
                 </table>
@@ -89,7 +91,7 @@ include_once("php/resultados.php");
                             <label for="" class="title">aprobadas:</label>
                         </td>
                         <td>
-                            <label for="">16</label>
+                            <label for=""><?php echo $aprovada['aprovada']; ?></label>
                         </td>
                     </tr>
                     <tr>
@@ -98,7 +100,7 @@ include_once("php/resultados.php");
                             <label for="" class="title">reprobadas:</label>
                         </td>
                         <td>
-                            <label for="">25</label>
+                            <label for=""><?php echo $reprovada['reprovada']; ?></label>
                         </td>
                     </tr>
                     <tr>
@@ -106,7 +108,7 @@ include_once("php/resultados.php");
                 <label for="" class="title">no presentadas:</label>
                         </td>
                         <td>
-                            <label for="">7</label>
+                            <label for=""><?php echo $NA['noAplica']; ?></label>
                         </td>
                     </tr>
 
@@ -116,7 +118,7 @@ include_once("php/resultados.php");
                             <label for="" class="title">total:</label>
                         </td>
                         <td>
-                            <label for="">40</label>
+                            <label for=""><?php echo $Nmateria['materia'];?></label>
                         </td>
                     </tr>
                 </table>

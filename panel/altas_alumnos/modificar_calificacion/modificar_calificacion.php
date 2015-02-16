@@ -1,15 +1,15 @@
 <?php
 session_start();
 if (!isset($_SESSION['admin-sica'])) {
-echo '<SCRIPT LANGUAGE="javascript">
+echo '<script>
 location.href = "../../login_admin/index.php";
 </script>';
 }
-include_once("php/conexion.php");
-include_once('php/PDO_Pagination.php');
+include_once("../../../conexion/conexion.php");
+include_once('../../../conexion/PDO_Pagination.php');
 include_once("php/paginacion.php");
-
 ?>
+
 
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -22,17 +22,19 @@ include_once("php/paginacion.php");
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>ADMINISTRADOR</title>
+  <title>MAESTROS</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/modificar_calificacion.css">
+  <link rel="stylesheet" href="css/modificar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
 
 
+<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
 
 
 </head>
@@ -54,7 +56,8 @@ include_once("php/paginacion.php");
 
               <div class="user">
                 <div class="userimg">
-                  <?php include_once("php/miniatura.php"); ?>
+                  <?php include_once("php/miniatura.php");
+                   ?>
                 </div>
                 <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>
@@ -74,8 +77,8 @@ include_once("php/paginacion.php");
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
-                <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
+                <!-- <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li> -->
                 <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
             </div>
@@ -90,42 +93,35 @@ include_once("php/paginacion.php");
             </div>
 <!-- incio de menu config -->
             <div class="Ccontent">
-                   <div class="Cco">
-
-                <a href="../../control_admin/perfil/perfil.php">
+                <div class="Cco">
+                <a href="../../control/perfil/perfil.php">
                 <div class="mod btn btn-1 btn-1e">
                   <span class="modico "></span>
                   <p>PERFIL</p>
                   </div>
                   </a>
 
-
-             <!--    <div class="mod2 btn btn-1 btn-1a">
+             <!--    <div class="mod2 btn1 btn-1 btn-1a">
                   <span class="modico2 "></span>
                   <p>MATERIALES</p>
-                </div> -->
+                </div>
 
-
-                <a href="../../control_admin/publicar/publicar.php">
-                 <div class="mod3 btn btn-1 btn-1b">
+                 <div class="mod3 btn1 btn-1 btn-1b">
                   <span class="modico3"></span>
                   <p>PUBLICAR</p>
                 </div>
-                </a>
-                <a href="../../control_admin/avisos/avisos.php">
-                <div class="mod4 btn btn-1 btn-1c">
+                <div class="mod4 btn1 btn-1 btn-1c">
                   <span class="modico4"></span>
                   <p>AVISOS</p>
-                </div>
-                </a>
+                </div> -->
 
               </div>
-
 
             </div>
           </div>
           <!-- finde munu 4 -->
 
+          <!-- inicio de menu2 -->
           <!-- inicio de menu2 -->
           <div id="alum"class="contenido menu3">
             <div class="Tmenu3">
@@ -136,20 +132,20 @@ include_once("php/paginacion.php");
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
-                  <ul class="ul2">
-        <li ><a href='../home/home.php'><span class="icoHome">HOME</span></a></li>
-        <li class='has-sub admin '><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
+                 <ul class="ul2">
+        <li ><a href='#'><span class="icoHome">HOME</span></a></li>
+        <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
                <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_alumnos/altas_alumno.php'><span class="icoAltas"><b>ALTAS</b></span></a>
             </li>
-            <li><a  href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_alumno/modificar_alumno.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-         <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
+      <li class='has-sub admin'><a  href='#'><span class='icoMaestro'>MAESTROS</span></a>
           <ul>
           <li><a   href='../buscar_maestro/buscar_maestro.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
@@ -160,30 +156,31 @@ include_once("php/paginacion.php");
 
           </ul>
         </li>
-          <li class='has-sub admin '><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
           <li><a href="../buscar_materia/buscar_materia.php"><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
-            <li><a  href='#'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a href='../modificar_materia/modificar_materia.php'><span class='icoEditar'><b>MODIFICAR/ELIMINAR</b></span></a>
             </li>
 
           </ul>
         </li>
 
- <li class='has-sub admin activo '><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+        <li class='has-sub admin activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
                <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
+            <li><a  href='#'><span class="icoAltasM" ><b>ALTAS</b></span></a>
             </li>
-            <li><a  class="activo" href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
+            <li><a class="activo" href='../modificar_calificacion/modificar_calificacion.php'><span class='icoEditarActivo'><b>MODIFICAR/ELIMINAR</b></span></a>
 
           </ul>
         </li>
-   <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
+
+        <li class='has-sub admin'><a  href='#'><span class="icoGrupo">GRUPOS</span></a>
           <ul>
           </li>
 
@@ -196,106 +193,78 @@ include_once("php/paginacion.php");
       <li><a><span>***</span></a></li>
            </div>
            <!-- fin de menu3 -->
-<!-- <div class="Mconfirma">
-  <div class="contentM">
-  <div class="Mhead">
-      <div class="icoAlert"><span></span></div>
-      <div class="confirmacion"><p>Confirmación</p></div>
-      <div class="icoCerrar"><span></span></div>
-  </div>
-  <div class="Mbody">
-    <p>Realmente quiere <b>Eliminar</b> el alumno?</p>
-  </div>
-  <div class="Mfooter"> -->
-<!-- inicio de botones de confirmacion --><!--
-      <table class="table2">
-          </td><td>
-            <input type="submit" value="ACEPTAR" class="confirmarBtn" id="enviar">
-                  <div class="conent1 color"> <span class="icoaltas"></span></div>
-            </input>
-          </td><td>
-          <input type="reset" value="CANCELAR" class="cancelarBtn">
 
-             <div class="conent1"> <span class="icoCancelar"></span></div>
-          </input>
-
-        </td></tr>
-      </table> -->
-<!-- fin de botones de confirmacion -->
-
-<!--     </div>
-  </div>
-</div> -->
            <!-- inicio de menu4 <-->
          </div>
-
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p></p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
 
       <!-- inicio de section -->
       <section class="seccion1">
         <div class="tem">
-<div class="estacion">
-            <span class="cali"></span>
+        <div class="estacion">
+            <span class="icoCalificacion"></span>
         </div>
-        <p>modificar / eliminar materia</p>
+        <p>Modificar calificaciones</p>
         </div>
-        <form method="POST" class="formBuscar" ction="<?php echo $_SERVER["PHP_SELF"] ?>">
+        <form method="POST" class="formBuscar" action="<?php echo $_SERVER["PHP_SELF"] ?>">
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
+
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
-          <input type="submit"  class='btnSearch' value="-"></input>
+          <input type="submit"  class='btnSearch' value="+"></input>
         </form>
         <br><br>
         <center>
           <table>
             <thead class="datosmodificar">
-
               <tr >
+                <th class="materia">Materia</th>
+                <th class="grado">grado</th>
+                <th class="grado">grupo</th>
                 <th>nombre</th>
-                <th>profesor</th>
-                <th>Credito</th>
-                <th>Cal. Minima</th>
-                <th class="modi">eliminar-</th>
-                <th class="modi">modificar-</th>
-                <th class="modi">mostrar</th>
+                <th>A paterno</th>
+                <th>A materno</th>
+                <th>matricula</th>
 
+                <th class="modi">mostrar</th>
               </tr>
             </thead>
             <tbody  class="tableHead">
               <?php
+
               foreach($model as $row)
               {
-                echo "<tr>";
-                echo "<td>".$row['nombre']."</td>";
-                echo "<td>".$row['profesor']."</td>";
-
-                echo "<td>".$row['credito']."</td>";
-                echo "<td>".$row['cal_min']."</td>";
                 ?>
-                 <td><a class="liEliminar" href="#"  onclick="delEmpresa(<?php echo $row['id_materia'];?>);"><span class="eliminar"></span></a></td>
+                <tr>
+                <td class="materia"><?php echo $row['nombre_materia'];?></td>
+                <td><?php echo $row['create_grado'];?></td>
+                <td><?php echo $row['create_grupo'];?></td>
+                <td><?php echo $row['nombre_alumno'];?></td>
+                <td><?php echo $row['A_paterno_alumno'];?></td>
+                <td><?php echo $row['A_materno_alumno'];?></td>
+                <td><?php echo $row['matricula'];?></td>
 
-                <td><a class="liModifi" href="modificar.php?id=<?php echo $row['id_materia'];?>"><span class="modificar"></span></a></td>
-                <td><a class="liMostrar" href="mostrar_calificacion.php?id=<?php echo $row['id_materia'];?>"><span class="mostrar"></span></a></td>
+              <td>
+               <form action="mostrar_calificaciones.php" name="formulario1" method="post">
+              <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
+              <input type="hidden" name="materia" value="<?php echo $row['id_materia']?>"/>
+              <input type="hidden" name="credito" value="<?php echo $row['credito']?>"/>
+              <input type="hidden" name="cal_min" value="<?php echo $row['cal_min']?>"/>
+         <input type="hidden" name="id_cal" value="<?php echo $row['id_calificacion']?>"/>
+
+              <button name="enviar"class="botton"><span class="mostrar"></span></button>
+              </form>
+              </td>
+
+
 
                 </tr>
-
-                <?php
+              <?php
               }
               ?>
+
+
             </tbody>
           </table>
 
@@ -307,19 +276,21 @@ include_once("php/paginacion.php");
                 $pagination->pages("btn");
                 ?>
               </div>
+
             </table>
 
       </section>
-
-      <!-- fin de section -->
 
       <script src="js/jquery.js"></script>
       <script src="js/jquery-ui.js"></script>
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
+      <!-- <script src="js/confirmacion.js"></script> -->
+      <script src="js/eliminar.js"></script>
       <script src="js/val_campos.js"></script>
 
+      <script src="alertifyjs/alertify.js"></script>
 
     </body>
     </html>

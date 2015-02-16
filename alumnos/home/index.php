@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['alumno'])) {
+if (!isset($_SESSION['sica-alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';

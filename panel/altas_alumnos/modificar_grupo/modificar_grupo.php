@@ -249,7 +249,8 @@ include_once("php/paginacion.php");
 
 
 
-                 <td><a class="liEliminar" href="#"  onclick="delGrupo(<?php echo $row['id_grupo'];?>);"><span class="
+                 <td><a class="liEliminar" href="#"
+                 onclick="delGrupo(<?php echo $row['id_grupo'];?>);"><span class="
                  eliminar"></span></a></td>
                  <td>
                    <form action="modificar.php" name="formulario1" method="post">

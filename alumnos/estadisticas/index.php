@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['alumno'])) {
+if (!isset($_SESSION['sica-alumno'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../login_alumno/index.php";
 </script>';
@@ -143,125 +143,41 @@ include_once("php/resultados.php");
             <div class="info-alumno">
                 <table class="table1">
                     <tr>
-                        <td>
-                            <label for="" class="title">nombre:</label>
-                        </td>
+                        <td><label for="" class="title">nombre:</label></td>
                     </tr>
-                    <tr>
-                        <td>
-    <label for=""><?php echo $row["nombre_alumno"]." ".$row["A_paterno_alumno"]." ".$row["A_materno_alumno"];?></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="" class="title">programa educativo:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">informática</label>
-                        </td>
-                    </tr>
-                     <tr>
-                        <td>
-                            <label for="" class="title">promedio:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">
-                            <?php echo $row["calificacion"];?>
-                            </label>
-                        </td>
-                    </tr>
-
-                     <tr>
-                        <td>
-                            <label for="" class="title">creditos:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for=""><?php echo $row["creditos"];?> de 100</label>
-                        </td>
-                    </tr>
+                    <tr><td><label for=""><?php echo $row["nombre_alumno"]." ".$row["A_paterno_alumno"]." ".$row["A_materno_alumno"];?></label>
+                        </td></tr>
+                    <tr><td><label for="" class="title">programa educativo:</label></td></tr>
+                    <tr><td><label for="">informática</label></td></tr>
+                     <tr><td><label for="" class="title">promedio:</label></td></tr>
+                    <tr><td><label for=""><?php echo $row["calificacion"];?></label></td></tr>
+                     <tr><td><label for="" class="title">creditos:</label></td></tr>
+                    <tr><td><label for=""><?php echo $credito["total"];?> de <?php echo $total_credito['total_credito']; ?></label></td></tr>
                 </table>
                 <table class="tabla2">
-                    <tr>
-                        <td>
-                            <label for="" class="title">Matricula:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for=""><?php echo $row["matricula"];?></label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="" class="title">Nivel:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">preparatoria bachillerato</label>
-                        </td>
-                    </tr>
-
-
-                     <tr>
-                        <td>
-                            <label for="" class="title">fecha de consulta</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">
+                    <tr><td><label for="" class="title">Matricula:</label></td></tr>
+                    <tr><td><label for=""><?php echo $row["matricula"];?></label></td></tr>
+                    <tr><td><label for="" class="title">Nivel:</label></td></tr>
+                    <tr><td><label for="">preparatoria bachillerato</label></td></tr>
+                    <tr><td><label for="" class="title">fecha de consulta</label></td></tr>
+                    <tr><td><label for="">
                                 <script>
                                      var f = new Date();
 document.write( f.getFullYear() +  "/" + (f.getMonth() +1) + "/" + f.getDate() );
                                 </script>
-                            </label>
-                        </td>
-                    </tr>
+                    </label></td></tr>
 
                 </table >
                      <table  class="table3">
-                    <tr>
-                        <td>
-                            <label for="" class="title">aprobadas:</label>
-                        </td>
-                        <td>
-                            <label for="">16</label>
-                        </td>
-                    </tr>
-                    <tr>
+                     <tr><td><label for="" class="title">aprobadas:</label></td>
+                     <td><label for=""><?php echo $aprovada['aprovada']; ?></label></td></tr>
 
-                        <td>
-                            <label for="" class="title">reprobadas:</label>
-                        </td>
-                        <td>
-                            <label for="">25</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="" class="title">no presentadas:</label>
-                        </td>
-                        <td>
-                            <label for="">7</label>
-                        </td>
-                    </tr>
-
-
-                     <tr>
-                        <td>
-                            <label for="" class="title">total:</label>
-                        </td>
-                        <td>
-                            <label for="">40</label>
-                        </td>
-                    </tr>
+            <tr><td><label for="" class="title">reprovada:</label></td>
+                    <td><label for=""><?php echo $reprovada['reprovada']; ?></label></td></tr>
+                    <tr><td><label for="" class="title">no presentadas:</label></td>
+                    <td><label for=""><?php echo $NA['noAplica']; ?></label></td></tr>
+                    <tr><td><label for="" class="title">total materias:</label></td>
+                    <td><label for=""><?php echo $Nmateria['materia'];?></label></td></tr>
                 </table>
 
         <div class="content-histrial">

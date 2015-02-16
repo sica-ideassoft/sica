@@ -1,38 +1,63 @@
 <?php
-include_once("../../../conexion/conexion.php");
+include_once("../../../../conexion/conexion.php");
 $conn = new Conexion();
 
-$conn = dbConnect();
-	$OK = true;
-	if (isset($_POST['name'])) {
-		$data = "%".$_POST['name']."%";
-		$sql = 'SELECT * FROM materias WHERE nombre like ?';
-		$stmt = $conn->prepare($sql);
-		$results = $stmt->execute(array($data));
-		$rows = $stmt->fetchAll();
-		$error = $stmt->errorInfo();
-	}
-	if(!isset($f)) {
-?>
+$busca= "%".$_POST['name']."%";
+if($busca!=""){
+
+$sql = "SELECT
+	m.id_materia,m.claveSEP,m.nombre_materia,
+g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+o.id_maestro,o.nombre,
+a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+u.id_login_maestro,u.id_maestro,u.user,
+c.id_create_grupo,c.create_grupo,c.create_grado
+FROM materias m
+INNER JOIN grupos g       ON g.id_materia = m.id_materia
+INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
+INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
+INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
+INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
+
+	WHERE  a.nombre_alumno LIKE '%".$busca."%' OR a.A_paterno_alumno LIKE '%".$busca."%' OR a.A_materno_alumno LIKE '%".$busca."%'
+	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grado LIKE '%".$busca."%' ";
+
+$query = $conn->query($sql);
+
+	if($query->rowCount()==0) {
+	?>
 		<tr>
-			<td colspan='5'>El alumno no existe</td>
+			<td colspan='9'>La calificación del alumno no existe</td>
 		</tr>
 
-<?php
+	<?php
 	}
-	else {
-		foreach ($rows as $row) {
-			echo "<tr>";
-				echo "<td>".$row['nombre']."</td>";
-				echo "<td>".$row['profesor']."</td>";
-				echo "<td>".$row['credito']."</td>";
-				echo "<td>".$row['cal_min']."</td>";
-				?>
 
-				<td class="lia"><a href="mostrar_materias.php?id=<?php echo $row['id_materia']?>"><span class="mas"></span></a></td>
+while($f=$query->fetch()){
 
-<?php
-		}
+	?>
+	<tr>
+		<td><?php echo $f['nombre_materia']; ?></td>
+		<td><?php echo $f['nombre']; ?></td>
+		<td><?php echo $f['create_grado']; ?></td>
+		<td><?php echo $f['create_grupo']; ?></td>
+		<td><?php echo $f['nombre_alumno'];?></td>
+		<td><?php echo $f['A_paterno_alumno'];?></td>
+		<td><?php echo $f['A_materno_alumno'];?></td>
+		<td><?php echo $f['matricula'];?></td>
+		<td>
+		<form action="mostrar_calificacion.php" name="formulario1" method="post">
+		<input type="hidden" name="id" value="<?php echo $f['id_alumno'];?>"/>
+		<button name="enviar"class="botton"><span class="mas"></span></button>
+		</form>
+		</td>
 
-	}
+	</tr>
+
+	<?php
+}
+
+}
+?>
+
 ?>

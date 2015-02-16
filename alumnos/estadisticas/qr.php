@@ -1,20 +1,17 @@
 <?php
-    $user = $_SESSION['alumno'];
     $conn = new Conexion();
     include('phpqrcode/qrlib.php');
-    // include('qrconfig.php');
 
-    $sql = "SELECT * FROM alumno WHERE matricula  = '$user'";
-    $query = $conn->query($sql);
+    $sql = $conn->prepare("SELECT * FROM alumno WHERE matricula  = :user");
+    $sql ->bindParam(':user',$_SESSION['sica-alumno']);
+    $sql ->execute();
+    $row = $sql->fetch();
 
-    $row = $query->fetch();
-
-    $alumno1 = $row['nombre_alumno'].' ';
+    $alumno1    = $row['nombre_alumno'].' ';
     $apellido1  = $row['A_paterno_alumno'].' ';
-    $apellido2 = $row['A_materno_alumno'].' ';
-    $alumno2 = $row['matricula'];
-
-    $alumno = $alumno1.$apellido1.$apellido2.$alumno2;
+    $apellido2  = $row['A_materno_alumno'].' ';
+    $alumno2    = $row['matricula'];
+    $alumno     = $alumno1.$apellido1.$apellido2.$alumno2;
 
 
     $codeContents = $alumno;

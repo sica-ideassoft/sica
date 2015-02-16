@@ -6,11 +6,6 @@ location.href = "../../login_admin/index.php";
 </script>';
 }
 ?>
-<?php
-require_once 'php/Connection.simple.php';
-$conn = dbConnect();
-
- ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
@@ -31,7 +26,8 @@ $conn = dbConnect();
   <link rel="stylesheet" href="css/jquery-ui.css">
   <link rel="stylesheet" href="css/buscar_calificacion.css">
   <link rel="stylesheet" href="css/mensajes.css">
-    <link rel="stylesheet" href="css/mostrar_calificacion.css">
+  <link rel="stylesheet" href="css/mostrar_calificacion.css">
+  <link rel="stylesheet" href="css/status.css">
 
 
 
@@ -52,9 +48,9 @@ $conn = dbConnect();
 
               </ul>
 
-              <div class="user">
+               <div class="user">
                 <div class="userimg">
-                  <img src="image/user.png" alt="">
+                  <?php include_once("php/miniatura.php"); ?>
                 </div>
                 <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
               </div>
@@ -160,9 +156,9 @@ $conn = dbConnect();
 
           </ul>
         </li>
-          <li class='has-sub admin  activo'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
+          <li class='has-sub admin'><a  href='#'><span class='icoMateria'>MATERIAS</span></a>
           <ul>
-          <li><a class='activo' href="../buscar_materia/buscar_materia.php"><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
+          <li><a href="../buscar_materia/buscar_materia.php"><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_materia/altas_materia.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
@@ -172,10 +168,10 @@ $conn = dbConnect();
           </ul>
         </li>
 
-    <li class='has-sub admin'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
+    <li class='has-sub admin activo'><a  href='#'><span class="icoCalificaciones">CALIFICACIONES</span></a>
           <ul>
           </li>
-               <li><a href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+               <li><a class="activo" href='../buscar_calificacion/buscar_calificacion.php'><span class="icoBuscarActivo"><b>BUSCAR</b></span></a>
             </li>
             <li><a  href='../altas_calificacion/altas_calificacion.php'><span class="icoAltasM"><b>ALTAS</b></span></a>
             </li>
@@ -201,19 +197,6 @@ $conn = dbConnect();
 
          </div>
 
-<!--          <div class='footcontent'>
-          <table class="tabla1">
-            <thead>
-              <td class="Nalumno"><p># Alumnos</p></td><td><p>N Alumno</p></td>
-            </thead>
-            <tbody>
-              <td><p>1200</p></td><td><p>hola</p></td>
-            </tbody>
-            <tfoot>
-
-            </tfoot>
-          </table>
-        </div> -->
       </div>
 
       <!-- inicio de section -->
@@ -226,14 +209,18 @@ $conn = dbConnect();
         <p>buscar matería</p>
         </div>
           <!-- inicio de bloque  -->
-            <div class="content-materia">
+            <div class="content-alumno">
+                  <div class="img-alumno">
+                      <?php
+                      include_once("php/mostrar_foto.php");
+                       ?>
+                  </div>
+                  <div class="info-alumno">
 
-                  <div class="info-materia">
-
-<?php
-include_once("php/mostrar.php");
-?>
-</table>
+                    <?php
+                    include_once("php/mostrar.php");
+                    ?>
+                    </table>
                   </div>
             </div>
 
@@ -242,7 +229,7 @@ include_once("php/mostrar.php");
         <table>
         <tr>
         <td>
-            <a class="regresar" href="buscar_materia.php">REGRESAR</a><span class="reg"></span>
+            <a class="regresar" href="buscar_calificacion.php">REGRESAR</a><span class="reg"></span>
         </td>
         </tr>
         </table>
@@ -256,7 +243,7 @@ include_once("php/mostrar.php");
       <script src="js/jquery-ui.js"></script>
       <script src="js/calendario.js"></script>
       <script src="js/script.js"></script>
-
+      <script src="js/status.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
       <script src="js/buscar.js"></script>

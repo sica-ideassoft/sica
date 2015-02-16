@@ -170,52 +170,55 @@ if (!isset($_SESSION['maestro-session'])) {
     <p>buscar alumno</p>
   </div>
 
-  <form method="POST" class="search">
 
-    <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
+    <form method="get" class="search" action="mostrar_materia.php?id=<?php echo $row['id_materia'] ?>">
 
-    <button type="button" class="btnSearch"><span class="icoSearch"></span></button>
+        <input id="name" name="name" type="text" class="buscar" placeholder="Buscar..." class=""></input>
 
-  </form>
+        <button type="button" class="btnSearch"><span class="icoSearch"></span></button>
 
-  <div class="datosAlumno">
-    <table>
-      <thead class="datosBucar1">
-        <th class="materia2">Materías</th>
+    </form>
 
-        <th >Nombre</th>
+<div class="datosAlumno">
+<table>
+    <thead class="datosBucar1">
+        <th class="grande1">Materia</th>
+        <th>Profesor</th>
+        <th class="pequeno2">grado</th>
+        <th class="pequeno2">grupo</th>
+        <th>Alumno</th>
         <th>A paterno</th>
         <th>A materno</th>
-        <th class="medio">Grado</th>
-        <th class="medio">Grupo</th>
-        <th class="medio">mostrar</th>
-      </thead>
-    </table>
-  </div>
-  <div class="ContentBuscar">
-    <table id="resultTable" >
+        <th>matricula</th>
+        <th class="pequeno1">más</th>
+    </thead>
+</table>
+</div>
+<div class="ContentBuscar">
+<table id="resultTable" >
 
-      <thead class="datosBucar">
-        <th class="materia"></th>
-        <th ></th>
-        <th ></th>
-        <th ></th>
+    <thead class="datosBucar">
+        <th class="grande"></th>
+        <th></th>
+        <th class="pequeno"></th>
+        <th class="pequeno"></th>
         <th></th>
         <th></th>
         <th></th>
-      </thead>
+        <th></th>
+        <th class="pequeno"></th>
+    </thead>
 
-      <tbody>
+    <tbody>
 
-      </tbody>
-    </table>
-  </div>
+    </tbody>
+</table>
+    </div>
 
-  <div class="control">
-  </div>
+        <div class="control">
+        </div>
 
-
-</section>
+      </section>
 
 <!-- fin de section -->
 

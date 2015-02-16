@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_SESSION['alumno'])) {
+if (!isset($_SESSION['sica-alumno'])) {
     echo '<SCRIPT LANGUAGE="javascript">
     location.href = "../login_alumno/index.php";
 </script>';
@@ -76,7 +76,8 @@ include_once("php/resultados.php");
 
         </div>
         <div class="Nuser">
-            <p><?php echo  $row["nombre_alumno"];?></p>
+
+            <p><?php echo $filas["nombre_alumno"];?></p>
         </div>
 
     </div>

@@ -1,32 +1,40 @@
 <?php
-include_once("conexion.php");
-$conn = new DB();
-$conn->conectar();
-$check = mysql_query("SELECT * FROM materias order by id_materia desc");
-if(isset($_POST['modulo']) && isset($_POST['sep']) && isset($_POST['nombre']) && isset($_POST['profesor']) && isset($_POST['fecha1']) && isset($_POST['fecha2'])&& isset($_POST['creditos']) && isset($_POST['calificacion']))
-{
+include_once("../../../../conexion/conexion.php");
+$conn = new Conexion();
+// (id_calificacion,id_alumno,id_materia,creditos,calificacion,Tipo_evaluacion,acumulado)
 
-$modulo       = mysql_real_escape_string($_POST['modulo']);
-$sep          = mysql_real_escape_string($_POST['sep']);
-$nombre       = mysql_real_escape_string($_POST['nombre']);
-$profesor     = mysql_real_escape_string($_POST['profesor']);
-$fecha1       = mysql_real_escape_string($_POST['fecha1']);
-$fecha2       = mysql_real_escape_string($_POST['fecha2']);
-$creditos     = mysql_real_escape_string($_POST['creditos']);
-$calificacion = mysql_real_escape_string($_POST['calificacion']);
-$ip           = mysql_real_escape_string($_SERVER['REMOTE_ADDR']);
+// $materias = $_POST['min_materia'];
+// $creditos = $_POST['creditos'];
+$calificacion = $_POST['cal'];
+$creditos  = $_POST['creditos'];
+$materia  = $_POST['materia'];
 
+$sqll= $conn->prepare("SELECT id_materia,claveSEP,nombre_materia,fecha_inicio,fecha_fin,credito,cal_min  FROM materias where id_materia = :materia");
+$sqll->bindParam(':materia',$materia);
+$sqll->execute();
+$row =$sqll->fetch();
 
+$calificando = $row['cal_min'];
 
-mysql_query("INSERT INTO materias(id_materia,claveSEP,modulo,nombre,profesor,fecha_inicio,fecha_fin,credito,cal_min,ip) values (null,'$modulo','$sep','$nombre','$profesor','$fecha1','$fecha2','$creditos','$calificacion','$ip')");
-
-$fetch= mysql_query("SELECT *  FROM materias order by id_materia desc");
-$row=mysql_fetch_array($fetch);
+if($calificacion >= $calificando){
+		$creditos = $row['credito'];
+}else{
+		$creditos = 0;
 }
+
+
+$sql = $conn->prepare('INSERT INTO calificacion '
+	   .'VALUES (:idC, :id, :materia, :creditos, :cal, :eval,:acum)');
+$vacio = "";
+
+$sql->bindParam(':idC',$vacio);
+$sql->bindParam(':id',$_POST['id']);
+$sql->bindParam(':materia',$materia);
+$sql->bindParam(':creditos',$creditos);
+$sql->bindParam(':cal',$calificacion);
+$sql->bindParam(':eval',$_POST['eval']);
+$sql->bindParam(':acum',$vacio);
+
+$sql->execute();
+
 ?>
-
-<link rel="stylesheet" href="../css/mensajes.css">
-<div class="showbox"> <?php echo $row['nombre'];
-echo "<hr>";
-?> </div>
-

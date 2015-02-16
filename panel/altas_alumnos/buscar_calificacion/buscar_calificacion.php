@@ -232,11 +232,15 @@ location.href = "../../login_admin/index.php";
 <div class="datosAlumno">
 <table>
     <thead class="datosBucar1">
-        <th>Nombre</th>
+        <th class="grande1">Materia</th>
         <th>Profesor</th>
-        <th>Creditos</th>
-        <th>Cal. minima</th>
-        <th>mostrar</th>
+        <th class="pequeno2">grado</th>
+        <th class="pequeno2">grupo</th>
+        <th>Alumno</th>
+        <th>A paterno</th>
+        <th>A materno</th>
+        <th>matricula</th>
+        <th class="pequeno1">más</th>
     </thead>
 </table>
 </div>
@@ -244,11 +248,15 @@ location.href = "../../login_admin/index.php";
 <table id="resultTable" >
 
     <thead class="datosBucar">
+        <th class="grande"></th>
+        <th></th>
+        <th class="pequeno"></th>
+        <th class="pequeno"></th>
         <th></th>
         <th></th>
         <th></th>
         <th></th>
-        <th class="masBuscar"></th>
+        <th class="pequeno"></th>
     </thead>
 
     <tbody>

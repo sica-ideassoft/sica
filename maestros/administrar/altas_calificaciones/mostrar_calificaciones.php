@@ -4,7 +4,6 @@ if (!isset($_SESSION['maestro-session'])) {
 echo '<SCRIPT LANGUAGE="javascript">
 location.href = "../../login_maestro/index.php";
 </script>';
-
 }
 ?>
 <!DOCTYPE html>
@@ -30,6 +29,8 @@ location.href = "../../login_maestro/index.php";
   <link rel="stylesheet" href="css/mostrar_maestro.css">
   <link rel="stylesheet" href="css/status.css">
 
+  <link rel="stylesheet" href="alertifyjs/css/alertify.css">
+  <link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
 
 
 
@@ -89,6 +90,14 @@ location.href = "../../login_maestro/index.php";
   </div>
 </div>
 
+  <div class="mensajesCalificacion">
+  <div class="Logom2">
+    <label>los caracateres <b>calificación</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+    <span class="Mico2"></span>
+  </div>
+</div>
 <div class="mensajesCorrecto">
   <div class="Logom3">
       <label>Los datos se enviaron <b>Correctamente</b></label>
@@ -105,6 +114,7 @@ location.href = "../../login_maestro/index.php";
   <div class="Imenu52">
     <p><span class="Iconfig"></span><b>CONFIGURACIÓN</b></p>
   </div>
+
   <!-- incio de menu config -->
   <div class="Ccontent">
    <div class="Cco">
@@ -234,11 +244,12 @@ include_once("php/mostrar.php");
 <script src="js/script.js"></script>
 <script src="js/menu.js"></script>
 <!-- <script src="js/confirmacion.js"></script> -->
+<script src="alertifyjs/alertify.js"></script>
 <script src="js/eliminar.js"></script>
 <script src="js/val_campos.js"></script>
 <script src="js/functions.js"></script>
 <script src="js/status.js"></script>
-
+<script src="js/noAplica.js"></script>
 
 
 </body>

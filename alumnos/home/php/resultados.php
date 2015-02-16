@@ -7,7 +7,7 @@ $sql=$conn->prepare("SELECT
 	FROM alumno a
 	INNER JOIN grupos  g ON g.id_create_grupo = a.id_create_grupo
 	WHERE a.matricula = :matricula");
-$sql->bindParam(':matricula',$_SESSION['alumno']);
+$sql->bindParam(':matricula',$_SESSION['sica-alumno']);
 $sql->execute();
 $row = $sql->fetch();
  ?>

@@ -1,9 +1,6 @@
 $(document).on("ready",inicio);
 function inicio(e){
-
 	e.preventDefault();
-
-
 $(".contenido").hide();
 $(".contenido:eq(1)").show();
 $(".heder21 div").on("click",function (){

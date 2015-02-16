@@ -2,9 +2,6 @@
 include_once("../../../../conexion/conexion.php");
 $conn =  new Conexion();
 session_start();
-
-
-// $busca=$_POST['name'];
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
 $sql =$conn->prepare("SELECT

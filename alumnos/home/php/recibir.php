@@ -11,7 +11,7 @@ move_uploaded_file($rutaTemporal,$rutaDestino);
 
 
 $sql = $conn->prepare("UPDATE alumno set fotografia = :rutaDestino WHERE  matricula =:matricula");
-$sql->bindParam(':matricula',$_SESSION['alumno']);
+$sql->bindParam(':matricula',$_SESSION['sica-alumno']);
 $sql->bindParam(':rutaDestino',$rutaDestino);
 $sql->execute();
 

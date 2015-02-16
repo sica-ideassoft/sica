@@ -195,12 +195,12 @@ include_once("php/paginacion.php");
             <thead class="datosmodificar">
               <tr >
                 <th class="materia">Materia</th>
+                <th class="grado">grado</th>
+                <th class="grado">grupo</th>
                 <th>nombre</th>
                 <th>A paterno</th>
                 <th>A materno</th>
                 <th>matricula</th>
-                <th class="grado">grado</th>
-                <th class="grado">grupo</th>
 
                 <th class="modi">mostrar</th>
               </tr>
@@ -213,22 +213,18 @@ include_once("php/paginacion.php");
                 ?>
                 <tr>
                 <td class="materia"><?php echo $row['nombre_materia'];?></td>
+                <td><?php echo $row['create_grado'];?></td>
+                <td><?php echo $row['create_grupo'];?></td>
                 <td><?php echo $row['nombre_alumno'];?></td>
                 <td><?php echo $row['A_paterno_alumno'];?></td>
                 <td><?php echo $row['A_materno_alumno'];?></td>
                 <td><?php echo $row['matricula'];?></td>
-                <td><?php echo $row['create_grado'];?></td>
-                <td><?php echo $row['create_grupo'];?></td>
               <td>
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">
               <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>
               <input type="hidden" name="materia" value="<?php echo $row['id_materia']?>"/>
-
               <input type="hidden" name="credito" value="<?php echo $row['credito']?>"/>
-
               <input type="hidden" name="cal_min" value="<?php echo $row['cal_min']?>"/>
-
-
               <button name="enviar"class="botton"><span class="mostrar"></span></button>
               </form>
               </td>

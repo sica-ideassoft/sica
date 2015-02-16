@@ -1,5 +1,6 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
+include_once("php/select.php");
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
@@ -13,9 +14,10 @@ $sql = $conn->prepare("SELECT
 	m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min
 	FROM alumno a
 	INNER JOIN grupos g ON g.id_create_grupo = a.id_create_grupo
-	INNER JOIN materias m ON m.id_materia = g.id_materia
+	INNER JOIN materias m ON m.id_materia = g.id_materia AND m.id_materia = :materia
 	WHERE a.id_alumno = :id");
 $sql->bindParam(':id',$id);
+$sql->bindParam(':materia',$materia);
 $sql->execute();
 
 $row = $sql->fetch();
@@ -35,6 +37,16 @@ $nombre = $row['nombre_alumno'];
 	<td><?php echo $row['matricula']; ?></td>
 
 </tr>
+<tr>
+	<td class="dato"><label for="">Matería:</label></td>
+	<td class="dato"><label for="">Creditos:</label></td>
+	<td class="dato"><label for="">Cal. minima:</label></td>
+</tr>
+<tr>
+	<td><?php echo $row['nombre_materia']; ?></td>
+	<td><?php echo $row['credito']; ?></td>
+	<td><?php echo $row['cal_min']; ?></td>
+</tr>
 </table>
 
 <script>
@@ -45,7 +57,9 @@ var min_materia = "<?php echo $min_materia; ?>" ;
 
 </script>
 
+<div class="content-history">
 <form action="">
+
 <table class="history">
 <tr>
 	<td><label for="">Calificación:</label></td>
@@ -54,13 +68,15 @@ var min_materia = "<?php echo $min_materia; ?>" ;
 <tr>
 
 
-	<td><input type="text" class="cal" name='cal' id='cal' placeholder='cal...'></td>
+	<td><input type="text" class="cal" name='cal' id='cal' placeholder='cal...' value=""></td>
 	<td>
 	<select class="eval" name='eval' id='eval'>
-		<option value="ORD">ORD</option>
-		<option value="EXT-1">EXT-1</option>
+		<?php
+		tipo_evaluacion();
+		 ?>
 	</select>
 
 </tr>
 
 </table>
+</div>

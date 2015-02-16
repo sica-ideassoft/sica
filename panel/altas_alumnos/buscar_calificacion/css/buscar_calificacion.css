@@ -20,9 +20,23 @@
 	font-weight: normal;
 	font-style: normal;
 }
-
+.pequeno{
+width: 90px !important;
+}
+.pequeno2{
+width: 10px !important;
+}
+.grande{
+	width: 170px !important;
+}
+.grande1{
+	width: 220px !important;
+}
 .datos{
 	text-transform: uppercase;
+}
+.pequeno1{
+	width: 130px !important;
 }
 /*inicio de activo*/
 #cssmenu > ul > .activo > a {
@@ -160,7 +174,7 @@ margin-top:10px;
 }
 .ContentBuscar{
 
-width: 900px;
+width: 1020px;
 height: 350px;
 z-index: -10;
 
@@ -177,9 +191,9 @@ top: 0px;
 	background-color: red;
 	text-align: center;
 	background-color: #09C;
-	width: 750px;
+	width: 1020px;
 	margin: 0 auto;
-	margin-left: 130px;
+	/*margin-left: 130px;*/
 	height: 30px;
 	margin-top: 10px !important;
 }

@@ -27,6 +27,8 @@ if (!isset($_SESSION['maestro-session'])) {
   <link rel="stylesheet" href="css/buscar_calificaciones.css">
   <link rel="stylesheet" href="css/mensajes.css">
   <link rel="stylesheet" href="css/mostrar_calificaciones.css">
+  <link rel="stylesheet" href="css/status.css">
+
 
 </head>
 <body>
@@ -183,35 +185,33 @@ if (!isset($_SESSION['maestro-session'])) {
     </div>
     <p>buscar alumno</p>
   </div>
-  <!-- inicio de bloque  -->
-  <div class="content-alumno">
-    <div class="img-alumno">
-      <figure class="foto-alumno">
-        <img src="" alt="">
-      </figure>
-      <label for=""></label>
+           <!-- inicio de bloque  -->
+            <div class="content-alumno">
+                  <div class="img-alumno">
+                      <?php
+                      include_once("php/mostrar_foto.php");
+                       ?>
+                  </div>
+                  <div class="info-alumno">
 
-    </div>
-    <div class="info-alumno">
-
-      <?php
-      include_once("php/mostrar.php");
-      ?>
-    </table>
-  </div>
-</div>
+                    <?php
+                    include_once("php/mostrar.php");
+                    ?>
+                    </table>
+                  </div>
+            </div>
 
 
-<div class="control">
-  <table>
-    <tr>
-      <td>
-        <a class="regresar" href="buscar_calificaciones.php">REGRESAR</a><span class="reg"></span>
-      </td>
-    </tr>
-  </table>
-</div>
-</section>
+        <div class="control">
+        <table>
+        <tr>
+        <td>
+            <a class="regresar" href="buscar_calificaciones.php">REGRESAR</a><span class="reg"></span>
+        </td>
+        </tr>
+        </table>
+        </div>
+      </section>
 
 
 <!-- fin de section -->
@@ -224,6 +224,7 @@ if (!isset($_SESSION['maestro-session'])) {
 <script src="js/menu.js"></script>
 <script src="js/val_campos.js"></script>
 <script src="js/buscar.js"></script>
+<script src="js/status.js"></script>
 
 
 </body>

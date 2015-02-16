@@ -1,0 +1,31 @@
+.activoAlumno{
+
+	font-family: helvetica;
+	color:rgb(6, 3, 23);
+	text-transform: uppercase;
+	margin-left: 13px;
+	background-color:rgb(95, 174, 17);
+	color: white;
+	padding: 2px 20px;
+}
+.inactivoAlumno{
+
+	font-family: helvetica;
+	color:rgb(6, 3, 23);
+	text-transform: uppercase;
+	margin-left: 13px;
+	background-color:#ff6a6a;
+	color: white;
+	padding: 2px 20px;
+}
+.bajaTemproralAlumno{
+
+	font-family: helvetica;
+	color:rgb(6, 3, 23);
+	text-transform: uppercase;
+	margin-left: 13px;
+	background-color:#eed711;
+	color: white;
+	padding: 2px 10px;
+	 font-weight: bold;
+}
