@@ -23,8 +23,8 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = '".$user."'
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%'");
-	$pagination->config(3, 5);
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR a.matricula LIKE '%$search%' OR c.create_grado LIKE '%$search%' OR m.nombre_materia LIKE '%$search%' OR o.nombre LIKE '%$search%' ");
+	$pagination->config(3, 7);
 	$sql = "SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
 g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
@@ -39,7 +39,7 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 and u.user = '".$user."'
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row,$pagination->max_rows";
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR a.matricula LIKE '%$search%' OR c.create_grado LIKE '%$search%' OR o.nombre LIKE '%$search%' OR m.nombre_materia LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row,$pagination->max_rows";
 	$query = $conn->prepare($sql);
 	$query->execute();
 
@@ -69,8 +69,10 @@ INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
-and u.user = :user WHERE a.id_alumno NOT IN (SELECT id_alumno from calificacion)
+and u.user = :user
  ORDER BY m.id_materia ASC LIMIT $pagination->start_row, $pagination->max_rows");
+// WHERE a.id_alumno NOT IN
+// (SELECT id_alumno as Calumno from calificacion)
 $sqll->bindParam(':user',$user);
 $sqll->execute();
 	$model = array();

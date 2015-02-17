@@ -14,3 +14,64 @@
 	width: 800px;
 	height: 635px;
 }
+@media screen and (max-width: 980px){
+.content-calendario{
+	/*background-color: red;*/
+	width: 779px;
+}
+.enbebido{
+	float: right;
+	width: 780px !important;
+	height: 635px;
+}
+}
+
+@media screen and (max-width: 800px){
+.content-calendario{
+	/*background-color: red;*/
+	width: 600px;
+}
+.enbebido{
+	float: right;
+	width: 600px !important;
+
+	height: 635px;
+}
+}
+
+@media screen and (max-width: 768px){
+.content-calendario{
+	/*background-color: red;*/
+	width: 570px;
+}
+.enbebido{
+	float: right;
+	width: 570px !important;
+
+	height: 635px;
+}
+}
+@media screen and (max-width: 360px){
+.content-calendario{
+	/*background-color: red;*/
+	width: 360px;
+	height: 580px;
+}
+.enbebido{
+	float: right;
+	width: 360px !important;
+
+}
+}
+@media screen and (max-width: 320px){
+.content-calendario{
+	background-color: red;
+	width: 320px;
+	height: 420px;
+}
+.enbebido{
+	float: right;
+	width: 320px !important;
+
+}
+}

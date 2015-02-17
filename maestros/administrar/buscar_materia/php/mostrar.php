@@ -4,7 +4,7 @@ $conn =  new Conexion();
 
 $sql=$conn->prepare("SELECT
 o.id_maestro,o.nombre,o.A_paterno,o.A_materno,o.clave,o.curp,o.telefono,o.correo,o.genero,o.edad,o.estado_civil,o.fecha_nacimiento,o.Estado,o.municipio,o.calle,o.Ninterior,o.Nexterior,o.nacionalidad,
- m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
+ m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,m.ciclo,
 g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
 u.id_login_maestro,u.id_maestro,u.user
 FROM materias m
@@ -35,11 +35,12 @@ $nombre = $row['nombre_materia'];
 	<td class="dato"><label for="">Fecha inicio:</label></td>
 	<td class="dato"><label for="">Fecha fin:</label></td>
 	<td class="dato"><label for="">Calificación min:</label></td>
+	<td class="dato"><label for="">Ciclo</label></td>
 </tr>
 <tr>
 	<td><?php echo $row['fecha_inicio']; ?></td>
 	<td><?php echo $row['fecha_fin']; ?></td>
 	<td><?php echo $row['cal_min']; ?></td>
+	<td><?php echo $row['ciclo']; ?></td>
 </tr>
-
 </table>

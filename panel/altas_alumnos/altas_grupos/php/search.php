@@ -13,7 +13,8 @@ $busqueda="SELECT
     INNER JOIN materias m ON m.id_materia = g.id_materia
     INNER JOIN maestro o ON o.id_maestro = g.id_maestro
     INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
-    WHERE m.nombre_materia LIKE '%".$busca."%'";
+    WHERE m.nombre_materia LIKE '%".$busca."%' OR o.nombre LIKE '%".$busca."%'
+    OR c.create_grado LIKE '%".$busca."%' OR c.create_grupo LIKE '%".$busca."%'";
     $query= $conn->query($busqueda);
 
 	if($query->rowCount()==0) {

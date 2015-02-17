@@ -218,7 +218,7 @@ include_once("php/paginacion.php");
           <input type="text" name="search" value="<?php echo $search ?>" class='inputBuscar'  placeholder="Buscar...">
            <!-- <button type="button" class="btnSearch"><span class="icoSearch"></span></button> -->
 
-          <input type="submit"  class='btnSearch' value="-"></input>
+          <input type="submit"  class='btnSearch' value="+"></input>
         </form>
         <br><br>
         <center>

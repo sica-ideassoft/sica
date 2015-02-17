@@ -55,6 +55,18 @@ $numMateria = $conn->prepare("SELECT id_alumno,id_materia,count(*) AS materia FR
 $numMateria->bindParam(':id',$id);
 $numMateria->execute();
 $Nmateria = $numMateria->fetch();
+// ----------------------------------
+$Ctotal = $conn->prepare("SELECT a.id_alumno,
+	c.id_calificacion,c.id_alumno,c.id_materia,SUM(c.calificacion) as total,
+	m.id_materia
+	FROM calificacion c
+	INNER JOIN materias m ON m.id_materia = c.id_materia
+	INNER JOIN alumno a ON a.id_alumno = c.id_alumno
+	WHERE a.id_alumno = :id");
+$Ctotal->bindParam(':id',$id);
+$Ctotal->execute();
+$totalCalificacion	 = $Ctotal->fetch();
+$calTotal = $totalCalificacion["total"]/$Nmateria['materia'];
 
 
  ?>

@@ -5,21 +5,23 @@ session_start();
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
 $sql =$conn->prepare("SELECT
-m.id_materia,m.claveSEP,m.nombre_materia,
 g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
+m.id_materia,m.claveSEP,m.nombre_materia,m.credito,
 o.id_maestro,o.nombre,
-a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
 u.id_login_maestro,u.id_maestro,u.user,
-c.id_create_grupo,c.create_grupo,c.create_grado
+c.id_create_grupo,c.create_grupo,c.create_grado,
+a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno
 FROM materias m
-INNER JOIN grupos g       ON g.id_materia = m.id_materia
-INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
-INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
-INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
-INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
-and u.user = :user
-WHERE a.nombre_alumno LIKE '%".$busca."%' ORDER BY m.id_materia");
+INNER JOIN grupos g ON m.id_materia = g.id_materia
+INNER JOIN maestro o  ON o.id_maestro = g.id_maestro
+INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
+INNER JOIN create_grupo c ON  c.id_create_grupo = g.id_create_grupo
+INNER JOIN alumno  a      ON  a.id_create_grupo   = g.id_create_grupo
+and u.user = :user WHERE m.nombre_materia LIKE :buscar OR  a.nombre_alumno LIKE :buscar OR  a.A_paterno_alumno LIKE :buscar OR  a.A_materno_alumno LIKE :buscar OR  c.create_grado LIKE :buscar ORDER BY m.id_materia");
+
 $sql->bindParam(':user',$_SESSION['maestro-session']);
+$sql->bindParam(':buscar',$busca);
+
 $sql->execute();
 	if($sql->rowCount() ==0) {
 	?>
@@ -40,6 +42,7 @@ while($f=$sql->fetch()){
 		<td><?php echo $f['A_materno_alumno']; ?></td>
 		<td><?php echo $f['create_grado']; ?></td>
 		<td><?php echo $f['create_grupo']; ?></td>
+
 
 
 

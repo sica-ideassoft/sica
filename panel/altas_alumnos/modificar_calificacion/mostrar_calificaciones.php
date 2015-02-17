@@ -252,7 +252,7 @@ location.href = "../../login_admin/index.php";
           <tr>
 
           <td>
-            <input type="submit" value="MODIFICAR" class="altasbtn" id="enviar">
+            <input type="submit" value="ALTA" class="altasbtn" id="enviar">
             <div class="conent1 color"> <span class="icoaltas"></span></div>
             </input>
           </td>

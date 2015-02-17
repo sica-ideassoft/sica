@@ -135,11 +135,11 @@ color: white;
 font-weight:bolder;
 }
 .altasbtn{
-background: #008CDD;
+background: none repeat scroll 0% 0% rgb(0, 140, 221);
+border-bottom:4px solid 	#00688b;
 border-style: none;
 width: 190px !important;
 border-radius:5px;
-border-bottom:4px solid 	#00688b;
 
 	}
 

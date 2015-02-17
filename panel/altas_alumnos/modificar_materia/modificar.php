@@ -194,99 +194,77 @@ include_once("php/select.php");
         </li>
       <li><a><span>***</span></a></li>
      </div>
-     <!-- fin de menu3 -->
-
-     <!-- inicio de menu4 -->
-
    </div>
-
-<!--    <div class='footcontent'>
-
-    <div class="headtabla1"><p>Recien Ingresados</p></div>
-
-    <table class="tabla1">
-      <div class="mosAlumno">
-        <div id="show"></div>
-      </div>
-
-    </table>
-  </div> -->
+</div>
+<div class="mensajesCalificacion">
+  <div class="Logom2">
+    <label>los caracateres <b>calificación</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+    <span class="Mico2"></span>
+  </div>
 </div>
 
-<!-- mensajes de validacion -->
 <div class="mensajes">
   <div class="Logom">
-      <label><b>Campos vacios</b> no se puede Enviar la petición</label>
+    <label><b>Campos vacios</b> no se puede Enviar la petición</label>
   </div>
   <div class="divmensaje">
-      <span class="Mico"></span>
+    <span class="Mico"></span>
+  </div>
+</div>
+<div class="msCiclo">
+  <div class="Logom2">
+    <label>los caracateres <b>Ciclo</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes de validacion -->
 <!-- mensajes de matricula validacion -->
-<div class="mensajesMatricula">
+<div class="mensajesMateria">
   <div class="Logom2">
-      <label>Los caracteres de la <b>Matricula</b> son incorrectos</label>
+    <label>los caracateres de la <b>clave matria</b>  son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
-<!-- finde  mensajes matricula de validacion -->
-  <!-- mensajes de curp validacion -->
-<div class="mensajesCurp">
-  <div class="Logom2">
-      <label>Los caracteres de la <b>CURP</b> son incorrectos</label>
-  </div>
-  <div class="divmensaje2">
-      <span class="Mico2"></span>
-  </div>
-</div>
-<!-- finde  mensajes curp de validacion -->
 
 
-  <!-- mensajes de curp validacion -->
+
+
 <div class="mensajesTelefono">
   <div class="Logom2">
-      <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
+    <label>Los caracteres del <b>Telefono</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
- <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesEmail">
   <div class="Logom2">
-      <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
+    <label>Los caracteres del <b>E-mail</b> son incorrectos</label>
   </div>
   <div class="divmensaje2">
-      <span class="Mico2"></span>
+    <span class="Mico2"></span>
   </div>
 </div>
 <!-- finde  mensajes curp de validacion -->
- <!-- mensajes de curp validacion -->
+<!-- mensajes de curp validacion -->
 <div class="mensajesCorrecto">
   <div class="Logom3">
-      <label>Los datos se enviaron <b>Correctamente</b></label>
+    <label>Los datos se enviaron <b>Correctamente</b></label>
   </div>
   <div class="divmensaje3">
-      <span class="Mico3"></span>
+    <span class="Mico3"></span>
   </div>
 </div>
 
-<!-- <div class="mensajesAlumno">
-  <div class="Logom4">
-      <div id="show"></div>
-  </div>
-  <div class="divmensaje4">
-      <span class="Mico4"></span>
-  </div>
-</div>
- -->
-<!-- finde  mensajes curp de validacion -->
 
-<!-- inicio de section -->
 <section class="seccion1">
   <div class="tem">
 <div class="estacion">
@@ -340,6 +318,12 @@ $id = $_POST["id"];
       <tr>
         <td><input type="text" name="fecha1" id="fecha1" class="fecha" value=<?php echo $materia['fecha_inicio'];?>></td>
         <td><input type="text" name="fecha2" id="fecha2" class="fecha" value=<?php echo $materia['fecha_fin'];?>></td>
+      </tr>
+      <tr><td><label for="">Ciclo:</label></td></tr>
+      <tr>
+      <td>
+        <input type="text" name="ciclo" class="ciclo" id="ciclo" value="<?php echo $materia['ciclo']?>">
+      </td>
       </tr>
       </table>
 

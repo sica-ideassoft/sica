@@ -30,7 +30,12 @@ $nombre = $row['nombre_materia'];
 	<td><?php echo $row['fecha_fin']; ?></td>
 	<td><?php echo $row['cal_min']; ?></td>
 </tr>
-
+<tr>
+<td class="dato"><label for="">Ciclo</label></td>
+</tr>
+<tr>
+	<td><?php echo $row['ciclo']; ?></td>
+</tr>
 </table>
 
 <?php

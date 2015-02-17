@@ -28,6 +28,7 @@ $query = $conn->query($sql);
 		<td><?php echo $f['fecha_fin']?></td>
 		<td><?php echo $f['credito']?></td>
 		<td><?php echo $f['cal_min']?></td>
+		<td><?php echo $f['ciclo']?></td>
 		?>
 <?php
 }

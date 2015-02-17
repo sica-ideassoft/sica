@@ -1,15 +1,16 @@
 <?php
 include_once("../../../../conexion/conexion.php");
 $conn = new Conexion();
+session_start();
 
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
 
-$sql = "SELECT
-	m.id_materia,m.claveSEP,m.nombre_materia,
+$sql = $conn->prepare("SELECT
+m.id_materia,m.claveSEP,m.nombre_materia,
 g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
 o.id_maestro,o.nombre,
-a.id_alumno,a.matricula,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,
+a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,
 u.id_login_maestro,u.id_maestro,u.user,
 c.id_create_grupo,c.create_grupo,c.create_grado
 FROM materias m
@@ -18,13 +19,13 @@ INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
-
+and u.user = :user
 	WHERE  a.nombre_alumno LIKE '%".$busca."%' OR a.A_paterno_alumno LIKE '%".$busca."%' OR a.A_materno_alumno LIKE '%".$busca."%'
-	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grado LIKE '%".$busca."%' ";
+	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grado LIKE '%".$busca."%' OR m.nombre_materia LIKE '%".$busca."%' OR o.nombre LIKE '%".$busca."%'");
+$sql->bindParam(':user',$_SESSION['maestro-session']);
+$sql->execute();
 
-$query = $conn->query($sql);
-
-	if($query->rowCount()==0) {
+	if($sql->rowCount()==0) {
 	?>
 		<tr>
 			<td colspan='9'>La calificación del alumno no existe</td>
@@ -33,7 +34,7 @@ $query = $conn->query($sql);
 	<?php
 	}
 
-while($f=$query->fetch()){
+while($f=$sql->fetch()){
 
 	?>
 	<tr>

@@ -69,7 +69,7 @@ include_once("php/resultados.php");
                     <tr>
                         <td>
                             <label for="">
-                               <?php echo $row["calificacion"];?>
+                               <?php echo round($calTotal,2);?>
                             </label>
                         </td>
                     </tr>
@@ -144,16 +144,6 @@ include_once("php/resultados.php");
                             <label for="">preparatoria bachillerato</label>
                         </td>
                     </tr>
-                     <tr>
-                        <td>
-                            <label for="" class="title">promedio:</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <label for="">71.6</label>
-                        </td>
-                    </tr>
 
                      <tr>
                         <td>
@@ -187,7 +177,7 @@ include_once("php/resultados.php");
                         </tr>
                     </thead>
 
-                    <tbody>
+                    <tbody >
                         <?php
                            include_once("php/historial.php");
                         ?>

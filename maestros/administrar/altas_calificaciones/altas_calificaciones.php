@@ -219,6 +219,7 @@ include_once("php/paginacion.php");
                 <td><?php echo $row['A_paterno_alumno'];?></td>
                 <td><?php echo $row['A_materno_alumno'];?></td>
                 <td><?php echo $row['matricula'];?></td>
+
               <td>
                <form action="mostrar_calificaciones.php" name="formulario1" method="post">
               <input type="hidden" name="id" value="<?php echo $row['id_alumno']?>"/>

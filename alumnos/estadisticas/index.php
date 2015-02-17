@@ -150,7 +150,7 @@ include_once("php/resultados.php");
                     <tr><td><label for="" class="title">programa educativo:</label></td></tr>
                     <tr><td><label for="">informática</label></td></tr>
                      <tr><td><label for="" class="title">promedio:</label></td></tr>
-                    <tr><td><label for=""><?php echo $row["calificacion"];?></label></td></tr>
+                    <tr><td><label for=""><?php echo round($calTotal,2);?></label></td></tr>
                      <tr><td><label for="" class="title">creditos:</label></td></tr>
                     <tr><td><label for=""><?php echo $credito["total"];?> de <?php echo $total_credito['total_credito']; ?></label></td></tr>
                 </table>

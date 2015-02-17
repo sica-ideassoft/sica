@@ -20,13 +20,14 @@ INNER JOIN grupos g ON m.id_materia = g.id_materia
 INNER JOIN maestro o  ON o.id_maestro = g.id_maestro
 INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
 INNER JOIN create_grupo c ON  c.id_create_grupo = g.id_create_grupo
-and u.user = :user WHERE m.nombre_materia LIKE '%".$busca."%'");
+and u.user = :user WHERE m.nombre_materia LIKE :buscar OR o.nombre LIKE :buscar OR c.create_grado LIKE :buscar ");
 $sql->bindParam(':user',$_SESSION['maestro-session']);
+$sql->bindParam(':buscar',$busca);
 $sql->execute();
 	if($sql->rowCount()==0) {
 	?>
 		<tr class= "existe">
-			<td  colspan='5'>La matería no existe</td>
+			<td  colspan='7'>La matería no existe</td>
 		</tr>
 
 	<?php

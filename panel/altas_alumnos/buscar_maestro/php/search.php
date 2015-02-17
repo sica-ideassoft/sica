@@ -4,19 +4,14 @@ $conn= new Conexion();
 
 $busca= "%".$_POST['name']."%";
 if($busca!=""){
-$sql = "SELECT * FROM maestro WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
-	OR telefono LIKE '%".$busca."%'";
+$sql = "SELECT *
+FROM maestro
+WHERE nombre LIKE '%".$busca."%' OR A_paterno LIKE '%".$busca."%' OR A_materno LIKE '%".$busca."%'
+	OR telefono LIKE '%".$busca."%' ";
 
 $query = $conn->query($sql);
 
-	if($query->rowCount()==0) {
-	?>
-		<tr>
-			<td colspan='5'>El maestro no existe</td>
-		</tr>
 
-	<?php
-	}
 	while($f=$query->fetch()){
 
 	?>

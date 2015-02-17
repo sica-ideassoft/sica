@@ -14,7 +14,7 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 	c.id_create_grupo,c.create_grupo,c.create_grado,c.descripcion
 	FROM alumno a
 	INNER JOIN create_grupo c ON c.id_create_grupo = a.id_create_grupo
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%'");
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR c.create_grado LIKE '%$search%'");
 	$pagination->config(3, 5);
 	$sql = "SELECT
 
@@ -23,9 +23,10 @@ if(isset($_REQUEST["search"]) && $_REQUEST["search"] != "")
 	c.id_create_grupo,c.create_grupo,c.create_grado,c.descripcion
 	FROM alumno a
 	INNER JOIN create_grupo c ON c.id_create_grupo = a.id_create_grupo
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR c.create_grado LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row, $pagination->max_rows";
 	$query = $conn->prepare($sql);
 	$query->execute();
+
 
 	$model = array();
 

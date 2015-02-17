@@ -232,7 +232,6 @@ include_once("php/paginacion.php");
       </thead>
       <tbody  class="tableHead">
         <?php
-
         foreach($model as $row)
         {
           ?>

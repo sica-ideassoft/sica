@@ -23,7 +23,7 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%'");
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR m.nombre_materia LIKE '%$search%' OR c.create_grado LIKE '%$search%'");
 	$pagination->config(3, 5);
 	$sql = "SELECT
 m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
@@ -39,7 +39,7 @@ INNER JOIN maestro o      ON o.id_maestro = g.id_maestro
 INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 
-	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' ORDER BY a.id_alumno ASC LIMIT $pagination->start_row,$pagination->max_rows";
+	WHERE a.nombre_alumno LIKE '%$search%' OR a.A_paterno_alumno LIKE '%$search%' OR a.A_materno_alumno LIKE '%$search%' OR m.nombre_materia LIKE '%$search%' ORDER BY a.id_alumno OR c.create_grado LIKE '%$search%' ASC LIMIT $pagination->start_row,$pagination->max_rows";
 	$query = $conn->prepare($sql);
 	$query->execute();
 

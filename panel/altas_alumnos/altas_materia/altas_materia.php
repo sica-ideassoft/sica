@@ -111,6 +111,7 @@ include_once("php/select.php");
                 </a>
                 <a href="../../control_admin/avisos/avisos.php">
                 <div class="mod4 btn btn-1 btn-1c">
+
                   <span class="modico4"></span>
                   <p>AVISOS</p>
                 </div>
@@ -196,17 +197,7 @@ include_once("php/select.php");
 
     </div>
 
-<!--    <div class='footcontent'>
 
-<div class="headtabla1"><p>Recien Ingresados</p></div>
-
-<table class="tabla1">
-<div class="mosAlumno">
-<div id="show"></div>
-</div>
-
-</table>
-</div> -->
 </div>
 
 <!-- mensajes de validacion -->
@@ -227,6 +218,14 @@ include_once("php/select.php");
     <span class="Mico"></span>
   </div>
 </div>
+<div class="msCiclo">
+  <div class="Logom2">
+    <label>los caracateres <b>Ciclo</b> son incorrectos</label>
+  </div>
+  <div class="divmensaje2">
+    <span class="Mico2"></span>
+  </div>
+</div>
 <!-- finde  mensajes de validacion -->
 <!-- mensajes de matricula validacion -->
 <div class="mensajesMateria">
@@ -237,6 +236,7 @@ include_once("php/select.php");
     <span class="Mico2"></span>
   </div>
 </div>
+
 
 
 
@@ -323,6 +323,12 @@ include_once("php/select.php");
       <tr>
         <td><input type="text" name="fecha1" id="fecha1" class="fecha"></td>
         <td><input type="text" name="fecha2" id="fecha2" class="fecha"></td>
+      </tr>
+      <tr>
+      	<td><label for="">Ciclo</label></td>
+      </tr>
+      <tr>
+      	<td><input type="text" class="ciclo" id="ciclo" name="ciclo"></td>
       </tr>
     </table>
 

@@ -237,6 +237,7 @@ location.href = "../../login_admin/index.php";
         <th>Fecha Fin.</th>
         <th>Credito</th>
         <th>CAl. Min</th>
+        <th>ciclo</th>
     </thead>
 </table>
 </div>
@@ -244,6 +245,7 @@ location.href = "../../login_admin/index.php";
 <table id="resultTable" >
 
     <thead class="datosBucar">
+        <th ></th>
         <th></th>
         <th></th>
         <th></th>

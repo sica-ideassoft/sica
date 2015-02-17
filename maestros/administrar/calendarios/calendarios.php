@@ -56,7 +56,7 @@ if (!isset($_SESSION['maestro-session'])) {
       <div class="userimg">
         <?php  include_once("php/miniatura.php"); ?>
       </div>
-      <div class="datos"><p><?php echo  $_SESSION['admin-sica'] ;?></p></div>
+      <div class="datos"><p><?php echo  $_SESSION['maestro-session'] ;?></p></div>
     </div>
   </nav>
 

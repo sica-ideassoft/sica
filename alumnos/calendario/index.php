@@ -129,7 +129,7 @@ include_once("php/resultados.php");
 
 <section class="content-calendario">
 <?php include_once("php/calendario.php"); ?>
-  <embed src="<?php echo $url.$row['calendario']; ?>" width="500" height="450">
+  <embed class="enbebido" src="<?php echo $url.$row['calendario']; ?>" width="500" height="450">
 </section>
 
 <script src="js/jquery.js"></script>

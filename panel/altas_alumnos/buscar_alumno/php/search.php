@@ -13,7 +13,7 @@ $sql = "SELECT
 	INNER JOIN create_grupo c ON c.id_create_grupo = a.id_create_grupo
 	-- INNER JOIN create_grupo c ON c.id_create_grupo = g.id_create_grupo
 	WHERE  a.nombre_alumno LIKE '%".$busca."%' OR a.A_paterno_alumno LIKE '%".$busca."%' OR a.A_materno_alumno LIKE '%".$busca."%'
-	OR a.matricula LIKE '%".$busca."%'";
+	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grupo LIKE '%".$busca."%'";
 
 $query = $conn->query($sql);
 
@@ -30,7 +30,7 @@ while($f=$query->fetch()){
 
 	?>
 	<tr>
-		<td><?php echo $f['nombre_alumno']; ?></td>
+		<td ><?php echo $f['nombre_alumno']; ?></td>
 		<td><?php echo $f['A_paterno_alumno']; ?></td>
 		<td><?php echo $f['A_materno_alumno']; ?></td>
 		<td><?php echo $f['matricula']; ?></td>

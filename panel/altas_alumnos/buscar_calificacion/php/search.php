@@ -20,7 +20,7 @@ INNER JOIN alumno  a      ON a.id_create_grupo   = g.id_create_grupo
 INNER JOIN user_maestro u ON u.id_maestro = o.id_maestro
 
 	WHERE  a.nombre_alumno LIKE '%".$busca."%' OR a.A_paterno_alumno LIKE '%".$busca."%' OR a.A_materno_alumno LIKE '%".$busca."%'
-	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grado LIKE '%".$busca."%' ";
+	OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR a.matricula LIKE '%".$busca."%' OR c.create_grado LIKE '%".$busca."%' OR m.nombre_materia LIKE '%".$busca."%' OR o.nombre LIKE '%".$busca."%'";
 
 $query = $conn->query($sql);
 

@@ -82,7 +82,9 @@ input[type="submit"] {
     margin-top: -40px;
 }
 .color {
-    	background: linear-gradient(rgb(135, 239, 51), rgb(19, 90, 37)) repeat scroll 0% 0% transparent;
+    	background: -webkit-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
+background: -o-linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
+background: linear-gradient(#00A1F1, #0072C6) repeat scroll 0% 0% transparent;
 }
 .conent1 span {
     vertical-align: middle;
@@ -97,8 +99,8 @@ input[type="submit"] {
     overflow: hidden;
 }
 .altasbtn {
-   border-bottom: 4px solid rgb(28, 95, 24);
-background: linear-gradient(rgb(26, 233, 57), rgb(68, 141, 57)) repeat scroll 0% 0% transparent;
+  background: none repeat scroll 0% 0% rgb(0, 140, 221);
+border-bottom:4px solid 	#00688b;
     border-style: none none solid;
     width: 190px !important;
     border-radius: 5px;
