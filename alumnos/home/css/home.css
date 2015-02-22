@@ -1,3 +1,22 @@
+.imagen{
+position: fixed;
+left: 200px;
+height: 60px;
+width: 230px;
+z-index: 100;
+}
+#contenedorImagen{
+	color: white;
+}
+.botonVerde{
+	background-color: transparent;
+	border-style: none;
+	color: white;
+	width: 220px;
+	height: 55px;
+	font-family: helvetica;
+	font-weight: bold;
+}
 .mensajes{
 	width: 300px;
 	height: 100px;

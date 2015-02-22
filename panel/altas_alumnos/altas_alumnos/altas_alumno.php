@@ -392,15 +392,7 @@ location.href = "../../login_admin/index.php";
 
 
       </tr>
-<!--       <tr>
-          <td><label for="">Status:</label></td>
-        </tr>
-        <tr>
-          <td><select name="status" id="status">
-            <option value="activo">Activo</option>
-            <option value="inactivo">Inactivo</option>
-          </select></td>
-        </tr> -->
+
       </table>
 
 

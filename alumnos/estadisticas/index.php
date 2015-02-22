@@ -99,7 +99,7 @@ include_once("php/resultados.php");
 
                     <li class="activo"><a href="#"><span class="esta"></span>ESTADISTICA</a></li>
 
-                    <li ><a href="../inscripciones/index.php"><span class="insc"></span>INSCRIPCIONES</a></li>
+
                 </div>
 
             </div>

@@ -66,6 +66,6 @@ $Ctotal->bindParam(':id',$id);
 $Ctotal->execute();
 $totalCalificacion	 = $Ctotal->fetch();
 // -----------------------------------
-$calTotal = $totalCalificacion["total"]/$Nmateria['materia'];
+@$calTotal = $totalCalificacion["total"]/$Nmateria['materia'];
  ?>
 

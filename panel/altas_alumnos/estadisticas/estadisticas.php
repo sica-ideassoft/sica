@@ -192,11 +192,11 @@ location.href = "../../login_admin/index.php";
         </div>
         <p>estadisticas</p>
         </div>
-
-
+<section class="content-principal">
     <?php
     include_once("php/datos.php");
      ?>
+<!--
      <div id="json">
 
      </div>
@@ -211,7 +211,7 @@ location.href = "../../login_admin/index.php";
 
     document.getElementById('json').innerHTML = alumno_json.id_create_grupo;
 
-    </script>
+    </script> -->
 
             <div class="control">
 

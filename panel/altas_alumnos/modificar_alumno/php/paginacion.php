@@ -41,7 +41,6 @@ else
 	$pagination->config(3, 7);
 	$sql = "SELECT
 	a.id_alumno,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.id_create_grupo,
-	-- g.id_grupo,g.id_create_grupo,
 	c.id_create_grupo,c.create_grupo,c.create_grado,c.descripcion
 	FROM alumno a
 	INNER JOIN create_grupo c ON c.id_create_grupo = a.id_create_grupo

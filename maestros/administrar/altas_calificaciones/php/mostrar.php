@@ -8,6 +8,7 @@ $materia = $_POST["materia"];
 $creditos = $_POST["credito"];
 $min_materia = $_POST['cal_min'];
 $id = $_POST["id"];
+
 $sql = $conn->prepare("SELECT
 	a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
 	g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
@@ -52,7 +53,7 @@ $nombre = $row['nombre_alumno'];
 <script>
 var id = "<?php echo $id; ?>" ;
 var materia = "<?php echo $materia; ?>" ;
-var creditos = "<?php echo $creditos; ?>" ;
+var creditos = "<?php echo $creditos;?>" ;
 var min_materia = "<?php echo $min_materia; ?>" ;
 
 </script>

@@ -1,6 +1,4 @@
-
-
-  var valCalificacion =  /^[1-9]+|\d+(?:\.\d{0,2})$/;
+var valCalificacion =  /^[1-9]+|\d+(?:\.\d{0,2})$/;
 $(function() {
 
   $("#enviar").click(function(e) {

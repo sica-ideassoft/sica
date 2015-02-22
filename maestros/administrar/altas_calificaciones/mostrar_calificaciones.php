@@ -23,7 +23,7 @@ location.href = "../../login_maestro/index.php";
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="css/jquery-ui.css"> -->
   <link rel="stylesheet" href="css/modificar_alumno.css">
   <link rel="stylesheet" href="css/mensajes.css">
   <link rel="stylesheet" href="css/mostrar_maestro.css">
@@ -125,20 +125,6 @@ location.href = "../../login_maestro/index.php";
                   </div>
                   </a>
 
-      <!-- <div class="mod2 btn1 btn-1 btn-1a">
-        <span class="modico2 "></span>
-        <p>MATERIALES</p>
-      </div>
-
-      <div class="mod3 btn1 btn-1 btn-1b">
-        <span class="modico3"></span>
-        <p>PUBLICAR</p>
-      </div>
-      <div class="mod4 btn1 btn-1 btn-1c">
-        <span class="modico4"></span>
-        <p>AVISOS</p>
-      </div> -->
-
     </div>
 
   </div>
@@ -239,14 +225,14 @@ include_once("php/mostrar.php");
 
 
 <script src="js/jquery.js"></script>
-<script src="js/jquery-ui.js"></script>
-<script src="js/calendario.js"></script>
+<!-- <script src="js/jquery-ui.js"></script> -->
+<!-- <script src="js/calendario.js"></script> -->
 <script src="js/script.js"></script>
 <script src="js/menu.js"></script>
 <!-- <script src="js/confirmacion.js"></script> -->
 <script src="alertifyjs/alertify.js"></script>
-<script src="js/eliminar.js"></script>
-<script src="js/val_campos.js"></script>
+<!-- <script src="js/eliminar.js"></script> -->
+<!-- <script src="js/val_campos.js"></script> -->
 <script src="js/functions.js"></script>
 <script src="js/status.js"></script>
 <script src="js/noAplica.js"></script>

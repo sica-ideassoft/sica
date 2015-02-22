@@ -10,6 +10,64 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.dato p{
+	margin-top: 20px;
+	font-size: 20px;
+	/*background-color: red;*/
+
+}
+.total-alumno{
+	display: inline-block;
+	width: 300px;
+	height: 100px;
+	position:relative;
+	color: white;
+	font-family: helvetica;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-right: 10px;
+	box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+}
+.info{
+	position: absolute;
+	background-color: rgb(138, 22, 22);
+    width: 100px;
+	height: 100px;
+	right: 0px;
+}
+.info p{
+	font-size: 35px;
+	display: block;
+	overflow: hidden;
+	/*background-color: yellow;*/
+	text-align: center;
+
+
+}
+.dato label{
+font-size: 20px;
+/*background-color: red;*/
+padding-top: 30px;
+
+}
+.dato{
+
+	left: 0;
+	position: absolute;
+	background-color: rgb(27, 173, 185);
+	text-align: center;
+	width: 200px;
+	height: 100px;
+	text-align: middle;
+
+}
+.content-principal{
+width: 100%;
+height: 500px;
+/*background-color: blue;*/
+}
 #chart_div{
 background-color: #fff;
 }

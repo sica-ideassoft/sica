@@ -2,20 +2,59 @@
 include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
-$sql = "SELECT
-		a.id_alumno,a.id_create_grupo,
-        g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
-        m.id_maestro
-		FROM grupos g
-		INNER JOIN maestro m  ON m.id_maestro = g.id_maestro
-		INNER JOIN alumno  a  ON a.id_create_grupo = g.id_create_grupo";
-$query = $conn->query($sql);
-$array_alumno = array();
 
-while($row = $query->fetch()){
-	$array_alumno[]= $row;
+$sql = $conn->prepare("SELECT id_alumno FROM calificacion ");
+$sql->bindParam(':id',$id);
+$sql->execute();
+$count = $sql->rowCount();
 
-}
-$alumnos = json_encode($array_alumno);
+$sqll = $conn->prepare("SELECT id_materia FROM materias");
+$sqll->bindParam(':id',$id);
+$sqll->execute();
+$count_materia = $sqll->rowCount();
 
+$sql1 = $conn->prepare("SELECT id_grupo FROM grupos");
+$sql1->bindParam(':id',$id);
+$sql1->execute();
+$count_grupo = $sql1->rowCount();
+
+$sql2 = $conn->prepare("SELECT id_maestro FROM maestro");
+$sql2->bindParam(':id',$id);
+$sql2->execute();
+$count_maestro = $sql2->rowCount();
 ?>
+<div class="total-alumno">
+<div class="dato">
+	<p>Total de alumnos</p>
+</div>
+<div class="info">
+<p><?php echo "'".$count."'"; ?></p>
+</div>
+</div>
+
+<div class="total-alumno">
+<div class="dato">
+	<p>Total de materias</p>
+</div>
+<div class="info">
+<p><?php echo "'".$count_materia."'"; ?></p>
+</div>
+</div>
+
+<div class="total-alumno">
+<div class="dato">
+	<p>Total grupos</p>
+</div>
+<div class="info">
+<p><?php echo "'".$count_grupo."'";  ?></p>
+</div>
+</div>
+
+<div class="total-alumno">
+<div class="dato">
+	<p>Total maestros</p>
+</div>
+<div class="info">
+<p><?php echo "'".$count_maestro."'";  ?></p>
+</div>
+</div>

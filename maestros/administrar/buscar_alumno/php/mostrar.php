@@ -7,7 +7,7 @@ $sql =$conn->prepare("SELECT s.id_status,s.status_create,
 		g.id_grupo,g.id_maestro,g.id_materia,g.id_create_grupo,
 		c.id_create_grupo,c.create_grupo,c.create_grado,
 		m.id_materia,m.claveSEP,m.nombre_materia,m.fecha_inicio,m.fecha_fin,m.credito,m.cal_min,
-		o.id_maestro,o.nombre,o.A_paterno,o.A_materno,o.clave,o.curp,o.telefono,o.correo,o.genero,o.edad,o.estado_civil,o.fecha_nacimiento,o.Estado,o.municipio,o.calle,o.Ninterior,o.Nexterior,o.nacionalidad,
+		o.id_maestro,o.nombre,
 		n.id_genero_persona,n.genero_create,
 		e.id_edad,e.edad_create,
 		x.id_estado,x.nombre_estado,x.codigo,
@@ -26,7 +26,6 @@ $sql =$conn->prepare("SELECT s.id_status,s.status_create,
 	INNER JOIN nacionalidad d ON d.id_nacionalidad = a.nacionalidad
 	INNER JOIN estado_civil l ON l.id_estado_civil = a.estado_civil
 	INNER JOIN status u ON u.id_status = a.status
-
 	where a.id_alumno = :id");
 
 $sql->bindParam(':id',$_POST["id"]);

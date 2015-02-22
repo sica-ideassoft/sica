@@ -11,6 +11,7 @@
     $apellido1  = $row['A_paterno_alumno'].' ';
     $apellido2  = $row['A_materno_alumno'].' ';
     $alumno2    = $row['matricula'];
+    // $alumno2    = $row['matricula'];
     $alumno     = $alumno1.$apellido1.$apellido2.$alumno2;
 
 

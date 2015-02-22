@@ -23,6 +23,7 @@ include_once("php/resultados.php");
         <link rel="stylesheet" href="../css_global/normalize.css">
 
         <link rel="stylesheet" href="../css_global/style.css">
+        <link rel="stylesheet" href="css/style.css">
 
 
     </head>
@@ -133,6 +134,17 @@ include_once("php/resultados.php");
         <!-- <div id="more">Más</div> -->
     </div>
 </div>
+
+<section class="select-incripcion">
+<div class="title">
+    <p>INCREPCIÓN ABIERTA</p>
+</div>
+    <div class="incrip">
+<?php
+include_once('php/mostrar.php');
+ ?>
+    </div>
+</section>
 <!--fin menu secundario -->
             <!-- fin de menu 2 -->
 <script src="js/jquery.js"></script>

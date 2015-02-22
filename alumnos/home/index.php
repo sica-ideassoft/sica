@@ -29,6 +29,9 @@ include_once("php/resultados.php");
         <link rel="stylesheet" href="css/style_slider.css">
 
 
+<link rel="stylesheet" href="alertifyjs/css/alertify.css">
+<link rel="stylesheet" href="alertifyjs/css/themes/bootstrap.css">
+
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -75,22 +78,11 @@ include_once("php/resultados.php");
                     </div>
 
                 </div>
-                <div class="imagen">
-                   <form action="php/recibir.php" method="POST" enctype="multipart/form-data">
-                   <table>
-                       <tr>
-                           <td>
-                    <input type="file" name="imagen" id="imagen" />
 
-                           </td>
-                           <td>
-                    <input type="submit" name="subir" value="SUBIR"/>
 
-                           </td>
-                       </tr>
-                   </table>
-                    </form>
-                </div>
+
+
+
                 <div class="color">
                    <li class="Rcolor azul" id="azul" ><a href="#"></a></li>
                    <li class="Rcolor verde" id="verde" ><a href="#"></a></li>
@@ -108,7 +100,7 @@ include_once("php/resultados.php");
                 <div class="menu3">
                     <li class="activo"><a href="#"><span class="home"></span>HOME</a></li>
                     <li><a href="../estadisticas/index.php"><span class="esta"></span>ESTADISTICA</a></li>
-                    <li><a href="../inscripciones/index.php"><span class="insc"></span>INSCRIPCIONES</a></li>
+
                 </div>
 
 
@@ -121,6 +113,18 @@ include_once("php/resultados.php");
         include_once("php/banner.php");
          ?>
     </section>
+
+     <div class="imagen">
+                   <div>
+                      <div id="contenedorImagen"></div>
+                      <div id="upload_button">
+                        <button class="botonVerde" id="profile_image_upload" type="button" >
+                          Selecciona la imagen (JPG)
+
+                        </button>
+                      </div>
+                    </div>
+                </div>
 <!-- fin de menu 2 -->
 <!-- inicio de menu secundario -->
 
@@ -162,9 +166,12 @@ include_once("php/resultados.php");
 
 <!--fin menu secundario -->
 <script src="js/jquery.js"></script>
+<script src="js/AjaxUpload.js"></script>
+<script src="js/subirImagen.js"></script>
 <script src="js/hammer.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/menu-secundario.js"></script>
+<script src="alertifyjs/alertify.js"></script>
     </body>
 </html>
 
