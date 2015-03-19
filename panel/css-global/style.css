@@ -18,6 +18,9 @@
 	font-weight: normal;
 	font-style: normal;
 }
+.miniatura img{
+	background-color: white;
+}
 body{
 background-image: url(../image-global/fondo.png);
 font-family: "Open Sans",Arial;

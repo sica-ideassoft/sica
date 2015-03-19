@@ -134,7 +134,7 @@ include_once("php/resultados.php");
 
 <script src="js/jquery.js"></script>
 <script src="js/hammer.js"></script>
-<script src="js/menu.js"></script>
+<script src="js/gestos.js"></script>
 <script src="js/menu-secundario.js"></script>
 
 

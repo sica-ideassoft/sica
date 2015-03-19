@@ -14,15 +14,16 @@ var showMenu  = function(){
 }
 
 var hideMenu  = function(){
-
 	$show.classList.add("is-active");
 	$hide.classList.remove("is-active");
     $menu.classList.remove("is-active");
 }
+
 $show.addEventListener("click",showMenu);
 $hide.addEventListener("click",hideMenu);
 
 
-body.on("panright", showMenu);
-body.on("panleft ", hideMenu);
+
+body.on("panright",showMenu);
+body.on("panleft",hideMenu);
 

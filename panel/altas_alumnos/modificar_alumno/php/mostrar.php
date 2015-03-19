@@ -25,7 +25,7 @@ a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alu
 
 $sql->bindParam(':id',$_POST["id"]);
 $sql->execute();
-while($row = $sql->fetch()){
+$row = $sql->fetch();
 
 $nombre = $row['nombre_alumno'];
 ?>
@@ -99,8 +99,3 @@ $nombre = $row['nombre_alumno'];
 	<td><?php echo $row['status_create']; ?></td>
 </tr>
 </table>
-
-<?php
-}
-
- ?>

@@ -1,3 +1,4 @@
+
 .imagen{
 position: fixed;
 left: 200px;
@@ -45,6 +46,7 @@ overflow-y:scroll;
 .mensajes-alumno{
 	width: 1070px;
 	/*height: 100%;*/
+	/*display: inline-block;*/
 	position: absolute;
 	margin-top: 360px;
 	right: 0px;
@@ -55,4 +57,83 @@ overflow-y:scroll;
 #lessoncup{
 	position: fixed;
 	margin-top: 0px;
+}
+@media only screen and (max-width: 980px) {
+.content-principal{
+	width: 780px;
+	height:640px;
+}
+.mensajes-alumno{
+	margin-left: 35px;
+	width: 1070px;
+	position: relative;
+	margin-top: 250px;
+
+
+}
+
+}
+@media only screen and (max-width: 800px) {
+.content-principal{
+	width: 600px;
+	height:640px;
+	/*background-color: tomato;*/
+
+}
+.mensajes-alumno{
+	width: 600px;
+	top:-20px;
+	/*margin-top: 250px;*/
+}
+.mes-cont{
+width: 250px !important;
+}
+#leyent{
+	width: 230px !important;
+}
+}
+@media only screen and (max-width: 768px) {
+.slider-wrapper{
+	height: 220px !important;
+}
+.mensajes-alumno{
+	margin-left: 50px;
+}
+}
+
+@media only screen and (max-width: 630px) {
+.content-principal{
+	width: 360px;
+	height:640px ;
+	/*background-color: tomato;*/
+
+}
+.mensajes-alumno{
+	width: 360px;
+	top:-90px;
+	margin-left: 20px;
+}
+.slider-wrapper{
+	height: 150px !important;
+}
+.mes-cont{
+width: 300px !important;
+}
+#leyent{
+width: 280px !important;
+}
+}
+@media only screen and (max-width: 320px) {
+.content-principal{
+	width: 320px;
+	height:640px;
+	/*background-color: tomato;*/
+
+}
+.mensajes-alumno{
+	width: 320px;
+	top:-90px;
+	margin-left: 5px;
+}
+
 }

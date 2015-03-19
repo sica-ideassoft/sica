@@ -91,20 +91,6 @@ if (!isset($_SESSION['maestro-session'])) {
                   </div>
                   </a>
 
-      <!-- <div class="mod2 btn btn-1 btn-1a">
-        <span class="modico2 "></span>
-        <p>MATERIALES</p>
-      </div>
-
-      <div class="mod3 btn btn-1 btn-1b">
-        <span class="modico3"></span>
-        <p>PUBLICAR</p>
-      </div>
-      <div class="mod4 btn btn-1 btn-1c">
-        <span class="modico4"></span>
-        <p>AVISOS</p>
-      </div> -->
-
     </div>
 
   </div>
