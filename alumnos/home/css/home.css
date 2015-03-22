@@ -1,10 +1,12 @@
 
 .imagen{
 position: fixed;
+top: 60px;
 left: 200px;
 height: 60px;
 width: 230px;
 z-index: 100;
+
 }
 #contenedorImagen{
 	color: white;
@@ -50,6 +52,7 @@ overflow-y:scroll;
 	position: absolute;
 	margin-top: 360px;
 	right: 0px;
+
 	/*background-color:rgba(255,255,255,0.3);*/
 }
 
@@ -60,68 +63,87 @@ overflow-y:scroll;
 }
 @media only screen and (max-width: 980px) {
 .content-principal{
+	/*display: inline-block;*/
+	/*background: red;*/
 	width: 780px;
 	height:640px;
+
+}
+.mes-cont:first-child{
+	margin-left: none;
 }
 .mensajes-alumno{
-	margin-left: 35px;
-	width: 1070px;
+	/*margin-left: 35px;*/
+	/*background: red;*/
+	width: 781px;
 	position: relative;
-	margin-top: 250px;
+	margin-top: 260px;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap:wrap;
+	justify-content: space-around;
 
+}
+.mes-cont{
+	margin: 0px;
 
+	width: 330px;
+	height: 130px;
+	position: relative;
+	box-shadow: 3px 3px 3px #ccc;
+	margin
 }
 
 }
 @media only screen and (max-width: 800px) {
 .content-principal{
 	width: 600px;
-	height:640px;
+	height:100%;
 	/*background-color: tomato;*/
 
 }
 .mensajes-alumno{
 	width: 600px;
 	top:-20px;
+	/*background: red;*/
 	/*margin-top: 250px;*/
 }
-.mes-cont{
-width: 250px !important;
-}
-#leyent{
-	width: 230px !important;
-}
+
 }
 @media only screen and (max-width: 768px) {
 .slider-wrapper{
 	height: 220px !important;
 }
-.mensajes-alumno{
+/*.mensajes-alumno{
 	margin-left: 50px;
-}
+}*/
 }
 
 @media only screen and (max-width: 630px) {
 .content-principal{
+	left: 0px;
 	width: 360px;
 	height:640px ;
-	/*background-color: tomato;*/
+	position: relative;
+
 
 }
+.imagen{
+	left: 0px;
+}
 .mensajes-alumno{
-	width: 360px;
-	top:-90px;
-	margin-left: 20px;
+	/*background-color: tomato;*/
+	width: 350px;
+	position: absolute;
+	top: -110px !important;
+	left: 0px;
+
+	/*margin-left: 20px;*/
 }
 .slider-wrapper{
 	height: 150px !important;
 }
-.mes-cont{
-width: 300px !important;
-}
-#leyent{
-width: 280px !important;
-}
+
 }
 @media only screen and (max-width: 320px) {
 .content-principal{
@@ -131,9 +153,32 @@ width: 280px !important;
 
 }
 .mensajes-alumno{
+	/*background-color: tomato;*/
+	width: 310px;
+	position: absolute;
+	top: -110px !important;
+	left: 0px;
+
+	/*margin-left: 20px;*/
+}
+
+
+.mes-principal {
+
+	width: 295px !important;
+}
+.mes-principal p{
+
+	width: 50px !important;
+}
+
+#leyent{
+	width: 275px !important;
+}
+/*.mensajes-alumno{
 	width: 320px;
 	top:-90px;
 	margin-left: 5px;
-}
+}*/
 
 }

@@ -54,7 +54,7 @@ if (isset($_SESSION['admin-sica'])) {
 
                         <div class="alertaT">
                             <div class="alerta mensajes"></div>
-                            <div class="textoM">Campos vacios no se puede Enviar la petición</div>
+                            <div class="textoM">Campos vacíos no se puede Enviar la petición</div>
                         </div>
 
                         <div class="error mensajes"><p>Mensaje que informa al usuario sobre el error que se ha producido</p></div>

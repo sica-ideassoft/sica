@@ -151,7 +151,7 @@ include_once("php/resultados.php");
                     <tr><td><label for="">informática</label></td></tr>
                      <tr><td><label for="" class="title">promedio:</label></td></tr>
                     <tr><td><label for=""><?php echo round($calTotal,2);?></label></td></tr>
-                     <tr><td><label for="" class="title">creditos:</label></td></tr>
+                     <tr><td><label for="" class="title">créditos:</label></td></tr>
                     <tr><td><label for=""><?php echo $credito["total"];?> de <?php echo $total_credito['total_credito']; ?></label></td></tr>
                 </table>
                 <table class="tabla2">
@@ -172,7 +172,7 @@ document.write( f.getFullYear() +  "/" + (f.getMonth() +1) + "/" + f.getDate() )
                      <tr><td><label for="" class="title">aprobadas:</label></td>
                      <td><label for=""><?php echo $aprovada['aprovada']; ?></label></td></tr>
 
-            <tr><td><label for="" class="title">reprovada:</label></td>
+            <tr><td><label for="" class="title">reprobada:</label></td>
                     <td><label for=""><?php echo $reprovada['reprovada']; ?></label></td></tr>
                     <tr><td><label for="" class="title">no presentadas:</label></td>
                     <td><label for=""><?php echo $NA['noAplica']; ?></label></td></tr>

@@ -2,9 +2,9 @@
 	font-family: 'iconitos';
 	src:url('../fonts/icomoon.eot?x2elbl');
 	src:url('../fonts/icomoon.eot?#iefixx2elbl') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?x2elbl') format('woff'),
-		url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
-		url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
+	url('../fonts/icomoon.woff?x2elbl') format('woff'),
+	url('../fonts/icomoon.ttf?x2elbl') format('truetype'),
+	url('../fonts/icomoon.svg?x2elbl#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -15,7 +15,7 @@
 	position: fixed;
 	z-index: 10;
 	right: 0;
-	margin-top:15px;
+	margin-top: 15px;
 	border-radius: 7px;
 	margin-right: 17px;
 	border: 1px solid #ff3030;
@@ -33,27 +33,27 @@
 }
 .Logom label{
 	text-align: center;
-color:white;
-overflow: hidden;
-display: block;
-margin-top: 2px;
-font-family: helvetica;
-font-size:17px;
+	color:white;
+	overflow: hidden;
+	display: block;
+	margin-top: 2px;
+	font-family: helvetica;
+	font-size:17px;
 
 }
 .divmensaje span{
-text-align: center;
-width: 60px;
-height: 50px;
-margin-top: 7px;
-display: block;
+	text-align: center;
+	width: 60px;
+	height: 50px;
+	margin-top: 7px;
+	display: block;
 
 }
 .Mico:before{
-font-family: "iconitos";
-content: "\e605";
-font-size: 30px;
-color: white;
+	font-family: "iconitos";
+	content: "\e605";
+	font-size: 30px;
+	color: white;
 }
 .divmensaje{
 	width: 60px;
@@ -66,7 +66,7 @@ color: white;
 }
 /*----------------------------------------------------------*/
 /*inicio de mensaje de informacion*/
-.mensajesCurp{
+.mensajesUrl{
 	width: 290px;
 	height: 50px;
 	background-color: none;
@@ -78,7 +78,7 @@ color: white;
 	margin-right: 17px;
 	border: 1px solid tomato;
 	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
+	display: none;
 }
 .Logom2{
 	width: 230px;
@@ -91,27 +91,27 @@ display: none;
 }
 .Logom2 label{
 	text-align: center;
-color:white;
-overflow: hidden;
-display: block;
-margin-top: 2px;
-font-family: helvetica;
-font-size:17px;
+	color:white;
+	overflow: hidden;
+	display: block;
+	margin-top: 2px;
+	font-family: helvetica;
+	font-size:17px;
 
 }
 .divmensaje2 span{
-text-align: center;
-width: 60px;
-height: 50px;
-margin-top: 7px;
-display: block;
+	text-align: center;
+	width: 60px;
+	height: 50px;
+	margin-top: 7px;
+	display: block;
 
 }
 .Mico2:before{
-font-family: "iconitos";
-content: "\e628";
-font-size: 30px;
-color: white;
+	font-family: "iconitos";
+	content: "\e628";
+	font-size: 30px;
+	color: white;
 }
 .divmensaje2{
 	width: 60px;
@@ -134,10 +134,10 @@ color: white;
 	right: 0;
 	margin-top:15px;
 	border-radius: 7px;
-margin-right: 17px;
+	margin-right: 17px;
 	border: 1px solid tomato;
 	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
+	display: none;
 }
 
 .mensajesMatricula{
@@ -166,5 +166,102 @@ display: none;
 	margin-right: 17px;
 	border: 1px solid tomato;
 	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
-display: none;
+	display: none;
+}
+/*inicio de mnsaje corrrecto*/
+.mensajesCorrecto{
+	width: 290px;
+	height: 50px;
+	background-color: none;
+	position: fixed;
+	z-index: 10;
+	right: 0;
+	margin-top:15px;
+	border-radius: 7px;
+	margin-right: 17px;
+	border: 1px solid #297B1C;
+	box-shadow: 5px 5px 8px rgba(0,0,0,0.2);
+	display:none;
+}
+.Logom3{
+	width: 230px;
+	height: 50px;
+	background-color:#2EB625;
+	position: relative;
+	float:right;
+	border-radius:0px 7px 7px 0px;
+	overflow: hidden;
+}
+.Logom3 label{
+	text-align: center;
+	color:white;
+	overflow: hidden;
+	display: block;
+	margin-top: 2px;
+	font-family: helvetica;
+	font-size:17px;
+
+}
+.divmensaje3 span{
+	text-align: center;
+	width: 60px;
+	height: 50px;
+	margin-top: 7px;
+	display: block;
+
+}
+.Mico3:before{
+	font-family: "iconitos";
+	content: "\e631";
+	font-size: 30px;
+	color: white;
+}
+.divmensaje3{
+	width: 60px;
+	height: 50px;
+	background-color: #1E9516;
+	position: relative;
+	float:left;
+	border-radius:7px 0px 0px 7px;
+}
+#flash{
+	display: none;
+}
+.footcontent{
+	width: 200px;
+	height: 180px;
+	background-color:  rgba(0, 0, 0, 0.8);
+	margin-top: 10px;
+	font-weight: bold;
+	overflow: hidden;
+}
+.mosAlumno{
+	color: black;
+}
+.mosAlumno{
+
+
+}
+
+.headtabla1{
+	width: 100%;
+	height: 30px;
+	background-color:#09C;
+	top: 0px !important ;
+overflow: hidden;
+	text-transform: uppercase;
+}
+.headtabla1 p{
+	color: white;
+	text-align: center;
+	margin-top: 5px !important;
+	top:0px;
+}
+.showbox{
+color: #28B1A3;
+text-align: center;
+font-weight: bold;
+}
+.showbox hr{
+	color:rgba(126, 149, 145, 0.2);
 }

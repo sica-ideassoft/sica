@@ -18,7 +18,7 @@ if (!isset($_SESSION['admin-sica'])) {
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -202,9 +202,6 @@ if (!isset($_SESSION['admin-sica'])) {
 
 
 </div>
-<section class="seccion1">
-
-
   <div class="mensajes">
     <div class="Logom">
       <label><b>Campos vacios</b> no se puede Enviar la petición</label>
@@ -213,41 +210,59 @@ if (!isset($_SESSION['admin-sica'])) {
       <span class="Mico"></span>
     </div>
   </div>
+  <div class="mensajesCorrecto">
+  <div class="Logom3">
+      <label>Los datos se enviaron <b>Correctamente</b></label>
+  </div>
+  <div class="divmensaje3">
+      <span class="Mico3"></span>
+  </div>
+</div>
+
+<div class="mensajesUrl">
+  <div class="Logom2">
+      <label>La estructura de la url no es correcta</label>
+  </div>
+  <div class="divmensaje2">
+      <span class="Mico2"></span>
+  </div>
+</div>
+<section class="seccion1">
+
+
+
+
 <div class="tem"><p><span class="aviso-ico"></span>AVISOS</p></div>
 
-<section class="content-aviso">
-  <div class="mensajes-previw">
+<section class="content-aviso" >
+  <div class="mensajes-previw ">
         <?php
         include_once("php/preview.php");
          ?>
 
   </div>
-<form action="php/recibir.php" method="post" enctype="multipart/form-data">
+<form action="" method="post">
     <table class="table-principal">
-      <tr><td><label for="">url:</label></td></tr>
-      <tr><td><input type="text" name="url" placeholder="http://ideasSoft.com"></td>      </tr>
-      <tr><td><label for="">Imagen:</label></td></tr><tr>
-      <td><input type="file" class="imagen" id="imagen" name="imagen"></td></tr>
-      <tr><td><label for="">Prioridad:</label></td></tr>
+      <tr><td><input type="text" name="aviso" id="aviso" placeholder='Aviso'></td></tr>
+
       <tr><td>
-        <select name="prioridad" id="">
-          <option value="1">urgente</option>
-          <option value="2">informativo</option>
-          <option value="3">recordatorio</option>
+        <select name="prioridad" id="prio">
+          <option value="urgente">urgente</option>
+          <option value="informativo">informativo</option>
+          <option value="recordatorio">recordatorio</option>
         </select>
         </td>
       </tr>
-      <tr><td><label for="">Aviso:</label></td></tr>
-      <tr><td><textarea name='aviso'></textarea></td></tr>
-    </table>
 
+    <tr><td><input type="text" name="url" id="url" placeholder="http://ideasSoft.com"></td>      </tr>
 
+  </table>
 </section>
 
 <div class="control">
 <table class="teble2">
   <tr>
-    <td><input type="submit" name="btnEnviar" value='subir mensaje'></td>
+    <td><input type="submit" name="btnEnviar" id="btnEnviar" value='subir mensaje'></td>
   </tr>
 </table>
 
@@ -259,12 +274,12 @@ if (!isset($_SESSION['admin-sica'])) {
 <!-- fin de section -->
 
 <script src="js/jquery.js"></script>
-<script src="js/script.js"></script>
-<!-- <script src="js/confirmacion.js"></script> -->
 <script src="js/menu.js"></script>
+<script src="js/script.js"></script>
+<script src="js/function.js"></script>
+<!-- <script src="js/confirmacion.js"></script> -->
 <script src="js/validar.js"></script>
 <script src="alertifyjs/alertify.js"></script>
-<script src="js/previw.js"></script>
 
 
 
