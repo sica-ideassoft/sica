@@ -75,7 +75,7 @@ if (!isset($_SESSION['admin-sica'])) {
 
   <div class="heder22">
     <ul class="heder21sub2">
-      <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+      <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
       <li><a href="../../altas_alumnos/mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
       <li><a href="../../altas_alumnos/calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
     </ul>

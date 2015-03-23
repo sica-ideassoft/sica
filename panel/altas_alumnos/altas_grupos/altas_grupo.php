@@ -75,7 +75,7 @@ if (!isset($_SESSION['admin-sica'])) {
 
   <div class="heder22">
     <ul class="heder21sub2">
-      <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+      <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
       <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
       <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
     </ul>
@@ -133,7 +133,7 @@ if (!isset($_SESSION['admin-sica'])) {
     <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
   </div>
   <div class="Tmenu52">
-    <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+    <p><span class="Tconfig"></span><b>ADMINISTRACIÓN</b></p>
   </div>
   <div class="Mcontent">
     <div id='cssmenu'>
@@ -286,7 +286,7 @@ if (!isset($_SESSION['admin-sica'])) {
       <table>
         <tr>
           <td><label for="">Maestro:</label></td>
-          <td><label for="">Matería:</label></td>
+          <td><label for="">Materia:</label></td>
 
           <td><label for="">Grupo:</label></td>
 
@@ -340,7 +340,7 @@ if (!isset($_SESSION['admin-sica'])) {
   <div class="datosAlumno">
     <table>
       <thead class="datosBucar1">
-        <th class="materia-head">Matería</th>
+        <th class="materia-head">Materia</th>
         <th >Profesor</th>
         <th>Grado</th>
         <th>Grupo</th>

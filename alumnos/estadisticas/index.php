@@ -97,7 +97,7 @@ include_once("php/resultados.php");
                 <div class="menu3">
                     <li><a href="../home/index.php"><span class="home"></span>HOME</a></li>
 
-                    <li class="activo"><a href="#"><span class="esta"></span>ESTADISTICA</a></li>
+                    <li class="activo"><a href="#"><span class="esta"></span>ESTADÍSTICAS</a></li>
 
 
                 </div>
@@ -172,7 +172,7 @@ document.write( f.getFullYear() +  "/" + (f.getMonth() +1) + "/" + f.getDate() )
                      <tr><td><label for="" class="title">aprobadas:</label></td>
                      <td><label for=""><?php echo $aprovada['aprovada']; ?></label></td></tr>
 
-            <tr><td><label for="" class="title">reprobada:</label></td>
+            <tr><td><label for="" class="title">reprobadas:</label></td>
                     <td><label for=""><?php echo $reprovada['reprovada']; ?></label></td></tr>
                     <tr><td><label for="" class="title">no presentadas:</label></td>
                     <td><label for=""><?php echo $NA['noAplica']; ?></label></td></tr>

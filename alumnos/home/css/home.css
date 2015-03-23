@@ -61,6 +61,9 @@ overflow-y:scroll;
 	position: fixed;
 	margin-top: 0px;
 }
+.mes-principal p{
+	width: 320px !important;
+}
 @media only screen and (max-width: 980px) {
 .content-principal{
 	/*display: inline-block;*/
@@ -69,6 +72,8 @@ overflow-y:scroll;
 	height:640px;
 
 }
+
+
 .mes-cont:first-child{
 	margin-left: none;
 }
@@ -93,6 +98,7 @@ overflow-y:scroll;
 	box-shadow: 3px 3px 3px #ccc;
 	margin
 }
+
 
 }
 @media only screen and (max-width: 800px) {
@@ -162,14 +168,12 @@ overflow-y:scroll;
 	/*margin-left: 20px;*/
 }
 
-
 .mes-principal {
 
 	width: 295px !important;
 }
 .mes-principal p{
-
-	width: 50px !important;
+	width: 270px !important;
 }
 
 #leyent{

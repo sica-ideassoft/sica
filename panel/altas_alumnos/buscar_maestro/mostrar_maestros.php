@@ -70,7 +70,7 @@ location.href = "../../login_admin/index.php";
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
                 <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
                 <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
@@ -127,7 +127,7 @@ location.href = "../../login_admin/index.php";
               <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="Tmenu52">
-              <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+              <p><span class="Tconfig"></span><b>ADMINISTRACIÓN</b></p>
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>

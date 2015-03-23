@@ -18,7 +18,7 @@ location.href = "../../login_admin/index.php";
 
   <link rel="shortcut icon" href="image/favicon.ico">
 
-  <title>Calificaciones</title>
+  <title>ADMINISTRADOR</title>
 
   <meta name="description" content="Sistemas de calificaciones">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -73,7 +73,7 @@ location.href = "../../login_admin/index.php";
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../../altas_alumnos/estadisticas/estadisticas.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
                 <li><a href="../../altas_alumnos/mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
                 <li><a href="../../altas_alumnos/calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>

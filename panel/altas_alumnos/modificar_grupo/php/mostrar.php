@@ -24,7 +24,7 @@ while($row = $sql->fetch()){
 <tr>
 
 	<td class="dato"><label for="">Profeso:</label></td>
-	<td class="dato"><label for="">Matería:</label></td>
+	<td class="dato"><label for="">Materia:</label></td>
 	<td class="dato"><label for="">Grado:</label></td>
 	<td class="dato"><label for="">Grupo:</label></td>
 </tr>

@@ -45,7 +45,7 @@ $nombre = $row['nombre_alumno'];
 </tr>
 <tr>
 	<td class="dato"><label for="">Profesor:</label></td>
-	<td class="dato"><label for="">Matería:</label></td>
+	<td class="dato"><label for="">Materia:</label></td>
 	<td class="dato"><label for="">Creditos:</label></td>
 	<td class="dato"><label for="">Cal. minima:</label></td>
 </tr>

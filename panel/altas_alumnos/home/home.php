@@ -69,7 +69,7 @@ location.href = "../../login_admin/index.php";
 
             <div class="heder22">
               <ul class="heder21sub2">
-                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADISTICAS</a></li>
+                <li><a href="../estadisticas/estadisticas.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
                 <li><a href="../mensajes/mensajes.php"><span class="mes"></span>MENSAJES</a></li>
                 <li><a href="../calendarios/calendarios.php"><span class="cale"></span>CALENDARIOS</a></li>
               </ul>
@@ -127,7 +127,7 @@ location.href = "../../login_admin/index.php";
               <p><span class="SICA"></span><b>SICA</b> CANTERA</p>
             </div>
             <div class="Tmenu52">
-              <p><span class="Tconfig"></span><b>ALUMNOS</b></p>
+              <p><span class="Tconfig"></span><b>ADMINISTRACIÓN</b></p>
             </div>
             <div class="Mcontent">
               <div id='cssmenu'>
@@ -213,17 +213,15 @@ location.href = "../../login_admin/index.php";
       </div>
 
       <!-- inicio de section -->
-      <section class="seccion1">
-        <div class="tem">
- <div class="estacion">
-            <span class="estudent"></span>
+      <section class="seccion1" >
+        <div class="tem" >
+ <div class="estacion" >
+            <span class="estudent" ></span>
         </div>
         <p>home</p>
         </div>
-			<div class="home">
-        		<figure>
-				<img class="imghome"src="image/home.svg" alt="">
-				</figure>
+			<div class="homes">
+
 			</div>
             <div class="control">
 
@@ -243,6 +241,7 @@ location.href = "../../login_admin/index.php";
       <script src="js/script.js"></script>
       <script src="js/menu.js"></script>
       <script src="js/val_campos.js"></script>
+
 
 
     </body>

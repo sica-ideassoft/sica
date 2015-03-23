@@ -97,7 +97,7 @@ include_once("php/resultados.php");
     </div>
     <div class="menu3">
         <li><a href="../home/index.php"><span class="home"></span>HOME</a></li>
-        <li><a href="../estadisticas/index.php"><span class="esta"></span>ESTADISTICA</a></li>
+        <li><a href="../estadisticas/index.php"><span class="esta"></span>ESTADÍSTICAS</a></li>
 
     </div>
 </div>

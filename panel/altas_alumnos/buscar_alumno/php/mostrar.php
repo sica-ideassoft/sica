@@ -52,7 +52,7 @@ $row = $sql->fetch();
 	<td><?php echo $row['genero_create']; ?></td>
 </tr>
 <tr>
-	<td class="dato"><label for="">F. Nacimineto:</label></td>
+	<td class="dato"><label for="">F. Nacimiento:</label></td>
 	<td class="dato"><label for="">Edad:</label></td>
 	<td class="dato"><label for="">Grado:</label></td>
 	<td class="dato"><label for="">Grupo:</label></td>
