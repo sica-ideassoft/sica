@@ -36,10 +36,9 @@ INNER JOIN user_maestro u ON  u.id_maestro = o.id_maestro
 INNER JOIN create_grupo c ON  c.id_create_grupo = g.id_create_grupo
 INNER JOIN alumno  a      ON  a.id_create_grupo   = g.id_create_grupo
 and u.user = :user
-  and  :alumno != (a.id_alumno
-	)
-
-WHERE m.nombre_materia LIKE :buscar OR  a.nombre_alumno LIKE :buscar OR  a.A_paterno_alumno LIKE :buscar OR  a.A_materno_alumno LIKE :buscar OR  c.create_grado LIKE :buscar ORDER BY m.id_materia");
+  -- and  :alumno != (a.id_alumno)
+WHERE m.nombre_materia LIKE :buscar OR  a.nombre_alumno LIKE :buscar OR  a.A_paterno_alumno LIKE :buscar OR  a.A_materno_alumno LIKE :buscar OR  c.create_grado LIKE :buscar ORDER BY m.id_materia
+");
 
 $sql->bindParam(':user',$_SESSION['maestro-session']);
 $sql->bindParam(':materias',$materia);
@@ -73,7 +72,7 @@ while($f=$sql->fetch()){
               <input type="hidden" name="materia" value="<?php echo $f['id_materia']?>"/>
               <input type="hidden" name="credito" value="<?php echo $f['credito']?>"/>
               <input type="hidden" name="cal_min" value="<?php echo $f['cal_min']?>"/>
-              <button name="enviar" class="botton"><span class="mostrar"></span></button>
+              <button name="enviar" class="botton" id="calificacion"><span class="mostrar"></span></button>
         </form>
         </td>
 	</tr>
@@ -83,3 +82,6 @@ while($f=$sql->fetch()){
 
 }
 ?>
+
+
+

@@ -258,7 +258,9 @@ color: white;
 	background-color:#e0e0e0;
 }
 .table tr td input[type="submit"]{
-	background: -moz-linear-gradient(center top , rgb(22, 138, 221) 0%, rgb(0, 126, 229) 100%) repeat scroll 0% 0% transparent;
+	background: -webkit-linear-gradient(rgb(22, 138, 221) 0%, rgb(0, 126, 229) 100%) repeat scroll 0% 0% transparent;
+	background: -o-linear-gradient(rgb(22, 138, 221) 0%, rgb(0, 126, 229) 100%) repeat scroll 0% 0% transparent;
+	background: linear-gradient(rgb(22, 138, 221) 0%, rgb(0, 126, 229) 100%) repeat scroll 0% 0% transparent;
 	border-radius: 5px;
 	border: none;
 	border-bottom: 4px solid rgba(10, 99, 140, 0.6);

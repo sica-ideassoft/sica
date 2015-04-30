@@ -1,4 +1,4 @@
-<?php
+  <?php
 session_start();
 if (!isset($_SESSION['maestro-session'])) {
   echo '<SCRIPT LANGUAGE="javascript">
@@ -41,7 +41,7 @@ if (!isset($_SESSION['maestro-session'])) {
     </div>
     <ul class="menu1">
       <li class="lisalir" ><a href="../../logout.php"><span class='salir'></span>SALIR</a></li>
-      <li><a href="../home/home.php"><span class='home'></span>HOME</a></li>
+      <li><a href="../home/index.php"><span class='home'></span>HOME</a></li>
 
     </ul>
 
@@ -112,7 +112,7 @@ if (!isset($_SESSION['maestro-session'])) {
         <li class='has-sub admin'><a  href='#'><span class="icoAlumno">ALUMNOS</span></a>
           <ul>
           </li>
-          <li><a href='#'><span class="icoBuscar"><b>BUSCAR</b></span></a>
+          <li><a href='../buscar_alumno/buscar_alumno.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
           </li>
         </ul>
       </li>
@@ -129,7 +129,7 @@ if (!isset($_SESSION['maestro-session'])) {
           </li>
                <li><a href='../buscar_calificaciones/buscar_calificaciones.php'><span class="icoBuscar"><b>BUSCAR</b></span></a>
             </li>
-            <li><a class="activo" href='../altas_calificaciones/altas_calificaciones.php'><span class="icoAltasMActivo"><b>ALTAS</b></span></a>
+            <li><a class="activo"  href='../altas_calificaciones/altas_calificaciones.php'><span class="icoAltasMActivo"><b>ALTAS</b></span></a>
             </li>
 
 
@@ -213,7 +213,7 @@ if (!isset($_SESSION['maestro-session'])) {
 <script src="js/menu.js"></script>
 <script src="js/val_campos.js"></script>
 <script src="js/buscar.js"></script>
-
+<script src="js/asignacion.js"></script>
 
 </body>
 </html>
