@@ -3,7 +3,7 @@ include_once("../../../conexion/conexion.php");
 $conn = new Conexion();
 
 
-$sql = $conn->prepare("SELECT id_alumno FROM calificacion ");
+$sql = $conn->prepare("SELECT id_alumno FROM alumno");
 $sql->bindParam(':id',$id);
 $sql->execute();
 $count = $sql->rowCount();

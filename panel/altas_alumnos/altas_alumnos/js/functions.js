@@ -5,7 +5,6 @@ $(function() {
   var Ecurp     = /[a-zA-Z]{4,4}[0-9]{6}[a-zA-Z]{6,6}[0-9]{2}/;
   var Etelefono = /^[0-9-()+]{3,20}/;
 
-
   $("#enviar").click(function(e) {
     e.preventDefault();
     var nombre    = $("#nombre").val();
@@ -27,6 +26,7 @@ $(function() {
     var exterior     = $("#exterior").val();
     var nacionalidad = $("#nacionalidad").val();
     var civil        = $("#civil").val();
+
 
     // var status    = $("#status").val();
 

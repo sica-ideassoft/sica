@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="css/mostrar_alumnos.css">
 <?php
-include_once("../../conexion/conexion.php");
+// include_once("../../conexion/conexion.php");
 $conn = new Conexion();
 $sql=$conn->prepare("SELECT
 a.id_alumno,a.id_create_grupo,a.nombre_alumno,a.A_paterno_alumno,a.A_materno_alumno,a.matricula,a.curp,a.telefono,a.correo,a.genero,a.fecha_nacimiento,a.edad,a.estado,a.municipio,a.colonia,a.calle,a.Ninterior,a.Nexterior,a.nacionalidad,a.estado_civil,a.fotografia,a.status,
@@ -72,7 +72,7 @@ $row = $sql->fetch();
 	<td class="dato"><label for="">Calle:</label></td>
 </tr>
 <tr>
-	<td><?php echo $row['nombre_estado']; ?></td>
+	<td><?php echo utf8_encode($row['nombre_estado']); ?></td>
 	<td><?php echo $row['municipio']; ?></td>
 	<td><?php echo $row['colonia']; ?></td>
 	<td><?php echo $row['calle']; ?></td>

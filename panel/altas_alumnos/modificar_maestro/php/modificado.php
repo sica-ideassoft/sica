@@ -28,7 +28,7 @@ $sql->execute();
 $ssql = $conn->prepare("UPDATE user_maestro set user = :user,password = :password WHERE id_maestro= :id");
 $ssql->bindParam(':id',$_POST["id"]);
 $ssql->bindParam(':user',$_POST['user']);
-$ssql->bindParam(':password',$_POST['password']);
+$ssql->bindParam(':password',md5(sha1($_POST['password'])));
 $ssql->execute();
 
 

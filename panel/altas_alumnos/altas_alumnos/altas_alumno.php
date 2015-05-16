@@ -315,8 +315,7 @@ location.href = "../../login_admin/index.php";
       </tr>
       <tr>
         <td><input type="text" name="correo" id="correo"></td>
-        <td><select name="genero" id="genero
-        ">
+        <td><select name="genero" id="genero">
             <?php
             require_once("php/select.php");
             genero();

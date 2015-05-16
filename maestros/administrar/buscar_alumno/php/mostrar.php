@@ -78,7 +78,7 @@ $nombre = $row['nombre_alumno'];
 	<td class="dato"><label for="">Nacionalidad:</label></td>
 </tr>
 <tr>
-	<td><?php echo $row['nombre_estado']; ?></td>
+	<td><?php echo utf8_encode($row['nombre_estado']); ?></td>
 	<td><?php echo $row['municipio']; ?></td>
 	<td><?php echo $row['calle']; ?></td>
 	<td><?php echo $row['nacionalidad_create']; ?></td>
